@@ -40,7 +40,7 @@
   padding: var(--tooltip-padding);
   font-weight: normal;
   height: auto;
-  width: 23rem;
+  width: 24rem;
 
   background: var(--tooltip-background-dot), var(--tooltip-background-dot), linear-gradient(to bottom, #3d578f var(--tooltip-padding), #3d4b69 calc(var(--tooltip-padding) * 2), #3d4b69);
   background-size: var(--tooltip-background-dot-spacing) var(--tooltip-background-dot-spacing), var(--tooltip-background-dot-spacing) var(--tooltip-background-dot-spacing), auto;

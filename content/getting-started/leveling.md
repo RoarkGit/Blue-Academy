@@ -32,11 +32,11 @@ method.
 
 {{< role addle >}}
 
-{{< spell diamondback >}}
+{{< spell cold-fog >}}
 
 {{< spell diamondback >}}
 
-{{< spell water-cannon >}}
+{{< spell chelonian-gate >}}
 
 {{< spell flame-thrower >}}
 

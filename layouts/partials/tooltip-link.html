@@ -1,5 +1,6 @@
 {{- $tooltip := index (where (index site.Data .type) "id" .id) 0 }}
 {{- $image := printf "/images/tooltips/%s.png" .id | resources.Get -}}
+{{- $image := $image.Resize "16x webp" -}}
 
 <span class="tooltip" data-tooltip-id="{{ .id }}-tooltip">
   <span class="tooltip-image"><img src="{{ $image.RelPermalink }}?featherlight=false"></span>
