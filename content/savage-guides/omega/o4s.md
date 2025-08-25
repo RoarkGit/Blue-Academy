@@ -38,7 +38,7 @@ most groups.
 ### Utility Spells
 
 - {{< spell mighty_guard >}} and {{< spell diamondback >}} can be helpful if you
-  skip Black Hole, but otherwise nothing is needed.
+  don't skip Black Hole, but otherwise nothing is needed.
 
 This phase is pretty short and straightforward, but there are still a lot of
 mechanics to juggle. At minimum, every player should be assigned a standard
