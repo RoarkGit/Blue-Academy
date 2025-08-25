@@ -1,11 +1,5 @@
 ---
 title: E8S (Shiva)
 weight: 2
+archetype: savage-guide
 ---
-
-{{< notice style="note" >}}
-
-This guide is written assuming you have all Blue Mage spells, appropriate gear,
-and know how to play your chosen role.
-
-{{< /notice >}}

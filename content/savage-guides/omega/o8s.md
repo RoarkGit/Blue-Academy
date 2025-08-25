@@ -1,14 +1,8 @@
 ---
 title: O8S (Kefka)
 weight: 2
+archetype: savage-guide
 ---
-
-{{< notice style="note" >}}
-
-This guide is written assuming you have all Blue Mage spells, appropriate gear,
-and know how to play your chosen role.
-
-{{< /notice >}}
 
 _The urge to flip switches is almost irresistible... even when you know full
 well the consequences for doing so. Once more your finger moves as if of its own

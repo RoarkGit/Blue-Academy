@@ -1,14 +1,8 @@
 ---
 title: O4S (Neo Exdeath)
 weight: 1
+archetype: savage-guide
 ---
-
-{{< notice style="note" >}}
-
-This guide is written assuming you have all Blue Mage spells, appropriate gear,
-and know how to play your chosen role.
-
-{{< /notice >}}
 
 _Taken by curiosity, you activate something called the Savage Initiative at a
 Garlond Ironworks terminal. Apparently a program to address work-related stress,

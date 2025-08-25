@@ -1,14 +1,8 @@
 ---
 title: A4S (Manipulator)
 weight: 1
+archetype: savage-guide
 ---
-
-{{< notice style="note" >}}
-
-This guide is written assuming you have all Blue Mage spells, appropriate gear,
-and know how to play your chosen role.
-
-{{< /notice >}}
 
 _What fun is there in merely restating the facts? Never one to be content with
 the truth, the wandering minstrel has taken the liberty of retelling the tale of

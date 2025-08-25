@@ -1,0 +1,22 @@
+{{- $page := .page }}
+{{- $content := .content }}
+{{- with $page }}
+  <article class="default">
+    {{ partial "heading-pre.html" . }}
+    <h1>
+      {{ .Title }}
+    </h1>
+    {{ partial "heading-post.html" . }}
+
+    {{ partial "shortcodes/notice.html" (dict
+       "page" .
+       "style" "note"
+       "content" "This guide is written assuming you have all Blue Mage spells, appropriate gear, and know how to play your chosen role."
+    )}}
+    
+    {{ $content | safeHTML }}
+    <footer class="footline">
+      {{- partial "content-footer.html" . }}
+    </footer>
+  </article>
+{{- end }}

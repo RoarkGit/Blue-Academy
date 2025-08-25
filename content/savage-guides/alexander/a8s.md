@@ -1,14 +1,8 @@
 ---
 title: A8S (Brute Justice)
 weight: 2
+archetype: savage-guide
 ---
-
-{{< notice style="note" >}}
-
-This guide is written assuming you have all Blue Mage spells, appropriate gear,
-and know how to play your chosen role.
-
-{{< /notice >}}
 
 _Sometimes even the most thrilling tale can benefit from slight embellishment,
 and the wandering minstrel's reimagining of your foray into Midas─while
