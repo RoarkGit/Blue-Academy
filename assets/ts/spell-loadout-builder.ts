@@ -1,7 +1,17 @@
 import { ready } from './common'
 
+interface Spell {
+  Id: string
+  Name: string
+  Number: string
+}
+
 // Array of spell IDs that are currently set in the loadout.
-const activeSpells: string[] = new Array<string>(24).fill('')
+const activeSpells: Spell[] = new Array<Spell>(24).fill({
+  Id: '',
+  Name: '',
+  Number: '',
+})
 
 // Event listeners for spells added to the loadout. This is needed to be able to
 // remove them when a spell is removed from the loadout.
@@ -59,14 +69,24 @@ function removeListener(spellId: string) {
 function updateMacro(macro: HTMLElement) {
   const lines = ['/bluespellbook clear']
   for (const spell of activeSpells) {
-    if (spell !== '') {
+    if (spell.Id !== '') {
       if (lines.length === 15) {
         lines.push(`\n--- macros are limited to 15 lines ---\n`)
       }
-      lines.push(`/bluespellbook set "${spell}"`)
+      lines.push(`/bluespellbook set "${spell.Name}"`)
     }
   }
   macro.innerHTML = lines.join('\n')
+}
+
+function updateSpellLoadoutLink() {
+  const url = new URL(window.location.href)
+  const spellNumbers = activeSpells.map((s: Spell) => s.Number).join(',')
+  url.searchParams.set('spell_loadout', spellNumbers)
+  const spellLoadoutBuilderLink = document.getElementById(
+    'spell-loadout-builder-link',
+  )
+  spellLoadoutBuilderLink?.setAttribute('href', url.toString())
 }
 
 function setSpell(spellLoadoutSpell: HTMLElement, spellbookSpell: HTMLElement) {
@@ -115,15 +135,25 @@ ready(function () {
   ) as HTMLElement
   for (const spell of spellbookSpells) {
     const spellId = spell.getAttribute('data-tooltip-id')
-    if (spellId === null) {
+    const spellName = spell.getAttribute('data-spell-name')
+    const spellNumber = spell.getAttribute('data-spell-number')
+    if (spellId === null || spellName === null || spellNumber === null) {
       continue
     }
     spell.addEventListener('click', function () {
-      const nextOpen = activeSpells.indexOf('')
-      if (nextOpen !== -1 && activeSpells.indexOf(spellId) === -1) {
-        activeSpells[nextOpen] = spellId
+      const nextOpen = activeSpells.findIndex((s: Spell) => s.Id === '')
+      if (
+        nextOpen !== -1 &&
+        activeSpells.findIndex((s: Spell) => s.Id === spellId) === -1
+      ) {
+        activeSpells[nextOpen] = {
+          Id: spellId,
+          Name: spellName,
+          Number: spellNumber,
+        }
         setSpell(spellLoadoutSpells[nextOpen], spell)
         updateMacro(macro)
+        updateSpellLoadoutLink()
       }
     })
     spell.addEventListener('dragstart', function () {
@@ -151,12 +181,17 @@ ready(function () {
         }
         for (let i = 0; i < spellLoadoutSpells.length; ++i) {
           if (element === spellLoadoutSpells[i]) {
-            activeSpells[i] = spellId
+            activeSpells[i] = {
+              Id: spellId,
+              Name: spellName,
+              Number: spellNumber,
+            }
             break
           }
         }
         setSpell(element, spell)
         updateMacro(macro)
+        updateSpellLoadoutLink()
       }
     })
   }
@@ -164,10 +199,15 @@ ready(function () {
     spell.addEventListener('click', function () {
       const spellId = spell.getAttribute('data-tooltip-id')
       if (spellId === null) return
-      activeSpells[activeSpells.indexOf(spellId)] = ''
+      activeSpells[activeSpells.findIndex((s: Spell) => s.Id === spellId)] = {
+        Id: '',
+        Name: '',
+        Number: '',
+      }
       removeListener(spellId)
       unsetSpell(spell)
       updateMacro(macro)
+      updateSpellLoadoutLink()
     })
   }
   const params = new URLSearchParams(window.location.search)
@@ -179,11 +219,13 @@ ready(function () {
         const spellTooltip = spellbookSpells[spellNumber - 1]
         const spellLoadoutSpell = spellLoadoutSpells[i]
         const spellId = spellTooltip.getAttribute('data-tooltip-id')
-        if (spellId === null) return ''
-        activeSpells[i] = spellId
+        const spellName = spellTooltip.getAttribute('data-spell-name')
+        if (spellId === null || spellName === null) return ''
+        activeSpells[i] = { Id: spellId, Name: spellName, Number: s }
         setSpell(spellLoadoutSpell, spellTooltip)
       }
     })
   }
+  updateSpellLoadoutLink()
   updateMacro(macro)
 })

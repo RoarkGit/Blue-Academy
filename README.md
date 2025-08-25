@@ -77,7 +77,7 @@ There are some shortcodes that are helpful to use for adding content:
   This also works for role/general actions, but with the `{{< action addle >}}`
   shortcode.
 - You can create a spell loadout by writing
-  `{{< spell-loadout spels="1,,32,,104" >}}`. In this example, you will create a
+  `{{< spell-loadout spells="1,,32,,104" >}}`. In this example, you will create a
   spell loadout with Water Cannon in the first spot, Toad Oil in the third spot,
   and Nightbloom in the fifth spot.
 - You can render a rotation and its timeline by adding its contents to

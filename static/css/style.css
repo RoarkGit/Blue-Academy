@@ -457,6 +457,11 @@ dd {
   height: calc(var(--rotation-event-width) / 5);
 }
 
+.spell-loadout-builder-link-wrapper {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 .spell-loadout-builder-macro-wrapper {
   font-size: 2rem;
   text-align: center;
