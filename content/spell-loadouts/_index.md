@@ -2,7 +2,7 @@
 title: Spell Loadouts
 archetype: chapter
 date: 2023-09-13
-weight: 4
+weight: 40
 chapter: true
 ---
 

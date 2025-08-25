@@ -1,7 +1,7 @@
 ---
 title: Bonus Descriptions
 type: article
-weight: 10
+weight: 20
 ---
 
 ## Basic Bonuses

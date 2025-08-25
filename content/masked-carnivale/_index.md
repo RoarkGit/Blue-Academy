@@ -2,7 +2,7 @@
 title: Masked Carnivale
 archetype: chapter
 date: 2023-09-13
-weight: 3
+weight: 50
 ---
 
 The Masked Carnivale is a set of solo duties for Blue Mage, and it's where the

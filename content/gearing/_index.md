@@ -2,7 +2,7 @@
 title: Blue Mage Gearing
 archetype: chapter
 date: 2023-09-13
-weight: 2
+weight: 20
 ---
 
 Gear on Blue Mage does not actually make too much of a difference in what you're

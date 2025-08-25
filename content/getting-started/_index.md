@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 archetype: chapter
-weight: 1
+weight: 10
 date: 2023-09-13
 ---
 
