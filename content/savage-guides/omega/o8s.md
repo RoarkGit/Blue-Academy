@@ -41,6 +41,10 @@ most groups.
 - {{< spell mighty_guard >}}
 - {{< spell diamondback >}}
 
+Kefka's first phase is pretty simple. Most of the mechanics don't require a ton
+of adjusting and play out the same way each time, so just a little bit of
+practice is required to get through this phase.
+
 ### Mana Charge / Mana Release
 
 Kefka's first phase will revolve around using Fire, Blizzard, and Thunder spells
@@ -94,4 +98,169 @@ back, so dodge accordingly. He will then cast Graven Image again and the statue
 will appear on the west edge of the arena and start casting **Shockwave**, a
 huge knockback effect. Look closely because during the cast the statue may swap
 to the east side. Go to whichever side the statue is on and after the knockback
-dodge _both_ the Thunder and Blizzard effects from Mana Release.
+dodge _both_ the Thunder and Blizzard effects from Mana Release. Kefka will then
+use Ultima Upsurge followed by Hyperdrive before casting Graven Image again.
+
+### Graven Image 3
+
+Kefka will start by casting **Gravitas**, a light AOE on four random players
+that leaves behind an AOE puddle that applies a lethal bleed effect. He then
+follows up with **Vitrophyre**, a light AOE on four random players with a huge
+knockback to any secondary targets hit. He will then cleave half of the room
+(indicated by the glowing orb on the statue), another Gravitas, another
+Vitrophyre, and finish with **Aero Assault** which is an AOE knockback.
+
+Since the targeting for this mechanic is random, we don't have a reliable way to
+handle the mechanic the way traditional jobs would. Instead, everyone puts on
+{{< spell mighty_guard >}} and stacks in the center. Immediately after the
+Gravitas cast, the party spreads out to clock positions for the Vitrophyre hit.
+After this, the party needs to go the safe side of the arena. Once the Gravitas
+puddles disappear from the center, everyone needs to move _back_ into the center
+to bait the final Gravitas, and then use {{< action surecast >}} to prevent the
+knockback from Aero Assault.
+
+There is a _ton_ of damage going out during this mechanic, so {{< spell
+angels_snack >}} and {{< spell white_wind >}} are crucial here. Kefka will
+finish the mechanic off with another Light of Judgment, so heal up and mitigate
+appropriately.
+
+After Graven Image 3, Kefka will cast Mana Charge and Flagrant Fire, Ultima
+Upsurge, and Graven Image. This time Graven Image simply cleaves half of hte
+room, so dodge accordingly. At the same time he will use Mana Release to repeat
+the previously casted Flagrant Fire.
+
+Kefka will then use Thrumming Thunder, Ultima Upsurge, and Hyperdrive again
+before casting Graven Image yet again. This last Graven Image has a ton going on
+and is honestly pretty awful to try on Blue Mage. This should be treated as the
+phase's hard enrage.
+
+### Final Sting
+
+Kefka's Final Sting threshold is roughly 65%, since he transitions at 60%. Once
+he is at 65%, apply {{< spell off-guard>}}, use {{< spell moon_flute >}}, any
+Primal abilities you have, then finish with {{< spell whistle >}} and {{< spell
+final_sting >}}. Most groups will be able to sting shortly after Graven Image 3.
+
+## Phase 2: God Kefka
+
+### Utility Spells
+
+- {{< spell mighty_guard >}}
+- {{< spell diamondback >}}
+
+Kefka's second phase is a little bit trickier. Once you fully understand the
+mechanics it is fairly easy, but getting to that level of understanding can be
+tricky. The fight mostly comes down to how well the party is able to execute the
+Forsaken mechanics.
+
+### Celestriad
+
+Kefka will start the fight by casting **Heartless Angel** which sets everyones
+HP to 1 before casting **Ultima**, a heavy-hitting raidwide AOE. Quickly heal
+back to full and mitigate the Ultima cast. Kefka will then use Hyperdrive, but
+in this phase it also applies a bleed debuff. If no damage is taken by the
+initial hit then there is no bleed effect, so {{< spell diamondback >}} and {{<
+spell gobskin >}} can be used to prevent the bleed effect. It is crucial that
+Kefka is in the center of the arena for Celestriad. the first major mechanic.
+
+Celestriad involves Kefka casting all variations of Blizzard Blitz, Flagrant
+Fire, and Thrumming Thunder together. For Celestriad we will use what we call
+"Celestriad Positions," which will also come up in several fights later on. The
+cardinal positions (N/E/S/W) rotate clockwise to find partners to share a
+quadrant. Thrumming Thunder will cause only the intercardinals of the arena to
+be safe initially and Blizzard Blitz will cover the center of the arena. Players
+should be spread out within their quadrant, about halfway between the Blizzard
+Blitz AOE and the edge of the arena. A Flagrant Fire stack marker will go out on
+one player who should {{< spell diamondback >}} immediately. Everyone else will
+move forward and step into the center circle as soon as it becomes safe, and
+then spread out to clock positions within that circle to prevent Flagrant Fire
+overlap. This all happens extremely quickly and the timing is pretty tricky, so
+it will take practice, but there are also a couple of things to keep in mind:
+
+- The tank will be in {{< spell diamondback >}} from the tankbuster as
+  Celestriad starts. They can immediately {{< spell diamondback >}} a second
+  time in order to ignore all of the Celestriad mechanics.
+- Celestriad starts 29 seconds after pull. To be able to {{< spell diamondback
+  >}}, you _need_ to be out of Waning before this happens. This means that {{<
+  spell moon_flute >}} will be cast at -2 seconds from pull to start right at 0
+  seconds. That means that you will not be able to precast {{< spell tingle >}}
+  before {{< spell moon_flute >}}. The easiest change to make is to just drop
+  {{< spell tingle >}} entirely. It is slightly more potency to keep {{< spell
+  tingle >}} and drop {{< spell bristle >}} from {{< spell matra_magic >}}, but
+  this is a bit harder to pull off and the gain isn't huge.
+
+Kefka will finish Celestriad with another Ultima and then cast **Forsaken**, a
+heavy-hitting raidwide AOE.
+
+### Forsaken 1
+
+Forsaken 1 is a mechanic you will want to (and need to) get well-acquainted
+with, as it comes up in this fight quite a bit. Kefka will start by casting
+**Heartless Archangel** which sets everyone's HP to 1 and applies an Incurable
+debuff. The Incurable debuff lasts for only 4 seconds if the recipient was at
+full health when Heartless Archangel goes off, but will last for 12 seconds if
+they were not at full health.
+
+During this mechanic, Kefka will create three **Starstrafe** towers that need to
+be soaked by two players (in the east, west, and center). He will also cast
+**The Mad Head** which spawns four heads that tether to four random players and
+slowly move towards them. When touched, they explode in a small AOE that deals
+damage and applies a Magic Vulnerability Up debuff. During the mechanic he will
+also use **Wings of Destruction (Double)** that hits the closest and furthest
+target with an AOE tankbuster. There is a lot to unpack with each step, but the
+steps for the entire mechanic are:
+
+1. Forsaken AOE
+2. Heartless Archangel
+3. Soak Starstrafe towers
+4. Pop skulls
+5. Bait Wings of Destruction
+6. Ultima
+7. Soak Starstrafe towers
+8. Pop skulls
+9. Light of Judgment AOE
+
+To fully understand the mechanic, let's break each step down by itself and then
+combine them all together.
+
+Each Starstrafe tower needs two players to be properly soaked. The east and west
+towers are soaked by the players tethered to the skulls. The skulls spawn in the
+four intercardinal directions (NW/NE/SW/SE). The players tethered by the west
+skulls will soak the east tower and the players tethered by the east skuls will
+soak the west tower, which just leaves the center tower. There will be four
+players remaining and only two need to step into the center tower. This can be
+called out verbally, but if multiple people call it out at once it can lead to
+confusion. I prefer to use a self-marking macro like this to make things easier:
+
+<pre>
+/mk ignore &lt;me&gt; &lt;wait.5&gt;
+/mk off &lt;me&gt;
+</pre>
+
+The way this works is that this will assign the red 1 and 2 markers to people in
+the order that they press it. If a few people hit it at the same time it's
+possible that the markers will jump around a bit initially, but once the markers
+are assigned they cannot be re-assigned by hitting the macro repeatedly. Once
+the skull tethers go out, if the other players hit this macro until markers are
+established then there will be two people marked in the end. These are the two
+players that step into the center tower. The macro will also remove the markers
+after five seconds.
+
+The people tethered to skulls need to pop the skulls before they explode on
+their own, but they also need to do it after they get healed and do so away from
+other players. After they have soaked their tower, these players need to step
+out to the north or south, whichever side their skull is coming from (so it
+doesn't go through the center). As soon as they get healed up and the skull
+isn't near anyone else, they need to run into the skull to blow it up.
+
+Almost immediately after, Kefka will start casting Wings of Destruction. The
+tank should stand in the dead center of the arena, the party should be a bit
+south of that, and whoever is designated as the baiter needs to run outwards and
+use {{< spell mighty_guard >}}. This hit is survivable at full health with just
+{{< spell mighty_guard >}}, but other mitigations should be used to make it even
+safer.
+
+After the wings hit, Kefka will cast Ultima before spawning a second set of
+towers and skulls. This plays out exactly the same as the first time, but the
+targets will not be the same. Kefka will then finish the mechanic with a Light
+of Judgment AOE, so heal up and mitigate appropriately.
