@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+
+<h2>Video Guide</h2>
+<iframe width="560" height="315" src="https://youtube.com/embed/{{ .Params.youtube }}" frameborder="0" allowfullscreen></iframe>
+
+{{ .Content }}
+
+<footer class="footline">
+	{{with .Params.LastModifierDisplayName}}
+	    <i class='fas fa-user'></i> <a href="mailto:{{ $.Params.LastModifierEmail }}">{{ . }}</a> {{with $.Date}} <i class='fas fa-calendar'></i> {{ .Format "02/01/2006" }}{{end}}
+	    </div>
+	{{end}}
+</footer>
+
+{{ partial "footer.html" . }}
