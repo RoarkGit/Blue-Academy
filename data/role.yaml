@@ -1,0 +1,9 @@
+- id: addle
+  name: Addle
+  actionType: Ability
+  range: 25
+  recast: 90
+  description: |
+    Lower's targets physical damage dealt by 5% and magic damage dealt by 10%.
+
+    {{< green "Duration:" >}} 10s

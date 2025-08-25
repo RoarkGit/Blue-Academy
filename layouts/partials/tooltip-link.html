@@ -1,4 +1,4 @@
-{{- $tooltip := index (where (index site.Data.tooltips .type) "id" .id) 0 }}
+{{- $tooltip := index (where (index site.Data .type) "id" .id) 0 }}
 {{- $image := printf "/images/tooltips/%s.png" .id | resources.Get -}}
 
 <span class="tooltip" data-tooltip-id="{{ .id }}-tooltip">

@@ -1,4 +1,4 @@
-{{- $tooltip := index (where (index site.Data.tooltips .type) "id" .id) 0 -}}
+{{- $tooltip := index (where (index site.Data .type) "id" .id) 0 -}}
 {{- $imagePath := (printf "/images/tooltips/%s.png" .id)}}
 <div id="{{ .id }}-tooltip" class="tooltip-popup-wrapper" hidden>
   <aside class="tooltip-popup">

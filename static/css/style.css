@@ -211,3 +211,15 @@ dd {
 .tooltip-popup-additional-info dt+dd {
   margin-left: .25rem;
 }
+
+.spell-list p {
+  margin: 0;
+}
+
+.spell-list-number-cell {
+  text-align: center;
+}
+
+.spell-list-nowrap-cell {
+  white-space: nowrap;
+}
