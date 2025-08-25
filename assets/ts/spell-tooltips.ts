@@ -1,5 +1,11 @@
 import { ready } from './common'
 
+/**
+ * Moves a tooltip based on the mouse's location.
+ *
+ * @param tooltip the tooltip being moved
+ * @param event the event that triggered the movement
+ */
 function moveTooltip(tooltip: HTMLElement, event: MouseEvent) {
   let newX = event.clientX + 10
   let newY = event.clientY
@@ -17,6 +23,8 @@ ready(function () {
   const tooltipObjects = document.getElementsByClassName(
     'tooltip',
   ) as HTMLCollectionOf<HTMLElement>
+
+  // Initialize all tooltips with event listeners.
   for (const tooltipObject of tooltipObjects) {
     const spellId = tooltipObject.getAttribute('data-tooltip-id')
     if (spellId === null) return

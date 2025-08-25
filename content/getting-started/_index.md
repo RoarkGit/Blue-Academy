@@ -5,6 +5,10 @@ weight: 10
 date: 2023-09-13
 ---
 
+{{< role "surecast" >}}
+
+{{< role "lucid_dreaming" >}}
+
 Blue Mage is an interesting job in that there isn't really an obvious path to
 getting started on the job. In general, this is the expected order in which you
 can tackle content:

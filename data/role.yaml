@@ -1,3 +1,14 @@
+# File for storing role action tooltip information.
+#
+# - id: the role action's ID
+#   name: the role action's name
+#   actionType: Spell or Ability
+#   range: the role action's range
+#   radius: the role action's radius
+#   cast: the role action's cast time
+#   recast: the role action's recast time
+#   description: the role action's in-game description
+
 - id: addle
   name: Addle
   actionType: Ability
@@ -31,3 +42,25 @@
     Next spell is cast immediately.
 
     {{< green "Duration:" >}} 10s
+- id: surecast
+  name: Surecast
+  actionType: Ability
+  cast: 0
+  recast: 120
+  description: |
+    Spells can be cast without interruption.
+
+    {{< green "Additional Effect:" >}} Nullifies most knockback and draw-in effects
+
+    {{< green "Duration:" >}} 6s
+- id: lucid_dreaming
+  name: Lucid Dreaming
+  actionType: Ability
+  cast: 0
+  recast: 60
+  description: |
+    Gradually restores own MP.
+
+    {{< green "Potency:" >}} 55
+
+    {{< green "Duration:" >}} 21s

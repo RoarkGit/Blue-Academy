@@ -1,3 +1,22 @@
+# File for storing spell tooltip information.
+#
+# - id: the spell's ID
+#   name: the spell's name
+#   number: the spell's number
+#   actionType: Spell or Ability
+#   spellType: Magic or Physical
+#   spellAspect: Earth, Fire, Ice, Lightning, Water, or Wind
+#   rank: the spell's rank/rarity
+#   range: the spell's range
+#   radius: the spell's radius
+#   cast: the spell's cast time
+#   recast: the spell's recast time
+#   mp: the spell's MP cost (optional)
+#   hp: the spell's HP cost as a % (optional)
+#   face: indicates if the spell is a "face" spell (optional)
+#   location: where the spell can be learned
+#   description: the spell's in-game description
+
 - id: water-cannon
   name: Water Cannon
   number: 1

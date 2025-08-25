@@ -7,8 +7,12 @@ ready(function () {
   const spellList = document.getElementsByClassName(
     'spellbook-spell',
   ) as HTMLCollectionOf<HTMLElement>
+
+  // Initialize spellbook to page 1.
   toggleActive('data-page-number', '1', spellList)
   toggleActive('data-page-number', '1', labels)
+
+  // Add event listeners for page labels.
   for (const label of labels) {
     label.addEventListener('click', function () {
       const pageNumber = label.getAttribute('data-page-number')

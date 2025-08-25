@@ -1,6 +1,10 @@
-{{- $currentGcd := (or .startingGcd 0) -}}
+{{- $rotation := index site.Data.rotation .rotation -}}
+{{- $currentGcd := 0 -}}
+{{- with $rotation.starting_gcd -}}
+  {{- $currentGcd = . -}}
+{{- end -}}
 <div class="rotation">
-  {{- range (index site.Data.rotation .rotation) -}}
+  {{- range $rotation.actions -}}
     <div class="rotation-event">
       <div class="rotation-event-gcd-wrapper">
         <div class="rotation-event-gcd tooltip" data-tooltip-id="{{ .gcd }}">

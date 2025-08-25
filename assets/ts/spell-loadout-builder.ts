@@ -1,6 +1,10 @@
 import { ready } from './common'
 
+// Array of spell IDs that are currently set in the loadout.
 const activeSpells: string[] = new Array<string>(24).fill('')
+
+// Event listeners for spells added to the loadout. This is needed to be able to
+// remove them when a spell is removed from the loadout.
 const eventListeners = new Map<
   string,
   {
@@ -10,6 +14,12 @@ const eventListeners = new Map<
   }[]
 >()
 
+/**
+ * Moves a tooltip based on the mouse's location.
+ *
+ * @param tooltip the tooltip being moved
+ * @param event the event that triggered the movement
+ */
 function moveTooltip(tooltip: HTMLElement, event: MouseEvent) {
   let newX = event.clientX + 10
   let newY = event.clientY
