@@ -1,3 +1,4 @@
+{{/* Renders a tooltip inside a spell loadout. */}}
 {{- $spellDataByName := index (where (index site.Data.spell) "name" .name) 0 -}}
 {{- $spellDataByNumber := index (where (index site.Data.spell) "number" .number) 0 -}}
 {{- $spellData := or $spellDataByName $spellDataByNumber }}

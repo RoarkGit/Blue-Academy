@@ -1,13 +1,19 @@
+{{/* Prepend content with YouTube video to guide. */}}
+
 {{- $page := .page }}
 {{- $content := .content }}
 {{- with $page }}
-          <article class="default">
-{{ partial "heading-pre.html" . }}<h1>Stage {{ strings.TrimLeft "0" .File.BaseFileName | int -}}: {{ .Title }}</h1>{{ partial "heading-post.html" . }}
+  <article class="default">
+    {{ partial "heading-pre.html" . }}
+    <h1>
+      Stage {{ strings.TrimLeft "0" .File.BaseFileName | int -}}: {{ .Title }}
+    </h1>
+    {{ partial "heading-post.html" . }}
 
-{{ partial "youtube-embed.html" (dict "id" page.Params.youtube) }}
-{{ $content | safeHTML }}
-            <footer class="footline">
-              {{- partial "content-footer.html" . }}
-            </footer>
-          </article>
+    {{ partial "youtube-embed.html" (dict "id" page.Params.youtube) }}
+    {{ $content | safeHTML }}
+    <footer class="footline">
+      {{- partial "content-footer.html" . }}
+    </footer>
+  </article>
 {{- end }}

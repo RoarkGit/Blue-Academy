@@ -1,3 +1,4 @@
+{{/* Provides an in-line mouseover link for a tooltip. */}}
 {{- $tooltip := index (where (index site.Data .type) "id" .id) 0 }}
 {{- if (not $tooltip) -}}
   {{- errorf "Could not locate data for spell %s." .id -}}

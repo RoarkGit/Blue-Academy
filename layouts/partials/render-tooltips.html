@@ -1,3 +1,4 @@
+{{/* Iterate over all declared tooltips and add them in the background. */}}
 {{- range $id, $type := .Page.Store.Get "tooltips" -}}
   {{- partial "tooltip.html" (dict "context" . "id" $id "type" $type) -}}
 {{- end -}}

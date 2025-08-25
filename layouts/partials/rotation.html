@@ -1,3 +1,4 @@
+{{/* Displays a rotation loaded from rotation.yaml. */}}
 {{- $rotation := index site.Data.rotation .rotation -}}
 {{- $currentGcd := 0 -}}
 {{- with $rotation.starting_gcd -}}
