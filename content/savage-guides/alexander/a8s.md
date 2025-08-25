@@ -258,6 +258,39 @@ Justice sends out the following attacks at the same time:
 - **Long Needle (Stack)**: marks one random player with a stack marker that
   deals moderate AOE damage split between all players hit.
 
+There is going to be a lot of damage, so mitigate as much as possible. There is
+a lot going on and it will take some practice to get it right, but the overall
+flow is pretty straightforward:
+
+1. AOEs will appear under the party while a Flarethrower hits the tank, so the
+   tank will need to be healed. The party should rotate to the south side of the
+   boss.
+2. The two Long Needle (Prey) markers will go out. Those two people should move
+   away from the party and each other towards the south and east. More AOEs will
+   appear under the party, so the party rotates to the west side of the boss.
+3. The tank should try their best to dodge AOEs and also finish on the west
+   side. At this point the Long Needle (Stack) and Long Needle (Prey) AOEs will
+   go off.
+
+Immediately after the AOEs go off, Brute Justice will start channeling a Mega
+Beam so move away from its front. It will target the stacked party _most_ of the
+time, but you do still need to make sure you know where he's looking to avoid
+it.
+
+While dodging the Mega Beam, the tank should move to one of the far corners of
+the room and everyone else should stay close. Brute Justice will use **Super
+Jump** on the furthest player, which causes it to jump to that player. Any other
+players hit will be knocked back and stunned. If the tank uses
+{{< spell j_kick >}} when the Super Jump cast finishes, then the AOE will be
+snapshotted into the corner but Brute Justice will stay in the center.
+
+After Super Jump, Brute Justice will channel **Apocalyptic Ray**, which is a
+huge multi-hit frontal cone that applies a vuln stack with each hit. Just move
+behind Brute Justice to be safe.
+
+Brute Justice will repeat all of these mechanics one more time and then go into
+Intermission 1 if you haven't killed it yet.
+
 {{< notice style="warning" >}}
 
 Since the level 80 patch came out it is actually possible to do _too_ much
@@ -267,3 +300,204 @@ case, consider dropping {{< spell breath_of_magic >}} from one of the openers or
 dropping {{< spell moon_flute >}} entirely from one or two people.
 
 {{< /notice >}}
+
+### Intermission 1
+
+We don't do this. We skip it. If you're not skipping this then something is
+seriously wrong and you should fix it.
+
+### Intermission 2
+
+Whenever Brute Justice's health is reduced to 0 it will jump away and begin
+Intermission 2. When Brute Justice's health is about to hit 0 everyone should
+put up {{< spell mighty_guard >}} and stack on the east wall of the arena.
+Mighty Guard will stay up for all of Intermission 2.
+
+Brute Justice will land with a {{< spell j_kick >}} before splitting off into
+individual bots again. There is going to be a lot going on here, but most of it
+will be ignored!
+
+The first thing that happens is a Double Drill. Brawler spawns in the north side
+of the arena, so send the tank close to it and the Double Drill baiter to the
+southeast corner of the arena. Heal up the baiters once this hits.
+
+There are going to be mines that spawn on random squares, so just be aware of
+where they spawn and don't step on them. Some will be visible, and some _start_
+visible and look like a green and black swirling circle before becoming hidden.
+
+After Double Drill, Onslaughter will face a random person and start channeling
+Mega Beam. If it's facing you, just step to the side without hitting any mines.
+Once the beam actually fires, hardcast {{< spell diamondback >}} (no
+{{< role swiftcast >}}). This is based on the animation of the Mega Beam, not
+the cast bar. Once the beam fires and starts shrinking slightly that's when you
+should use {{< spell diamondback >}}. If you timed this correctly, then you will
+see a bunch of explosions, chakrams, and mirage charges, but everyone will be
+safe.
+
+Once you're out of {{< spell diamondback >}} Vortexer will start casting **Ultra
+Flash** on the west side of the arena. Ultra Flash kills anyone in line of
+sight, even through Diamondback. We will use Onslaughter's legs to get out of
+line of sight. Position yourself such that one of Onslaughter's legs is between
+you and Vortexer.
+
+While Ultra Flash is happening, Swindler will also use **Enumeration**. This
+puts a circle around two random players and requires 2-4 total players to be
+inside the circle or else it explodes, killing the target. This _can_ be
+mitigated by {{< spell diamondback >}} and is significantly easier than trying
+to solve it with random targets. The players who get targeted by Enumeration
+still need to avoid Ultra Flash, but need to stay away from the group to avoid
+getting people caught in Enumeration. These players should stand back, get out
+of line of sight of Vortexer, and then {{< role swiftcast >}}
+{{< spell diamondback >}}. The Enumeration targets will end up with a max HP
+down and damage down debuff, but these are inconsequential regardless of how you
+are handling Gavel in the next phase. _If you mess up Gavel in the next phase it
+is not because of these debuffs._
+
+After all of this happens, the bots will rejoin to form Brute Justice. Brute
+Justice now has an HP up buff and will fully heal itself with **Justice** before
+we go into the next phase.
+
+### Phase 4: Gavel
+
+This is one of the most notorious Blue Mage mechanics, but its difficulty is
+significantly overblown. The only thing that makes it somewhat difficult is that
+you need to actually know what each debuff does in order to resolve it. The
+basic idea is that Brute Justice will cast **Verdict** and apply debuffs to
+everyone, and then 40 seconds later cast **Gavel** and instantly kill everyone
+if the debuffs were not resolved correctly. If anyone dies at all during this
+phase, including by {{< spell final_sting >}}, Brute Justice will instantly kill
+everyone.
+
+There are two ways to handle Gavel. We can either do it properly and resolve the
+debuffs, or we can skip it by killing Brute Justice before Gavel finishes
+casting.
+
+#### Proper Gavel
+
+**TL;DR**:
+[Toolbox](https://ff14.toolboxgaming.space/?id=230935123921361&preview=1)
+
+One tornado will spawn in each corner of the room. Stepping inside a tornado
+sets your HP to 1 and gives you a Final Flight debuff which functionally does
+nothing. A red Steam Regulator will spawn on either the east or west side, and a
+blue Steam Regulator will spawn on whichever side the red one did not. These
+regulators function the same as in phase 1, but the color will matter based on
+debuffs described below. There will also be four orbs that spawn in the two
+north squares between the tornadoes and the two south squares between the
+tornadoes. The orbs deal moderate AOE damage when touched, and will explode and
+wipe the raid if left up for too long.
+
+Some of the debuffs mentioned here will include Final Punishment stacks. Each
+time you take damage from Brute Justice (orbs and tornadoes count for this), you
+lose one stack. If the debuff timer hits zero and you still have stacks you
+instantly die.
+
+Debuff resolution is checked when Gavel finishes casting. Here is the full list
+of debuffs and how to resolve them:
+
+- Final Judgment: Min HP
+  - Must have the lowest HP in the party.
+  - Includes 4 Final Punishment stacks.
+  - This player should pop the southwest, northwest, and northeast orbs and then
+    step into the northeast tornado when Gavel starts casting.
+  - It is important to not heal this player after they step in the tornado until
+    after Gavel is resolved.
+- Final Judgment: Max HP
+  - Must have the highest HP in the party.
+  - Includes 4 Final Punishment stacks.
+  - This player should immediately {{< spell frog_legs >}} and tank Brute
+    Justice. They should help heal orb poppers with {{< spell white_wind >}},
+    and then use {{< spell devour >}} when Gavel is being cast.
+- Final Judgment: Penalty I
+  - Must have one debuff from Brute Justice.
+  - Includes 3 Final Punishment stacks.
+  - This player should pop the southwest, northwest, and northeast orbs.
+  - One debuff: Penalty I
+- Final Judgment: Penalty II
+  - Must have two debuffs from Brute Justice.
+  - This player needs to step in the northwest tornado.
+  - Two debuffs: Penalty II and Final Flight
+- Final Judgment: Penalty III (on two players)
+  - Must have three debuffs from Brute Justice.
+  - Includes 2 Final Punishment stack.
+  - One player needs to step in the southwest tornado and the other needs to
+    step in the southeast tornado.
+  - Three debuffs: Penalty III, Final Flight, Final Punishment
+  - After Gavel resolves, both players should pop the southeast orb together to
+    remove their Final Punishment stack and prevent the orb from exploding.
+- Final Judgment: Decree Nisi A (Blue Nisi)
+  - Must destroy the blue Steam Regulator and receive the Blue Nisi debuff.
+  - Includes 1 Final Punishment stack.
+  - This player should quickly kill their regulator, which can spawn on either
+    the east or the west, and then pop the north orb on their side with the Min
+    HP and Penalty I players.
+- Final Judgment: Decree Nisi B (Red Nisi)
+  - Must destroy the red Steam Regulator and receive the Red Nisi debuff.
+  - Includes 1 Final Punishment stack.
+  - This player should quickly kill their regulator, which can spawn on either
+    the east or the west, and then pop the north orb on their side with the Min
+    HP and Penalty I players.
+
+If you run with the same eight people and don't have any deaths, then the debuff
+assignment isn't completely random. With traditional jobs, the tanks get the
+Min/Max HP debuffs, the healers get the Penalty I/II debuffs, and the DPS get
+the Penalty III/Nisi debuffs. If you have the same eight people and no deaths,
+then the same four people will _always_ get the support debuffs and the same
+four people will _always_ get the DPS debuffs. Within those groups the debuffs
+will be random.
+
+If everything was done properly then everyone should live. Remember to turn off
+{{< spell mighty_guard >}} when entering this phase if you don't need to have it
+on (Min HP, Max HP, Penalty I).
+
+#### Skip Gavel
+
+Once we got access to level 70 spells it became possible to skip Gavel entirely.
+With level 80 spells it's even easier, but there are still things that can trip
+you up. Once Brute Justice regains his HP we have 38 seconds to kill it before
+Gavel finishes casting. We also still need to kill the Steam Regulators or they
+will blow up and wipe the group.
+
+The basic strategy for this is to do a Moon Flute Opener and then synchronize
+{{< spell id="final_sting" altText="Final Stings" >}} so that we are able to all
+sting without getting killed (because Brute Justice kills _everyone_ if _anyone_
+dies).
+
+More specifically, the full rotation should look like this:
+
+1. Pre-{{< spell bristle >}} before Brute Justice is targetable.
+2. One person applies {{< spell breath_of_magic >}} while everyone else applies
+   {{< spell song_of_torment >}}.
+3. Use a full {{< spell phantom_flurry >}} including its second activation, then
+   use a potion for extra damage.
+4. Use 3 GCD spells. You _should_ have {{< spell the_rose_of_destruction >}} and
+   {{< spell winged_reprobation >}} up here, but {{< spell sonic_boom >}} is
+   still fine. Since we're not bringing many utility spells we should have room
+   for everything. Weave your weaker OGCD spells like
+   {{< spell feather_rain >}}, {{< spell shock_strike >}}.
+5. {{< spell whistle >}} with {{< spell off-guard >}} or {{< spell peculiar_light >}} weaved.
+6. {{< spell tingle >}}
+7. {{< spell moon_flute >}} and {{< spell nightbloom >}}
+8. {{< spell triple_trident >}} and {{< spell sea_shanty >}}
+9. {{< spell bristle >}}, {{< role swiftcast >}}, and {{< spell being_mortal >}}
+10. {{< spell matra_magic >}}
+11. {{< spell whistle >}} and {{< spell surpanakha >}}x4
+12. Wait for synchronized sting call, then {{< spell final_sting >}}.
+
+{{% expand title="Expand to see full timeline..." %}}
+
+{{< rotation gavel_skip >}}
+
+{{% /expand %}}
+
+It can be easier to synchronize stings if you use {{< role swiftcast >}} there instead of {{< spell matra_magic >}}. I recommend using a countdown macro, something simple like this works fine:
+
+<code>
+  /p Get ready to sting! <se.1> <wait.1>
+  /p 5 <se.1> <wait.1>
+  /p 4 <se.1> <wait.1>
+  /p 3 <se.1> <wait.1>
+  /p 2 <se.1> <wait.1>
+  /p 1 <se.1> <wait.1>
+  /p STING! <se.1> <wait.1>
+</code>

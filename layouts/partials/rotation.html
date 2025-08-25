@@ -10,6 +10,9 @@
       <div class="rotation-event-gcd-wrapper">
         <div class="rotation-event-gcd tooltip" data-tooltip-id="{{ .gcd }}">
           {{- $image := (printf "/images/tooltips/%s.png" .gcd) | resources.Get }}
+          {{- if (not $image) -}}
+            {{- errorf "Could not locate data for spell %s." .gcd -}}
+          {{- end -}}
           {{- $image = $image.Resize "48x webp" -}}
           {{- page.Store.SetInMap "tooltips" .gcd "spell" -}}
           <img src="{{ $image.RelPermalink }}" />
@@ -34,6 +37,9 @@
         <div class="rotation-event-ogcd-wrapper">
           <div class="rotation-event-ogcd tooltip" data-tooltip-id="{{ $id }}">
             {{- $image := (printf "/images/tooltips/%s.png" $id) | resources.Get }}
+            {{- if (not $image) -}}
+              {{- errorf "Could not locate data for spell %s." $id -}}
+            {{- end -}}
             {{- $image = $image.Resize "36x webp" -}}
             {{- page.Store.SetInMap "tooltips" $id $type -}}
             <img src="{{ $image.RelPermalink }}" />

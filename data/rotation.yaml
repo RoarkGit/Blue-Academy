@@ -100,3 +100,39 @@ moon_flute_breath:
     - gcd: matra_magic
       ogcd:
         - phantom_flurry
+
+gavel_skip:
+  starting_gcd: -1
+  actions:
+    - gcd: song_of_torment
+    - gcd: phantom_flurry
+    - gcd: phantom_flurry
+    - gcd: the_rose_of_destruction
+      ogcd:
+        - feather_rain
+    - gcd: winged_reprobation
+      ogcd:
+        - shock_strike
+    - gcd: winged_reprobation
+    - gcd: whistle
+      ogcd:
+        - off-guard
+    - gcd: tingle
+    - gcd: moon_flute
+      ogcd:
+        - nightbloom
+    - gcd: triple_trident
+      ogcd:
+        - sea_shanty
+    - gcd: bristle
+      ogcd:
+        - role:swiftcast
+        - being_mortal
+    - gcd: matra_magic
+    - gcd: whistle
+      ogcd:
+        - surpanakha
+        - surpanakha
+        - surpanakha
+        - surpanakha
+    - gcd: final_sting
