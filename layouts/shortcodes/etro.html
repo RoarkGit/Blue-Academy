@@ -1,13 +1,12 @@
 {{- $title := .Get "title" -}}
-{{- $etro := .Get "etro" }}
+{{- $id := .Get "id" }}
 
-{{- if not (and $title $etro) -}}
+{{- if not (and $title $id) -}}
   {{- errorf "The %q shortcode requires a title and etro gearset id. See %s" .Name .Position }}
 {{- end -}}
 <div class="etro-gearset">
   <iframe
     title="{{ $title }}"
-    src="https://etro.gg/embed/gearset/b4f7e26d-8462-44c3-ae13-ed0c814d1219"
-    loading="lazy"
-  ></iframe>
+    src="https://etro.gg/embed/gearset/{{ $id }}"
+    loading="lazy"></iframe>
 </div>

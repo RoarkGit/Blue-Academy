@@ -2,8 +2,32 @@
   name: Addle
   actionType: Ability
   range: 25
+  cast: 0
   recast: 90
   description: |
     Lower's targets physical damage dealt by 5% and magic damage dealt by 10%.
+
+    {{< green "Duration:" >}} 10s
+- id: sleep
+  name: Sleep
+  actionType: Spell
+  range: 30
+  radius: 5
+  cast: 2.5
+  recast: 2.5
+  mp: 800
+  description: |
+    Puts target and all nearby enemies to sleep.
+
+    {{< green "Duration:" >}} 30s
+
+    Cancels auto-attack upon execution.
+- id: swiftcast
+  name: Swiftcast
+  actionType: Ability
+  cast: 0
+  recast: 60
+  description: |
+    Next spell is cast immediately.
 
     {{< green "Duration:" >}} 10s

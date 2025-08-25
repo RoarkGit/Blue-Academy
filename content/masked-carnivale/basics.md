@@ -36,6 +36,8 @@ is a complete list of bonuses and their meaning
 
 ## Recommended Spells
 
+{{< spell-loadout spells="77,,73,58,,53,,105,55,,,,,,,,,,33,92,,109,104,44" >}}
+
 Most of the stages don't require very many spells. At minimum you should have
 these on your bar:
 
@@ -52,8 +54,9 @@ these on your bar:
   {{< spell pom-cure >}} heals for a little bit more, but
   {{< spell exuviation >}} _is_ required for certain stages because of its
   dispel effect.
-- A magic filler GCD spell. My personal favorite is {{< spell exuviation >}};
-  it's not necessarily better than the others I just think it sounds cool.
+- A magic filler GCD spell. My personal favorite is
+  {{< spell electrogenesis >}}; it's not necessarily better than the others I
+  just think it sounds cool.
 - A physical filler GCD spell. {{< spell goblin-punch >}} is really powerful
   because there are no positionals in the Masked Carnivale, but if you need
   range then {{< spell abyssal-transfixion >}} is another option.

@@ -1,0 +1,5 @@
+---
+title: Solo
+---
+
+bingus
