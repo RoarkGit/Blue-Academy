@@ -2,7 +2,7 @@
 {{- $content := .content }}
 {{- with $page }}
           <article class="default">
-{{ partial "heading-pre.html" . }}<h1>{{ .Title }}</h1>{{ partial "heading-post.html" . }}
+{{ partial "heading-pre.html" . }}<h1>Stage {{ strings.TrimLeft "0" .File.BaseFileName | int -}}: {{ .Title }}</h1>{{ partial "heading-post.html" . }}
 
 {{ partial "youtube-embed.html" (dict "id" page.Params.youtube) }}
 {{ $content | safeHTML }}
