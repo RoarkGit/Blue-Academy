@@ -76,8 +76,7 @@ function updateMacro(macro: HTMLElement) {
       lines.push(`/bluespellbook set "${spell.Name}"`)
     }
   }
-  macro.innerHTML = lines.join('\n')
-  console.log(macro.innerHTML)
+  macro.innerText = lines.join('\n')
 }
 
 function updateSpellLoadoutLink() {
