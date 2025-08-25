@@ -1,7 +1,5 @@
 {{- $numRemaining := 24 }}
-<div
-  class="spell-loadout ffxiv-ui-background"
-  {{ if .Get "id" }}id="{{- .Get "id" -}}"{{- end -}}>
+<div class="spell-loadout ffxiv-ui-background">
   {{- with .Get "spells" -}}
     {{- $spellNumbers := (split . ",") -}}
     {{- $numRemaining = sub $numRemaining (len $spellNumbers) -}}
