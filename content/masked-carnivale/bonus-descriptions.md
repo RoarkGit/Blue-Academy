@@ -39,7 +39,7 @@ purposes of the challenge so you may use them freely.
 : Interrupted a target's casting.
 
 **A Walk in the Park**  
-: Refrained from using Sprint.
+: Refrained from using {{< role sprint >}}.
 
 **Mastery of Fire/Water/Earth/Wind/Ice/Lightning**  
 : Used one or more fire/water/earth/wind/ice/lightning-aspected spells. Spells
