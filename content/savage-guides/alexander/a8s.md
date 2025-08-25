@@ -228,4 +228,42 @@ we will just skip it. {{< spell cold_fog >}} on the Super Cyclone hit is a
 _really_ good idea here, and {{< spell moon_flute >}} can help but should not be
 needed.
 
-Once Vortexer is dead, switch to Brawler and finish it off. 
+Once Vortexer is dead, Brawler will start causing Self-Destruct, which is an
+instant wipe if it finishes. Switch to Brawler and finish it off, and then get
+ready for Brute Justice.
+
+### Phase 3: Brute Justice
+
+Have the party move to just east of the center of the arena and the tank just
+north of the center. The five bots will show up in the middle and fuse into
+Brute Justice. When they **Transform** there is a big knockback with moderate
+raidwide damage. Use {{< role surecast >}} when the lightning appears between
+the bots to negate the knockback.
+
+Once Brute Justice is targetable, the tank should use {{< spell white_wind >}}
+to quickly generate a bunch of threat. At this point everyone who can do a Moon
+Flute Opener should be doing one, including one healer if possible (if you are
+running two healers). Brute Justice opens up with **Flarethrower**, a conal
+tankbuster, followed by **Double Rocket Punch**, which is meant to be a shared
+tankbuster. The tank should try to learn the timing to generate threat and then
+{{< spell diamondback >}} both hits, but it is most important to mitigate Double
+Rocket Punch since it is not survivable otherwise.
+
+Once the tankbusters are finished we get to play "ring around the robot." Brute
+Justice sends out the following attacks at the same time:
+
+- **Short Needle**: light raidwide AOE damage.
+- **Long Needle (Prey)**: moderate AOE damage around two random players,
+  indicated by a red circle overhead.
+- **Long Needle (Stack)**: marks one random player with a stack marker that
+  deals moderate AOE damage split between all players hit.
+
+{{< notice style="warning" >}}
+
+Since the level 80 patch came out it is actually possible to do _too_ much
+damage and push Brute Justice before the Super Jump. If that happens you will be
+in Waning Nocturne when Intermission 2 starts and probably die. If this is the
+case, consider dropping {{< spell breath_of_magic >}} from one of the openers or
+dropping {{< spell moon_flute >}} entirely from one or two people.
+
+{{< /notice >}}
