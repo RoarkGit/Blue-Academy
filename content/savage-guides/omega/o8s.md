@@ -263,4 +263,22 @@ safer.
 After the wings hit, Kefka will cast Ultima before spawning a second set of
 towers and skulls. This plays out exactly the same as the first time, but the
 targets will not be the same. Kefka will then finish the mechanic with a Light
-of Judgment AOE, so heal up and mitigate appropriately.
+of Judgment AOE, so heal up and mitigate appropriately. Once this is done, the
+tank should make sure to point Kefka straight north to make the next mechanic
+consistent.
+
+### Trine
+
+Kefka will cast **Trine (Small)** and spawn three sets of triangles at various
+locations on the ground that explode after a delay in the order that they
+spawned. The ideal plan is to find where the third set of triangles spawns and
+move into where the first set was after they explode. While this is going on,
+**Wings of Destruction (Single)** will also be happening. Go to whichever side
+of the arena Kefka _isn't_ cleaving (doesn't have a glowing wing) and dodge the
+Trine triangles. This is the reason why we want to have Kefka facing north; many
+players find it easier to think of east/west rather than doing it relative to
+Kefka. After the third set of triangles explode, Kefka will use Wings of
+Destruction (Double) again so bait and mitigate appropriately. This mechanic is
+actually quite difficult to read in my experience, so this is one mechanic where
+it can be helpful to have someone who is very confident call out where to go and
+just follow them.
