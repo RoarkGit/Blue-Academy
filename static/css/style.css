@@ -173,7 +173,7 @@ dd {
   background: rgba(255, 255, 255, 0.1);
   width: 100%;
   height: 0.5rem;
-  content: "";
+  content: '';
 }
 
 .tooltip-popup-cast dd {
@@ -208,7 +208,8 @@ dd {
   height: 100%;
 }
 
-.fab {
+.fab,
+.fas {
   width: 1.1rem;
   text-align: center;
 }
