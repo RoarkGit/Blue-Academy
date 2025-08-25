@@ -1,9 +1,3 @@
 {{- $spellId := .Get 0 -}}
-{{- $spell := index (where $.Site.Data.tooltips.spell "id" $spellId) 0 }}
-{{- $image := printf "/images/spell/%s.png" $spell.id | resources.Get -}}
-
-{{- .Page.Store.SetInMap "tooltips" $spell.id "spell" -}}
-<span class="tooltip" data-tooltip-id="{{ $spell.id }}-tooltip">
-  <span class="tooltip-image"><img src="{{ $image.RelPermalink }}?featherlight=false"></span>
-  <span class="tooltip-link">{{ $spell.name }}</span>
-</span>
+{{- .Page.Store.SetInMap "tooltips" $spellId "spell" -}}
+{{ partial "tooltip-link" (dict "context" . "id" $spellId "type" "spell") }}

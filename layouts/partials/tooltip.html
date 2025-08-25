@@ -1,5 +1,5 @@
 {{- $tooltip := index (where (index site.Data.tooltips .type) "id" .id) 0 -}}
-{{- $imagePath := (printf "/images/%s/%s.png" .type .id)}}
+{{- $imagePath := (printf "/images/tooltips/%s.png" .id)}}
 <div id="{{ .id }}-tooltip" class="tooltip-popup-wrapper" hidden>
   <aside class="tooltip-popup">
     <header class="tooltip-popup-header">
@@ -45,12 +45,18 @@
     <div class="tooltip-popup-description">
       {{- $tooltip.description | markdownify -}}
     </div>
-    {{- if $tooltip.spellType -}}
+    {{- if (or $tooltip.spellType $tooltip.rank) -}}
       <dl class="tooltip-popup-additional-info">
         {{- if $tooltip.spellType -}}
           <div>
             <dt>Aspect:</dt>
             <dd>{{ $tooltip.spellType }} / {{ $tooltip.spellAspect | default "Unaspected" -}}</dd>
+          </div>
+        {{- end -}}
+        {{- if $tooltip.rank -}}
+          <div>
+            <dt>Rank:</dt>
+            <dd>{{- strings.Repeat $tooltip.rank "★" -}}</dd>
           </div>
         {{- end -}}
       </dl>
