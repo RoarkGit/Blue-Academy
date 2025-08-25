@@ -1,5 +1,18 @@
 import { ready } from './common'
 
+function moveTooltip(tooltip: HTMLElement, event: MouseEvent) {
+  let newX = event.clientX + 10
+  let newY = event.clientY
+  if (event.clientX + tooltip.offsetWidth > window.innerWidth) {
+    newX -= tooltip.offsetWidth + 20
+  }
+  if (event.clientY + tooltip.offsetHeight > window.innerHeight) {
+    newY -= tooltip.offsetHeight
+  }
+  tooltip.style.left = `${newX}px`
+  tooltip.style.top = `${newY}px`
+}
+
 ready(function () {
   const tooltipLinks = document.getElementsByClassName(
     'tooltip',
@@ -9,7 +22,9 @@ ready(function () {
     if (tooltipId === null) return
     const tooltip = document.getElementById(tooltipId)
     if (tooltip === null) return
-    tooltipLink.addEventListener('mouseenter', function () {
+    tooltipLink.addEventListener('mouseenter', function (event) {
+      if (!(event instanceof MouseEvent)) return
+      moveTooltip(tooltip, event)
       tooltip.hidden = false
     })
     tooltipLink.addEventListener('mouseleave', function () {
@@ -17,16 +32,7 @@ ready(function () {
     })
     tooltipLink.addEventListener('mousemove', (event) => {
       if (!(event instanceof MouseEvent)) return
-      let newX = event.clientX + 10
-      let newY = event.clientY
-      if (event.clientX + tooltip.offsetWidth > window.innerWidth) {
-        newX -= tooltip.offsetWidth + 20
-      }
-      if (event.clientY + tooltip.offsetHeight > window.innerHeight) {
-        newY -= tooltip.offsetHeight
-      }
-      tooltip.style.left = `${newX}px`
-      tooltip.style.top = `${newY}px`
+      moveTooltip(tooltip, event)
     })
   }
 })
