@@ -1,5 +1,6 @@
 ---
 title: Spell Loadout Builder
+draft: true
 ---
 
 {{< spellbook >}}
