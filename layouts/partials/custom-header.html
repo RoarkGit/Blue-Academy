@@ -1,7 +1,8 @@
+<script defer data-domain="stats.mage.blue" src="https://stats.mage.blue/js/script.js"></script>
 {{- $spellTooltips := resources.Get "/ts/spell-tooltips.ts" | js.Build (dict "targetPath" "/js/spell-tooltips.js") -}}
-<script src="{{ $spellTooltips.RelPermalink }}" defer></script>
+<script defer src="{{ $spellTooltips.RelPermalink }}"></script>
 {{- $spellbook := resources.Get "/ts/spellbook.ts" | js.Build (dict "targetPath" "/js/spellbook.js") -}}
-<script src="{{ $spellbook.RelPermalink }}" defer></script>
+<script defer src="{{ $spellbook.RelPermalink }}"></script>
 {{ with .Params.customCss -}}
   <link rel="stylesheet" href="{{ . }}" />
 {{- end }}
