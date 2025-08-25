@@ -1,5 +1,5 @@
 ---
-title: O4S (Neo Exdeath)
+title: O4S (Exdeath)
 weight: 1
 archetype: savage-guide
 ---
