@@ -1,3 +1,28 @@
+.ffxiv-ui-background {
+  --ffxiv-ui-background-dot: radial-gradient(
+    rgba(31, 48, 75, 0.5) 1px,
+    transparent 0
+  );
+  --ffxiv-ui-background-dot-spacing: 4px;
+  --ffxiv-ui-background-dot-offset: 1rem;
+  background: var(--ffxiv-ui-background-dot), var(--ffxiv-ui-background-dot),
+    linear-gradient(
+      to bottom,
+      #3d578f var(--ffxiv-ui-background-dot-offset),
+      #3d4b69 calc(var(--ffxiv-ui-background-dot-offset) * 2),
+      #3d4b69
+    );
+  background-position:
+    0 0,
+    calc(var(--ffxiv-ui-background-dot-spacing) / -2)
+      calc(var(--ffxiv-ui-background-dot-spacing) / -2),
+    0;
+  background-size:
+    var(--ffxiv-ui-background-dot-spacing) var(--ffxiv-ui-background-dot-spacing),
+    var(--ffxiv-ui-background-dot-spacing) var(--ffxiv-ui-background-dot-spacing),
+    auto;
+}
+
 .tooltip {
   white-space: nowrap;
 }
@@ -36,27 +61,6 @@
   --tooltip-image-padding: calc(
     var(--tooltip-image-size) + var(--tooltip-padding) / 2
   );
-  --tooltip-background-dot: radial-gradient(
-    rgba(31, 48, 75, 0.5) 1px,
-    transparent 0
-  );
-  --tooltip-background-dot-spacing: 4px;
-  background: var(--tooltip-background-dot), var(--tooltip-background-dot),
-    linear-gradient(
-      to bottom,
-      #3d578f var(--tooltip-padding),
-      #3d4b69 calc(var(--tooltip-padding) * 2),
-      #3d4b69
-    );
-  background-position:
-    0 0,
-    calc(var(--tooltip-background-dot-spacing) / -2)
-      calc(var(--tooltip-background-dot-spacing) / -2),
-    0;
-  background-size:
-    var(--tooltip-background-dot-spacing) var(--tooltip-background-dot-spacing),
-    var(--tooltip-background-dot-spacing) var(--tooltip-background-dot-spacing),
-    auto;
   padding: var(--tooltip-padding);
   width: 24rem;
   height: auto;
@@ -87,13 +91,14 @@
 }
 
 .tooltip-popup-number {
-  flex-basis: 30%;
+  flex-basis: 25%;
   font-size: 1.1rem;
   text-align: right;
 }
 
 .tooltip-popup-title {
-  flex-basis: 70%;
+  flex-basis: 75%;
+  white-space: nowrap;
   font-size: 1.1rem;
 }
 
@@ -289,4 +294,28 @@ dd {
 
 .death-vulnerability-table-red-cross {
   color: #cc2200;
+}
+
+.spell-loadout-wrapper {
+  --spell-loadout-gap: 12px;
+  display: grid;
+  grid-template-rows: repeat(2, 48px);
+  grid-template-columns: repeat(12, 48px);
+  column-gap: calc(var(--spell-loadout-gap) / 2);
+  row-gap: calc(var(--spell-loadout-gap) * 3);
+  align-self: center;
+  margin: auto;
+  border: solid 1px #fff;
+  width: calc(48px * 12 + var(--spell-loadout-gap) * 7.5);
+  height: calc(48px * 2 + var(--spell-loadout-gap) * 7);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.spell-loadout-spell {
+  margin: var(--spell-loadout-gap);
+  background: var(--MENU-SECTION-ACTIVE-CATEGORY-BG-color);
+  width: 100%;
+  height: 100%;
+  outline: solid 1px #fff;
 }

@@ -2,7 +2,7 @@
 {{- $image := (printf "/images/tooltips/%s.png" .id) | resources.Get }}
 {{- $image := $image.Resize "48x webp" }}
 <div id="{{ .id }}-tooltip" class="tooltip-popup-wrapper" hidden>
-  <aside class="tooltip-popup">
+  <aside class="tooltip-popup ffxiv-ui-background">
     <header class="tooltip-popup-header">
       <p class="tooltip-popup-image">
         <img src="{{ $image.RelPermalink }}" loading="lazy" />
