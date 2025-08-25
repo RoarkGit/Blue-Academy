@@ -8,10 +8,5 @@
 {{- end -}}
 {{- $image = $image.Resize "16x webp" -}}
 
-
-<span class="tooltip" data-tooltip-id="{{ .id }}">
-  <span class="tooltip-image">
-    <img src="{{ $image.RelPermalink }}?featherlight=false" />
-  </span>
-  <span class="tooltip-link">{{ $tooltip.name }}</span>
-</span>
+<!-- prettier-ignore -->
+<span class="tooltip" data-tooltip-id="{{ .id }}"><span class="tooltip-image"><img src="{{ $image.RelPermalink }}?featherlight=false" /></span><span class="tooltip-link">{{ $tooltip.name }}</span></span>
