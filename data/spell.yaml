@@ -6,6 +6,9 @@
   spellAspect: Water
   rank: 1
   range: 25
+  cast: 2
+  recast: 2.5
+  mp: 100
   location: |
     Learned First
   description: |
@@ -18,6 +21,9 @@
   spellAspect: Fire
   rank: 4
   range: 8
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Gobmachine G-VI / Brayflox's Longstop (Hard)
 
@@ -34,6 +40,9 @@
   spellAspect: Water
   rank: 4
   radius: 8
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Ultros / The Dragon’s Neck
 
@@ -43,11 +52,11 @@
   description: |
     Deals water damage to all enemies in a cone before you with a potency of 140 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} Inflicts {{< yellow "Dropsy" >}}, dealing water damage over time
+    {{< green "Additional Effect: " >}}Inflicts {{< yellow "Dropsy" >}}, dealing water damage over time
     
-    {{< green "Potency:" >}} 20
+    {{< green "Potency: " >}}20
     
-    {{< green "Duration:" >}} 12s
+    {{< green "Duration: " >}}12s
 - id: flying-frenzy
   name: Flying Frenzy
   number: 4
@@ -57,6 +66,9 @@
   rank: 3
   range: 20
   radius: 6
+  cast: 1
+  recast: 2.5
+  mp: 200
   location: |
     Zu / Pharos Sirius
   description: |
@@ -72,12 +84,15 @@
   rank: 2
   range: 20
   radius: 20
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Magitek Vanguard H-2 / Northern Thanalan (16, 15)
   description: |
     Deals physical damage to all enemies in a straight line before you with a potency of 200 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} Potency is increased to 600 when target is afflicted with {{< yellow "Petrification" >}}. The {{< yellow "Petrification" >}} effect is also removed.
+    {{< green "Additional Effect: " >}}Potency is increased to 600 when target is afflicted with {{< yellow "Petrification" >}}. The {{< yellow "Petrification" >}} effect is also removed.
 - id: high-voltage
   name: High Voltage
   number: 6
@@ -86,6 +101,9 @@
   spellAspect: Lightning
   rank: 4
   radius: 12
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     ADS / The Binding Coil of Bahamut T1
 
@@ -93,13 +111,13 @@
   description: |
     Deals lightning damage to all nearby enemies with a potency of 180 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} {{< yellow "Paralysis" >}}
+    {{< green "Additional Effect: " >}}{{< yellow "Paralysis" >}}
     
-    {{< green "Duration:" >}} 15s
+    {{< green "Duration: " >}}15s
     
-    {{< green "Additional Effect:" >}} Potency increased to 220 when target is afflicted with {{< yellow "Dropsy" >}}
+    {{< green "Additional Effect: " >}}Potency increased to 220 when target is afflicted with {{< yellow "Dropsy" >}}
     
-    {{< green "Additional Effect:" >}} Duration of {{< yellow "Paralysis" >}} is increased to 30 seconds when target is afflicted with {{< yellow "Dropsy" >}}
+    {{< green "Additional Effect: " >}}Duration of {{< yellow "Paralysis" >}} is increased to 30 seconds when target is afflicted with {{< yellow "Dropsy" >}}
 - id: loom
   name: Loom
   number: 7
@@ -108,6 +126,9 @@
   spellAspect: Unaspected
   rank: 1
   range: 15
+  cast: 1
+  recast: 2.5
+  mp: 200
   location: |
     Baalzephon / The Lost City of Amdapor
 
@@ -119,10 +140,7 @@
     
     Cannot be executed while bound.
   notes: |
-    Loom is easiest to learn from Flame Sergeant Dalvag.
-    
-    Using Loom is not faster than just running normally.
-
+    Loom is easiest to learn from Flame Sergeant Dalvag. Using Loom is not faster than just running normally.
 - id: final-sting
   name: Final Sting
   number: 8
@@ -131,14 +149,16 @@
   spellAspect: Piercing
   rank: 2
   range: 3
+  cast: 2
+  recast: 2.5
   location: |
     Killer Wespe / Middle La Noscea (15, 15)
   description: |
     Deals physical damage with a potency of 2,000 while incapacitating self.
     
-    {{< green "Additional Effect:" >}} Inflicts {{< yellow "Brush with Death" >}} on self
+    {{< green "Additional Effect: " >}}Inflicts {{< yellow "Brush with Death" >}} on self
     
-    {{< green "Duration:" >}} 600s
+    {{< green "Duration: " >}}600s
     
     Effect will not be removed upon revival or further incapacitation.
     
@@ -151,16 +171,19 @@
   spellAspect: Unaspected
   rank: 2
   range: 25
+  cast: 2
+  recast: 2.5
+  mp: 400
   location: |
     Siren / Pharos Sirius
   description: |
     Deals unaspected damage with a potency of 50.
     
-    {{< green "Additional Effect:" >}} Unaspected damage over time
+    {{< green "Additional Effect: " >}}Unaspected damage over time
     
-    {{< green "Potency:" >}} 50
+    {{< green "Potency: " >}}50
     
-    {{< green "Duration:" >}} 30s
+    {{< green "Duration: " >}}30s
 - id: glower
   name: Glower
   number: 10
@@ -170,16 +193,19 @@
   rank: 4
   range: 15
   radius: 15
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Coincounter / The Aurum Vale
   description: |
     Deals lightning damage to all enemies in a straight line before you with a potency of 220 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} {{< yellow "Paralysis" >}}
+    {{< green "Additional Effect: " >}}{{< yellow "Paralysis" >}}
     
-    {{< green "Duration:" >}} 6s
-  notes: Guaranteed learn even when running unsynced.
-
+    {{< green "Duration: " >}}6s
+  notes: |
+    Guaranteed learn even when running unsynced.
 - id: plaincracker
   name: Plaincracker
   number: 11
@@ -188,6 +214,9 @@
   spellAspect: Earth
   rank: 2
   radius: 6
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Basalt Golem / Outer La Noscea (14, 16)
 
@@ -203,16 +232,19 @@
   spellType: Magic
   spellAspect: Unaspected
   rank: 2
+  cast: 1
+  recast: 2.5
+  mp: 200
   location: |
     Wild Boar / East Shroud (18, 24)
   description: |
     Increases the potency of the next spell cast by 50%.
     
-    {{< green "Duration:" >}} 30s
+    {{< green "Duration: " >}}30s
     
     Effect cannot be stacked with {{< yellow "Harmonized" >}}.
-  notes: Buffs *spells*, not *abilities*. Spells are *usually* tied to the GCD, while abilities are not (usually Primal spells).
-
+  notes: |
+    Buffs *spells*, not *abilities*. Spells are *usually* tied to the GCD, while abilities are not (usually Primal spells).
 - id: white-wind
   name: White Wind
   number: 13
@@ -221,6 +253,9 @@
   spellAspect: Unaspected
   rank: 3
   radius: 15
+  cast: 2
+  recast: 2.5
+  mp: 1500
   location: |
     Learn 10 Spells - Whalaqee Totem
   description: |
@@ -233,12 +268,15 @@
   spellAspect: Unaspected
   rank: 2
   radius: 6
+  cast: 2
+  recast: 2.5
+  mp: 400
   location: |
     Manor Sentry (*before* the first boss) / Haukke Manor
   description: |
     Petrifies all enemies in a cone before you.
     
-    {{< green "Duration:" >}} 20s
+    {{< green "Duration: " >}}20s
     
     Chance of successful attack is low.
     
@@ -251,12 +289,15 @@
   spellAspect: Slashing
   rank: 4
   range: 3
+  cast: 1
+  recast: 2.5
+  mp: 200
   location: |
     Tonberry King / The Wanderer’s Palace
   description: |
     Deals physical damage with a potency of 220.
     
-    {{< green "Additional Effect:" >}} Potency is increased to 450 when target is stunned
+    {{< green "Additional Effect: " >}}Potency is increased to 450 when target is stunned
 - id: ice-spikes
   name: Ice Spikes
   number: 16
@@ -264,20 +305,23 @@
   spellType: Magic
   spellAspect: Ice
   rank: 1
+  cast: 2
+  recast: 2.5
+  mp: 500
   location: |
     Trickster Imp / Central Shroud (27, 24)
   description: |
     Counters enemies with ice damage every time you suffer physical damage.
     
-    {{< green "Counter Potency:" >}} 40
+    {{< green "Counter Potency: " >}}40
     
-    {{< green "Duration:" >}} 15s
+    {{< green "Duration: " >}}15s
     
     Effect cannot be stacked with {{< yellow "Veil of the Whorl" >}} or {{< yellow "Schiltron" >}}.
     
-    {{< green "Additional Effect:" >}} 50% chance that when you are struck, the striker will be afflicted with {{< yellow "Slow" >}} +20%
+    {{< green "Additional Effect: " >}}50% chance that when you are struck, the striker will be afflicted with {{< yellow "Slow" >}} +20%
     
-    {{< green "Duration:" >}} 15s
+    {{< green "Duration: " >}}15s
 - id: blood-drain
   name: Blood Drain
   number: 17
@@ -286,12 +330,15 @@
   spellAspect: Unaspected
   rank: 1
   range: 25
+  cast: 2
+  recast: 2.5
+  mp: 100
   location: |
     Cave Bat / Lower La Noscea (27, 16)
   description: |
     Deals unaspected damage with a potency of 50.
     
-    {{< green "Additional Effect:" >}} Restores MP
+    {{< green "Additional Effect: " >}}Restores MP
 - id: acorn-bomb
   name: Acorn Bomb
   number: 18
@@ -301,16 +348,19 @@
   rank: 1
   range: 25
   radius: 6
+  cast: 2
+  recast: 2.5
+  mp: 300
   location: |
     Treant Sapling / North Shroud (24, 28)
   description: |
     Puts target and all enemies nearby it to sleep.
     
-    {{< green "Duration:" >}} 30s
+    {{< green "Duration: " >}}30s
     
     Cancels auto-attack upon execution.
-  notes: Largely irrelevant due to the Sleep role action.
-
+  notes: |
+    Largely irrelevant due to the Sleep role action.
 - id: bomb-toss
   name: Bomb Toss
   number: 19
@@ -320,6 +370,9 @@
   rank: 2
   range: 25
   radius: 6
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Goblin Fisher / Middle La Noscea (23, 21)
 
@@ -327,9 +380,9 @@
   description: |
     Deals fire damage at a designated location with a potency of 200 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} {{< yellow "Stun" >}}
+    {{< green "Additional Effect: " >}}{{< yellow "Stun" >}}
     
-    {{< green "Duration:" >}} 3s
+    {{< green "Duration: " >}}3s
 - id: off-guard
   name: Off-guard
   number: 20
@@ -338,16 +391,19 @@
   spellAspect: Unaspected
   rank: 2
   range: 25
+  cast: 1
+  recast: 60
+  mp: 100
   location: |
     Learn 5 Spells - Whalaqee Totem
   description: |
     Increases target's damage taken by 5%.
     
-    {{< green "Duration:" >}} 15s
+    {{< green "Duration: " >}}15s
     
     Recast timer cannot be affected by other spells. However, this action shares a recast timer with {{< orange "Peculiar Light" >}}.
-  notes: Stacks with Peculiar Light.
-
+  notes: |
+    Stacks with Peculiar Light.
 - id: self-destruct
   name: Self-destruct
   number: 21
@@ -356,16 +412,18 @@
   spellAspect: Fire
   rank: 1
   radius: 20
+  cast: 2
+  recast: 2.5
   location: |
     Glide Bomb / Western Thanalan (27, 16)
   description: |
     Deals fire damage with a potency of 1,500 to all nearby enemies while incapacitating self.
     
-    {{< green "Additional Effect:" >}} Potency is increased to 1,800 when you are under the effect of {{< yellow "Toad Oil" >}}
+    {{< green "Additional Effect: " >}}Potency is increased to 1,800 when you are under the effect of {{< yellow "Toad Oil" >}}
     
-    {{< green "Additional Effect:" >}} Inflicts {{< yellow "Brush with Death" >}} on self
+    {{< green "Additional Effect: " >}}Inflicts {{< yellow "Brush with Death" >}} on self
     
-    {{< green "Duration:" >}} 600s
+    {{< green "Duration: " >}}600s
     
     Effect will not be removed upon revival or further incapacitation.
     
@@ -378,14 +436,16 @@
   spellAspect: Unaspected
   rank: 2
   range: 25
+  cast: 2
+  recast: 2.5
   location: |
     Learn 20 Spells - Whalaqee Totem
   description: |
     Restores all HP and MP of a single party member while incapacitating self.
     
-    {{< green "Additional Effect:" >}} Inflicts {{< yellow "Brush with Death" >}} on self
+    {{< green "Additional Effect: " >}}Inflicts {{< yellow "Brush with Death" >}} on self
     
-    {{< green "Duration:" >}} 600s
+    {{< green "Duration: " >}}600s
     
     Effect will not be removed upon revival or further incapacitation.
     
@@ -398,12 +458,15 @@
   spellAspect: Unaspected
   rank: 3
   range: 4
+  cast: 2
+  recast: 2.5
+  mp: 300
   location: |
     Qiqirn Shellsweeper / Central Thanalan (16, 19)
   description: |
     Stuns all enemies in a cone before you.
     
-    {{< green "Duration:" >}} 6s
+    {{< green "Duration: " >}}6s
 - id: flying-sardine
   name: Flying Sardine
   number: 24
@@ -412,12 +475,15 @@
   spellAspect: Piercing
   rank: 1
   range: 25
+  cast: 0
+  recast: 2.5
+  mp: 200
   location: |
     Apkallu / Eastern La Noscea (27, 35)
   description: |
     Deals physical damage with a potency of 10.
     
-    {{< green "Additional Effect:" >}} Interrupts target
+    {{< green "Additional Effect: " >}}Interrupts target
 - id: snort
   name: Snort
   number: 25
@@ -426,14 +492,17 @@
   spellAspect: Wind
   rank: 4
   radius: 6
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Typhon / The Dragon’s Neck
 
     Typhon / The Masked Carnivale #20 & #27
   description: |
     Deals a 20-yalm knockback to all enemies in a cone before you.
-  notes: Only the ability actually called *Snort* will teach the spell; it is cast quite late into The Dragon's Neck.
-
+  notes: |
+    Only the ability actually called *Snort* will teach the spell; it is cast quite late into The Dragon's Neck.
 - id: 4-tonze-weight
   name: 4-tonze Weight
   number: 26
@@ -443,14 +512,17 @@
   rank: 4
   range: 25
   radius: 4
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Ultros / The Dragon’s Neck
   description: |
     Drops a 4-tonze weight dealing physical damage at a designated location with a potency of 200 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} {{< yellow "Heavy" >}} +40%
+    {{< green "Additional Effect: " >}}{{< yellow "Heavy" >}} +40%
     
-    {{< green "Duration:" >}} 30s
+    {{< green "Duration: " >}}30s
 - id: the-look
   name: The Look
   number: 27
@@ -459,6 +531,9 @@
   spellAspect: Unaspected
   rank: 2
   radius: 6
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Anantaboga / Amdapor Keep
 
@@ -466,9 +541,9 @@
   description: |
     Deals unaspected damage to all enemies in a cone before you with a potency of 220 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} Increased enmity
-  notes: Largely irrelevant due to Mighty Guard threat modifier.
-
+    {{< green "Additional Effect: " >}}Increased enmity
+  notes: |
+    Largely irrelevant due to Mighty Guard threat modifier.
 - id: bad-breath
   name: Bad Breath
   number: 28
@@ -477,6 +552,9 @@
   spellAspect: Unaspected
   rank: 3
   radius: 8
+  cast: 2
+  recast: 2.5
+  mp: 500
   location: |
     Stroper / Central Shroud (12, 23)
 
@@ -484,15 +562,15 @@
   description: |
     Blow noxious breath on all enemies in a cone before you, inflicting {{< yellow "Slow" >}} +20%, {{< yellow "Heavy" >}} +40%, {{< yellow "Blind" >}}, and {{< yellow "Paralysis" >}}.
     
-    {{< green "Additional Effect:" >}} {{< yellow "Poison" >}}
+    {{< green "Additional Effect: " >}}{{< yellow "Poison" >}}
     
-    {{< green "Potency:" >}} 20
+    {{< green "Potency: " >}}20
     
-    {{< green "Additional Effect:" >}} Damage dealt reduced 10%
+    {{< green "Additional Effect: " >}}Damage dealt reduced 10%
     
-    {{< green "Duration:" >}} 15s
+    {{< green "Duration: " >}}15s
     
-    {{< green "Additional Effect:" >}} Interrupts target
+    {{< green "Additional Effect: " >}}Interrupts target
 - id: diamondback
   name: Diamondback
   number: 29
@@ -500,6 +578,9 @@
   spellType: Magic
   spellAspect: Unaspected
   rank: 4
+  cast: 2
+  recast: 2.5
+  mp: 3000
   location: |
     Cuca Fera (vulnerable to Death effects) / The Stone Vigil (Hard)
   description: |
@@ -507,7 +588,7 @@
     
     Unable to move or take action for the duration of this effect.
     
-    {{< green "Duration:" >}} 10s
+    {{< green "Duration: " >}}10s
     
     If used when {{< yellow "Waxing Nocturne" >}} is active, its effect will transition immediately to {{< yellow "Waning Nocturne" >}}.
     
@@ -519,6 +600,9 @@
   spellType: Magic
   spellAspect: Unaspected
   rank: 4
+  cast: 2
+  recast: 2.5
+  mp: 700
   location: |
     Learn 10 Spells - Whalaqee Totem
   description: |
@@ -533,6 +617,9 @@
   spellAspect: Blunt
   rank: 4
   range: 25
+  cast: 2
+  recast: 2.5
+  mp: 300
   location: |
     Toxic Toad / Central Thanalan (26, 19)
 
@@ -540,7 +627,7 @@
   description: |
     Draws target towards caster.
     
-    {{< green "Additional Effect:" >}} {{< yellow "Stun" >}}
+    {{< green "Additional Effect: " >}}{{< yellow "Stun" >}}
     
     {{< green "Duration:" >}} 4s
     
@@ -552,14 +639,17 @@
   spellType: Magic
   spellAspect: Unaspected
   rank: 3
+  cast: 2
+  recast: 2.5
+  mp: 500
   location: |
     Giggling Gigantoad / Western Thanalan (15, 7)
   description: |
     Increases evasion by 20%.
     
-    {{< green "Duration:" >}} 180s
-  notes: Largely irrelevant due to most bosses having 100% accuracy.
-
+    {{< green "Duration: " >}}180s
+  notes: |
+    Largely irrelevant due to most bosses having 100% accuracy.
 - id: the-rams-voice
   name: The Ram's Voice
   number: 33
@@ -568,6 +658,9 @@
   spellAspect: Ice
   rank: 2
   radius: 6
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Chimera / Cutter's Cry
 
@@ -577,9 +670,9 @@
   description: |
     Deals ice damage to all nearby enemies with a potency of 220 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} {{< yellow "Deep Freeze" >}}
+    {{< green "Additional Effect: " >}}{{< yellow "Deep Freeze" >}}
     
-    {{< green "Duration:" >}} 12s
+    {{< green "Duration: " >}}12s
 - id: the-dragons-voice
   name: The Dragon's Voice
   number: 34
@@ -588,6 +681,9 @@
   spellAspect: Lightning
   rank: 2
   radius: 20
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Chimera / Cutter's Cry
 
@@ -599,11 +695,11 @@
     
     Enemies within an 8-yalm radius will be unaffected.
     
-    {{< green "Additional Effect:" >}} {{< yellow "Paralysis" >}}
+    {{< green "Additional Effect: " >}}{{< yellow "Paralysis" >}}
     
-    {{< green "Duration:" >}} 9s
+    {{< green "Duration: " >}}9s
     
-    {{< green "Additional Effect:" >}} Potency is increased to 400 against most enemies afflicted with {{< yellow "Deep Freeze" >}}. The {{< yellow "Deep Freeze" >}} effect is also removed.
+    {{< green "Additional Effect: " >}}Potency is increased to 400 against most enemies afflicted with {{< yellow "Deep Freeze" >}}. The {{< yellow "Deep Freeze" >}} effect is also removed.
 - id: missile
   name: Missile
   number: 35
@@ -612,6 +708,9 @@
   spellAspect: Unaspected
   rank: 4
   range: 25
+  cast: 2
+  recast: 2.5
+  mp: 300
   location: |
     Enkidu / Battle in the Big Keep
 
@@ -620,8 +719,8 @@
     Deals damage equal to 50% of target's current HP.
     
     Chance of successful attack is low. Has no effect on enemies whose level is higher than your own.
-  notes: Has approximately 67% accuracy.
-
+  notes: |
+    Has approximately 67% accuracy.
 - id: 1000-needles
   name: 1000 Needles
   number: 36
@@ -630,12 +729,15 @@
   spellAspect: Piercing
   rank: 4
   radius: 4
+  cast: 6
+  recast: 2.5
+  mp: 300
   location: |
     Sabotender Bailaor / Southern Thanalan (16, 15)
   description: |
     Deals a fixed 1,000 points of physical damage which is shared by all enemies around you.
-  notes: Always deals exactly 1,000 damage unless the enemy is invulnerable.
-
+  notes: |
+    Always deals exactly 1,000 damage unless the enemy is invulnerable.
 - id: ink-jet
   name: Ink Jet
   number: 37
@@ -644,14 +746,17 @@
   spellAspect: Unaspected
   rank: 3
   radius: 6
+  cast: 2
+  recast: 2.5
+  mp: 400
   location: |
     Kraken / Sastasha (Hard)
   description: |
     Deals unaspected damage to all enemies in a cone before you with a potency of 200 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} {{< yellow "Blind" >}}
+    {{< green "Additional Effect: " >}}{{< yellow "Blind" >}}
     
-    {{< green "Duration:" >}} 30s
+    {{< green "Duration: " >}}30s
 - id: fire-angon
   name: Fire Angon
   number: 38
@@ -661,6 +766,9 @@
   rank: 3
   range: 25
   radius: 4
+  cast: 1
+  recast: 2.5
+  mp: 200
   location: |
     Fruminoius Koheel Ja / The Wanderer's Palace (Hard)
   description: |
@@ -672,18 +780,21 @@
   spellType: Magic
   spellAspect: Unaspected
   rank: 1
+  cast: 2
+  recast: 2.5
+  mp: 500
   location: |
     Complete 10 stages in the Masked Carnivale.
   description: |
     Grants the effect of {{< yellow "Waxing Nocturne" >}}, increasing damage dealt by 50% and movement speed by 30%.
     
-    {{< green "Duration:" >}} 15s
+    {{< green "Duration: " >}}15s
     
     When effect ends, the player is afflicted with {{< yellow "Waning Nocturne" >}}, preventing the use of auto-attack, weaponskills, spells, or abilities.
     
-    {{< green "Duration:" >}} 15s
-  notes: Yes, it is worth using even with the Waning Nocturne debuff. The damage we gain during Moon Flute outweighs the handful of Sonic Booms we would miss during Waning Nocturne.
-
+    {{< green "Duration: " >}}15s
+  notes: |
+    Yes, it is worth using even with the Waning Nocturne debuff. The damage we gain during Moon Flute outweighs the handful of Sonic Booms we would miss during Waning Nocturne.
 - id: tail-screw
   name: Tail Screw
   number: 40
@@ -692,6 +803,9 @@
   spellAspect: Unaspected
   rank: 4
   range: 25
+  cast: 2
+  recast: 2.5
+  mp: 400
   location: |
     Karlabos / Sastasha (Hard)
 
@@ -702,8 +816,8 @@
     Reduces target's HP to a single digit.
     
     Chance of successful attack is low. Has no effect on enemies whose level is higher than your own.
-  notes: Has approximately 10% accuracy.
-
+  notes: |
+    Has approximately 10% accuracy.
 - id: mind-blast
   name: Mind Blast
   number: 41
@@ -712,16 +826,19 @@
   spellAspect: Unaspected
   rank: 1
   radius: 6
+  cast: 1
+  recast: 2.5
+  mp: 200
   location: |
     Galvanth the Dominator / The Tam-tara Deepcroft
   description: |
     Deals unaspected damage to all nearby enemies with a potency of 200 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} {{< yellow "Paralysis" >}}
+    {{< green "Additional Effect: " >}}{{< yellow "Paralysis" >}}
     
-    {{< green "Duration:" >}} 30s
-  notes: Guaranteed learn even when running unsynced.
-
+    {{< green "Duration: " >}}30s
+  notes: |
+    Guaranteed learn even when running unsynced.
 - id: doom
   name: Doom
   number: 42
@@ -730,18 +847,21 @@
   spellAspect: Unaspected
   rank: 4
   range: 25
+  cast: 2
+  recast: 2.5
+  mp: 400
   location: |
     Complete 20 stages in the Masked Carnivale.
   description: |
     Inflicts {{< yellow "Doom" >}} on target.
     
-    {{< green "Duration:" >}} 15s
+    {{< green "Duration: " >}}15s
     
     When effect expires, the target will be KO'd.
     
     Chance of successful attack is low. Has no effect on enemies whose level is higher than your own.
-  notes: Has approximately 33% accuracy.
-
+  notes: |
+    Has approximately 33% accuracy.
 - id: peculiar-light
   name: Peculiar Light
   number: 43
@@ -750,16 +870,19 @@
   spellAspect: Unaspected
   rank: 2
   radius: 6
+  cast: 1
+  recast: 60
+  mp: 500
   location: |
     Lentic Mudpuppy / Mor Dhona (13, 10)
   description: |
     Increases magic damage taken by all nearby enemies by 5%.
     
-    {{< green "Duration:" >}} 15s
+    {{< green "Duration: " >}}15s
     
     Recast timer cannot be affected by other spells. However, this action shares a recast timer with {{< orange "Off-guard" >}}.
-  notes: Stacks with Off-guard.
-
+  notes: |
+    Stacks with Off-guard.
 - id: feather-rain
   name: Feather Rain
   number: 44
@@ -769,16 +892,19 @@
   rank: 5
   range: 30
   radius: 5
+  cast: 0
+  recast: 30
+  mp: 300
   location: |
     Garuda / The Howling Eye (Extreme)
   description: |
     Deals wind damage with a potency of 220 to all enemies at a designated location.
     
-    {{< green "Additional Effect:" >}} Wind damage over time
+    {{< green "Additional Effect: " >}}Wind damage over time
     
-    {{< green "Potency:" >}} 40
+    {{< green "Potency: " >}}40
     
-    {{< green "Duration:" >}} 6s
+    {{< green "Duration: " >}}6s
     
     Shares a recast timer with {{< orange "Eruption" >}}.
 - id: eruption
@@ -790,14 +916,17 @@
   rank: 5
   range: 25
   radius: 5
+  cast: 0
+  recast: 30
+  mp: 300
   location: |
     Ifrit / The Bowl of Embers
   description: |
     Deals fire damage with a potency of 300 to all enemies at a designated location.
     
     Shares a recast timer with {{< orange "Feather Rain" >}}.
-  notes: Can trivially be learned solo synced on normal difficulty with 1000 Needles.
-
+  notes: |
+    Can trivially be learned solo synced on normal difficulty with 1000 Needles.
 - id: mountain-buster
   name: Mountain Buster
   number: 46
@@ -806,6 +935,9 @@
   spellAspect: Blunt/Earth
   rank: 5
   radius: 6
+  cast: 0
+  recast: 60
+  mp: 400
   location: |
     Titan / The Navel (Hard)
   description: |
@@ -821,6 +953,9 @@
   rank: 5
   range: 25
   radius: 3
+  cast: 0
+  recast: 60
+  mp: 400
   location: |
     Ramuh / The Striking Tree (Hard)
   description: |
@@ -835,6 +970,9 @@
   spellAspect: Ice
   rank: 5
   radius: 12
+  cast: 0
+  recast: 90
+  mp: 500
   location: |
     Shiva / Akh Afah Amphitheatre (Extreme)
   description: |
@@ -848,20 +986,23 @@
   spellType: Magic
   spellAspect: Water
   rank: 5
+  cast: 0
+  recast: 90
+  mp: 500
   location: |
     Leviathan / The Whorleater (Hard)
   description: |
     Counters enemies with water damage every time you suffer damage.
     
-    {{< green "Counter Potency:" >}} 50
+    {{< green "Counter Potency: " >}}50
     
-    {{< green "Duration:" >}} 30s
+    {{< green "Duration: " >}}30s
     
     Effect cannot be stacked with {{< yellow "Ice Spikes" >}} or {{< yellow "Schiltron" >}}.
     
     Shares a recast timer with {{< orange "Glass Dance" >}}.
-  notes: This is inferior to Glass Dance.
-
+  notes: |
+    This is inferior to Glass Dance.
 - id: alpine-draft
   name: Alpine Draft
   number: 50
@@ -871,6 +1012,9 @@
   rank: 2
   range: 20
   radius: 20
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Griffin / Sea of Clouds (36, 9)
 
@@ -885,6 +1029,9 @@
   spellAspect: Water
   rank: 3
   radius: 15
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Living Liquid / Alexander - The Arm of the Father
 
@@ -892,9 +1039,9 @@
   description: |
     Deals water damage to all enemies in a cone before you with a potency of 220 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} 15-yalm knockback
-  notes: Can be learned from the tornadoes during Act 2 of Red, Fraught, and Blue (Stage 29).
-
+    {{< green "Additional Effect: " >}}15-yalm knockback
+  notes: |
+    Can be learned from the tornadoes during Act 2 of Red, Fraught, and Blue (Stage 29).
 - id: northerlies
   name: Northerlies
   number: 52
@@ -903,6 +1050,9 @@
   spellAspect: Ice
   rank: 4
   radius: 6
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Lone Yeti / Coerthas Western Highlands (22, 27)
 
@@ -910,9 +1060,9 @@
   description: |
     Deals ice damage to all enemies in a cone before you with a potency of 220 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} Enemies affected by {{< yellow "Dropsy" >}} are frozen. The {{< yellow "Dropsy" >}} effect is also removed.
+    {{< green "Additional Effect: " >}}Enemies affected by {{< yellow "Dropsy" >}} are frozen. The {{< yellow "Dropsy" >}} effect is also removed.
     
-    {{< green "Duration:" >}} 20s
+    {{< green "Duration: " >}}20s
 - id: electrogenesis
   name: Electrogenesis
   number: 53
@@ -922,6 +1072,9 @@
   rank: 2
   range: 25
   radius: 6
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Conodont / Sea of Clouds (26, 33)
 
@@ -936,6 +1089,9 @@
   spellAspect: Slashing
   rank: 2
   radius: 6
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Faust & Sturm Doll / Alexander - The Fist of the Father
 
@@ -950,6 +1106,9 @@
   spellAspect: Piercing
   rank: 4
   range: 25
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Ash / Haukke Manor (Hard)
 
@@ -957,9 +1116,9 @@
   description: |
     Deals physical damage with a potency of 220.
     
-    {{< green "Additional Effect:" >}} {{< yellow "Paralysis" >}}
+    {{< green "Additional Effect: " >}}{{< yellow "Paralysis" >}}
     
-    {{< green "Duration:" >}} 30s
+    {{< green "Duration: " >}}30s
 - id: chirp
   name: Chirp
   number: 56
@@ -968,16 +1127,19 @@
   spellAspect: Unaspected
   rank: 1
   radius: 3
+  cast: 2
+  recast: 2.5
+  mp: 400
   location: |
     Paissa / Sea of Clouds (24, 33)
   description: |
     Puts all nearby enemies to sleep.
     
-    {{< green "Duration:" >}} 40s
+    {{< green "Duration: " >}}40s
     
     Cancels auto-attack upon execution.
-  notes: Largely irrelevant due to the Sleep role action.
-
+  notes: |
+    Largely irrelevant due to the Sleep role action.
 - id: eerie-soundwave
   name: Eerie Soundwave
   number: 57
@@ -986,6 +1148,9 @@
   spellAspect: Unaspected
   rank: 2
   radius: 6
+  cast: 2
+  recast: 2.5
+  mp: 500
   location: |
     Enkidu / Battle in the Big Keep
 
@@ -1002,12 +1167,15 @@
   spellAspect: Unaspected
   rank: 3
   range: 30
+  cast: 1.5
+  recast: 2.5
+  mp: 200
   location: |
     Furryfoot Kupli Kipp / Thornmarch (Hard)
   description: |
     Restores target's HP.
     
-    {{< green "Cure Potency:" >}} 100
+    {{< green "Cure Potency: " >}}100
     
     Cure potency is increased to 500 when you are under the effect of {{< yellow "Aetheric Mimicry: Healer" >}}.
 - id: gobskin
@@ -1018,12 +1186,15 @@
   spellAspect: Unaspected
   rank: 4
   radius: 20
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Alexandrian Hider / Alexander - The Breath of the Creator
   description: |
     Creates a barrier around self and all nearby party members that absorbs damage equivalent to a heal of 100 potency.
     
-    {{< green "Duration:" >}} 30s
+    {{< green "Duration: " >}}30s
     
     Barrier strength is increased to absorb damage equivalent to a heal of 250 potency when you are under the effect of {{< yellow "Aetheric Mimicry: Healer" >}}.
     
@@ -1037,6 +1208,9 @@
   rank: 2
   range: 25
   radius: 8
+  cast: 1
+  recast: 90
+  mp: 400
   location: |
     Apanda / The Great Gubal Library (Hard)
 
@@ -1044,11 +1218,11 @@
   description: |
     Deals unaspected damage to target and all enemies nearby it with a potency of 250 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} Lowers intelligence and mind attributes by 10%
+    {{< green "Additional Effect: " >}}Lowers intelligence and mind attributes by 10%
     
-    {{< green "Duration:" >}} 10s
+    {{< green "Duration: " >}}10s
     
-    {{< green "Additional Effect:" >}} Restores 10% of maximum MP
+    {{< green "Additional Effect: " >}}Restores 10% of maximum MP
     
     Shares a recast timer with {{< orange "Candy Cane" >}}.
 - id: avail
@@ -1059,12 +1233,15 @@
   spellAspect: Unaspected
   rank: 1
   range: 10
+  cast: 1
+  recast: 120
+  mp: 1000
   location: |
     Queen Hawk / Saint Mocianne's Arboretum
   description: |
     Direct damage intended for you to another party member.
     
-    {{< green "Duration:" >}} 12s
+    {{< green "Duration: " >}}12s
     
     Can only be executed when member is within 10 yalms. Does not activate with certain attacks.
     
@@ -1077,12 +1254,15 @@
   spellAspect: Unaspected
   rank: 1
   radius: 4
+  cast: 1
+  recast: 2.5
+  mp: 200
   location: |
     Poroggo / The Dravanian Hinterlands (12, 35)
   description: |
     Provoke nearby enemies, placing yourself at the top of their enmity list.
-  notes: This is not a proper provoke; it has a very small range and only sets your enmity to 1 more than the current highest enmity.
-
+  notes: |
+    This is not a proper provoke; it has a very small range and only sets your enmity to 1 more than the current highest enmity.
 - id: sonic-boom
   name: Sonic Boom
   number: 63
@@ -1091,6 +1271,9 @@
   spellAspect: Wind
   rank: 4
   range: 25
+  cast: 1
+  recast: 2.5
+  mp: 200
   location: |
     Anzu / Sea of Clouds (21, 6)
 
@@ -1104,6 +1287,9 @@
   spellType: Magic
   spellAspect: Unaspected
   rank: 3
+  cast: 1
+  recast: 2.5
+  mp: 200
   location: |
     Dhalmel / Sea of Clouds (16, 30)
 
@@ -1113,11 +1299,11 @@
   description: |
     Increases the potency of the next physical damage spell cast by 80%.
     
-    {{< green "Duration:" >}} 30s
+    {{< green "Duration: " >}}30s
     
     Effect cannot be stacked with {{< yellow "Boost" >}}.
-  notes: Buffs *spells*, not *abilities*. Spells are *usually* tied to the GCD, while abilities are not (usually Primal spells).
-
+  notes: |
+    Buffs *spells*, not *abilities*. Spells are *usually* tied to the GCD, while abilities are not (usually Primal spells).
 - id: white-knights-tour
   name: White Knight's Tour
   number: 65
@@ -1127,14 +1313,17 @@
   rank: 2
   range: 20
   radius: 20
+  cast: 2
+  recast: 2.5
+  mp: 300
   location: |
     White Knight / The Vault
   description: |
     Deals unaspected damage to all enemies in a straight line before you with a potency of 200 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} Potency is increased to 400 when enemies are bound. The {{< yellow "Bind" >}} effect is also removed.
+    {{< green "Additional Effect: " >}}Potency is increased to 400 when enemies are bound. The {{< yellow "Bind" >}} effect is also removed.
     
-    {{< green "Additional Effect:" >}} {{< yellow "Slow" >}} +20%
+    {{< green "Additional Effect: " >}}{{< yellow "Slow" >}} +20%
     
     {{< green "Duration:" >}} 20s
 - id: black-knights-tour
@@ -1146,14 +1335,17 @@
   rank: 2
   range: 20
   radius: 20
+  cast: 2
+  recast: 2.5
+  mp: 300
   location: |
     Black Knight / The Vault
   description: |
     Deals unaspected damage to all enemies in a straight line before you with a potency of 200 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} Potency is increased to 400 when enemies are under the effect of {{< yellow "Slow" >}}. The {{< yellow "Slow" >}} effect is also removed.
+    {{< green "Additional Effect: " >}}Potency is increased to 400 when enemies are under the effect of {{< yellow "Slow" >}}. The {{< yellow "Slow" >}} effect is also removed.
     
-    {{< green "Additional Effect:" >}} {{< yellow "Bind" >}}
+    {{< green "Additional Effect: " >}}{{< yellow "Bind" >}}
     
     {{< green "Duration:" >}} 20s
 - id: level-5-death
@@ -1164,6 +1356,9 @@
   spellAspect: Unaspected
   rank: 4
   radius: 6
+  cast: 2
+  recast: 180
+  mp: 1500
   location: |
     Page 64 (No Tether) / The Great Gubal Library
   description: |
@@ -1174,8 +1369,8 @@
     Enemy level must be a multiple of 5. Has no effect on enemies whose level is higher than your own.
     
     Shares a recast timer with {{< orange "Ultravibration" >}}.
-  notes: Has approximately 90% accuracy.
-
+  notes: |
+    Has approximately 90% accuracy.
 - id: launcher
   name: Launcher
   number: 68
@@ -1184,6 +1379,9 @@
   spellAspect: Unaspected
   rank: 2
   radius: 15
+  cast: 2
+  recast: 2.5
+  mp: 2500
   location: |
     Armored Weapon / Baelsar's Wall
 
@@ -1192,8 +1390,8 @@
     Delivers an attack to all nearby enemies randomly dealing 50%, 30%, 20%, or 10% of their HP.
     
     Has no effect on enemies whose level is higher than your own.
-  notes: Has 100% accuracy, but MP cost makes it a bad choice.
-
+  notes: |
+    Has 100% accuracy, but MP cost makes it a bad choice.
 - id: perpetual-ray
   name: Perpetual Ray
   number: 69
@@ -1202,14 +1400,17 @@
   spellAspect: Unaspected
   rank: 4
   range: 25
+  cast: 3
+  recast: 2.5
+  mp: 300
   location: |
     The Manipulator / Alexander - The Burden of the Father
   description: |
     Deals unaspected damage with a potency of 220.
     
-    {{< green "Additional Effect:" >}} {{< yellow "Stun" >}}
+    {{< green "Additional Effect: " >}}{{< yellow "Stun" >}}
     
-    {{< green "Duration:" >}} 1s
+    {{< green "Duration: " >}}1s
     
     Ignores target's {{< yellow "Stun" >}} resistance.
 - id: cactguard
@@ -1220,16 +1421,19 @@
   spellAspect: Unaspected
   rank: 1
   range: 25
+  cast: 1
+  recast: 2.5
+  mp: 200
   location: |
     Sabotender Guardia / The Sunken Temple of Qarn (Hard)
   description: |
     Reduces target party member's damage taken by 5%.
     
-    {{< green "Duration:" >}} 6s
+    {{< green "Duration: " >}}6s
     
     Increases damage reduction to 15% when you are under the effect of {{< yellow "Aetheric Mimicry: Tank" >}}.
-  notes: Largely irrelevant since it can only be cast on other players.
-
+  notes: |
+    Largely irrelevant since it can only be cast on other players.
 - id: revenge-blast
   name: Revenge Blast
   number: 71
@@ -1238,6 +1442,9 @@
   spellAspect: Blunt
   rank: 2
   range: 3
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Learn 50 Spells - Whalaqee Totem
   description: |
@@ -1252,6 +1459,9 @@
   spellAspect: Unaspected
   rank: 4
   range: 25
+  cast: 10
+  recast: 300
+  mp: 1000
   location: |
     Complete 30 stages at the Masked Carnivale.
   description: |
@@ -1266,6 +1476,9 @@
   spellAspect: Unaspected
   rank: 2
   radius: 6
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Abalathian Wamoura (Heals Allies) / Sea of Clouds (9, 16)
 
@@ -1273,9 +1486,9 @@
   description: |
     Restores own HP and the HP of all nearby party members.
     
-    {{< green "Cure Potency:" >}} 50
+    {{< green "Cure Potency: " >}}50
     
-    {{< green "Additional Effect:" >}} Removes one detrimental effect from all nearby party members
+    {{< green "Additional Effect: " >}}Removes one detrimental effect from all nearby party members
     
     Cure potency is increased to 300 when you are under the effect of {{< yellow "Aetheric Mimicry: Healer" >}}.
 - id: reflux
@@ -1286,14 +1499,17 @@
   spellAspect: Lightning
   rank: 3
   range: 25
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Cloud Wyvern / The Churning Mists (23, 29)
   description: |
     Deals lightning damage with a potency of 220.
     
-    {{< green "Additional Effect:" >}} {{< yellow "Heavy" >}} +40%
+    {{< green "Additional Effect: " >}}{{< yellow "Heavy" >}} +40%
     
-    {{< green "Duration:" >}} 10s
+    {{< green "Duration: " >}}10s
     
     Ignores target's {{< yellow "Heavy" >}} resistance.
 - id: devour
@@ -1304,6 +1520,9 @@
   spellAspect: Unaspected
   rank: 1
   range: 3
+  cast: 1
+  recast: 60
+  mp: 300
   location: |
     Caduceus / The Binding Coil of Bahamut T1
 
@@ -1313,13 +1532,13 @@
   description: |
     Deals unaspected damage with a potency of 250.
     
-    {{< green "Additional Effect:" >}} Increases maximum HP by 20%
+    {{< green "Additional Effect: " >}}Increases maximum HP by 20%
     
-    {{< green "Duration:" >}} 15s
+    {{< green "Duration: " >}}15s
     
     Increases duration to 70s when you are under the effect of {{< yellow "Aetheric Mimicry: Tank" >}}.
     
-    {{< green "Additional Effect:" >}} Restores an amount of own HP equal to damage dealt
+    {{< green "Additional Effect: " >}}Restores an amount of own HP equal to damage dealt
     
     This action does not share a recast timer with any other actions.
 - id: condensed-libra
@@ -1330,6 +1549,9 @@
   spellAspect: Unaspected
   rank: 3
   range: 25
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Arena Scribe / Masked Carnivale #24
 
@@ -1337,17 +1559,17 @@
   description: |
     Afflicts target with {{< yellow "Physical Attenuation" >}}, {{< yellow "Astral Attenuation" >}}, or {{< yellow "Umbral Attenuation" >}}.
     
-    {{< green "Duration:" >}} 30s
+    {{< green "Duration: " >}}30s
     
-    {{< green "Physical Attenuation Effect:" >}} Increases damage taken from physical attacks by 5%
+    {{< green "Physical Attenuation Effect: " >}}Increases damage taken from physical attacks by 5%
     
-    {{< green "Astral Attenuation Effect:" >}} Increases damage taken from fire-, wind-, and lightning-aspected attacks by 5%
+    {{< green "Astral Attenuation Effect: " >}}Increases damage taken from fire-, wind-, and lightning-aspected attacks by 5%
     
-    {{< green "Umbral Attenuation Effect:" >}} Increases damage taken from water-, earth-, and ice-aspected attacks by 5%
+    {{< green "Umbral Attenuation Effect: " >}}Increases damage taken from water-, earth-, and ice-aspected attacks by 5%
     
     Only one of these statuses can be applied to a target at a time.
-  notes: Largely irrelevant with level 70 spells since we don't have the slots for three filler spells.
-
+  notes: |
+    Largely irrelevant with level 70 spells since we don't have the slots for three filler spells.
 - id: aetheric-mimicry
   name: Aetheric Mimicry
   number: 77
@@ -1356,6 +1578,9 @@
   spellAspect: Unaspected
   rank: 4
   range: 25
+  cast: 1
+  recast: 2.5
+  mp: 300
   location: |
     Ghrah Luminary Adds / Pharos Sirius (Hard)
   description: |
@@ -1368,8 +1593,8 @@
     If target is a healer, grants {{< yellow "Aetheric Mimicry: Healer" >}}, increasing healing magic potency by 20% and augmenting certain blue magic spells.
     
     Cannot be cast on self. Effect ends upon reuse.
-  notes: Can easily be learned solo. Unsynced is fine here, since we just keep killing adds on the first boss until it's learned.
-
+  notes: |
+    Can easily be learned solo. Unsynced is fine here, since we just keep killing adds on the first boss until it's learned.
 - id: surpanakha
   name: Surpanakha
   number: 78
@@ -1378,18 +1603,21 @@
   spellAspect: Earth
   rank: 5
   radius: 16
+  cast: 0
+  recast: 30
+  mp: 200
   location: |
     Ravana / Thok Ast Thok
   description: |
     Deals earth damage to all enemies in a cone before you with a potency of 200 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} Grants {{< yellow "Surpanakha's Fury" >}}, increasing potency of {{< orange "Surpanakha" >}} by 50%
+    {{< green "Additional Effect: " >}}Grants {{< yellow "Surpanakha's Fury" >}}, increasing potency of {{< orange "Surpanakha" >}} by 50%
     
-    {{< green "Duration:" >}} 3s
+    {{< green "Duration: " >}}3s
     
     Can be stacked up to 3 times.
     
-    {{< green "Maximum Charges:" >}} 4
+    {{< green "Maximum Charges: " >}}4
     
     Effect is canceled upon execution of any action other than {{< orange "Surpanakha" >}}.
 - id: quasar
@@ -1400,6 +1628,9 @@
   spellAspect: Unaspected
   rank: 5
   radius: 15
+  cast: 0
+  recast: 60
+  mp: 300
   location: |
     Sophia / Containment Bay P1T6
   description: |
@@ -1415,6 +1646,9 @@
   rank: 5
   range: 25
   radius: 6
+  cast: 0
+  recast: 60
+  mp: 300
   location: |
     Brute Justice / Alexander - The Burden of the Son
   description: |
@@ -1431,6 +1665,9 @@
   spellAspect: Piercing
   rank: 1
   range: 2
+  cast: 2
+  recast: 90
+  mp: 300
   location: |
     Ebisu Catfish / Yanxia (28, 6) 
 
@@ -1448,6 +1685,9 @@
   rank: 2
   range: 20
   radius: 6
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Ebisu Catfish / Yanxia (28, 6) 
 
@@ -1455,9 +1695,9 @@
   description: |
     Deals lightning damage to target and all enemies nearby it with a potency of 100 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} Increases the potency of the next physical damage spell cast by 100
+    {{< green "Additional Effect: " >}}Increases the potency of the next physical damage spell cast by 100
     
-    {{< green "Duration:" >}} 15s
+    {{< green "Duration: " >}}15s
 - id: tatami-gaeshi
   name: Tatami-gaeshi
   number: 83
@@ -1467,14 +1707,17 @@
   rank: 3
   range: 20
   radius: 20
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Dojun-maru Adds (2nd Boss) / Kugane Castle
   description: |
     Deals unaspected damage to all enemies in a straight line before you with a potency of 220 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} {{< yellow "Stun" >}}
+    {{< green "Additional Effect: " >}}{{< yellow "Stun" >}}
     
-    {{< green "Duration:" >}} 3s
+    {{< green "Duration: " >}}3s
 - id: cold-fog
   name: Cold Fog
   number: 84
@@ -1483,18 +1726,21 @@
   spellAspect: Ice
   rank: 4
   range: 25
+  cast: 2
+  recast: 90
+  mp: 300
   location: |
     Mist Dragon Heads / The Burn
   description: |
     Grants {{< yellow "Cold Fog" >}} to self.
     
-    {{< green "Duration:" >}} 5s
+    {{< green "Duration: " >}}5s
     
     Effect changes to {{< yellow "Touch of Frost" >}} if damage is taken.
     
-    {{< green "Touch of Frost Effect:" >}} Action changes from {{< orange "Cold Fog" >}} to {{< orange "White Death" >}}
+    {{< green "Touch of Frost Effect: " >}}Action changes from {{< orange "Cold Fog" >}} to {{< orange "White Death" >}}
     
-    {{< green "Duration:" >}} 15s
+    {{< green "Duration: " >}}15s
     
     &nbsp;
     
@@ -1502,13 +1748,13 @@
     
     Deals ice damage with a potency of 400.
     
-    {{< green "Additional Effect:" >}} {{< yellow "Deep Freeze" >}}
+    {{< green "Additional Effect: " >}}{{< yellow "Deep Freeze" >}}
     
-    {{< green "Duration:" >}} 10s
+    {{< green "Duration: " >}}10s
     
     Can only be executed while under the effect of {{< yellow "Touch of Frost" >}}.
-  notes: In order to learn the spell you must *fail* the three heads mechanic during Mist Dragon.
-
+  notes: |
+    In order to learn the spell you must *fail* the three heads mechanic during Mist Dragon.
 - id: stotram
   name: Stotram
   number: 85
@@ -1517,6 +1763,9 @@
   spellAspect: Unaspected
   rank: 2
   radius: 15
+  cast: 2
+  recast: 2.5
+  mp: 300
   location: |
     Lakshmi / Emanation
   description: |
@@ -1524,7 +1773,7 @@
     
     Action effect changes, restoring own HP and the HP of all nearby party members when you are under the effect of {{< yellow "Aetheric Mimicry: Healer" >}}.
     
-    {{< green "Cure Potency:" >}} 300
+    {{< green "Cure Potency: " >}}300
 - id: saintly-beam
   name: Saintly Beam
   number: 86
@@ -1534,14 +1783,17 @@
   rank: 2
   range: 25
   radius: 6
+  cast: 2
+  recast: 2.5
+  mp: 400
   location: |
     Phantom Train / Sigmascape V1.0
   description: |
     Deals unaspected damage with a potency of 100 to target and all enemies nearby it.
     
     Potency increases to 500 when used against undead enemies.
-  notes: A decent list of vulnerable enemies can be found [here](https://finalfantasy.fandom.com/wiki/Final_Fantasy_XIV_enemies/Ashkin).
-
+  notes: |
+    A decent list of vulnerable enemies can be found [here](https://finalfantasy.fandom.com/wiki/Final_Fantasy_XIV_enemies/Ashkin).
 - id: feculent-flood
   name: Feculent Flood
   number: 87
@@ -1551,6 +1803,9 @@
   rank: 1
   range: 20
   radius: 20
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Tokkapchi / Saint Mocianne's Arboretum (Hard)
 
@@ -1565,18 +1820,21 @@
   spellAspect: Unaspected
   rank: 3
   radius: 20
+  cast: 2
+  recast: 120
+  mp: 400
   location: |
     Level 70 - Whalaqee Totem
   description: |
     Restores own HP and the HP of all nearby party members.
     
-    {{< green "Cure Potency:" >}} 400
+    {{< green "Cure Potency: " >}}400
     
-    {{< green "Additional Effect:" >}} Grants healing over time effect when you are under the effect of {{< yellow "Aetheric Mimicry: Healer" >}}
+    {{< green "Additional Effect: " >}}Grants healing over time effect when you are under the effect of {{< yellow "Aetheric Mimicry: Healer" >}}
     
-    {{< green "Cure Potency:" >}} 200
+    {{< green "Cure Potency: " >}}200
     
-    {{< green "Duration:" >}} 15s
+    {{< green "Duration: " >}}15s
     
     Shares a recast timer with {{< orange "Dragon Force" >}} and {{< orange "Matra Magic" >}}.
 - id: chelonian-gate
@@ -1587,16 +1845,19 @@
   spellAspect: Water
   rank: 4
   radius: 10
+  cast: 2
+  recast: 30
+  mp: 300
   location: |
     Genbu / Hells' Lid
   description: |
     Summons a chelonian gate, reducing damage taken by 20%.
     
-    {{< green "Duration:" >}} 10s
+    {{< green "Duration: " >}}10s
     
-    {{< green "Additional Effect:" >}} Grants {{< yellow "Auspicious Trance" >}} after taking damage equal to 30% of maximum HP
+    {{< green "Additional Effect: " >}}Grants {{< yellow "Auspicious Trance" >}} after taking damage equal to 30% of maximum HP
     
-    {{< green "Auspicious Trance Effect:" >}} Action changes from {{< orange "Chelonian Gate" >}} to {{< orange "Divine Cataract" >}}
+    {{< green "Auspicious Trance Effect: " >}}Action changes from {{< orange "Chelonian Gate" >}} to {{< orange "Divine Cataract" >}}
     
     {{< yellow "Chelonian Gate" >}} effect ends upon using another action or moving (including facing a different direction).
     
@@ -1621,6 +1882,9 @@
   spellAspect: Unaspected
   rank: 2
   range: 25
+  cast: 2
+  recast: 30
+  mp: 300
   location: |
     Ivon Coeurlfist / The Temple Of The Fist
   description: |
@@ -1636,6 +1900,9 @@
   spellType: Magic
   spellAspect: Unaspected
   rank: 2
+  cast: 2
+  recast: 2.5
+  mp: 500
   location: |
     Master Coeurl / Upper La Noscea (8, 21) 
 
@@ -1652,6 +1919,9 @@
   spellAspect: Unaspected
   rank: 1
   radius: 6
+  cast: 2
+  recast: 120
+  mp: 500
   location: |
     Kongamato / The Peaks (11, 25)
   description: |
@@ -1667,6 +1937,9 @@
   rank: 2
   range: 25
   radius: 6
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Alte Roite / Deltascape V1.0
   description: |
@@ -1680,16 +1953,19 @@
   rank: 4
   range: 25
   radius: 6
+  cast: 2
+  recast: 2.5
+  mp: 300
   location: |
     Omega / Alphascape V3.0
   description: |
     Deals fire damage to target and all enemies nearby it with a potency of 220 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} Enemies affected by {{< yellow "Lightheaded" >}} suffer damage over time
+    {{< green "Additional Effect: " >}}Enemies affected by {{< yellow "Lightheaded" >}} suffer damage over time
     
-    {{< green "Potency:" >}} 50
+    {{< green "Potency: " >}}50
     
-    {{< green "Duration:" >}} 15s
+    {{< green "Duration: " >}}15s
 - id: dragon-force
   name: Dragon Force
   number: 95
@@ -1697,12 +1973,15 @@
   spellType: Magic
   spellAspect: Unaspected
   rank: 3
+  cast: 2
+  recast: 120
+  mp: 300
   location: |
     Learn 100 Spells - Whalaqee Totem
   description: |
     Reduces damage taken by 20%.
     
-    {{< green "Duration:" >}} 15s
+    {{< green "Duration: " >}}15s
     
     Increases damage reduction to 40% when you are under the effect of {{< yellow "Aetheric Mimicry: Tank" >}}.
     
@@ -1716,6 +1995,9 @@
   rank: 1
   range: 20
   radius: 20
+  cast: 2
+  recast: 2.5
+  mp: 400
   location: |
     Salt Dhruva / The Lochs (22, 22)
 
@@ -1723,7 +2005,7 @@
   description: |
     Deals unaspected damage with a potency of 50 to all enemies in a straight line before you.
     
-    {{< green "Additional Effect:" >}} Unaspected damage over time
+    {{< green "Additional Effect: " >}}Unaspected damage over time
     
     {{< green "Potency:" >}} 50
     
@@ -1736,12 +2018,15 @@
   spellAspect: Water
   rank: 4
   radius: 15
+  cast: 2
+  recast: 2.5
+  mp: 300
   location: |
     Kelpie / The Drowned City Of Skalla
   description: |
     Deals water damage to all nearby enemies with a potency of 220 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} Draw-in</span>
+    {{< green "Additional Effect: " >}}Draw-in</span>
 - id: malediction-of-water
   name: Malediction Of Water
   number: 98
@@ -1750,12 +2035,15 @@
   spellAspect: Water
   rank: 2
   radius: 15
+  cast: 2
+  recast: 2.5
+  mp: 300
   location: |
     Sai Taisui / The Swallow's Compass
   description: |
     Deals water damage to all enemies in a straight line before you with a potency of 200 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} 10-yalm knockback to all enemies and party members in range
+    {{< green "Additional Effect: " >}}10-yalm knockback to all enemies and party members in range
     
     Cannot be used outside of combat or when target is suffering from certain enfeeblements.
 - id: choco-meteor
@@ -1767,14 +2055,17 @@
   rank: 1
   range: 25
   radius: 8
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Courser Chocobo / The Dravanian Forelands (34, 28)
   description: |
     Deals unaspected damage to target and all enemies nearby it with a potency of 200 for the first enemy, and 50% less for all remaining enemies.
     
     Potency increases to 300 when partied with your personal chocobo.
-  notes: This is our best spell in the overworld (outside of duties), but only does 200 potency inside duties.
-
+  notes: |
+    This is our best spell in the overworld (outside of duties), but only does 200 potency inside duties.
 - id: matra-magic
   name: Matra Magic
   number: 100
@@ -1783,6 +2074,9 @@
   spellAspect: Unaspected
   rank: 3
   range: 25
+  cast: 2
+  recast: 120
+  mp: 400
   location: |
     Learn 100 Spells - Whalaqee Totem
   description: |
@@ -1800,6 +2094,9 @@
   rank: 4
   range: 20
   radius: 20
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Omega / Alphascape V3.0
   description: |
@@ -1807,9 +2104,9 @@
     
     Potency increased to 400 when target becomes afflicted with {{< yellow "Lightheaded" >}}.
     
-    {{< green "Additional Effect:" >}} Inflicts {{< yellow "Lightheaded" >}}
+    {{< green "Additional Effect: " >}}Inflicts {{< yellow "Lightheaded" >}}
     
-    {{< green "Duration:" >}} 5s
+    {{< green "Duration: " >}}5s
     
     Repeated use of this action in a short period will reduce the additional effect's duration, eventually rendering targets immune to {{< yellow "Lightheaded" >}}.
 - id: both-ends
@@ -1820,6 +2117,9 @@
   spellAspect: Blunt
   rank: 5
   radius: 20
+  cast: 0
+  recast: 120
+  mp: 300
   location: |
     Qitian Dasheng / The Swallow's Compass
   description: |
@@ -1834,12 +2134,15 @@
   spellAspect: Blunt
   rank: 5
   radius: 8
+  cast: 0
+  recast: 120
+  mp: 300
   location: |
     Suzaku / Hells' Kier
   description: |
     Deals physical damage over time with a potency of 200 to all enemies in a cone before you.
     
-    {{< green "Duration:" >}} 5s
+    {{< green "Duration: " >}}5s
     
     Executing {{< orange "Phantom Flurry" >}} again before its effect expires deals physical damage to all enemies in a cone before you with a potency of 600 for the first enemy, and 50% less for all remaining enemies.
     
@@ -1852,16 +2155,19 @@
   spellAspect: Unaspected
   rank: 5
   radius: 10
+  cast: 0
+  recast: 120
+  mp: 300
   location: |
     Tsukuyomi / Castrum Fluminis
   description: |
     Deals unaspected damage to all nearby enemies with a potency of 400 for the first enemy, and 50% less for all remaining enemies.
     
-    {{< green "Additional Effect:" >}} Unaspected damage over time
+    {{< green "Additional Effect: " >}}Unaspected damage over time
     
-    {{< green "Potency:" >}} 75
+    {{< green "Potency: " >}}75
     
-    {{< green "Duration:" >}} 60s
+    {{< green "Duration: " >}}60s
     
     Shares a recast timer with {{< orange "Both Ends" >}}.
 - id: goblin-punch
@@ -1872,6 +2178,9 @@
   spellAspect: Blunt
   rank: 1
   range: 3
+  cast: 0
+  recast: 2.5
+  mp: 200
   location: |
     Hobgoblin / Kholusia (33, 33)
   description: |
@@ -1890,6 +2199,9 @@
   spellAspect: Blunt
   rank: 2
   radius: 8
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Greater Armadillo / Malikah's Well
   description: |
@@ -1905,6 +2217,9 @@
   spellType: Magic
   spellAspect: Unaspected
   rank: 1
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Long-tailed Armadillo / Amh Araeng (17, 30)
   description: |
@@ -1924,6 +2239,9 @@
   spellType: Magic
   spellAspect: Unaspected
   rank: 1
+  cast: 5
+  recast: 2.5
+  mp: 200
   location: |
     Slippery Armadillo / Amh Araeng (32, 9)
   description: |
@@ -1931,19 +2249,22 @@
     
     {{< green "Cure Potency:" >}} 600
 - id: breath-of-magic
-  name: Breath Of Magic
+  name: Breath of Magic
   number: 109
   actionType: Spell
   spellType: Magic
   spellAspect: Unaspected
   rank: 3
   radius: 10
+  cast: 2
+  recast: 2.5
+  mp: 300
   location: |
     Level 80 - Whalaqee Totem
   description: |
     Deals unaspected damage over time with a potency of 120 to all enemies in a cone before you.
     
-    {{< green "Duration:" >}} 60s
+    {{< green "Duration: " >}}60s
     
     Only one effect inflicted by this action can be active at a time.
 - id: wild-rage
@@ -1954,14 +2275,17 @@
   spellAspect: Blunt
   rank: 4
   radius: 10
+  cast: 5
+  recast: 2.5
+  hp: 50%
   location: |
     Spectral Berserker / The Heroes' Gauntlet
   description: |
     Deals physical damage to all nearby enemies with a potency of 500 for the first enemy, and 50% less for all remaining enemies.
     
     Consumes 50% of your maximum HP when executed.
-  notes: Two casts of this from full health will put you into Revenge Blast range
-
+  notes: |
+    Two casts of this from full health will put you into Revenge Blast range
 - id: peat-pelt
   name: Peat Pelt
   number: 111
@@ -1971,6 +2295,9 @@
   rank: 2
   range: 25
   radius: 6
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Mudman / Matoya's Relict
   description: |
@@ -1992,6 +2319,9 @@
   rank: 3
   range: 25
   radius: 6
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Seeker Of Solitude / The Grand Cosmos
   description: |
@@ -2018,6 +2348,9 @@
   spellAspect: Slashing
   rank: 4
   radius: 12
+  cast: 2
+  recast: 30
+  mp: 300
   location: |
     The Ruby Weapon / Cinder Drift
   description: |
@@ -2032,6 +2365,9 @@
   spellAspect: Unaspected
   rank: 4
   radius: 15
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Titania / The Dancing Plague
   description: |
@@ -2046,6 +2382,9 @@
   spellAspect: Unaspected
   rank: 4
   radius: 10
+  cast: 5
+  recast: 2.5
+  mp: 400
   location: |
     Eden Prime / Eden's Gate: Resurrection
   description: |
@@ -2061,6 +2400,9 @@
   rank: 3
   range: 25
   radius: 25
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Forgiven Obscenity / Mt. Gulg
   description: |
@@ -2074,6 +2416,9 @@
   spellType: Magic
   spellAspect: Unaspected
   rank: 3
+  cast: 2
+  recast: 120
+  mp: 300
   location: |
     Learn 120 Spells - Whalaqee Totem
   description: |
@@ -2095,6 +2440,9 @@
   rank: 3
   range: 25
   radius: 25
+  cast: 1
+  recast: 90
+  mp: 200
   location: |
     Innocence / The Crown Of The Immaculate
   description: |
@@ -2122,6 +2470,9 @@
   rank: 3
   range: 25
   radius: 8
+  cast: 2
+  recast: 2.5
+  mp: 200
   location: |
     Eden's Promise / Eden's Promise: Eternity
   description: |
@@ -2137,6 +2488,9 @@
   rank: 2
   range: 25
   radius: 5
+  cast: 1
+  recast: 90
+  mp: 400
   location: |
     Aenc Thon, Lord of the Lingering Gaze / Dohn Mheg
   description: |
@@ -2157,6 +2511,9 @@
   spellAspect: Fire
   rank: 3
   range: 25
+  cast: 2
+  recast: 2.5
+  mp: 500
   location: |
     Lugus / The Grand Cosmos
   description: |
@@ -2175,6 +2532,9 @@
   spellAspect: Water
   rank: 5
   radius: 10
+  cast: 0
+  recast: 120
+  mp: 300
   location: |
     Nixie / Matoya's Relict
   description: |
@@ -2190,6 +2550,9 @@
   rank: 5
   range: 25
   radius: 25
+  cast: 0
+  recast: 120
+  mp: 300
   location: |
     Therion / Amaurot
   description: |
@@ -2208,6 +2571,9 @@
   spellAspect: Unaspected
   rank: 5
   radius: 10
+  cast: 0
+  recast: 120
+  mp: 300
   location: |
     Titania / The Dancing Plague
   description: |

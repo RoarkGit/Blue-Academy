@@ -20,7 +20,7 @@
     --MENU-HOME-LINK-color: rgba( 204, 204, 204, 1 ); /* Color of the home button text */
     --MENU-HOME-LINK-HOVER-color: rgb( 230, 230, 230, 1 ); /* Color of the hovered home button text */
 
-    --MENU-HEADER-BG-color: rgba( 54, 57, 69, 1 ); /* Background color of menu header */
+    --MENU-HEADER-BG-color: rgba(73, 76, 88, 1); /* Background color of menu header */
     --MENU-HEADER-BORDER-color: rgba( 118, 121, 133, 1 ); /*Color of menu header border */
 
     --MENU-SEARCH-color: rgba( 239, 239, 255, 1 ); /* Color of search field text */
@@ -41,12 +41,4 @@
     --BOX-CAPTION-color: rgba( 255, 255, 255, 1 ); /* color of the title text */
     --BOX-BG-color: rgba( 255, 255, 255, .833 ); /* color of the content background */
     --BOX-TEXT-color: rgba( 16, 16, 16, 1 ); /* fixed color of the content text */
-}
-
-#topics > .collapsible-menu > li > .padding {
-    background-color: var(--MENU-SECTIONS-BG-color);
-}
-
-#topics > .collapsible-menu > li {
-    background-color: var(--MENU-SECTIONS-ACTIVE-BG-color);
 }

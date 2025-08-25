@@ -6,6 +6,9 @@
     <header class="tooltip-popup-header">
       <p class="tooltip-popup-image"><img src="{{ $image.RelPermalink }}" loading="lazy"></p>
       <p class="tooltip-popup-title">{{- $tooltip.name -}}</p>
+      {{- if $tooltip.number -}}
+        <p class="tooltip-popup-number">#{{- $tooltip.number -}}</p>
+      {{- end -}}
       <p class="tooltip-popup-type">{{- $tooltip.actionType -}}</p>
       <dl class="tooltip-popup-range">
         <span>
@@ -46,7 +49,7 @@
     <div class="tooltip-popup-description">
       {{- $tooltip.description | markdownify -}}
     </div>
-    {{- if (or $tooltip.spellType $tooltip.rank) -}}
+    {{- if (or $tooltip.number $tooltip.spellType $tooltip.rank) -}}
       <dl class="tooltip-popup-additional-info">
         {{- if $tooltip.spellType -}}
           <div>
