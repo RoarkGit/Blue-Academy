@@ -56,6 +56,19 @@ function removeListener(spellId: string) {
   }
 }
 
+function updateMacro(macro: HTMLElement) {
+  const lines = ['/bluespellbook clear']
+  for (const spell of activeSpells) {
+    if (spell !== '') {
+      if (lines.length === 15) {
+        lines.push(`\n--- macros are limited to 15 lines ---\n`)
+      }
+      lines.push(`/bluespellbook set "${spell}"`)
+    }
+  }
+  macro.innerHTML = lines.join('\n')
+}
+
 function setSpell(spellLoadoutSpell: HTMLElement, spellbookSpell: HTMLElement) {
   const spellId = spellbookSpell.getAttribute('data-tooltip-id')
   if (spellId === null) return
@@ -98,6 +111,9 @@ ready(function () {
   const spellLoadoutSpells = document.getElementsByClassName(
     'spell-loadout-spell',
   ) as HTMLCollectionOf<HTMLElement>
+  const macro = document.getElementById(
+    'spell-loadout-builder-macro',
+  ) as HTMLElement
   for (const spell of spellbookSpells) {
     const spellId = spell.getAttribute('data-tooltip-id')
     if (spellId === null) {
@@ -108,6 +124,7 @@ ready(function () {
       if (nextOpen !== -1 && activeSpells.indexOf(spellId) === -1) {
         activeSpells[nextOpen] = spellId
         setSpell(spellLoadoutSpells[nextOpen], spell)
+        updateMacro(macro)
       }
     })
     spell.addEventListener('dragstart', function () {
@@ -140,6 +157,7 @@ ready(function () {
           }
         }
         setSpell(element, spell)
+        updateMacro(macro)
       }
     })
   }
@@ -150,6 +168,7 @@ ready(function () {
       activeSpells[activeSpells.indexOf(spellId)] = ''
       removeListener(spellId)
       unsetSpell(spell)
+      updateMacro(macro)
     })
   }
   const params = new URLSearchParams(window.location.search)
@@ -167,4 +186,5 @@ ready(function () {
       }
     })
   }
+  updateMacro(macro)
 })

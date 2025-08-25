@@ -456,3 +456,15 @@ dd {
   height: 30%;
   height: calc(var(--rotation-event-width) / 5);
 }
+
+.spell-loadout-builder-macro-wrapper {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.spell-loadout-builder-macro {
+  width: 50%;
+  margin: auto;
+  text-align: left;
+  white-space: pre;
+}
