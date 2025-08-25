@@ -28,7 +28,7 @@ Crit/SpS variant.
 ### 2.20 Crit/SpS
 
 This is the best general-purpose set and works well for all roles. It is capable
-of performing all variants of the Moon Flute opener.
+of performing all variants of the Moon Flute Opener.
 
 {{< etro title="2.20 Crit/SpS" id="b4f7e26d-8462-44c3-ae13-ed0c814d1219" >}}
 
@@ -44,7 +44,7 @@ DPS, but it won't be _quite_ as high as the 2.20 Crit/SpS set.
 ### 2.49 Crit/Det (will struggle with opener)
 
 This set has a higher theoretical damage ceiling, but is not capable of doing
-the DOT Moon Flute opener. It is for people who prefer slower sets.
+the DOT Moon Flute Opener. It is for people who prefer slower sets.
 
 {{< etro title="2.49 Crit/Det" id="2039770e-31f7-4288-938f-8b16897be223" >}}
 
@@ -52,7 +52,7 @@ the DOT Moon Flute opener. It is for people who prefer slower sets.
 
 #### Which set is **best**?
 
-Any set that allows you to complete a full Moon Flute opener will be "best." The
+Any set that allows you to complete a full Moon Flute Opener will be "best." The
 damage variance between each set is minimal. While 2.49 Crit/Det has a
 theoretically higher damage ceiling, _every_ one of the fastest kills I've seen
 for fights has been dominated by 2.20 Crit/SpS.
