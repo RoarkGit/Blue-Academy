@@ -34,10 +34,9 @@
   --tooltip-background-dot: radial-gradient(rgba(31, 48, 75, 0.5) 1px, transparent 0);
   --tooltip-background-dot-spacing: 4px;
   padding: var(--tooltip-padding);
-  font-family: 'Noto Sans', sans-serif;
-  font-weight: 400;
+  font-weight: light;
   height: auto;
-  width: 25em;
+  width: 370px;
 
   background: var(--tooltip-background-dot), var(--tooltip-background-dot), linear-gradient(to bottom, #3d578f var(--tooltip-padding), #3d4b69 calc(var(--tooltip-padding) * 2), #3d4b69);
   background-size: var(--tooltip-background-dot-spacing) var(--tooltip-background-dot-spacing), var(--tooltip-background-dot-spacing) var(--tooltip-background-dot-spacing), auto;
@@ -74,6 +73,7 @@
   flex-basis: 50%;
   font-size: 1.1rem;
 }
+
 .spell-tooltip-popup-image {
   position: absolute;
   left: 0;
@@ -91,6 +91,7 @@
 }
 
 .spell-tooltip-popup-type {
+  flex-basis: 50%;
   color: var(--tooltip-color-secondary);
 }
 
@@ -136,8 +137,8 @@
 .spell-tooltip-popup-cast > *:not(:empty)::before {
   content: '';
   position: absolute;
-  left:0;
-  bottom: 0;
+  left: 0;
+  bottom: -.15rem;
   width: 100%;
   height: .5rem;
   background: rgba(255,255,255,.1);
@@ -145,8 +146,8 @@
 }
 
 .spell-tooltip-popup-cast dd {
-  font-size: 1.25rem;
-  line-height: 1.25rem;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
   margin-top: 0;
 }
 

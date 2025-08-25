@@ -1,8 +1,9 @@
-{{ $spellParam := .Get 0 }}
-{{ $spell := index .Site.Data "spells" $spellParam }}
-{{ $image := printf "/images/spells/%s.png" $spellParam | resources.Get }}
+{{- $spellParam := .Get 0 -}}
+{{- $spell := index site.Data.spells $spellParam -}}
+{{- $image := printf "/images/spells/%s.png" $spellParam | resources.Get -}}
 
-<span class="spell-tooltip" data-spell-param="{{ $spellParam }}">
+{{- .Page.Store.Add "spell-tooltips" (slice $spellParam) -}}
+<span class="spell-tooltip" data-tooltip-id="{{ $spellParam }}-tooltip">
   <span class="spell-tooltip-image"><img src="{{ $image.RelPermalink }}?featherlight=false"></span>
   <span class="spell-tooltip-link">{{ $spell.name }}</span>
 </span>

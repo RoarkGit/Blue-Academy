@@ -1,0 +1,60 @@
+water-cannon:
+  name: Water Cannon
+  actionType: Spell
+  cast: 2
+  mp: 200
+  range: 25
+  spellType: Magic
+  spellAspect: Water
+  description: |
+    Deals water damage with a potency of 200.
+
+flame-thrower:
+  name: Flame Thrower
+  actionType: Spell
+  cast: 2
+  mp: 200
+  radius: 8
+  spellType: Magic
+  spellAspect: Fire
+  description: |
+    Deals fire damage to all enemies in a cone before you with a potency of 220
+    for the first enemy, and 50% less for all remaining enemies.
+
+diamondback:
+  name: Diamondback
+  actionType: Spell
+  cast: 2
+  mp: 3000
+  spellType: Magic
+  description: |
+    Reduces damage taken by 90% and nullifies most knockback and draw-in
+    effects.
+
+    Unable to move or take action for the duration of this effect.
+
+    {{< green Duration >}}: 10s
+
+    If used when {{< yellow Waxing Nocturne >}} is active, its effect will
+    transition immediately to {{< yellow Waning Nocturne >}}.
+
+    The effect of this action cannot be ended manually.
+
+surpanakha:
+  name: Surpanakha
+  actionType: Ability
+  mp: 200
+  spellType: Magic
+  spellAspect: Earth
+  description: |
+    {{< green Additional Effect >}}: Grants {{< yellow "Surpanakha's Fury" >}},
+    increasing potency of {{< orange Surpanakha >}} by 50%
+    
+    {{< green Duration >}}: 3s
+    
+    Can be stacked up to 3 times.
+    
+    {{< green Maximum Charges >}}: 4
+    
+    Effect is canceled upon execution of any action other than {{< orange
+    Surpanakha >}}.

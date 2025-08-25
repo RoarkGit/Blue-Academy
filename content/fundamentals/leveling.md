@@ -32,9 +32,11 @@ method.
 
 Blue Mages cast {{< spell diamondback >}} sometimes.
 
-{{< spell water-cannon >}}
+Also {{< spell water-cannon >}}
 
-{{< spell diamondback >}}
+And {{< spell flame-thrower >}} more.
+
+{{< spell surpanakha >}}
 
 ### Manual Leveling
 Some folks prefer to do things the old fashioned way. This involves killing

@@ -1,8 +1,9 @@
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700&display=swap');
+{{ $spellTooltips := resources.Get "ts/spell-tooltips.ts" | js.Build }}
+<script src="{{ $spellTooltips.RelPermalink }}" defer></script>
 
-  body {
-    font-family: "Noto Sans", sans-serif;
+<style>
+  @font-face {
+    font-family: "Signia Pro";
+    src: url("/fonts/SigniaPro-Regular.woff2");
   }
-  
 </style>
