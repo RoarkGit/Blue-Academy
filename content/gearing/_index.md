@@ -14,3 +14,5 @@ If you _do_ want to optimize more, such as for Extreme trials or Savage raids
 (or just for fun), you can find more detailed info on the other gearing pages.
 You can read up on what our stat priorities are and what the recommended
 gearsets are.
+
+{{< children >}}

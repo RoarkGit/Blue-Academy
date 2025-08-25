@@ -1,13 +1,9 @@
 ---
-title: Getting Started with Blue Mage
+title: Getting Started With Blue Mage
 archetype: chapter
 weight: 10
 date: 2023-09-13
 ---
-
-{{< role "surecast" >}}
-
-{{< role "lucid_dreaming" >}}
 
 Blue Mage is an interesting job in that there isn't really an obvious path to
 getting started on the job. In general, this is the expected order in which you
@@ -21,7 +17,7 @@ can tackle content:
 - Learn {{< spell aetheric_mimicry >}} from the first boss in Pharos Sirius
   (Hard). This can be done solo unsynced, since the adds spawn continuously.
 - Start learning spells from 4-player duties either
-  [solo]({{< relref "/spell-loadouts/solo" >}}) or in a party. You should also
+  [solo]({{< relref "/gameplay/solo" >}}) or in a party. You should also
   start your job quests and complete any [Masked
   Carnivale]({{< relref "/masked-carnivale/" >}}) stages you are capable of
 - Start learning spells from 8-player duties in a party. This is easiest if you
