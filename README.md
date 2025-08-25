@@ -1,7 +1,8 @@
 <h1 align="center">Blue Academy Website</h1>
 <p align="center">
+<a href="https://discord.gg/blueacademy">
 <img src="https://github.com/RoarkGit/Blue-Academy/blob/main/static/images/audrey.png" style="width: 50%;"></br>
-<a href="https://discord.gg/blueacademy"><img src="https://dcbadge.vercel.app/api/server/blueacademy"></a>
+<img src="https://dcbadge.vercel.app/api/server/blueacademy"></a>
 </p>
 <h3 align="center">A website for aggregating and storing FFXIV Blue Mage knowledge and resources!</h3>
 
