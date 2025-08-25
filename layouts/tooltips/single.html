@@ -1,0 +1,40 @@
+<link rel="stylesheet" type="text/css" href="{{.Site.BaseURL}}css/spell-tooltip.css"/>
+{{ $spellParam := .File.BaseFileName }}
+{{ $image := printf "/images/spells/%s.png" $spellParam | resources.Get }}
+
+<aside class="spell-tooltip-popup">
+  <header class="spell-tooltip-popup-header">
+    <p class="spell-tooltip-popup-image"><img src="{{ $image.RelPermalink }}?featherlight=false"></p>
+    <p class="spell-tooltip-popup-title">{{ .Params.name }}</p>
+    <p class="spell-tooltip-popup-spell-info">{{ .Params.spellType }} / {{ .Params.spellAspect | default "Unaspected" }}</p>
+    <p class="spell-tooltip-popup-type">{{ .Params.actionType }}</p>
+    <dl class="spell-tooltip-popup-range">
+      <span>
+        <dt>Range</dt>
+        <dd>{{ .Params.range | default 0 }}y</dd>
+      </span>
+      <span>
+        <dt>Radius</dt>
+        <dd>{{ .Params.radius | default 0 }}y</dd>
+      </span>
+    </dl>
+    <dl class="spell-tooltip-popup-cast">
+      <span>
+        <dt>Cast</dt>
+        <dd>{{ .Params.cast | default 2.0 | lang.FormatNumberCustom 2 }}s</dd>
+      </span>
+      <span>
+        <dt>Recast</dt>
+        <dd>{{ .Params.recast | default 2.5 | lang.FormatNumberCustom 2 }}s</dd>
+      </span>
+      <span>
+        <dt>MP Cost</dt>
+        <dd>{{ .Params.mp }}</dd>
+      </span>
+    </dl>
+  </header>
+  <div class="spell-tooltip-popup-description">
+    {{ .Content }}
+  </div>
+  {{ .Params.aspect }}
+</aside>

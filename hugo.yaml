@@ -10,5 +10,6 @@ outputs:
     - 'JSON'
 
 params:
-  themeVariant: 'academy'
+  custom_css: ["css/spell-tooltip.css"]
   disableMermaid: true
+  themeVariant: 'academy'

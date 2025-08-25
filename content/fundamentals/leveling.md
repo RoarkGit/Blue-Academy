@@ -30,6 +30,12 @@ channels here and ask for help or offer to exchange power leveling with someone.
 Here's a video showing some of these locations, as well as a solo powerleveling
 method.
 
+Blue Mages cast {{< spell diamondback >}} sometimes.
+
+{{< spell water-cannon >}}
+
+{{< spell diamondback >}}
+
 ### Manual Leveling
 Some folks prefer to do things the old fashioned way. This involves killing
 enemies around your level until you reach max level. However, there are still

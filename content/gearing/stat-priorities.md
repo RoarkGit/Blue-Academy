@@ -2,12 +2,13 @@
 title: "Stat Priorities"
 date: 2023-09-17T12:24:34-04:00
 draft: true
+weight: 10
 ---
 
 ## Stat and Melding Priorities for Blue Mage
 
 This page will cover the general logic behind stat and melding priorites for
-Blue Mage. For full gear sets refer to the [Gear Sets]({{< ref "sets" >}} "Full Gear Sets") page.
+Blue Mage. For full gear sets refer to the [Gear Sets]({{< ref "gear-sets" >}} "Full Gear Sets") page.
 
 ### Stat Priorities
 
@@ -43,3 +44,35 @@ of Magic or Mortal Flame will require a GCD of about 2.20. This is still skill
 and ping dependent so you may need to meld additional SpS to make it more
 comfortable. The first step in gearing should be to figure out what GCD you need
 in order to do this comfortably and meld to reach that.
+
+#### Spell Speed vs. Critical Hit
+
+This debate had more relevance at level 70 when the two sets were dramatically
+different, but most Blue Mages will want to go with high Spell Speed to make
+completing a Moon Flute opener more practical. In general the two sets will
+still perform roughly equally. High Spell Speed generally performs more
+consistently, while focusing on high Critical Hit has a slightly higher damage
+ceiling.
+
+If you intend to play Blue Mage as a tank or healer, Spell Speed will be the
+best choice. ALl of our mitigations are tied to a cast time, so minimizating
+that cast time is crucial. As healer, all of our healing seplls are also tied to
+the GCD so we want to minimize that cast time as well for smoother healing.
+
+#### Why Determination over Direct Hit?
+
+Most jobs just focus on Critical Hit and Direct Hit, but Blue Mage is a little
+bit different. With DPS Mimicry we gain an additional +20% Direct Hit chance for
+free. Direct Hit is a flat +25% damage bonus and scales linearly, so as we add
+more Direct Hit each additional point becomes "weaker" relatively. Determination
+also scales linearly, but since we don't get a bunch of extra from DPS Mimicry
+it means that it is "stronger" relatively. The difference is <em>extremely</em>
+slight, but it does make Determination slightly stronger.
+
+If we're playing as a tank or healer we definitely prefer Determination. As a
+tank we will likely have Mighty Guard on so our DPS is quite low by default,
+which means the already small difference can be completely ignored. As a healer,
+we can strengthen our healing potency by adding Determination.
+
+### Materia Melding
+
