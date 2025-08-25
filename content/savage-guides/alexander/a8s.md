@@ -475,7 +475,8 @@ More specifically, the full rotation should look like this:
    still fine. Since we're not bringing many utility spells we should have room
    for everything. Weave your weaker OGCD spells like
    {{< spell feather_rain >}}, {{< spell shock_strike >}}.
-5. {{< spell whistle >}} with {{< spell off-guard >}} or {{< spell peculiar_light >}} weaved.
+5. {{< spell whistle >}} with {{< spell off-guard >}} or
+   {{< spell peculiar_light >}} weaved.
 6. {{< spell tingle >}}
 7. {{< spell moon_flute >}} and {{< spell nightbloom >}}
 8. {{< spell triple_trident >}} and {{< spell sea_shanty >}}
@@ -490,14 +491,136 @@ More specifically, the full rotation should look like this:
 
 {{% /expand %}}
 
-It can be easier to synchronize stings if you use {{< role swiftcast >}} there instead of {{< spell matra_magic >}}. I recommend using a countdown macro, something simple like this works fine:
+It can be easier to synchronize stings if you use {{< role swiftcast >}} there
+instead of {{< spell matra_magic >}}. I recommend using a countdown macro,
+something simple like this works fine:
 
-<code>
-  /p Get ready to sting! <se.1> <wait.1>
-  /p 5 <se.1> <wait.1>
-  /p 4 <se.1> <wait.1>
-  /p 3 <se.1> <wait.1>
-  /p 2 <se.1> <wait.1>
-  /p 1 <se.1> <wait.1>
-  /p STING! <se.1> <wait.1>
-</code>
+<pre>
+  /p Get ready to sting! &lt;se.1&gt; &lt;wait.1&gt;
+  /p 5 &lt;se.1&gt; &lt;wait.1&gt;
+  /p 4 &lt;se.1&gt; &lt;wait.1&gt;
+  /p 3 &lt;se.1&gt; &lt;wait.1&gt;
+  /p 2 &lt;se.1&gt; &lt;wait.1&gt;
+  /p 1 &lt;se.1&gt; &lt;wait.1&gt;
+  /p STING! &lt;se.1&gt; &lt;wait.1&gt;
+</pre>
+
+#### Which strategy is better?
+
+This depends entirely on your group. If your group is good at mechanics and
+intends to do more fights beyond the Morbol fights (like Omega and Eden), then
+doing Gavel properly will be good practice for BLU mechanics and probably be
+easier for you. If your group has no interest in learning mechanics and just
+wants to get the Morbol, then maybe skipping might be better for you. At the end
+of the day Gavel isn't mechanically much more difficult than the previous
+phases, anyway.
+
+Each BLU update makes skipping easier, but it's still not without issue. Final
+Stings need to be synchronized well, there might be some Crit RNG involved, and
+usually if people aren't good enough to just do mechanics then they also are
+less likely to perform their rotation optimally.
+
+In my personal experience with various groups it has taken less time overall to
+just do Gavel. With experienced Savage raiders who studied beforehand it only
+took about 3 pulls to get it correct. With less experienced raiders it took 1-2
+nights usually. Skipping can take a handful of pulls, or it can take multiple
+nights, so it's pretty much the same in the end.
+
+### Phase 5: Final Justice
+
+After Gavel, Brute Justice jumps away again and lands with J Kick. I recommend
+putting on {{< spell mighty_guard >}} again to mitigate this damage, but other
+mitigations can do the job fine as well. If your group was maintaining good
+damage during Gavel then you'll be ready to sting Brute Justice pretty shortly
+into this phase. This phase can be pretty chaotic but each bit in a vacuum is
+pretty easy on its own.
+
+The default positioning for this phase is to have the tank north of the boss and
+the party south of the boss.
+
+Brute Justice starts with **Link-Up** which empowers some of its abilities. This
+also applies **Compressed Water** to a random player. Compressed Water creates a
+water tornado when the debuff expires, which then needs to be removed by being
+hit by Flarethrower. We'll actually be handling it by having the person who
+receives the debuff die to prevent the tornado from spawning in the first place.
+
+Brute Justice starts out with **Final Punch**, a tankbuster that does a
+knockback and roots the target in place. The knockback is unavoidable and
+removes {{< spell diamondback >}}. It follows up with **Final Apocalypse** which
+is the same as **Apocalyptic Ray** from before but it does not apply vuln
+stacks. Brute Justice finishes its tankbuster combo with **Final Beam**, which
+is similar to Mega Beam from before but the damage is split between all targets
+hit. There are two ways to handle this combo:
+
+1. If your main tank is good at managing mana, and has some Super-Ethers for
+   safety, they can {{< spell diamondback >}} the Final Punch hit and then
+   immediately {{< spell diamondback >}} again to mitigate the other hits.
+2. If mana is tight, which usually happens if you see the combo a second time,
+   have the off-tank stand on one of Brute Justice's side and use
+   {{< spell mighty_guard >}}. Once the Final Punch cast starts, they should use
+   {{< spell frog_legs >}}, hit Brute Justice with something like
+   {{< spell shock_strike >}} for some extra threat, and then
+   {{< spell diamondback >}}. If done correctly, then the Final Apocalypse and
+   Final Beam hits will be taken by the off-tank. The off-tank can also rejoin
+   the party after Final Apocalypse starts and share the Final Beam with the
+   party.
+
+After the tankbuster combo Brute Justice will use Missile Command, which is
+essentially the same as our first Brute Justice phase. There is going to be a
+lot going on here and we handle it slightly differently from before. I recommend
+having everyone spread out at the start, and then whoever has the stack marker
+should just {{< spell diamondback >}}. There will also be an invisible mine that
+spawns in one of the four center squares. The player who received the Compressed
+Water debuff should stand on it to get rid of it while also killing themselves
+at the same time. If the player is still alive, they need to find another way to
+die (even just {{< spell final_sting >}} will get the job done). If the
+Compressed Water player is targeted by the stack marker, they should just take
+it without mitigating to die to that, and then the tank should detonate the mine
+in the center.
+
+{{% notice style="warning" %}}
+
+It is possible for the tank to be targeted with Compressed Water. This is a
+really unfortunate situation, but it can be handled by dying to Final Punch and
+then quickly resurrecting the tank.
+
+{{% /notice %}}
+
+After the Missile Command spam ends the party should try to get close to Brute
+Justice again, while the tank starts moving to a corner to try to bait an
+upcoming Super Jump. A bunch of **Steam Chakrams** will appear around the
+outside of the arena and Enumeration will appear on one player. Steam Chakrams
+draw a straight vertical or horizontal line through the arena, deal a ton of
+damage, and cause a huge knockback. You can either move out of the way of them
+or {{< spell diamondback >}}. Enumeration is still tricky to handle, so that
+person should {{< spell diamondback >}}
+
+Once the chakrams have fired, Brute Justice uses a regular Mega Beam followed by
+a Super Jump. This can be handled the same way as in the first Brute Justice
+phase. Brute Justice will then use Flarethrower and _another_ set of Missile
+Command AOEs, but this time there are no Prey or Stack markers. It finishes up
+with another tankbuster combo before Brute Justice jumps away again, at which
+point everyone should put on {{< spell mighty_guard >}} again.
+
+### Phase 6: J Wave
+
+This final phase is just a soft enrage. Brute Justice returns to the arena with
+**J Storm**, which is essentially J Kick but hits _way_ harder. After this, it
+starts spamming **J Wave**, which is a raidwide AOE that grants Brute Justice a
+stacking damage up buff each time it is used.
+
+Once Brute Justice lands, everyone should take off {{< spell mighty_guard >}}
+and do as much DPS as possible. Healers can use {{< spell stotram >}} and
+{{< spell angels_snack >}} to keep the party healthy, but will eventually need
+to switch to {{< spell white_wind >}} to keep up with the damage. If it goes on
+for long enough (and the healers don't have enough MP for
+{{< spell white_wind >}}) then the healers will want to {{< spell pom_cure >}}
+the tank while the tank uses {{< spell white_wind >}} instead.
+
+## Final Sting
+
+Brute Justice's Final Sting threshold is about 25%. Once it is at 25%, apply
+{{< spell off-guard>}}, use {{< spell moon_flute >}}, any Primal abilities you
+have, then finish with {{< spell whistle >}} and {{< spell final_sting >}}. If
+your group maintains good DPS during Gavel then this will be almost immediately
+after the Gavel phase ends.
