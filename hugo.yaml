@@ -12,6 +12,7 @@ params:
   custom_css: ['css/full-page.css', 'css/spell-tooltip.css']
   themeVariant: academy
   collapsibleMenu: true
+  hideAuthorDate: true
 
 markup:
   goldmark:

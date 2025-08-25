@@ -1,7 +1,7 @@
 ---
 title: O8S (Kefka)
 weight: 2
-archetype: savage-guide
+type: savage-guide
 ---
 
 _The urge to flip switches is almost irresistible... even when you know full

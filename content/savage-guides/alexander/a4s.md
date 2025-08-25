@@ -1,7 +1,7 @@
 ---
 title: A4S (Manipulator)
 weight: 1
-archetype: savage-guide
+type: savage-guide
 ---
 
 _What fun is there in merely restating the facts? Never one to be content with

@@ -1,6 +1,6 @@
 ---
 title: Blue Mage Gearing
-archetype: chapter
+type: chapter
 date: 2023-09-13
 weight: 20
 ---

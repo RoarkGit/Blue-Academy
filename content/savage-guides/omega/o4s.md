@@ -1,7 +1,7 @@
 ---
 title: O4S (Exdeath)
 weight: 1
-archetype: savage-guide
+type: savage-guide
 ---
 
 _Taken by curiosity, you activate something called the Savage Initiative at a

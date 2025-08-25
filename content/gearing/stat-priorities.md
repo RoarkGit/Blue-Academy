@@ -1,7 +1,6 @@
 ---
 title: 'Stat Priorities'
 date: 2023-09-17T12:24:34-04:00
-draft: true
 weight: 10
 ---
 

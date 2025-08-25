@@ -1,9 +1,9 @@
 {{/* This just exists to remove Chapter from the heading. */}}
 
-{{- $page := .page }}
-{{- $content := .content }}
+{{- $page := .Page }}
+{{- $content := .Content }}
 {{- with $page }}
-  <article class="chapter">
+  <article class="section">
     <header class="headline">
       {{- partial "content-header.html" . }}
     </header>

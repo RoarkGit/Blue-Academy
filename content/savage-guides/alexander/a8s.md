@@ -1,7 +1,7 @@
 ---
 title: A8S (Brute Justice)
 weight: 2
-archetype: savage-guide
+type: savage-guide
 ---
 
 _Sometimes even the most thrilling tale can benefit from slight embellishment,
