@@ -271,3 +271,22 @@ dd {
   text-align: left;
   white-space: nowrap;
 }
+
+.death-vulnerability-table-green-check,
+.death-vulnerability-table-red-cross {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow:
+    -1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    1px 1px 0 #000;
+} 
+
+.death-vulnerability-table-green-check {
+  color: #00cc22;
+}
+
+.death-vulnerability-table-red-cross {
+  color: #cc2200;
+}
