@@ -19,5 +19,5 @@ that are important to me!
 
 ---
 
-If you really feel like supporting directly, you can do so
-[here](https://ko-fi.com/liam_galt).
+<sup>If you really feel like supporting directly, you can do so
+[here](https://ko-fi.com/liam_galt).</sup>

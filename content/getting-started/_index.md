@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Getting Started with Blue Mage
 archetype: chapter
 weight: 10
 date: 2023-09-13

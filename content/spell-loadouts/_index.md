@@ -1,5 +1,5 @@
 ---
-title: Spell Loadouts
+title: Blue Mage Spell Loadouts
 archetype: chapter
 date: 2023-09-13
 weight: 40

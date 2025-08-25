@@ -1,5 +1,5 @@
 ---
-title: Resources
+title: Additional Resources
 archetype: chapter
 date: 2023-09-13
 weight: 100
