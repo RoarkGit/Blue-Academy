@@ -27,7 +27,8 @@ the starting GCD; -2 means 2 GCDs before the pull counter actually hits 0.
 
 ##### When do I use my potion?
 
-You are safe to use your potion when the countdown timer is at 10.
+You are safe to use your potion when the countdown timer is at 10 (or 10 seconds
+before your next Moon Flute opener).
 
 ##### What do I do if I can't fit everything into Moon Flute?
 

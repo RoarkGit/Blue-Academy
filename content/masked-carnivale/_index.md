@@ -1,6 +1,6 @@
 ---
 title: Masked Carnivale
-type: chapter
+type: section
 date: 2023-09-13
 weight: 50
 ---

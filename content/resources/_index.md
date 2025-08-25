@@ -1,9 +1,11 @@
 ---
 title: Additional Resources
-type: chapter
+type: section
 date: 2023-09-13
 weight: 100
-chapter: true
 ---
 
-Generic Resources
+This section contains additional resources or tools that don't otherwise fit
+into the above sections.
+
+{{< children >}}

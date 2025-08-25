@@ -22,8 +22,7 @@ Some enemies in the Masked Carnivale will be vulnerable to specific elements,
 meaning the will take _double_ damage from that element. This is indicated by
 the elemental icon floating over their heads. Note that this is different from
 Eureka where the icon over an enemy's head indicates an element that it is
-_resistant_ to. [Stage 2 (Much Ado About
-Pudding)]({{% stage 2 %}}) serves as a tutorial for
+_resistant_ to. {{< stage 2 >}} serves as a tutorial for
 this mechanic.
 
 ### Score & Bonuses
@@ -36,7 +35,7 @@ is a complete list of bonuses and their meaning
 
 ## Recommended Spells
 
-{{< spell-loadout spells="77,,73,58,,53,,105,55,,,,,,,,,,33,92,,109,104,44" >}}
+{{< spell-loadout spells="77,,73,58,,53,,55,15,105,,,,,,,,,33,92,,109,104,44" >}}
 
 Most of the stages don't require very many spells. At minimum you should have
 these on your bar:
@@ -57,9 +56,11 @@ these on your bar:
 - A magic filler GCD spell. My personal favorite is
   {{< spell electrogenesis >}}; it's not necessarily better than the others I
   just think it sounds cool.
-- A physical filler GCD spell. {{< spell goblin_punch >}} is really powerful
-  because there are no positionals in the Masked Carnivale, but if you need
-  range then {{< spell abyssal_transfixion >}} is another option.
+- A physical filler GCD spell. {{< spell sharpened_knife >}} is nice because it
+  has a fast cast time, but requires you to be in melee ranged. {{< spell
+  goblin_punch >}} is really powerful in stages with no positionals and is an
+  instant cast. For most purposes {{< spell abyssal_transfixion >}} is a good
+  option.
 - {{< spell flying_sardine >}} to interrupt enemy spells.
 
 If a stage requires specific spells it will be mentioned on its guide page. In

@@ -1,6 +1,6 @@
 ---
 title: Stage Guides
-type: chapter
+type: section
 weight: 100
 _build:
   render: never

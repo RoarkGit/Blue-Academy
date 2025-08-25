@@ -1,6 +1,6 @@
 ---
 title: Getting Started With Blue Mage
-type: chapter
+type: section
 weight: 10
 date: 2023-09-13
 ---

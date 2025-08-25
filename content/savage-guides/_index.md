@@ -1,6 +1,6 @@
 ---
 title: Blue Mage Savage Guides
-type: chapter
+type: section
 ---
 
 Even though it's a Limited Job, Blue Mage does actually have endgame content! We

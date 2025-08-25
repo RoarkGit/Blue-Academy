@@ -9,10 +9,16 @@ outputs:
     - RSS
 
 params:
-  custom_css: ['css/full-page.css', 'css/spell-tooltip.css']
-  themeVariant: academy
+  custom_css: ['css/full-page.css']
+
+  # Relearn Theme Settings
   collapsibleMenu: true
   hideAuthorDate: true
+  sidebarheadermenus:
+    - type: menu
+      identifier: homelinks
+      disableTitle: true
+  themeVariant: academy
 
 markup:
   goldmark:
