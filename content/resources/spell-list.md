@@ -1,5 +1,5 @@
 ---
 title: Spell List
-archetype: spell-list
+customCss: /css/full-page.css
 ---
 {{< spell-list >}}

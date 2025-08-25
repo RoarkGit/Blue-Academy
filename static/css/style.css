@@ -231,3 +231,30 @@ dd {
 .spell-list-nowrap-cell {
   white-space: nowrap;
 }
+
+.death-vulnerability-table-wrapper-label {
+  background: var(--MENU-SECTIONS-BG-color);
+  border-radius: 5px 5px 0 0;
+  padding: 12px 15px 10px 15px;
+  margin: 0 5px 0 0;
+  cursor: pointer;
+  float: left;
+  &.death-vulnerability-table-wrapper-label--active {
+    background: var(--MENU-SECTION-ACTIVE-CATEGORY-BG-color);
+  }
+}
+
+.death-vulnerability-table th {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.death-vulnerability-table td {
+  text-align: center;
+}
+
+.death-vulnerability-table-name-cell {
+  text-align: left;
+  white-space: nowrap;
+  width: 20%;
+}

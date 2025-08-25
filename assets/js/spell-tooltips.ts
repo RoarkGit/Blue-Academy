@@ -1,36 +1,19 @@
-function ready(fn: () => void) {
-  if (document.readyState !== 'loading') {
-    fn()
-  } else {
-    document.addEventListener('DOMContentLoaded', fn)
-  }
-}
-
-let throttled = false
-
-function throttle(fn, timesPerSecond) {
-  if (!throttled) {
-    throttled = true
-    fn()
-    setTimeout(() => throttled = false, 1000 / timesPerSecond)
-  }
-}
+import { ready } from './common'
 
 ready(function() {
-  const tooltipLinks = document.getElementsByClassName("tooltip")
+  const tooltipLinks = document.getElementsByClassName('tooltip') as HTMLCollectionOf<HTMLElement>
   for (const tooltipLink of tooltipLinks) {
-    const tooltipId = tooltipLink.getAttribute("data-tooltip-id")
+    const tooltipId = tooltipLink.getAttribute('data-tooltip-id')
     if (tooltipId === null) return
     const tooltip = document.getElementById(tooltipId);
-    console.log(tooltip)
     if (tooltip === null) return
-    tooltipLink.addEventListener("mouseenter", function() {
+    tooltipLink.addEventListener('mouseenter', function() {
       tooltip.hidden = false
     })
-    tooltipLink.addEventListener("mouseleave", function() {
+    tooltipLink.addEventListener('mouseleave', function() {
       tooltip.hidden = true
     })
-    tooltipLink.addEventListener("mousemove", (event) => {
+    tooltipLink.addEventListener('mousemove', (event) => {
       if (!(event instanceof MouseEvent)) return;
       let newX = event.clientX + 10
       let newY = event.clientY

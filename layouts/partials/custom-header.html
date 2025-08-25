@@ -1,3 +1,6 @@
-{{ $spellTooltips := resources.Get "js/spell-tooltips.ts" | js.Build }}
-<link rel="stylesheet" href="/css/style.css">
+{{- $spellTooltips := resources.Get "js/spell-tooltips.ts" | js.Build -}}
 <script src="{{ $spellTooltips.RelPermalink }}" defer></script>
+{{ with .Params.customCss -}}
+  <link rel="stylesheet" href="{{ . }}" />
+{{- end }}
+<link rel="stylesheet" href="/css/style.css">
