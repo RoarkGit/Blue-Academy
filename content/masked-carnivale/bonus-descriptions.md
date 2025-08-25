@@ -119,7 +119,7 @@ cast it before that happens.
 **Octopath Traveler**  
 : Complete {{< stage 20 >}} without killing any Ultros tentacles in Act 3. You
 can immediately kill Typhon in Act 3 with a fully buffed
-{{< spell final-sting >}} and get credit for this.
+{{< spell final_sting >}} and get credit for this.
 
 **Something Borrowed**  
 : Complete {{< stage 25 >}} while accomplishing the following:

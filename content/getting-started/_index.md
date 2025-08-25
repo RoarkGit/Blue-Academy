@@ -17,8 +17,8 @@ can tackle content:
 - [Reach level cap]({{< relref "/getting-started/leveling" >}}).
 - Learn all overworld (non-duty) spells.
 - Pick up totem spells that are currently available to you. The important ones
-  are {{< spell white-wind >}} and {{< spell mighty-guard >}}.
-- Learn {{< spell aetheric-mimicry >}} from the first boss in Pharos Sirius
+  are {{< spell white_wind >}} and {{< spell mighty_guard >}}.
+- Learn {{< spell aetheric_mimicry >}} from the first boss in Pharos Sirius
   (Hard). This can be done solo unsynced, since the adds spawn continuously.
 - Start learning spells from 4-player duties either
   [solo]({{< relref "/spell-loadouts/solo" >}}) or in a party. You should also
@@ -26,7 +26,7 @@ can tackle content:
   Carnivale]({{< relref "/masked-carnivale/" >}}) stages you are capable of
 - Start learning spells from 8-player duties in a party. This is easiest if you
   do it in expansion order (starting with A Realm Reborn). You should also try
-  to finish Masked Carnivale and learn {{< spell angel-whisper >}}.
+  to finish Masked Carnivale and learn {{< spell angel_whisper >}}.
 
 At each step you should be trying to complete your job quests. Spells that are
 required for job quests are a guaranteed learn from dungeons **even if

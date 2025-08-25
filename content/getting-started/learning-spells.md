@@ -14,7 +14,7 @@ important to understand how the mechanics for learning spells actually work!
 
 - The enemy must cast the spell before it dies.
 - The enemy must _actually_ die. If the enemy just disappears you will not learn
-  the spell (e.g. you cannot learn {{< spell perpetual-ray >}} from Onslaughter
+  the spell (e.g. you cannot learn {{< spell perpetual_ray >}} from Onslaughter
   in A8)
 - You are alive when the enemy dies.
 

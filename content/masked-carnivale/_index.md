@@ -28,10 +28,10 @@ allows us to access Blue Mage job gear and rewards from the Blue Mage vendor.
 On top of gear, there are some spells locked behind completing some number of
 stages:
 
-- {{< spell moon-flute >}} for completing 10 stages; this is one of our most
+- {{< spell moon_flute >}} for completing 10 stages; this is one of our most
   important spells!
 - {{< spell doom >}} for completing 20 stages
-- {{< spell angel-whisper >}} for completing 30 stages; this is also one of our
+- {{< spell angel_whisper >}} for completing 30 stages; this is also one of our
   most important spells and is <em>not</em> just for healers.
 
 Some stages even have achievements associated with completing them in certain

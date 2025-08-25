@@ -28,9 +28,9 @@ These restrictions mean that Blue Mage gameplay is basically separate from the
 rest of the game and functions as its own game-within-the-game. While Blue Mage
 is restricted from doing the content mentioned above, it's also free from some
 of the restrictive game design that applies to other jobs. Blue Mage has access
-to some wacky abilities like {{< spell level-5-death >}} which can instantly
+to some wacky abilities like {{< spell level_5_death >}} which can instantly
 kill enemies, {{< spell diamondback >}} which reduces all damage taken by 90%,
-and {{< spell final-sting >}} which deals an incredible 2,000 potency.. but
+and {{< spell final_sting >}} which deals an incredible 2,000 potency.. but
 kills you instantly.
 
 ## What content _can_ Blue Mage do?

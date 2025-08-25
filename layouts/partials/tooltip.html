@@ -1,4 +1,7 @@
 {{- $tooltip := index (where (index site.Data .type) "id" .id) 0 -}}
+{{- if not $tooltip -}}
+  {{- errorf "Could not locate tooltip by id: %s." .id -}}
+{{- end -}}
 {{- $image := (printf "/images/tooltips/%s.png" .id) | resources.Get }}
 {{- $image = $image.Resize "48x webp" }}
 <div id="{{ .id }}-tooltip" class="tooltip-popup-wrapper" hidden>

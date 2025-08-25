@@ -13,21 +13,21 @@ moon_flute_winged:
   actions:
     - gcd: whistle
     - gcd: tingle
-    - gcd: the-rose-of-destruction
-    - gcd: moon-flute
+    - gcd: the_rose_of_destruction
+    - gcd: moon_flute
       ogcd:
-        - j-kick
-    - gcd: triple-trident
+        - j_kick
+    - gcd: triple_trident
       ogcd:
         - nightbloom
-    - gcd: winged-reprobation
+    - gcd: winged_reprobation
       ogcd:
-        - feather-rain
-        - sea-shanty
-    - gcd: winged-reprobation
+        - feather_rain
+        - sea_shanty
+    - gcd: winged_reprobation
       ogcd:
-        - shock-strike
-        - being-mortal
+        - shock_strike
+        - being_mortal
     - gcd: bristle
       ogcd:
         - role:swiftcast
@@ -35,30 +35,30 @@ moon_flute_winged:
         - surpanakha
         - surpanakha
         - surpanakha
-    - gcd: matra-magic
+    - gcd: matra_magic
       ogcd:
-        - phantom-flurry
+        - phantom_flurry
 
 moon_flute_flame:
   starting_gcd: -2
   actions:
     - gcd: whistle
     - gcd: tingle
-    - gcd: the-rose-of-destruction
-    - gcd: moon-flute
+    - gcd: the_rose_of_destruction
+    - gcd: moon_flute
       ogcd:
-        - j-kick
-    - gcd: triple-trident
+        - j_kick
+    - gcd: triple_trident
       ogcd:
         - nightbloom
     - gcd: bristle
       ogcd:
-        - feather-rain
-        - sea-shanty
-    - gcd: mortal-flame
+        - feather_rain
+        - sea_shanty
+    - gcd: mortal_flame
       ogcd:
-        - shock-strike
-        - being-mortal
+        - shock_strike
+        - being_mortal
     - gcd: bristle
       ogcd:
         - role:swiftcast
@@ -66,30 +66,30 @@ moon_flute_flame:
         - surpanakha
         - surpanakha
         - surpanakha
-    - gcd: matra-magic
+    - gcd: matra_magic
       ogcd:
-        - phantom-flurry
+        - phantom_flurry
 
 moon_flute_breath:
   starting_gcd: -2
   actions:
     - gcd: whistle
     - gcd: tingle
-    - gcd: the-rose-of-destruction
-    - gcd: moon-flute
+    - gcd: the_rose_of_destruction
+    - gcd: moon_flute
       ogcd:
-        - j-kick
-    - gcd: triple-trident
+        - j_kick
+    - gcd: triple_trident
       ogcd:
         - nightbloom
     - gcd: bristle
       ogcd:
-        - feather-rain
-        - sea-shanty
-    - gcd: breath-of-magic
+        - feather_rain
+        - sea_shanty
+    - gcd: breath_of_magic
       ogcd:
-        - shock-strike
-        - being-mortal
+        - shock_strike
+        - being_mortal
     - gcd: bristle
       ogcd:
         - role:swiftcast
@@ -97,6 +97,6 @@ moon_flute_breath:
         - surpanakha
         - surpanakha
         - surpanakha
-    - gcd: matra-magic
+    - gcd: matra_magic
       ogcd:
-        - phantom-flurry
+        - phantom_flurry
