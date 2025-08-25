@@ -1,4 +1,4 @@
-{{- $currentGcd := 0 -}}
+{{- $currentGcd := (or .startingGcd 0) -}}
 <div class="rotation">
   {{- range (index site.Data.rotation .rotation) -}}
     <div class="rotation-event">
@@ -14,6 +14,12 @@
           {{- $currentGcd = add $currentGcd 1 -}}
         </div>
       </div>
+      {{- if (eq $currentGcd 0) -}}
+        <div class="rotation-event-pull-wrapper">
+          Pull
+          <div class="rotation-event-pull"></div>
+        </div>
+      {{- end -}}
       {{- range $id := .ogcd -}}
         {{- $type := "spell" -}}
         {{- if (strings.HasPrefix $id "role:") -}}

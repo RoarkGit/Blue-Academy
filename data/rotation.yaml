@@ -20,6 +20,9 @@ moon-flute:
     ogcd:
       - role:swiftcast
       - surpanakha
+      - surpanakha
+      - surpanakha
+      - surpanakha
   - gcd: matra-magic
     ogcd:
       - phantom-flurry
