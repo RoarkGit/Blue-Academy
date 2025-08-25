@@ -1,5 +1,5 @@
 {{- $spellNumbers := (split (.Get 0) ",") -}}
-<div class="spell-loadout-wrapper ffxiv-ui-background">
+<div class="spell-loadout ffxiv-ui-background">
   {{- range $spellNumbers -}}
     {{- if (gt (len .) 0) -}}
       {{- $spellData := index (where (index site.Data.spell) "number" (int .)) 0 -}}

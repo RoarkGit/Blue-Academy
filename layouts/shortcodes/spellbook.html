@@ -1,0 +1,30 @@
+{{- $numSpells := len site.Data.spell -}}
+<div class="spellbook-wrapper">
+  <div class="spellbook-wrapper-page-labels">
+    {{- range (seq 1 (math.Ceil (div $numSpells 16.0))) }}
+      <label class="spellbook-wrapper-page-label" data-page-number="{{ . }}">
+        {{ . }}
+      </label>
+    {{- end -}}
+  </div>
+  <div class="spellbook">
+    {{- range $spellData :=  site.Data.spell -}}
+      <div
+        class="spellbook-spell tooltip"
+        data-tooltip-id="{{ $spellData.id }}-tooltip"
+        data-page-number="{{ math.Ceil (div $spellData.number 16.0) }}"
+        hidden>
+        {{- $image := (printf "/images/tooltips/%s.png" $spellData.id) | resources.Get }}
+        {{- $image := $image.Resize "48x webp" -}}
+        {{- page.Store.SetInMap "tooltips" $spellData.id "spell" -}}
+        <img src="{{ $image.RelPermalink }}" />
+        #{{ $spellData.number }}
+      </div>
+    {{- end -}}
+    {{- range (seq (mod $numSpells 16) 15) -}}
+      <div
+        class="spellbook-spell"
+        data-page-number="{{ math.Ceil (div $numSpells 16.0) }}"></div>
+    {{- end -}}
+  </div>
+</div>

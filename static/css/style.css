@@ -1,3 +1,7 @@
+:root {
+  --spellbook-gap: 12px;
+}
+
 .ffxiv-ui-background {
   --ffxiv-ui-background-dot: radial-gradient(
     rgba(31, 48, 75, 0.5) 1px,
@@ -18,8 +22,10 @@
       calc(var(--ffxiv-ui-background-dot-spacing) / -2),
     0;
   background-size:
-    var(--ffxiv-ui-background-dot-spacing) var(--ffxiv-ui-background-dot-spacing),
-    var(--ffxiv-ui-background-dot-spacing) var(--ffxiv-ui-background-dot-spacing),
+    var(--ffxiv-ui-background-dot-spacing)
+      var(--ffxiv-ui-background-dot-spacing),
+    var(--ffxiv-ui-background-dot-spacing)
+      var(--ffxiv-ui-background-dot-spacing),
     auto;
 }
 
@@ -98,8 +104,8 @@
 
 .tooltip-popup-title {
   flex-basis: 75%;
-  white-space: nowrap;
   font-size: 1.1rem;
+  white-space: nowrap;
 }
 
 .tooltip-popup-image {
@@ -262,6 +268,13 @@ dd {
   }
 }
 
+.death-vulnerability-table-data-row {
+  display: none;
+  &.death-vulnerability-table-data-row--active {
+    display: table-row;
+  }
+}
+
 .death-vulnerability-table th {
   text-align: center;
   white-space: nowrap;
@@ -296,26 +309,72 @@ dd {
   color: #cc2200;
 }
 
-.spell-loadout-wrapper {
-  --spell-loadout-gap: 12px;
+.spellbook-wrapper {
+  margin: auto;
+  width: calc(48px * 4 + var(--spellbook-gap) * 8);
+}
+
+.spellbook-wrapper-page-labels {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 0 -1px 0;
+  font-size: 1.1rem;
+}
+
+.spellbook-wrapper-page-label {
+  float: left;
+  cursor: pointer;
+  margin: 0 2px 0 0;
+  border: solid 1px #fff;
+  border-radius: 5px 5px 0 0;
+  background: var(--MENU-SECTIONS-BG-color);
+  padding: 0 0.5rem 0 0.5rem;
+  &.spellbook-wrapper-page-label--active {
+    background: var(--MENU-SECTION-ACTIVE-CATEGORY-BG-color);
+  }
+}
+
+.spellbook {
   display: grid;
-  grid-template-rows: repeat(2, 48px);
-  grid-template-columns: repeat(12, 48px);
-  column-gap: calc(var(--spell-loadout-gap) / 2);
-  row-gap: calc(var(--spell-loadout-gap) * 3);
+  grid-template-rows: repeat(4, 48px);
+  grid-template-columns: repeat(4, 48px);
+  column-gap: calc(var(--spellbook-gap) * 2);
+  row-gap: calc(var(--spellbook-gap) * 3);
   align-self: center;
   margin: auto;
   border: solid 1px #fff;
-  width: calc(48px * 12 + var(--spell-loadout-gap) * 7.5);
-  height: calc(48px * 2 + var(--spell-loadout-gap) * 7);
+  height: calc(48px * 4 + var(--spellbook-gap) * 13);
   font-size: 1.1rem;
   text-align: center;
 }
 
+.spell-loadout {
+  display: grid;
+  grid-template-rows: repeat(2, 48px);
+  grid-template-columns: repeat(12, 48px);
+  column-gap: calc(var(--spellbook-gap) / 2);
+  row-gap: calc(var(--spellbook-gap) * 3);
+  align-self: center;
+  margin: auto;
+  border: solid 1px #fff;
+  width: calc(48px * 12 + var(--spellbook-gap) * 7.5);
+  height: calc(48px * 2 + var(--spellbook-gap) * 7);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.spellbook-spell {
+  display: none;
+  &.spellbook-spell--active {
+    display: grid;
+  }
+}
+
+.spellbook-spell,
 .spell-loadout-spell {
-  margin: var(--spell-loadout-gap);
+  margin: var(--spellbook-gap);
+  outline: solid 1px #fff;
   background: var(--MENU-SECTION-ACTIVE-CATEGORY-BG-color);
   width: 100%;
   height: 100%;
-  outline: solid 1px #fff;
 }
