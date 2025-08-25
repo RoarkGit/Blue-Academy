@@ -232,7 +232,7 @@ Once Vortexer is dead, Brawler will start causing Self-Destruct, which is an
 instant wipe if it finishes. Switch to Brawler and finish it off, and then get
 ready for Brute Justice.
 
-### Phase 3: Brute Justice
+## Phase 3: Brute Justice
 
 Have the party move to just east of the center of the arena and the tank just
 north of the center. The five bots will show up in the middle and fuse into
@@ -301,12 +301,12 @@ dropping {{< spell moon_flute >}} entirely from one or two people.
 
 {{< /notice >}}
 
-### Intermission 1
+## Intermission 1
 
 We don't do this. We skip it. If you're not skipping this then something is
 seriously wrong and you should fix it.
 
-### Intermission 2
+## Intermission 2
 
 Whenever Brute Justice's health is reduced to 0 it will jump away and begin
 Intermission 2. When Brute Justice's health is about to hit 0 everyone should
@@ -357,7 +357,7 @@ After all of this happens, the bots will rejoin to form Brute Justice. Brute
 Justice now has an HP up buff and will fully heal itself with **Justice** before
 we go into the next phase.
 
-### Phase 4: Gavel
+## Phase 4: Gavel
 
 This is one of the most notorious Blue Mage mechanics, but its difficulty is
 significantly overblown. The only thing that makes it somewhat difficult is that
@@ -526,7 +526,7 @@ took about 3 pulls to get it correct. With less experienced raiders it took 1-2
 nights usually. Skipping can take a handful of pulls, or it can take multiple
 nights, so it's pretty much the same in the end.
 
-### Phase 5: Final Justice
+## Phase 5: Final Justice
 
 After Gavel, Brute Justice jumps away again and lands with J Kick. I recommend
 putting on {{< spell mighty_guard >}} again to mitigate this damage, but other
@@ -602,7 +602,7 @@ Command AOEs, but this time there are no Prey or Stack markers. It finishes up
 with another tankbuster combo before Brute Justice jumps away again, at which
 point everyone should put on {{< spell mighty_guard >}} again.
 
-### Phase 6: J Wave
+## Phase 6: J Wave
 
 This final phase is just a soft enrage. Brute Justice returns to the arena with
 **J Storm**, which is essentially J Kick but hits _way_ harder. After this, it
