@@ -1,7 +1,7 @@
 ---
 title: 'Leveling'
 date: 2023-09-13
-weight: 30
+weight: 20
 ---
 
 Blue Mage starts at level 1 and has a maximum level of 80. The overall leveling

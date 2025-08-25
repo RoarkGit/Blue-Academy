@@ -1,7 +1,7 @@
 ---
 title: Learning Spells
 date: 2023-09-13
-weight: 20
+weight: 30
 ---
 
 ## Learning Spells
