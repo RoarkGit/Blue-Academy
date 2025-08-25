@@ -1,10 +1,9 @@
 <h1 align="center">Blue Academy Website</h1>
 <img src="https://github.com/RoarkGit/Blue-Academy/static/images/audrey.png"></br>
+<a href="https://discord.gg/blueacademy"><img src="https://dcbadge.vercel.app/api/server/blueacademy"></a>
 <h3 align="center">A website for aggregating and storing FFXIV Blue Mage knowledge and resources!</h3>
 
 ---
-
-[![](https://dcbadge.vercel.app/api/server/blueacademy)](https://discord.gg/blueacademy)
 
 This website is built using [Hugo](https://gohugo.io/) and the
 [Hugo Relearn Theme](https://github.com/McShelby/hugo-theme-relearn). This makes
