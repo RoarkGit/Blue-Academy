@@ -1,13 +1,16 @@
 ---
-title: "Leveling"
+title: 'Leveling'
 date: 2023-09-13
 weight: 30
 ---
+
 ## Leveling
+
 Blue Mage gains massively increased experience from defeating enemies. There are
 two ways to level: powerleveling and manual leveling.
 
 ### Powerleveling
+
 With a max level buddy, we can abuse the increased experience to level up
 extremely quickly (max level in about 30 minutes). I recommend using a Scholar
 since the big shields can provide safety when powerleveling, but something like

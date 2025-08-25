@@ -1,5 +1,5 @@
 ---
-title: "Stat Priorities"
+title: 'Stat Priorities'
 date: 2023-09-17T12:24:34-04:00
 draft: true
 weight: 10
@@ -8,11 +8,15 @@ weight: 10
 ## Stat and Melding Priorities for Blue Mage
 
 This page will cover the general logic behind stat and melding priorites for
-Blue Mage. For full gear sets refer to the [Gear Sets]({{< ref "gear-sets" >}} "Full Gear Sets") page.
+Blue Mage. For full gear sets refer to the [Gear Sets]({{< ref "gear-sets" >}}
+"Full Gear Sets") page.
 
 ### Stat Priorities
 
-Blue Mage is in a unique spot where it benefits from all DPS stats pretty equally. What this means in practice is that your gear actually means very little and it mostly just comes down to practice. That being said, the priority can be simplified to the following:
+Blue Mage is in a unique spot where it benefits from all DPS stats pretty
+equally. What this means in practice is that your gear actually means very
+little and it mostly just comes down to practice. That being said, the priority
+can be simplified to the following:
 
 1. Intelligence
 2. Spell Speed until Moon Flute opener can be performed consistently. If you
@@ -34,8 +38,7 @@ of our weapons have exactly 1 weapon damage and we scale a bit more from
 Intelligence as a result. Generally speaking, we will always want to go for the
 highest item level gear that is available since this will have the most
 Intelligence. The full theorycrafting information by Mahdi can be found
-[here](https://docs.google.com/document/d/1-NBJDkyl8h_UXFcOba-CrPPcFXZrDs2QXX53pSS3QJc/edit
-"FFXIV Blue Mage Damage Formula").
+[here](https://docs.google.com/document/d/1-NBJDkyl8h_UXFcOba-CrPPcFXZrDs2QXX53pSS3QJc/edit 'FFXIV Blue Mage Damage Formula').
 
 The biggest part of doing DPS at Blue Mage comes down to whether or not you can
 consistently pull off a full Moon Flute opener. The standard Winged Reprobation
@@ -75,4 +78,3 @@ which means the already small difference can be completely ignored. As a healer,
 we can strengthen our healing potency by adding Determination.
 
 ### Materia Melding
-

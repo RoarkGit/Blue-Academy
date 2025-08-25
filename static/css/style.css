@@ -15,57 +15,70 @@
 
 .tooltip-image img {
   display: inline-block;
-  vertical-align: baseline;
   position: relative;
-  top: .15rem;
-
+  top: 0.15rem;
+  vertical-align: baseline;
   margin: 0;
-  max-height: 100%;
   width: auto;
+  max-height: 100%;
 }
 
 .tooltip-popup-wrapper {
-  box-shadow: 0 0 .25rem .25rem #182326;
   position: fixed;
   z-index: 100;
+  box-shadow: 0 0 0.25rem 0.25rem #182326;
 }
 
 .tooltip-popup {
   --tooltip-color-secondary: #bbac94;
   --tooltip-padding: 1rem;
   --tooltip-image-size: 3rem;
-  --tooltip-image-padding: calc(var(--tooltip-image-size) + var(--tooltip-padding) / 2);
-  --tooltip-background-dot: radial-gradient(rgba(31, 48, 75, 0.5) 1px, transparent 0);
+  --tooltip-image-padding: calc(
+    var(--tooltip-image-size) + var(--tooltip-padding) / 2
+  );
+  --tooltip-background-dot: radial-gradient(
+    rgba(31, 48, 75, 0.5) 1px,
+    transparent 0
+  );
   --tooltip-background-dot-spacing: 4px;
+  background: var(--tooltip-background-dot), var(--tooltip-background-dot),
+    linear-gradient(
+      to bottom,
+      #3d578f var(--tooltip-padding),
+      #3d4b69 calc(var(--tooltip-padding) * 2),
+      #3d4b69
+    );
+  background-position:
+    0 0,
+    calc(var(--tooltip-background-dot-spacing) / -2)
+      calc(var(--tooltip-background-dot-spacing) / -2),
+    0;
+  background-size:
+    var(--tooltip-background-dot-spacing) var(--tooltip-background-dot-spacing),
+    var(--tooltip-background-dot-spacing) var(--tooltip-background-dot-spacing),
+    auto;
   padding: var(--tooltip-padding);
-  font-weight: normal;
-  height: auto;
   width: 24rem;
-
-  background: var(--tooltip-background-dot), var(--tooltip-background-dot), linear-gradient(to bottom, #3d578f var(--tooltip-padding), #3d4b69 calc(var(--tooltip-padding) * 2), #3d4b69);
-  background-size: var(--tooltip-background-dot-spacing) var(--tooltip-background-dot-spacing), var(--tooltip-background-dot-spacing) var(--tooltip-background-dot-spacing), auto;
-  background-position: 0 0, calc(var(--tooltip-background-dot-spacing) / -2) calc(var(--tooltip-background-dot-spacing) / -2), 0;
+  height: auto;
   color: #ffffff;
-  font-size: .8rem;
+  font-weight: normal;
+  font-size: 0.8rem;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.75);
 }
 
 .tooltip-popup-header {
-  position: relative;
-  padding-top: calc(var(--tooltip-padding) / 2);
-  padding-left: var(--tooltip-image-padding);
-
-  height: auto;
-
-  align-items: flex;
   display: flex;
+  position: relative;
   flex-wrap: wrap;
   justify-content: space-between;
-
+  align-items: flex;
   box-shadow: 0 1px 0 0 rgba(71, 110, 188, 1);
+  padding-top: calc(var(--tooltip-padding) / 2);
+  padding-left: var(--tooltip-image-padding);
+  height: auto;
 }
 
-.tooltip-popup-header>* {
+.tooltip-popup-header > * {
   height: calc(var(--tooltip-image-size) / 2);
 }
 
@@ -74,9 +87,9 @@
 }
 
 .tooltip-popup-number {
-  text-align: right;
   flex-basis: 30%;
   font-size: 1.1rem;
+  text-align: right;
 }
 
 .tooltip-popup-title {
@@ -86,18 +99,18 @@
 
 .tooltip-popup-image {
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   width: var(--tooltip-image-size);
   height: var(--tooltip-image-size);
 }
 
 .tooltip-popup-image img {
+  box-shadow: 0px 1px 1px 0px #182326;
   border: solid 1px #000;
   border-radius: 10%;
-  max-height: 100%;
   width: auto;
-  box-shadow: 0px 1px 1px 0px #182326;
+  max-height: 100%;
 }
 
 .tooltip-popup-type {
@@ -106,14 +119,14 @@
 }
 
 .tooltip-popup-range,
-.tooltip-popup-range>* {
+.tooltip-popup-range > * {
   display: flex;
   justify-content: flex-end;
   margin: 0;
   line-height: 1rem;
 }
 
-.tooltip-popup-range>*+* {
+.tooltip-popup-range > * + * {
   margin-left: 1em;
 }
 
@@ -126,47 +139,47 @@ dd {
 }
 
 .tooltip-popup-range dt {
-  opacity: .5;
+  opacity: 0.5;
 }
 
-.tooltip-popup-range dt+dd {
-  margin-left: .25rem;
+.tooltip-popup-range dt + dd {
+  margin-left: 0.25rem;
 }
 
 .tooltip-popup-cast {
-  flex-basis: calc(100% + var(--tooltip-image-padding));
-  flex-shrink: 0;
-  flex-grow: 0;
   display: flex;
-  height: auto;
-  justify-content: space-between;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(100% + var(--tooltip-image-padding));
   align-content: flex-end;
+  justify-content: space-between;
   align-items: flex-end;
   margin-top: 0;
   margin-left: calc(var(--tooltip-image-padding) * -1);
+  height: auto;
   text-align: right;
 }
 
-.tooltip-popup-cast>* {
+.tooltip-popup-cast > * {
   position: relative;
-  width: 30%
+  width: 30%;
 }
 
-.tooltip-popup-cast>*:not(:empty)::before {
-  content: '';
+.tooltip-popup-cast > *:not(:empty)::before {
   position: absolute;
+  bottom: -0.15rem;
   left: 0;
-  bottom: -.15rem;
-  width: 100%;
-  height: .5rem;
-  background: rgba(255, 255, 255, .1);
   border-radius: 1em;
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  height: 0.5rem;
+  content: "";
 }
 
 .tooltip-popup-cast dd {
+  margin-top: 0;
   font-size: 1.1rem;
   line-height: 1.1rem;
-  margin-top: 0;
 }
 
 .tooltip-popup-cast dt {
@@ -174,12 +187,12 @@ dd {
 }
 
 .tooltip-popup-description {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .tooltip-popup p {
-  line-height: 1rem;
   margin: 0;
+  line-height: 1rem;
 }
 
 .etro-gearset {
@@ -190,14 +203,14 @@ dd {
 }
 
 .etro-gearset iframe {
-  height: 100%;
-  width: 100%;
   border: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .fab {
-  text-align: center;
   width: 1.1rem;
+  text-align: center;
 }
 
 .tooltip-popup-additional-info div {
@@ -207,7 +220,7 @@ dd {
   line-height: 1rem;
 }
 
-.tooltip-popup-range>*+* {
+.tooltip-popup-range > * + * {
   margin-left: 1em;
 }
 
@@ -215,8 +228,8 @@ dd {
   color: rgb(0, 204, 34);
 }
 
-.tooltip-popup-additional-info dt+dd {
-  margin-left: .25rem;
+.tooltip-popup-additional-info dt + dd {
+  margin-left: 0.25rem;
 }
 
 .spell-list p {
@@ -232,12 +245,12 @@ dd {
 }
 
 .death-vulnerability-table-wrapper-label {
-  background: var(--MENU-SECTIONS-BG-color);
-  border-radius: 5px 5px 0 0;
-  padding: 12px 15px 10px 15px;
-  margin: 0 5px 0 0;
-  cursor: pointer;
   float: left;
+  cursor: pointer;
+  margin: 0 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  background: var(--MENU-SECTIONS-BG-color);
+  padding: 12px 15px 10px 15px;
   &.death-vulnerability-table-wrapper-label--active {
     background: var(--MENU-SECTION-ACTIVE-CATEGORY-BG-color);
   }
@@ -253,7 +266,7 @@ dd {
 }
 
 .death-vulnerability-table-name-cell {
+  width: 20%;
   text-align: left;
   white-space: nowrap;
-  width: 20%;
 }

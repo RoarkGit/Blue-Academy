@@ -5,5 +5,9 @@
   {{- errorf "The %q shortcode requires a title and etro gearset id. See %s" .Name .Position }}
 {{- end -}}
 <div class="etro-gearset">
-  <iframe title="{{ $title }}" src="https://etro.gg/embed/gearset/b4f7e26d-8462-44c3-ae13-ed0c814d1219" loading="lazy"></iframe>
+  <iframe
+    title="{{ $title }}"
+    src="https://etro.gg/embed/gearset/b4f7e26d-8462-44c3-ae13-ed0c814d1219"
+    loading="lazy"
+  ></iframe>
 </div>

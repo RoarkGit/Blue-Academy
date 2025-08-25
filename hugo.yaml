@@ -15,6 +15,9 @@ params:
   disableMermaid: true
   themeVariant: academy
   collapsibleMenu: true
+  
+build:
+  noJSConfigInAssets: true
 
 menu:
   shortcuts:

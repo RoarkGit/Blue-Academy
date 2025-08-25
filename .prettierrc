@@ -1,0 +1,16 @@
+{
+  "plugins": ["prettier-plugin-go-template", "prettier-plugin-css-order"],
+  "overrides": [
+    {
+      "files": ["*.html"],
+      "options": {
+        "bracketSameLine": true,
+        "htmlWhitespaceSensitivity": "ignore",
+        "parser": "go-template"
+      }
+    }
+  ],
+  "proseWrap": "always",
+  "singleQuote": true,
+  "semi": false
+}

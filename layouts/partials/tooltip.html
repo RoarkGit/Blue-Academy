@@ -1,10 +1,12 @@
 {{- $tooltip := index (where (index site.Data .type) "id" .id) 0 -}}
 {{- $image := (printf "/images/tooltips/%s.png" .id) | resources.Get }}
-{{- $image := $image.Resize "48x webp"}}
+{{- $image := $image.Resize "48x webp" }}
 <div id="{{ .id }}-tooltip" class="tooltip-popup-wrapper" hidden>
   <aside class="tooltip-popup">
     <header class="tooltip-popup-header">
-      <p class="tooltip-popup-image"><img src="{{ $image.RelPermalink }}" loading="lazy"></p>
+      <p class="tooltip-popup-image">
+        <img src="{{ $image.RelPermalink }}" loading="lazy" />
+      </p>
       <p class="tooltip-popup-title">{{- $tooltip.name -}}</p>
       {{- if $tooltip.number -}}
         <p class="tooltip-popup-number">No. {{ $tooltip.number -}}</p>
@@ -33,7 +35,9 @@
         </span>
         <span>
           <dt>Recast</dt>
-          <dd>{{- $tooltip.recast | default 2.5 | lang.FormatNumberCustom 2 -}}s</dd>
+          <dd>
+            {{- $tooltip.recast | default 2.5 | lang.FormatNumberCustom 2 -}}s
+          </dd>
         </span>
         <span>
           {{- if $tooltip.mp -}}
@@ -54,7 +58,10 @@
         {{- if $tooltip.spellType -}}
           <div>
             <dt>Aspect:</dt>
-            <dd>{{ $tooltip.spellType }} / {{ $tooltip.spellAspect | default "Unaspected" -}}</dd>
+            <dd>
+              {{ $tooltip.spellType }} /
+              {{ $tooltip.spellAspect | default "Unaspected" -}}
+            </dd>
           </div>
         {{- end -}}
         {{- if $tooltip.rank -}}

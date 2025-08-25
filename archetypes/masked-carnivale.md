@@ -1,8 +1,8 @@
 ---
-title: "{{ .File.ContentBaseName | int }}. "
+title: {{ .File.ContentBaseName | int }}. 
 date: {{ .Date }}
 weight: {{ substr .File.ContentBaseName 0 2 | int }}
-youtube: 
+youtube:
 ---
 
 ### Recommended Spells
