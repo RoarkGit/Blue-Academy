@@ -406,7 +406,7 @@
     {{< green "Additional Effect: " >}}{{< yellow "Stun" >}}
 
     {{< green "Duration: " >}}3s
-- id: off_guard
+- id: off-guard
   name: Off-guard
   number: 20
   actionType: Spell
@@ -427,7 +427,7 @@
     Recast timer cannot be affected by other spells. However, this action shares a recast timer with {{< orange "Peculiar Light" >}}.
   notes: |
     Stacks with Peculiar Light.
-- id: self_destruct
+- id: self-destruct
   name: Self-destruct
   number: 21
   actionType: Spell
@@ -528,7 +528,7 @@
     Deals a 20-yalm knockback to all enemies in a cone before you.
   notes: |
     Only the ability actually called *Snort* will teach the spell; it is cast quite late into The Dragon's Neck.
-- id: 4_tonze_weight
+- id: 4-tonze_weight
   name: 4-tonze Weight
   number: 26
   actionType: Spell
@@ -1732,7 +1732,7 @@
     {{< green "Additional Effect: " >}}Increases the potency of the next physical damage spell cast by 100
 
     {{< green "Duration: " >}}15s
-- id: tatami_gaeshi
+- id: tatami-gaeshi
   name: Tatami-gaeshi
   number: 83
   actionType: Spell

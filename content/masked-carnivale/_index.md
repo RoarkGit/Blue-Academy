@@ -36,7 +36,12 @@ stages:
 
 Some stages even have achievements associated with completing them in certain
 ways. If a stage has an achievement tied to it, it will be mentioned on that
-stage's guide page.
+stage's guide page. Some of these achievements even reward titles, such as:
+
+- "Perfect Blue" from {{< stage 25 >}}
+- "Champion of the Blue" from {{< stage 30 >}}
+- "Of the Truest Blue" from {{< stage 31 >}}
+- "Glitterier than Goldor" from {{< stage 32 >}}
 
 One final reason for completing the Masked Carnivale is that it rewards Allied
 Seals. You earn some for completing stages in general, but there are also weekly

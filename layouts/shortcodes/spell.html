@@ -1,3 +1,4 @@
-{{- $spellId := .Get 0 -}}
+{{- $spellId := (or (.Get 0) (.Get "id")) -}}
+{{- $altText := (or (.Get 1) (.Get "altText")) -}}
 {{- .Page.Store.SetInMap "tooltips" $spellId "spell" -}}
-{{ partial "tooltip-link" (dict "context" . "id" $spellId "type" "spell") -}}
+{{ partial "tooltip-link" (dict "context" . "id" $spellId "type" "spell" "altText" $altText) -}}

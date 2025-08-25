@@ -111,17 +111,19 @@ that you cast it at some point.
 
 ## Hidden Bonuses
 
-**The Harder They Fall**  
+**Giant Slayer**  
 : Complete {{< stage 10 >}} while allowing Crom Dubh to cast King's Will three
 times. He seems to stop casting the spell below 40% HP, so make sure to let him
-cast it before that happens.
+cast it before that happens. This rewards the "The Harder They Fall"
+achievement.
 
-**Octopath Traveler**  
+**Trouble with Tentacles**  
 : Complete {{< stage 20 >}} without killing any Ultros tentacles in Act 3. You
 can immediately kill Typhon in Act 3 with a fully buffed
-{{< spell final_sting >}} and get credit for this.
+{{< spell final_sting >}} and get credit for this. This rewards the "Octopath
+Traveler" achievement.
 
-**Something Borrowed**  
+**Perfect Blue**  
 : Complete {{< stage 25 >}} while accomplishing the following:
 
 - Can't Touch This
@@ -129,7 +131,10 @@ can immediately kill Typhon in Act 3 with a fully buffed
 - Ain't Got Time to Bleed
 - Too Fast, Too Furious (7:15 or faster)
 
-**None More Blue**  
+  This rewards the "Something Borrowed" achievement and the "Perfect Blue"
+  title.
+
+**Celestium's Finest**  
 : Complete {{< stage 30 >}} while accomplishing the following:
 
 - Can't Touch This
@@ -137,15 +142,24 @@ can immediately kill Typhon in Act 3 with a fully buffed
 - Too Fast, Too Furious (6:30 or faster)
 - Kill all three Siegfried clones in Act 3
 
-**Violets Are Violet**  
+  This rewards the "None More Blue" achievement and the "Champion of the Blue"
+  title.
+
+**Pure Azure**  
 : Complete {{< stage 31 >}} while accomplishing the following:
 
 - Too Fast, Too Furious (6:50 or faster)
 - No vuln stacks
 
-**All That Glitters Is Blue**  
+  This rewards the "Violets Are Violet" achievment and the "Of the Truest Blue"
+  title.
+
+**Going for Gold**  
 : Complete {{< stage 32 >}} while accomplishing the following:
 
 - Elemental Mastery
 - A Walk in the Park
 - Do not destroy the crystal in Act 2
+
+  This rewards the "All That Glitters Is Blue" achievement and the "Glitterier
+  Than Goldor" achievement.

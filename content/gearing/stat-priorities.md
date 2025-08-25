@@ -19,7 +19,7 @@ little and it mostly just comes down to practice. That being said, the priority
 can be simplified to the following:
 
 1. Intelligence
-2. Spell Speed until Moon Flute opener can be performed consistently. If you
+2. Spell Speed until Moon Flute Opener can be performed consistently. If you
    intend to do the DOT openers, you need to get your GCD down to 2.20 with
    food.
 3. Critical Hit
@@ -29,7 +29,7 @@ can be simplified to the following:
 Gear that has both SpS and Crit is extremely uncommon, but the level 80
 Phantasmal gear actually has a few pieces like this which allows us to focus on
 both stats. This is actually what the best general-purpose build is, as it
-allows you to comfortably perform the Moon Flute opener with solid damage and
+allows you to comfortably perform the Moon Flute Opener with solid damage and
 still play as a tank and healer when needed. The gearing page will outline the
 options in a bit more detail.
 
@@ -41,7 +41,7 @@ Intelligence. The full theorycrafting information by Mahdi can be found
 [here](https://docs.google.com/document/d/1-NBJDkyl8h_UXFcOba-CrPPcFXZrDs2QXX53pSS3QJc/edit 'FFXIV Blue Mage Damage Formula').
 
 The biggest part of doing DPS at Blue Mage comes down to whether or not you can
-consistently pull off a full Moon Flute opener. The standard Winged Reprobation
+consistently pull off a full Moon Flute Opener. The standard Winged Reprobation
 opener is doable with 0 additional Spell Speed, but the DOT opener using Breath
 of Magic or Mortal Flame will require a GCD of about 2.20. This is still skill
 and ping dependent so you may need to meld additional SpS to make it more
@@ -52,7 +52,7 @@ in order to do this comfortably and meld to reach that.
 
 This debate had more relevance at level 70 when the two sets were dramatically
 different, but most Blue Mages will want to go with high Spell Speed to make
-completing a Moon Flute opener more practical. In general the two sets will
+completing a Moon Flute Opener more practical. In general the two sets will
 still perform roughly equally. High Spell Speed generally performs more
 consistently, while focusing on high Critical Hit has a slightly higher damage
 ceiling.
