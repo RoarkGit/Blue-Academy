@@ -89,13 +89,47 @@ ready(function () {
     'spell-loadout-spell',
   ) as HTMLCollectionOf<HTMLElement>
   for (const spell of spellbookSpells) {
+    const spellId = spell.getAttribute('data-tooltip-id')
+    if (spellId === null) {
+      continue
+    }
     spell.addEventListener('click', function () {
-      const spellId = spell.getAttribute('data-tooltip-id')
-      if (spellId === null) return
       const nextOpen = activeSpells.indexOf('')
       if (nextOpen !== -1 && activeSpells.indexOf(spellId) === -1) {
         activeSpells[nextOpen] = spellId
         setSpell(spellLoadoutSpells[nextOpen], spell)
+      }
+    })
+    spell.addEventListener('dragstart', function () {
+      const tooltip = document.getElementById(spellId + '-tooltip')
+      if (tooltip === null) return
+      tooltip.hidden = true
+    })
+    spell.addEventListener('dragend', function (event: DragEvent) {
+      const element = document.elementFromPoint(
+        event.clientX,
+        event.clientY,
+      ) as HTMLElement
+      if (
+        element !== null &&
+        element.classList.contains('spell-loadout-spell')
+      ) {
+        for (const setSpell of spellLoadoutSpells) {
+          if (setSpell.getAttribute('data-tooltip-id') === spellId) {
+            return
+          }
+        }
+        const oldSpellId = element.getAttribute('data-tooltip-id')
+        if (oldSpellId !== null) {
+          removeListener(oldSpellId)
+        }
+        for (let i = 0; i < spellLoadoutSpells.length; ++i) {
+          if (element === spellLoadoutSpells[i]) {
+            activeSpells[i] = spellId
+            break
+          }
+        }
+        setSpell(element, spell)
       }
     })
   }
