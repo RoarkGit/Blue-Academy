@@ -16,14 +16,18 @@ weight: 20
 
 **4 Ways to Die**  
 : Used two, three, or four unique spell types.
-{{< notice style="note" >}}Pretend the word "types" isn't in the previous two
-descriptions. What matters is the number of unique/distinct spells. If I cast
-Water Cannon 100 times, that is one unique spell. If I cast Water Cannon, Fire
-Angon, Toad Oil, Flying Frenzy, and Final Sting that is five unique spells.
-Spells with secondary actions like Cold Fog, Chelonian Gate, and Phantom Flurry
-only count as one spell for these purposes. Additionally, role actions and
-general actions do not count for the purposes of the challenge so you may use
-them freely. {{< /notice >}}
+
+{{< notice style="note" >}}
+
+Pretend the word "types" isn't in the previous two descriptions. What matters is
+the number of unique/distinct spells. If I cast Water Cannon 100 times, that is
+one unique spell. If I cast Water Cannon, Fire Angon, Toad Oil, Flying Frenzy,
+and Final Sting that is five unique spells. Spells with secondary actions like
+Cold Fog, Chelonian Gate, and Phantom Flurry only count as one spell for these
+purposes. Additionally, role actions and general actions do not count for the
+purposes of the challenge so you may use them freely.
+
+{{< /notice >}}
 
 **Can't Touch This**  
 : Took zero damage.
@@ -39,9 +43,14 @@ them freely. {{< /notice >}}
 
 **Mastery of Fire/Water/Earth/Wind/Ice/Lightning**  
 : Used one or more fire/water/earth/wind/ice/lightning-aspected spells. Spells
-aspected to other elements were not used. {{< notice style="note" >}}You must
-cast at least one spell aspected to whichever Mastery you're targeting.
-Unaspected and physical spells are still fine.{{< /notice>}}
+aspected to other elements were not used.
+
+{{< notice style="note" >}}
+
+You must cast at least one spell aspected to whichever Mastery you're targeting.
+Unaspected and physical spells are still fine.
+
+{{< /notice>}}
 
 **Elemental Mastery**  
 : Cast spells aspected to all six elements.
@@ -51,18 +60,27 @@ Unaspected and physical spells are still fine.{{< /notice>}}
 piercing, slashing).
 
 **Enfeeble Me Tender/Tenderer**  
-: Applied six/nine or more unique enfeeblements. {{< notice style="tip" >}}Any
-debuff that appears under the enemy counts as an enfeeblement. You do not need
-all of these to be present at the same time or even on the same enemy, it just
-needs to be six/nine unique debuffs used at some point during the
-stage.{{< /notice >}}
+: Applied six/nine or more unique enfeeblements.
+
+{{< notice style="tip" >}}
+
+Any debuff that appears under the enemy counts as an enfeeblement. You do not
+need all of these to be present at the same time or even on the same enemy, it
+just needs to be six/nine unique debuffs used at some point during the stage.
+
+{{< /notice >}}
 
 **Let's Get Physical**  
-: Used only physical-type actions. {{< notice style="note" >}}This one is
-<strong>extremely</strong> strict. All BLU actions that you use must be
-explicitly listed as physical. An easy way to identify this is to filter your
+: Used only physical-type actions.
+
+{{< notice style="note" >}}
+
+This one is <strong>extremely</strong> strict. All BLU actions that you use must
+be explicitly listed as physical. An easy way to identify this is to filter your
 spellbook to blunt, piercing, and slashing actions. Targeted role actions such
-as Addle and Sleep will also make you fail this.{{< /notice >}}
+as Addle and Sleep will also make you fail this.
+
+{{< /notice >}}
 
 **Advanced Spellcasting**  
 : Cast only rank 4 or 5 spells.
@@ -73,9 +91,12 @@ each spell._
 
 **Four/eight-faced**  
 : Used four/eight or more unique actions that are fired from the face.
-{{< notice style="tip" >}}This is referring to the actual casting animation
-itself coming from your face. You also do not even need to hit an enemy with the
-spell, all that matters is that you cast it at some point.
+
+{{< notice style="tip" >}}
+
+This is referring to the actual casting animation itself coming from your face.
+You also do not even need to hit an enemy with the spell, all that matters is
+that you cast it at some point.
 
 {{% expand title="List of eligible spells" %}}
 
