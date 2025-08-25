@@ -15,7 +15,7 @@
         data-page-number="{{ math.Ceil (div $spellData.number 16.0) }}"
         hidden>
         {{- $image := (printf "/images/tooltips/%s.png" $spellData.id) | resources.Get }}
-        {{- $image := $image.Resize "48x webp" -}}
+        {{- $image = $image.Resize "48x webp" -}}
         {{- page.Store.SetInMap "tooltips" $spellData.id "spell" -}}
         <img src="{{ $image.RelPermalink }}" loading="lazy" />
         #{{ $spellData.number }}

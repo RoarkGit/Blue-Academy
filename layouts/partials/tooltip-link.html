@@ -6,7 +6,7 @@
 {{- if (not $image) -}}
   {{- errorf "Could not locate image for spell %s." .id -}}
 {{- end -}}
-{{- $image := $image.Resize "16x webp" -}}
+{{- $image = $image.Resize "16x webp" -}}
 
 
 <span class="tooltip" data-tooltip-id="{{ .id }}">

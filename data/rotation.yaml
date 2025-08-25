@@ -4,22 +4,35 @@ moon-flute:
   - gcd: the-rose-of-destruction
   - gcd: moon-flute
     ogcd:
-    - j-kick
+      - j-kick
   - gcd: triple-trident
     ogcd:
-    - nightbloom
+      - nightbloom
   - gcd: winged-reprobation
     ogcd:
-    - feather-rain
-    - sea-shanty
+      - feather-rain
+      - sea-shanty
   - gcd: winged-reprobation
     ogcd:
-    - shock-strike
-    - being-mortal
+      - shock-strike
+      - being-mortal
   - gcd: bristle
     ogcd:
-    - role:swiftcast
-    - surpanakha
+      - role:swiftcast
+      - surpanakha
   - gcd: matra-magic
     ogcd:
-    - phantom-flurry
+      - phantom-flurry
+
+test:
+  - gcd: whistle
+  - gcd: tingle
+    ogcd:
+      - j-kick
+  - gcd: moon-flute
+    ogcd:
+      - nightbloom
+  - gcd: triple-trident
+    ogcd:
+      - feather-rain
+      - sea-shanty

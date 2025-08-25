@@ -1,31 +1,32 @@
 <div class="rotation">
   {{- range (index site.Data.rotation .rotation) -}}
     <div class="rotation-event">
-      <div class="rotation-event-ogcd-wrapper">
-        {{- range $id := .ogcd -}}
-          {{- $type := "spell" -}}
-          {{- if (strings.HasPrefix $id "role:") -}}
-            {{- $id = strings.TrimPrefix "role:" $id -}}
-            {{- $type = "role" -}}
-          {{- end -}}
-          <div
-            class="rotation-event-ogcd tooltip"
-            data-tooltip-id="{{ $id }}">
+      <div class="rotation-event-gcd-wrapper">
+        <div class="rotation-event-gcd tooltip" data-tooltip-id="{{ .gcd }}">
+          {{- $image := (printf "/images/tooltips/%s.png" .gcd) | resources.Get }}
+          {{- $image = $image.Resize "48x webp" -}}
+          {{- page.Store.SetInMap "tooltips" .gcd "spell" -}}
+          <img src="{{ $image.RelPermalink }}" />
+        </div>
+      </div>
+      {{- range $id := .ogcd -}}
+        {{- $type := "spell" -}}
+        {{- if (strings.HasPrefix $id "role:") -}}
+          {{- $id = strings.TrimPrefix "role:" $id -}}
+          {{- $type = "role" -}}
+        {{- end -}}
+        <div class="rotation-event-ogcd-wrapper">
+          <div class="rotation-event-ogcd tooltip" data-tooltip-id="{{ $id }}">
             {{- $image := (printf "/images/tooltips/%s.png" $id) | resources.Get }}
-            {{- $image := $image.Resize "48x webp" -}}
+            {{- $image = $image.Resize "36x webp" -}}
             {{- page.Store.SetInMap "tooltips" $id $type -}}
             <img src="{{ $image.RelPermalink }}" />
           </div>
-        {{- end -}}
-      </div>
-      <div
-        class="rotation-event-gcd tooltip"
-        data-tooltip-id="{{ .gcd }}">
-        {{- $image := (printf "/images/tooltips/%s.png" .gcd) | resources.Get }}
-        {{- $image := $image.Resize "48x webp" -}}
-        {{- page.Store.SetInMap "tooltips" .gcd "spell" -}}
-        <img src="{{ $image.RelPermalink }}" />
-      </div>
+          <div class="rotation-event-ogcd-timebox-wrapper">
+            <div class="rotation-event-ogcd-timebox"></div>
+          </div>
+        </div>
+      {{- end -}}
     </div>
   {{- end -}}
 </div>
