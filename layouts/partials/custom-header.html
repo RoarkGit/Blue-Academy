@@ -1,9 +1,2 @@
 {{ $spellTooltips := resources.Get "ts/spell-tooltips.ts" | js.Build }}
 <script src="{{ $spellTooltips.RelPermalink }}" defer></script>
-
-<style>
-  @font-face {
-    font-family: "Signia Pro";
-    src: url("/fonts/SigniaPro-Regular.woff2");
-  }
-</style>
