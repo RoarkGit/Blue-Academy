@@ -66,19 +66,6 @@ function removeListener(spellId: string) {
   }
 }
 
-function updateMacro(macro: HTMLElement) {
-  const lines = ['/bluespellbook clear']
-  for (const spell of activeSpells) {
-    if (spell.Id !== '') {
-      if (lines.length === 15) {
-        lines.push(`\n--- macros are limited to 15 lines ---\n`)
-      }
-      lines.push(`/bluespellbook set "${spell.Name}"`)
-    }
-  }
-  macro.innerText = lines.join('\n')
-}
-
 function updateSpellLoadoutLink() {
   const url = new URL(window.location.href)
   const spellNumbers = activeSpells.map((s: Spell) => s.Number).join(',')
@@ -130,9 +117,6 @@ ready(function () {
   const spellLoadoutSpells = document.getElementsByClassName(
     'spell-loadout-spell',
   ) as HTMLCollectionOf<HTMLElement>
-  const macro = document.getElementById(
-    'spell-loadout-builder-macro',
-  ) as HTMLElement
   for (const spell of spellbookSpells) {
     const spellId = spell.getAttribute('data-tooltip-id')
     const spellName = spell.getAttribute('data-spell-name')
@@ -152,7 +136,6 @@ ready(function () {
           Number: spellNumber,
         }
         setSpell(spellLoadoutSpells[nextOpen], spell)
-        updateMacro(macro)
         updateSpellLoadoutLink()
       }
     })
@@ -190,7 +173,6 @@ ready(function () {
           }
         }
         setSpell(element, spell)
-        updateMacro(macro)
         updateSpellLoadoutLink()
       }
     })
@@ -206,7 +188,6 @@ ready(function () {
       }
       removeListener(spellId)
       unsetSpell(spell)
-      updateMacro(macro)
       updateSpellLoadoutLink()
     })
   }
@@ -226,6 +207,5 @@ ready(function () {
       }
     })
   }
-  updateMacro(macro)
   updateSpellLoadoutLink()
 })
