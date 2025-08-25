@@ -1,8 +1,8 @@
 ---
-title: "Blue Mage Gearing"
+title: Blue Mage Gearing
+archetype: chapter
 date: 2023-09-13
-weight: 10
-chapter: true
+weight: 2
 ---
 
 # Resources

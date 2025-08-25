@@ -1,7 +1,7 @@
 ---
 title: "Leveling"
 date: 2023-09-13
-weight: 10
+weight: 30
 ---
 ## Leveling
 Blue Mage gains massively increased experience from defeating enemies. There are
@@ -30,15 +30,18 @@ channels here and ask for help or offer to exchange power leveling with someone.
 Here's a video showing some of these locations, as well as a solo powerleveling
 method.
 
-Blue Mages cast {{< spell diamondback >}} sometimes.
+{{< spell diamondback >}}
 
-Also {{< spell water-cannon >}}
+{{< spell water-cannon >}}
 
-And {{< spell flame-thrower >}} more.
+{{< spell flame-thrower >}}
+
+{{< etro title="SpS/Crit" etro="b4f7e26d-8462-44c3-ae13-ed0c814d1219">}}
+
+### Manual Leveling
 
 {{< spell surpanakha >}}
 
-### Manual Leveling
 Some folks prefer to do things the old fashioned way. This involves killing
 enemies around your level until you reach max level. However, there are still
 some nice tricks for this. You can start out by running around and killing

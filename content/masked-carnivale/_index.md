@@ -1,10 +1,8 @@
 ---
-title: "Masked Carnivale Guide"
+title: Masked Carnivale Guide
+archetype: chapter
 date: 2023-09-13
-weight: 30
+weight: 3
 chapter: true
 ---
-
-# Masked Carnivale
-
 Masked Carnivale guide.

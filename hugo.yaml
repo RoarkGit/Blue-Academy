@@ -1,15 +1,28 @@
-baseURL: 'https://example.org/'
-languageCode: 'en-us'
-title: 'Blue Academy'
-theme: 'hugo-theme-learn'
+baseURL: https://www.mage.blue/
+languageCode: en-us
+title: Blue Academy
+theme: relearn
 
 outputs:
   home:
-    - 'HTML'
-    - 'RSS'
-    - 'JSON'
+    - HTML
+    - RSS
+    - JSON
+  
 
 params:
   custom_css: ["css/spell-tooltip.css"]
   disableMermaid: true
-  themeVariant: 'academy'
+  themeVariant: academy
+
+menu:
+  shortcuts:
+    - name: <i class='fab fa-discord'></i> Discord
+      url: https://discord.mage.blue/
+      weight: 10
+    - name: <i class='fab fa-youtube'></i> Blue Academy
+      url: https://youtube.com/c/blueacademy
+      weight: 20
+    - name: <i class='fab fa-github'></i> Gitub repo
+      url: https://github.com/RoarkGit/Blue-Academy
+      weight: 30

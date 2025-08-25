@@ -1,7 +1,8 @@
 ---
-title: "Spell Loadouts"
+title: Spell Loadouts
+archetype: chapter
 date: 2023-09-13
-weight: 20
+weight: 4
 chapter: true
 ---
 
