@@ -7,7 +7,7 @@
       <p class="tooltip-popup-image"><img src="{{ $image.RelPermalink }}" loading="lazy"></p>
       <p class="tooltip-popup-title">{{- $tooltip.name -}}</p>
       {{- if $tooltip.number -}}
-        <p class="tooltip-popup-number">#{{- $tooltip.number -}}</p>
+        <p class="tooltip-popup-number">No. {{ $tooltip.number -}}</p>
       {{- end -}}
       <p class="tooltip-popup-type">{{- $tooltip.actionType -}}</p>
       <dl class="tooltip-popup-range">

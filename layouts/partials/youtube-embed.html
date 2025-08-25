@@ -1,0 +1,5 @@
+{{- if not .id }}
+  {{- errorf "The %q shortcode requires a video id. See %s" .Name .Position }}
+{{- end }}
+<h2>Video Guide</h2>
+<iframe width="784" height="441" src="https://youtube.com/embed/{{ .id }}" frameborder="0" allowfullscreen></iframe>
