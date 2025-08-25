@@ -2,7 +2,7 @@
 #
 # - id: the role action's ID
 #   name: the role action's name
-#   actionType: Spell or Ability
+#   actionType: Spell, Ability or null (for General Actions)
 #   range: the role action's range
 #   radius: the role action's radius
 #   cast: the role action's cast time
@@ -64,3 +64,11 @@
     {{< green "Potency:" >}} 55
 
     {{< green "Duration:" >}} 21s
+- id: sprint
+  name: Sprint
+  cast: 0
+  recast: 60
+  description: |
+    Increases movement speed.
+
+    {{< green "Duration:" >}} 10s (20s when not in combat)
