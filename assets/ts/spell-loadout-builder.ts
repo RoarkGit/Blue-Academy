@@ -77,6 +77,7 @@ function updateMacro(macro: HTMLElement) {
     }
   }
   macro.innerHTML = lines.join('\n')
+  console.log(macro.innerHTML)
 }
 
 function updateSpellLoadoutLink() {
@@ -226,6 +227,6 @@ ready(function () {
       }
     })
   }
-  updateSpellLoadoutLink()
   updateMacro(macro)
+  updateSpellLoadoutLink()
 })

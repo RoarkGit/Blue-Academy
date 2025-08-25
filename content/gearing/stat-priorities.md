@@ -8,7 +8,7 @@ weight: 10
 ## Stat and Melding Priorities for Blue Mage
 
 This page will cover the general logic behind stat and melding priorites for
-Blue Mage. For full gear sets refer to the [Gear Sets]({{< ref "gear-sets" >}}
+Blue Mage. For full gear sets refer to the [Gear Sets]({{% ref "gear-sets" %}}
 "Full Gear Sets") page.
 
 ### Stat Priorities

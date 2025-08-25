@@ -1,6 +1,11 @@
 ---
 title: Blue Academy
 archetype: home
+description: >-
+  Guides and Resources for the Blue Mage (BLU) job in Final Fantasy XIV
+  (FFXIV). Learn how to play Blue Mage: learn spells from monsters, play as a
+  tank, healer, or DPS, complete the Masked Carnivale, and complete
+  achievements!
 ---
 
 Welcome to Blue Academy! Eorzea's biggest and best (no bias whatsoever)
@@ -10,12 +15,12 @@ collection of Blue Mage theorycrafting, knowledge, and information!
 
 You'll find a navigation menu on the side of the page, but the big resources that are covered here are:
 
-- [Getting Started]({{< relref "/getting-started" >}})
-- [Leveling]({{< relref "/getting-started/leveling" >}})
-- [Gear]({{< relref "/gearing/gear-sets" >}})
-- [Spell Locations]({{< relref "resources/spell-list" >}})
-- [Masked Carnivale Guide]({{< relref "/masked-carnivale" >}})
-- [Savage Guides]({{< relref "/savage-guides" >}})
+- [Getting Started]({{% relref "/getting-started" %}})
+- [Leveling]({{% relref "/getting-started/leveling" %}})
+- [Gear]({{% relref "/gearing/gear-sets" %}})
+- [Spell Locations]({{% relref "resources/spell-list" %}})
+- [Masked Carnivale Guide]({{% relref "/masked-carnivale" %}})
+- [Savage Guides]({{% relref "/savage-guides" %}})
 
 ## About Blue Academy
 

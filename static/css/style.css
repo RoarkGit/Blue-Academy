@@ -463,13 +463,14 @@ dd {
 }
 
 .spell-loadout-builder-macro-wrapper {
-  font-size: 2rem;
+  font-size: 1rem;
+  margin-top: 2em;
   text-align: center;
 }
 
 .spell-loadout-builder-macro {
-  width: 50%;
   margin: auto;
   text-align: left;
   white-space: pre;
+  display: inline-block;
 }

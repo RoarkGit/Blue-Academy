@@ -48,21 +48,21 @@ Before you start raiding you should have all spells. When I say "all spells" I
 really mean _all spells_. Learning spells for us is the equivalent of completing
 job quests on other jobs.
 
-If you look at the spell loadouts in the [Gameplay]({{< relref "/gameplay" >}})
+If you look at the spell loadouts in the [Gameplay]({{% relref "/gameplay" %}})
 section you'll see that every loadout includes {{< spell angel_whisper >}},
 which is a reward for completing 30 stages in the Masked Carnivale. Completing
 the Masked Carnivale is dramatically easier than any of the Savage raids, so if
 you're struggling to do that then you aren't ready for raiding, anyway.
 
-Both the [DPS]({{< relref "/gameplay/dps" >}}) and
-[Tank]({{< relref "/gameplay/tank" >}}) loadouts include spells that require
+Both the [DPS]({{% relref "/gameplay/dps" %}}) and
+[Tank]({{% relref "/gameplay/tank" %}}) loadouts include spells that require
 learning at least 100 total spells. These spells are non-negotiable, and 100 is
 already nearly every spell, anyway.
 
 ### Required Gear
 
 You can take a look at the [Recommended Gear
-Sets]({{< relref "/gearing/gear-sets" >}}) to see what the recommended gear is.
+Sets]({{% relref "/gearing/gear-sets" %}}) to see what the recommended gear is.
 Gear makes very little difference overall, but it is incredible easy for us to
 get. As long as you are wearing level-appropriate gear and are able to execute
 your rotation properly, gear mostly doesn't matter.

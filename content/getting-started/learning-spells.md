@@ -44,5 +44,5 @@ concepts are still the same.
 
 ## Where do I learn all the spells?
 
-Check out the [full spell list]({{< relref "resources/spell-list" >}}) to see
+Check out the [full spell list]({{% relref "resources/spell-list" %}}) to see
 all the spells and where to learn them!

@@ -1,5 +1,5 @@
 <a
   id="logo"
-  href="{{ (cond (and (ne .Site.Params.landingPageURL nil) (.Site.IsMultiLingual)) .Site.Params.landingPageURL "/") }}">
+  href="{{ (cond (and (ne .Site.Params.landingPageURL nil) (hugo.IsMultiLingual)) .Site.Params.landingPageURL "/") }}">
   <img src="{{ "images/audrey.png" | relURL }}" />
 </a>

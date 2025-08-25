@@ -23,7 +23,7 @@ meaning the will take _double_ damage from that element. This is indicated by
 the elemental icon floating over their heads. Note that this is different from
 Eureka where the icon over an enemy's head indicates an element that it is
 _resistant_ to. [Stage 2 (Much Ado About
-Pudding)]({{< stage 2 >}}) serves as a tutorial for
+Pudding)]({{% stage 2 %}}) serves as a tutorial for
 this mechanic.
 
 ### Score & Bonuses
@@ -32,7 +32,7 @@ After completing a stage you will see a pop-up indicating what your score was
 for the stage. The score itself is just for fun and doesn't have much meaning,
 but the "bonuses" listed are relevant for achievements and weekly targets. There
 is a complete list of bonuses and their meaning
-[here]({{< ref "/masked-carnivale/bonus-descriptions" >}}).
+[here]({{% ref "/masked-carnivale/bonus-descriptions" %}}).
 
 ## Recommended Spells
 

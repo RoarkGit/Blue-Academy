@@ -7,16 +7,9 @@ outputs:
   home:
     - HTML
     - RSS
-    - SEARCH
 
 params:
-  description: >-
-    Guides and Resources for the Blue Mage (BLU) job in Final Fantasy XIV
-    (FFXIV). Learn how to play Blue Mage: learn spells from monsters, play as a
-    tank, healer, or DPS, complete the Masked Carnivale, and complete
-    achievements!
   custom_css: ['css/full-page.css', 'css/spell-tooltip.css']
-  disableMermaid: true
   themeVariant: academy
   collapsibleMenu: true
 
