@@ -214,7 +214,7 @@ steps for the entire mechanic are:
 2. Heartless Archangel
 3. Soak Starstrafe towers
 4. Pop skulls
-5. Bait Wings of Destruction
+5. Bait Wings (Double)
 6. Ultima
 7. Soak Starstrafe towers
 8. Pop skulls
@@ -253,7 +253,7 @@ out to the north or south, whichever side their skull is coming from (so it
 doesn't go through the center). As soon as they get healed up and the skull
 isn't near anyone else, they need to run into the skull to blow it up.
 
-Almost immediately after, Kefka will start casting Wings of Destruction. The
+Almost immediately after, Kefka will start casting Wings (Double). The
 tank should stand in the dead center of the arena, the party should be a bit
 south of that, and whoever is designated as the baiter needs to run outwards and
 use {{< spell mighty_guard >}}. This hit is survivable at full health with just
@@ -267,7 +267,7 @@ of Judgment AOE, so heal up and mitigate appropriately. Once this is done, the
 tank should make sure to point Kefka straight north to make the next mechanic
 consistent.
 
-### Trine
+### Trine (Small)
 
 Kefka will cast **Trine (Small)** and spawn three sets of triangles at various
 locations on the ground that explode after a delay in the order that they
@@ -282,3 +282,143 @@ Destruction (Double) again so bait and mitigate appropriately. This mechanic is
 actually quite difficult to read in my experience, so this is one mechanic where
 it can be helpful to have someone who is very confident call out where to go and
 just follow them.
+
+
+### Futures Numbered/Pasts Forgotten
+
+After Wings resolves, Kefka will cast Ultima again followed by either **Futures
+Numbered** or **Pasts Forgotten**. Futures Numbered will be a cleave in front of
+Kefka, while Pasts Forgotten will be a cleave behind Kefka. I remember this as
+"your future is ahead of you" or "your past is behind you." Everyone needs to
+stack behind Kefka for the first hit and then move together to avoid whichever
+of Future/Past was cast. If it was Future, the party needs to run through (since
+he is now facing the party). If it was Past, then everyone can just stay where
+they were. Kefka will then cast **Ultimate Embrace** followed by Hyperdrive, so
+stay away from the tank. {{< spell diamondback >}} lasts long enough to
+mitigate both hits. After the tankbusters, Kefka will cast Ultima again as we go
+into Forsaken 2.
+
+### Forsaken 2
+
+Forsaken 2 is a nightmare of a mechanic. It involves meteors, towers, Kefka
+clones, and just chaos in general. The full mechanic plays out like this:
+
+1. The two furthest players from Kefka are targeted by **Starstrafe** prey
+   markers, which drop four meteors that leave behind puddles which slow and
+   deal massive damage to anyone inside.
+2. One two-person tower spawns in the east and one two-person tower spawns in
+   the west.
+3. Two players get targeted with five ground-targeted AOEs.
+4. One four-person tower spawns in the north.
+5. Four clones spawn and jump at random players and cast Futures Numbered or
+   Pasts Forgotten.
+6. Two two-person towers spawn in the east and two two-person towers spawn in
+   the west.
+7. One player gets targeted with a stack marker.
+8. One person gets targeted with a proximity marker.
+9. Light of Judgment.
+
+This mechanic is _possible_ to resolve correctly, but it is extremely difficult
+and we will instead cheese most of it with {{< spell mighty_guard >}} and
+{{< spell diamondback >}}. This is how we handle it:
+
+1. Everyone put up {{< spell mighty_guard >}} and stack in the middle.
+2. Double Wing baiters (or two other people) step slightly outside of center to
+   bait Starstrafe, then return to the stack when the marker appears.
+3. Have both healers use {{< spell angels_snack >}} before ground AOEs start
+   appearing.
+4. Stutter step outwards to your clock position, making sure to step just barely
+   outside of AOEs to leave yourself as much room as possible.
+5. Clones charge four people, and the players that didn't bait Starstrafe cast
+   {{< spell diamondback >}}.
+6. After stepping out of their fourth Starstrafe AOE, the baiters use
+   {{< action swiftcast >}} and {{< spell diamondback >}}.
+7. Observe the chaos from inside your marble.
+8. After Light of Judgment, remove {{< spell mighty_guard >}}.
+
+The video guide doesn't show this strategy, since I figured this one out quite a
+bit later. [This clip](https://www.twitch.tv/liam_galt/clip/GenerousBoldSpindleFutureMan-V90hB0RxtmPRxR14)
+shows this strategy in action if you want to see how it plays out. By doing this
+you will receive a ton of Damage Down debuffs and be doing functionally zero
+damage, so there's no real downside to keeping {{< spell mighty_guard >}} on
+until the debuffs fall off. Since damage isn't a concern, this strategy is
+definitely way easier and more consistent than trying to do it "properly."
+
+After Forsaken 2 is done, Kefka will use Celestriad again. This is handled
+exactly the same way as in the beginning, except this time he will finish with a
+Wings (Single) cast, so just move to whichever side is safe.
+
+### Trine (Large)
+
+Kefka will cast **Trine (Large)** which will be handled one of two ways. If the
+small triangles create a pattern where the outside is unsafe, we will stack in
+the dead center of the arena (inside the larger triangle). The points of the
+large triangle will explode, but the center is safe. If there is a small
+triangle in the center of the arena, then we need to move to whichever outside
+edge does not have a small triangle. After Trine (Large), Kefka will do another
+Futures Numbered/Pasts Forgotten combo, Wings (Double), a tankbuster combo,
+Ultima, and then we go into Forsaken 3.
+
+### Forsaken 3
+
+In a vacuum, Forsaken 3 is quite intimidating. In practice, it's actually pretty
+easy. Kefka will call back the Graven Image statue from phase 1 for this
+mechanic. The full mechanic plays out like this:
+
+1. The statue tethers to four people for a knockback.
+2. Ultimate Embrace.
+3. Two two-person towers spawn in the east/west and one four-person tower spawns
+   in the south.
+4. The statue will then confuse four people and put four people to sleep, while
+   two two-person towers spawn in the east/west again.
+5. Ultima.
+6. One cycle of Forsaken 1 plays out.
+7. One four-person tower appears while Kefka casts Wings (Double).
+8. Ultima.
+9. Wings (Single) while the Graven Image statue
+   cleaves either east or west.
+10. Light of Judgment.
+
+Fortunately the difficult parts of this mechanic can also be cheesed with {{<
+spell diamondback >}}. Split the party up into one group of two (Wing baiters),
+another group of two (healers), and a group of four (remaining DPS). Have the
+first group take the west tower, the second group take the east tower, and the
+third group take the south tower. Everything gets resolved in this order:
+
+1. Preposition into tower locations.
+2. When knockback tethers appear, everyone use {{< action surecast >}} and tank
+   use {{< spell diamondback >}}. The person sharing the tower with the tank
+   needs to make sure they don't get hit by the tankbuster while soaking the
+   tower.
+3. When the next set of tethers appear, everyone {{< spell diamondback >}}. This
+   prevents the sleep and confusion combo from killing anyone.
+4. Handle Forsaken 1 the same way as before.
+5. Group of four soaks south tower again, while Wing baiters handle Wings (Double).
+6. Point Kefka east or west.
+7. Dodge Wings (Single) and statue cleave.
+8. Mitigate Light of Judgment.
+
+After Forsaken 3, Kefka will repeat mechanics we've already seen before going
+into his enrage sequence. The order of mechanics is:
+
+1. Trine (Small)
+2. Wings (Single)
+3. Wings (Double)
+4. Ultimate Embrace
+5. Trine (Large)
+6. Futures Numbered/Pasts Forgotten
+7. Hyperdrive
+8. Ultima x2
+9. Forsaken 3 cycle
+10. Ultima x4
+11. Light of Judgment (hard enrage)
+
+This fight has a very easy DPS check and is strictly a mechanics check. Most
+groups will kill shortly after Forsaken 3 resolves, but there is a full three
+minutes of mechanics after that to stabilize and finish the fight.
+
+### Final Sting
+
+God Kefka's Final Sting threshold is roughly 7%. Once he is at 7%, apply
+{{< spell off-guard>}}, use {{< spell moon_flute >}}, any Primal abilities you
+have, then finish with {{< spell whistle >}} and {{< spell final_sting >}}.
