@@ -1,0 +1,33 @@
+<style>
+#body .flex-block-wrapper {
+  width: 80%;
+  max-width: 80%;
+}
+
+p {
+  margin: 0;
+}
+</style>
+
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Notes</th>
+  </tr>
+  {{- range $.Site.Data.tooltips.spell -}}
+    {{- $imagePath := (printf "/images/spell/%s.png" .id)}}
+    <tr>
+      <td style="text-align: center;">{{ .number }}</td>
+      <td style="white-space: nowrap;">{{ partial "spell.html" (dict "context" . "id" .id "name" .name) }}</td>
+      <td style="white-space: nowrap;">{{ .location | markdownify }}</td>
+      <td>{{ .notes | markdownify }}</td>
+    </tr>
+  {{- end -}}
+</table>
+
+
+{{- range $.Site.Data.tooltips.spell -}}
+  {{- partial "tooltip.html" (dict "context" . "id" .id "type" "spell") }}
+{{- end -}}

@@ -1,15 +1,19 @@
-#body .spell-tooltip-link {
+.tooltip {
+  white-space: nowrap;
+}
+
+.tooltip-link {
   color: var(--MAIN-LINK-color);
   line-height: 1.15rem;
 }
 
-#body .spell-tooltip-image {
+.tooltip-image {
   display: inline-block;
   width: 1rem;
   height: 1rem;
 }
 
-#body .spell-tooltip-image img {
+.tooltip-image img {
   display: inline-block;
   vertical-align: baseline;
   position: relative;
@@ -20,13 +24,13 @@
   width: auto;
 }
 
-.spell-tooltip-popup-wrapper {
-  box-shadow: 0 0 3px 3px #182326;
+.tooltip-popup-wrapper {
+  box-shadow: 0 0 .25rem .25rem #182326;
   position: fixed;
   z-index: 100;
 }
 
-.spell-tooltip-popup {
+.tooltip-popup {
   --tooltip-color-secondary: #bbac94;
   --tooltip-padding: 1rem;
   --tooltip-image-size: 3rem;
@@ -34,9 +38,9 @@
   --tooltip-background-dot: radial-gradient(rgba(31, 48, 75, 0.5) 1px, transparent 0);
   --tooltip-background-dot-spacing: 4px;
   padding: var(--tooltip-padding);
-  font-weight: light;
+  font-weight: normal;
   height: auto;
-  width: 370px;
+  width: 23rem;
 
   background: var(--tooltip-background-dot), var(--tooltip-background-dot), linear-gradient(to bottom, #3d578f var(--tooltip-padding), #3d4b69 calc(var(--tooltip-padding) * 2), #3d4b69);
   background-size: var(--tooltip-background-dot-spacing) var(--tooltip-background-dot-spacing), var(--tooltip-background-dot-spacing) var(--tooltip-background-dot-spacing), auto;
@@ -46,7 +50,7 @@
   text-shadow: 1px 1px rgba(0, 0, 0, 0.75);
 }
 
-.spell-tooltip-popup-header {
+.tooltip-popup-header {
   position: relative;
   padding-top: calc(var(--tooltip-padding) / 2);
   padding-left: var(--tooltip-image-padding);
@@ -61,20 +65,20 @@
   box-shadow: 0 1px 0 0 rgba(71, 110, 188, 1);
 }
 
-.spell-tooltip-popup-header>* {
+.tooltip-popup-header>* {
   height: calc(var(--tooltip-image-size) / 2);
 }
 
-.spell-tooltip-popup-header p {
+.tooltip-popup-header p {
   margin: 0;
 }
 
-.spell-tooltip-popup-title {
-  flex-basis: 50%;
+.tooltip-popup-title {
+  flex-basis: 100%;
   font-size: 1.1rem;
 }
 
-.spell-tooltip-popup-image {
+.tooltip-popup-image {
   position: absolute;
   left: 0;
   top: 0;
@@ -82,7 +86,7 @@
   height: var(--tooltip-image-size);
 }
 
-.spell-tooltip-popup-image img {
+.tooltip-popup-image img {
   border: solid 1px #000;
   border-radius: 10%;
   max-height: 100%;
@@ -90,32 +94,39 @@
   box-shadow: 0px 1px 1px 0px #182326;
 }
 
-.spell-tooltip-popup-type {
-  flex-basis: 50%;
+.tooltip-popup-type {
   color: var(--tooltip-color-secondary);
 }
 
-.spell-tooltip-popup-range,
-.spell-tooltip-popup-range>* {
+.tooltip-popup-range,
+.tooltip-popup-range>* {
   display: flex;
   justify-content: flex-end;
   margin: 0;
   line-height: 1rem;
 }
 
-.spell-tooltip-popup-range>*+* {
+.tooltip-popup-range>*+* {
   margin-left: 1em;
 }
 
-.spell-tooltip-popup-range dt {
+dt {
+  font-style: normal;
+}
+
+dd {
+  list-style: none;
+}
+
+.tooltip-popup-range dt {
   opacity: .5;
 }
 
-.spell-tooltip-popup-range dt+dd {
+.tooltip-popup-range dt+dd {
   margin-left: .25rem;
 }
 
-.spell-tooltip-popup-cast {
+.tooltip-popup-cast {
   flex-basis: calc(100% + var(--tooltip-image-padding));
   flex-shrink: 0;
   flex-grow: 0;
@@ -129,12 +140,12 @@
   text-align: right;
 }
 
-.spell-tooltip-popup-cast>* {
+.tooltip-popup-cast>* {
   position: relative;
   width: 30%
 }
 
-.spell-tooltip-popup-cast>*:not(:empty)::before {
+.tooltip-popup-cast>*:not(:empty)::before {
   content: '';
   position: absolute;
   left: 0;
@@ -145,21 +156,21 @@
   border-radius: 1em;
 }
 
-.spell-tooltip-popup-cast dd {
+.tooltip-popup-cast dd {
   font-size: 1.1rem;
   line-height: 1.1rem;
   margin-top: 0;
 }
 
-.spell-tooltip-popup-cast dt {
+.tooltip-popup-cast dt {
   color: var(--tooltip-color-secondary);
 }
 
-.spell-tooltip-popup-description {
+.tooltip-popup-description {
   margin-top: .5rem;
 }
 
-.spell-tooltip-popup p {
+.tooltip-popup p {
   line-height: 1rem;
   margin: 0;
 }
@@ -180,4 +191,24 @@
 .fab {
   text-align: center;
   width: 1.1rem;
+}
+
+.tooltip-popup-additional-info,
+.tooltip-popup-additional-info>* {
+  display: flex;
+  justify-content: flex-start;
+  margin: .5rem 0 0 0;
+  line-height: 1rem;
+}
+
+.tooltip-popup-range>*+* {
+  margin-left: 1em;
+}
+
+.tooltip-popup-additional-info dt {
+  color: rgb(0, 204, 34);
+}
+
+.tooltip-popup-additional-info dt+dd {
+  margin-left: .25rem;
 }

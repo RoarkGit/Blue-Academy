@@ -1,0 +1,9 @@
+{{- $roleId := .Get 0 -}}
+{{- $role := index (where $.Site.Data.tooltips.role "id" $roleId) 0 }}
+{{- $image := printf "/images/role/%s.png" $roleId | resources.Get -}}
+
+{{- .Page.Store.SetInMap "tooltips" $roleId "role" -}}
+<span class="tooltip" data-tooltip-id="{{ $roleId }}-tooltip">
+  <span class="tooltip-image"><img src="{{ $image.RelPermalink }}?featherlight=false"></span>
+  <span class="tooltip-link">{{ $role.name }}</span>
+</span>

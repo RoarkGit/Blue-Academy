@@ -30,6 +30,10 @@ channels here and ask for help or offer to exchange power leveling with someone.
 Here's a video showing some of these locations, as well as a solo powerleveling
 method.
 
+{{< role addle >}}
+
+{{< spell diamondback >}}
+
 {{< spell diamondback >}}
 
 {{< spell water-cannon >}}

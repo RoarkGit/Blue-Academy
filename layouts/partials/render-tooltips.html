@@ -1,0 +1,55 @@
+{{- range $id, $type := .Page.Store.Get "tooltips" -}}
+  {{/*  {{- $tooltip := index (where (index $.Site.Data.tooltips $type) "id" $name) 0 -}}
+  {{- $imagePath := (printf "/images/%s/%s.png" $type $name)}}
+  <div id="{{ $name }}-tooltip" class="tooltip-popup-wrapper" hidden>
+    <aside class="tooltip-popup">
+      <header class="tooltip-popup-header">
+        <p class="tooltip-popup-image"><img src="{{ $imagePath }}"></p>
+        <p class="tooltip-popup-title">{{- $tooltip.name -}}</p>
+        {{- if $tooltip.spellType -}}
+        <p class="tooltip-popup-spell-info">{{- $tooltip.spellType -}} / {{- $tooltip.spellAspect | default "Unaspected" -}}</p>
+        {{- end -}}
+        <p class="tooltip-popup-type">{{- $tooltip.actionType -}}</p>
+        <dl class="tooltip-popup-range">
+          <span>
+            <dt>Range</dt>
+            <dd>{{- $tooltip.range | default 0 -}}y</dd>
+          </span>
+          <span>
+            <dt>Radius</dt>
+            <dd>{{- $tooltip.radius | default 0 -}}y</dd>
+          </span>
+        </dl>
+        <dl class="tooltip-popup-cast">
+          <span>
+            <dt>Cast</dt>
+            <dd>
+              {{- with $tooltip.cast -}}
+                {{- . | default 2.0 | lang.FormatNumberCustom 2 -}}s
+              {{- else -}}
+                Instant
+              {{- end -}}
+            </dd>
+          </span>
+          <span>
+            <dt>Recast</dt>
+            <dd>{{- $tooltip.recast | default 2.5 | lang.FormatNumberCustom 2 -}}s</dd>
+          </span>
+          <span>
+            {{- if $tooltip.mp -}}
+              <dt>MP Cost</dt>
+              <dd>{{- $tooltip.mp -}}</dd>
+            {{- else if $tooltip.hp -}}
+              <dt>HP Cost</dt>
+              <dd>{{- $tooltip.hp -}}</dd>
+            {{- end -}}
+          </span>
+        </dl>
+      </header>
+      <div class="tooltip-popup-description">
+        {{- $tooltip.description | markdownify -}}
+      </div>
+    </aside>
+  </div>  */}}
+  {{- partial "tooltip.html" (dict "context" . "id" $id "type" $type) -}}
+{{- end -}}

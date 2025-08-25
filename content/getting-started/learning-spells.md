@@ -1,15 +1,18 @@
 ---
-title: "Learning Spells"
+title: Learning Spells
 date: 2023-09-13
 weight: 20
 ---
 ## Learning Spells
 Blue Mages learn spells by defeating enemies who cast the spell they’re trying
-to learn.
+to learn. Since most of our power actually comes from learning new spells, it's
+important to understand how the mechanics for learning spells actually work!
 
 ### Requirements for learning spells
-- The enemy casts the spell before it dies.
-- The enemy actually dies.
+- The enemy must cast the spell before it dies.
+- The enemy must _actually_ die. If the enemy just disappears you will not learn
+  the spell (e.g. you cannot learn {{< spell perpetual-ray >}} from Onslaughter
+  in A8)
 - You are alive when the enemy dies.
 
 ### Things that affect learning rate
@@ -34,6 +37,5 @@ For a quick video detailing this process, click
 concepts are still the same.
 
 ## Where do I learn all the spells?
-I recommend using [Icy
-Veins](https://www.icy-veins.com/ffxiv/blue-mage-pve-dps-spell-summary) to
-quickly see where to learn spells.
+Check out the [full spell list]({{< relref "resources/spell-list" >}}) to see all the spells
+and where to learn them!

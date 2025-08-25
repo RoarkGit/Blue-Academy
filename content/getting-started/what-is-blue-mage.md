@@ -2,5 +2,56 @@
 title: What is Blue Mage?
 weight: 10
 ---
-## Blue Mage
-Blue Mage is a caster DPS job in FFXIV, but it is considered a Limited Job.
+Blue Mage is a Limited Job that is categorized as a caster DPS that is very
+different from the other jobs in FFXIV. It learns its abilities from enemies
+rather than by leveling up. Due to its classification as a Limited Job it has
+some restrictions on playing with others, but it is _because_ of this
+classification that it is so unique and interesting! Blue Mage is extremely
+flexible and as a result is capable of playing all three roles: Tank, Healer,
+and DPS.
+
+## What is a Limited Job?
+Before we talk about how Blue Mage functions as a whole it's important to
+understand what it means to be a Limited Job and what those restrictions entail. The current restrictions for a Limited Job are:
+
+- Maximum level of 80.
+- Unable to use Duty Finder matchmaking. Duty Finder _can_ be used to enter
+  duties, but it has to be with a preformed party.
+- Unable to enter certain types of duties, such as Eureka/Bozja, Squadron/Duty
+  Support/Trust duties, Deep Dungeons, PvP, and Ultimate Raids.
+- Unable to progress the Main Scenario Questline.
+
+These restrictions mean that Blue Mage gameplay is basically separate from the
+rest of the game and functions as its own game-within-the-game. While Blue Mage
+is restricted from doing the content mentioned above, it's also free from some
+of the restrictive game design that applies to other jobs. Blue Mage has access
+to some wacky abilities like {{< spell level-5-death >}} which can instantly
+kill enemies, {{< spell diamondback >}} which reduces all damage taken by 90%,
+and {{< spell final-sting >}} which deals an incredible 2,000 potency.. but
+kills you instantly.
+
+## What content _can_ Blue Mage do?
+Blue Mage can participate in almost everything that wasn't mentioned above! This
+means these are all on the table:
+- Dungeons
+- Trials (Normal and Extreme)
+- Raids (Normal and Savage)
+- Treasure Maps
+
+There _are_ some exceptions, such as Memoria Misera which we are completely
+blocked from entering, but most duties are open to Blue Mage!
+
+Blue Mage also has its own set of solo duties tied to its job quest called the
+Masked Carnivale. For group content, there are achievements for completing
+synced content with a full party of Blue Mages! Nearly every Extreme trial and
+each final floor of a Savage raid tier has an associated achievement. Completing
+all Savage achievements for a given expansion rewards a title, and completing
+the Bahamut and Alexander raids rewards the [Morbol
+Mount](https://na.finalfantasyxiv.com/lodestone/playguide/db/item/d25182f6faf/)!
+
+## Lore
+A so-called mage of rather questionable character claims to have mastered an
+outlandish form of spellcasting that resembles neither black nor white magic
+during his voyage to the New World. Allegedly, anyone who purchases one of his
+soul crystals can learn to mimic the aetherial magicks of wild creatures. But
+can he be trusted, or is he merely a con artist looking to make a quick gil?
