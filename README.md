@@ -74,7 +74,8 @@ There are some shortcodes that are helpful to use for adding content:
 - If you want to link to a spell and have its tooltip show up on a site, you can
   write `{{< spell the_rams_voice >}}`! The argument for the shortcode is the
   spell's full name, with punctuation removed, and spaces replaced with `_`.
-  This also works for role actions, but with the `{{< role addle >}}` shortcode.
+  This also works for role/general actions, but with the `{{< action addle >}}`
+  shortcode.
 - You can create a spell loadout by writing
   `{{< spell-loadout spels="1,,32,,104" >}}`. In this example, you will create a
   spell loadout with Water Cannon in the first spot, Toad Oil in the third spot,

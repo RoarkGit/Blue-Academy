@@ -55,12 +55,12 @@ tank, so stay away from the tank when possible.
 
 For this phase I recommend saving your Moon Flute Opener and spells with >60s
 cooldowns. Instead, start with a
-{{< spell id="bristle" altText="Bristle-buffed" >}} {{<spell song_of_torment >}}
-and group up on the tank. I know we said to avoid Hydrothermal Missile, but we
-can stack for the first one to get a free {{< spell cold_fog >}} proc and
-front-load a bunch of damage. After the first Seed of the Sky, Onslaughter faces
-a random target and uses **Mega Beam**, which is a lethal line AOE with a huge
-knockback, so sidestep it.
+{{< spell id="bristle" altText="Bristle-buffed" >}}
+{{< spell song_of_torment >}} and group up on the tank. I know we said to avoid
+Hydrothermal Missile, but we can stack for the first one to get a free
+{{< spell cold_fog >}} proc and front-load a bunch of damage. After the first
+Seed of the Sky, Onslaughter faces a random target and uses **Mega Beam**, which
+is a lethal line AOE with a huge knockback, so sidestep it.
 
 There will be a bunch of Hydrothermal Missiles and Seeds of the Sky so keep
 dodging, and then four **Steam Regulators** will spawn, one in each corner. We
@@ -331,11 +331,12 @@ visible and look like a green and black swirling circle before becoming hidden.
 
 After Double Drill, Onslaughter will face a random person and start channeling
 Mega Beam. If it's facing you, just step to the side without hitting any mines.
-Once the beam actually fires, hardcast {{< spell diamondback >}} (no {{< action
-swiftcast >}}). This is based on the animation of the Mega Beam, not the cast bar.
-Once the beam fires and starts shrinking slightly that's when you should use {{< spell diamondback >}}.
-If you timed this correctly, then you will see a bunch of explosions, chakrams, and
-mirage charges, but everyone will be safe.
+Once the beam actually fires, hardcast {{< spell diamondback >}} (no
+{{< action swiftcast >}}). This is based on the animation of the Mega Beam, not
+the cast bar. Once the beam fires and starts shrinking slightly that's when you
+should use {{< spell diamondback >}}. If you timed this correctly, then you will
+see a bunch of explosions, chakrams, and mirage charges, but everyone will be
+safe.
 
 Once you're out of {{< spell diamondback >}} Vortexer will start casting **Ultra
 Flash** on the west side of the arena. Ultra Flash kills anyone in line of
@@ -483,8 +484,8 @@ More specifically, the full rotation should look like this:
 6. {{< spell tingle >}}
 7. {{< spell moon_flute >}} and {{< spell nightbloom >}}
 8. {{< spell triple_trident >}} and {{< spell sea_shanty >}}
-9. {{< spell bristle >}}, {{< action swiftcast >}}, and {{< spell being_mortal
-   > }}
+9. {{< spell bristle >}}, {{< action swiftcast >}}, and
+   {{< spell being_mortal >}}
 10. {{< spell matra_magic >}}
 11. {{< spell whistle >}} and {{< spell surpanakha >}}x4
 12. Wait for synchronized sting call, then {{< spell final_sting >}}.
