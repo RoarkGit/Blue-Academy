@@ -427,10 +427,3 @@ dd {
   width: 36px;
   height: 36px;
 }
-
-.moon-flute-timeline {
-  display: inline-flex;
-  align-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-}
