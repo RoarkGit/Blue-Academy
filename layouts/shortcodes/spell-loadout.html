@@ -5,16 +5,7 @@
     {{- $numRemaining = sub $numRemaining (len $spellNumbers) -}}
     {{- range $spellNumbers -}}
       {{- if (gt (len .) 0) -}}
-        {{- $spellData := index (where (index site.Data.spell) "number" (int .)) 0 -}}
-        {{- $image := (printf "/images/tooltips/%s.png" $spellData.id) | resources.Get }}
-        {{- $image = $image.Resize "48x webp" -}}
-        {{- page.Store.SetInMap "tooltips" $spellData.id "spell" -}}
-        <div
-          class="spell-loadout-spell tooltip"
-          data-tooltip-id="{{ $spellData.id }}">
-          <img src="{{ $image.RelPermalink }}" />
-          #{{ . }}
-        </div>
+        {{- partial "spell-loadout-tooltip" (dict "context" . "number" (int .)) -}}
       {{- else -}}
         <div class="spell-loadout-spell"></div>
       {{- end -}}

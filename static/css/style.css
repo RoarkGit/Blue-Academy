@@ -364,6 +364,7 @@ dd {
 
 .spellbook-spell {
   display: none;
+  cursor: pointer;
   &.spellbook-spell--active {
     display: grid;
   }
@@ -419,7 +420,7 @@ dd {
 
 .rotation-event-pull-wrapper {
   position: relative;
-  width: calc(var(--rotation-event-width) * .6);
+  width: calc(var(--rotation-event-width) * 0.6);
   font-size: 1.1rem;
   text-align: center;
 }

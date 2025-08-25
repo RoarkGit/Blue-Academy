@@ -1,3 +1,5 @@
+{{- $spellbook := resources.Get "/ts/spellbook.ts" | js.Build (dict "targetPath" "/js/spellbook.js") -}}
+<script defer src="{{ $spellbook.RelPermalink }}"></script>
 {{- $numSpells := len site.Data.spell -}}
 <div class="spellbook-wrapper">
   <div class="spellbook-wrapper-page-labels">

@@ -1,0 +1,13 @@
+{{- $spellDataByName := index (where (index site.Data.spell) "name" .name) 0 -}}
+{{- $spellDataByNumber := index (where (index site.Data.spell) "number" .number) 0 -}}
+{{- $spellData := or $spellDataByName $spellDataByNumber }}
+{{- if not $spellData -}}
+  {{- errorf "Either a number or name must be specified for a spell-tooltip." -}}
+{{- end -}}
+{{- $image := (printf "/images/tooltips/%s.png" $spellData.id) | resources.Get }}
+{{- $image = $image.Resize "48x webp" -}}
+{{- page.Store.SetInMap "tooltips" $spellData.id "spell" -}}
+<div class="spell-loadout-spell tooltip" data-tooltip-id="{{ $spellData.id }}">
+  <img src="{{ $image.RelPermalink }}" />
+  #{{ .number }}
+</div>
