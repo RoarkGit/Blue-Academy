@@ -1,5 +1,11 @@
 :root {
   --spellbook-gap: 12px;
+  --tooltip-color-secondary: #bbac94;
+  --tooltip-padding: 1rem;
+  --tooltip-image-size: 3rem;
+  --tooltip-image-padding: calc(
+    var(--tooltip-image-size) + var(--tooltip-padding) / 2
+  );
 }
 
 .ffxiv-ui-background {
@@ -61,12 +67,6 @@
 }
 
 .tooltip-popup {
-  --tooltip-color-secondary: #bbac94;
-  --tooltip-padding: 1rem;
-  --tooltip-image-size: 3rem;
-  --tooltip-image-padding: calc(
-    var(--tooltip-image-size) + var(--tooltip-padding) / 2
-  );
   padding: var(--tooltip-padding);
   width: 24rem;
   height: auto;
