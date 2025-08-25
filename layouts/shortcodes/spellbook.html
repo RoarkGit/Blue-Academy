@@ -11,7 +11,7 @@
     {{- range $spellData :=  site.Data.spell -}}
       <div
         class="spellbook-spell tooltip"
-        data-tooltip-id="{{ $spellData.id }}-tooltip"
+        data-tooltip-id="{{ $spellData.id }}"
         data-page-number="{{ math.Ceil (div $spellData.number 16.0) }}"
         hidden>
         {{- $image := (printf "/images/tooltips/%s.png" $spellData.id) | resources.Get }}

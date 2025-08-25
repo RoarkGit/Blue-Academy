@@ -1,19 +1,28 @@
-{{- $spellNumbers := (split (.Get 0) ",") -}}
-<div class="spell-loadout ffxiv-ui-background">
-  {{- range $spellNumbers -}}
-    {{- if (gt (len .) 0) -}}
-      {{- $spellData := index (where (index site.Data.spell) "number" (int .)) 0 -}}
-      <div
-        class="spell-loadout-spell tooltip"
-        data-tooltip-id="{{ $spellData.id }}-tooltip">
+{{- $numRemaining := 24 }}
+<div
+  class="spell-loadout ffxiv-ui-background"
+  {{ if .Get "id" }}id="{{- .Get "id" -}}"{{- end -}}>
+  {{- with .Get "spells" -}}
+    {{- $spellNumbers := (split . ",") -}}
+    {{- $numRemaining = sub $numRemaining (len $spellNumbers) -}}
+    {{- range $spellNumbers -}}
+      {{- if (gt (len .) 0) -}}
+        {{- $spellData := index (where (index site.Data.spell) "number" (int .)) 0 -}}
         {{- $image := (printf "/images/tooltips/%s.png" $spellData.id) | resources.Get }}
         {{- $image := $image.Resize "48x webp" -}}
         {{- page.Store.SetInMap "tooltips" $spellData.id "spell" -}}
-        <img src="{{ $image.RelPermalink }}" />
-        #{{ . }}
-      </div>
-    {{- else -}}
-      <div class="spell-loadout-spell"></div>
+        <div
+          class="spell-loadout-spell tooltip"
+          data-tooltip-id="{{ $spellData.id }}">
+          <img src="{{ $image.RelPermalink }}" />
+          #{{ . }}
+        </div>
+      {{- else -}}
+        <div class="spell-loadout-spell"></div>
+      {{- end -}}
     {{- end -}}
+  {{- end -}}
+  {{- range (seq $numRemaining) -}}
+    <div class="spell-loadout-spell"></div>
   {{- end -}}
 </div>

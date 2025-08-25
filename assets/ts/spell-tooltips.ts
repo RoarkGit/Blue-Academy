@@ -14,23 +14,23 @@ function moveTooltip(tooltip: HTMLElement, event: MouseEvent) {
 }
 
 ready(function () {
-  const tooltipLinks = document.getElementsByClassName(
+  const tooltipObjects = document.getElementsByClassName(
     'tooltip',
   ) as HTMLCollectionOf<HTMLElement>
-  for (const tooltipLink of tooltipLinks) {
-    const tooltipId = tooltipLink.getAttribute('data-tooltip-id')
-    if (tooltipId === null) return
-    const tooltip = document.getElementById(tooltipId)
+  for (const tooltipObject of tooltipObjects) {
+    const spellId = tooltipObject.getAttribute('data-tooltip-id')
+    if (spellId === null) return
+    const tooltip = document.getElementById(spellId + '-tooltip')
     if (tooltip === null) return
-    tooltipLink.addEventListener('mouseenter', function (event) {
+    tooltipObject.addEventListener('mouseenter', function (event) {
       if (!(event instanceof MouseEvent)) return
       moveTooltip(tooltip, event)
       tooltip.hidden = false
     })
-    tooltipLink.addEventListener('mouseleave', function () {
+    tooltipObject.addEventListener('mouseleave', function () {
       tooltip.hidden = true
     })
-    tooltipLink.addEventListener('mousemove', (event) => {
+    tooltipObject.addEventListener('mousemove', (event) => {
       if (!(event instanceof MouseEvent)) return
       moveTooltip(tooltip, event)
     })
