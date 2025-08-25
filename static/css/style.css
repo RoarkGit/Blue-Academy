@@ -274,14 +274,14 @@ dd {
 
 .death-vulnerability-table-green-check,
 .death-vulnerability-table-red-cross {
-  font-size: 2rem;
   font-weight: bold;
+  font-size: 2rem;
   text-shadow:
     -1px -1px 0 #000,
     -1px 1px 0 #000,
     1px -1px 0 #000,
     1px 1px 0 #000;
-} 
+}
 
 .death-vulnerability-table-green-check {
   color: #00cc22;
