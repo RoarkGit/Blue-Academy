@@ -582,13 +582,13 @@ Compressed Water player is targeted by the stack marker, they should just take
 it without mitigating to die to that, and then the tank should detonate the mine
 in the center.
 
-{{% notice style="warning" %}}
+{{< notice style="warning" >}}
 
 It is possible for the tank to be targeted with Compressed Water. This is a
 really unfortunate situation, but it can be handled by dying to Final Punch and
 then quickly resurrecting the tank.
 
-{{% /notice %}}
+{{< /notice >}}
 
 After the Missile Command spam ends the party should try to get close to Brute
 Justice again, while the tank starts moving to a corner to try to bait an
