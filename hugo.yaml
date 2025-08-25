@@ -1,0 +1,14 @@
+baseURL: 'https://example.org/'
+languageCode: 'en-us'
+title: 'Blue Academy'
+theme: 'hugo-theme-learn'
+
+outputs:
+  home:
+    - 'HTML'
+    - 'RSS'
+    - 'JSON'
+
+params:
+  themeVariant: 'academy'
+  disableMermaid: true
