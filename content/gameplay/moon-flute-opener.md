@@ -61,7 +61,7 @@ the opener is so tight.
 
 ## The Openers
 
-There are three variations of the Moon Flute opener but they all are pretty
+There are three variations of the Moon Flute Opener but they all are pretty
 nearly identical. In a group of eight you will want one person doing each of the
 DOT openers and everyone else will do the Winged Reprobation opener.
 
