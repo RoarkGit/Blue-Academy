@@ -1,6 +1,5 @@
 ---
 title: Bonus Descriptions
-type: article
 weight: 20
 ---
 
@@ -80,26 +79,7 @@ spell, all that matters is that you cast it at some point.
 
 {{% expand title="List of eligible spells" %}}
 
-- {{< spell flame-thrower >}}
-- {{< spell aqua-breath >}}
-- {{< spell glower >}}
-- {{< spell level-5-petrify >}}
-- {{< spell flying-sardine >}}
-- {{< spell snort >}}
-- {{< spell the-look >}}
-- {{< spell bad-breath >}}
-- {{< spell sticky-tongue >}}
-- {{< spell ink-jet >}}
-- {{< spell northerlies >}}
-- {{< spell electrogenesis >}}
-- {{< spell perpetual-ray >}}
-- {{< spell reflux >}}
-- {{< spell devour >}}
-- {{< spell blaze >}}
-- {{< spell mustard-bomb >}}
-- {{< spell laser-eye >}}
-- {{< spell breath-of-magic >}}
-- {{< spell apokalypsis >}}
+{{< face-spells >}}
 
 {{% /expand %}}
 
@@ -109,3 +89,42 @@ spell, all that matters is that you cast it at some point.
 : Use Pom Cure, Exuviation, and White Wind
 
 ## Hidden Bonuses
+
+**The Harder They Fall**  
+: Complete {{< stage 10 >}} while allowing Crom Dubh to cast King's Will three
+times. He seems to stop casting the spell below 40% HP, so make sure to let him
+cast it before that happens.
+
+**Octopath Traveler**  
+: Complete {{< stage 20 >}} without killing any Ultros tentacles in Act 3. You
+can immediately kill Typhon in Act 3 with a fully buffed
+{{< spell final-sting >}} and get credit for this.
+
+**Something Borrowed**  
+: Complete {{< stage 25 >}} while accomplishing the following:
+
+- Can't Touch This
+- Total Mastery
+- Ain't Got Time to Bleed
+- Too Fast, Too Furious (7:15 or faster)
+
+**None More Blue**  
+: Complete {{< stage 30 >}} while accomplishing the following:
+
+- Can't Touch This
+- Total Mastery
+- Too Fast, Too Furious (6:30 or faster)
+- Kill all three Siegfried clones in Act 3
+
+**Violets Are Violet**  
+: Complete {{< stage 31 >}} while accomplishing the following:
+
+- Too Fast, Too Furious (6:50 or faster)
+- No vuln stacks
+
+**All That Glitters Is Blue**  
+: Complete {{< stage 32 >}} while accomplishing the following:
+
+- Elemental Mastery
+- A Walk in the Park
+- Do not destroy the crystal in Act 2

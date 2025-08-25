@@ -1,0 +1,8 @@
+<ul>
+  {{- range (where $.Site.Data.spell "face" true) -}}
+    {{- page.Store.SetInMap "tooltips" .id "spell" -}}
+    <li>
+      {{- partial "tooltip-link.html" (dict "context" . "id" .id "type" "spell") -}}
+    </li>
+  {{- end -}}
+</ul>

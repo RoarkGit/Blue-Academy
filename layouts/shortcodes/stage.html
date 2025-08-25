@@ -1,0 +1,5 @@
+{{- with site.GetPage (printf "masked-carnivale/stages/%02d" (.Get 0)) -}}
+  <a href="{{ .RelPermalink }}">
+    Stage {{ .Params.weight -}}: {{ .Params.title }}
+  </a>
+{{- end -}}

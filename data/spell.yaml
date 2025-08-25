@@ -24,6 +24,7 @@
   cast: 2
   recast: 2.5
   mp: 200
+  face: true
   location: |
     Gobmachine G-VI / Brayflox's Longstop (Hard)
 
@@ -43,6 +44,7 @@
   cast: 2
   recast: 2.5
   mp: 200
+  face: true
   location: |
     Ultros / The Dragon’s Neck
 
@@ -196,6 +198,7 @@
   cast: 2
   recast: 2.5
   mp: 200
+  face: true
   location: |
     Coincounter / The Aurum Vale
   description: |
@@ -271,6 +274,7 @@
   cast: 2
   recast: 2.5
   mp: 400
+  face: true
   location: |
     Manor Sentry (*before* the first boss) / Haukke Manor
   description: |
@@ -478,6 +482,7 @@
   cast: 0
   recast: 2.5
   mp: 200
+  face: true
   location: |
     Apkallu / Eastern La Noscea (27, 35)
   description: |
@@ -495,6 +500,7 @@
   cast: 2
   recast: 2.5
   mp: 200
+  face: true
   location: |
     Typhon / The Dragon’s Neck
 
@@ -534,6 +540,7 @@
   cast: 2
   recast: 2.5
   mp: 200
+  face: true
   location: |
     Anantaboga / Amdapor Keep
 
@@ -555,6 +562,7 @@
   cast: 2
   recast: 2.5
   mp: 500
+  face: true
   location: |
     Stroper / Central Shroud (12, 23)
 
@@ -620,6 +628,7 @@
   cast: 2
   recast: 2.5
   mp: 300
+  face: true
   location: |
     Toxic Toad / Central Thanalan (26, 19)
 
@@ -749,6 +758,7 @@
   cast: 2
   recast: 2.5
   mp: 400
+  face: true
   location: |
     Kraken / Sastasha (Hard)
   description: |
@@ -1053,6 +1063,7 @@
   cast: 2
   recast: 2.5
   mp: 200
+  face: true
   location: |
     Lone Yeti / Coerthas Western Highlands (22, 27)
 
@@ -1075,6 +1086,7 @@
   cast: 2
   recast: 2.5
   mp: 200
+  face: true
   location: |
     Conodont / Sea of Clouds (26, 33)
 
@@ -1403,6 +1415,7 @@
   cast: 3
   recast: 2.5
   mp: 300
+  face: true
   location: |
     The Manipulator / Alexander - The Burden of the Father
   description: |
@@ -1502,6 +1515,7 @@
   cast: 2
   recast: 2.5
   mp: 200
+  face: true
   location: |
     Cloud Wyvern / The Churning Mists (23, 29)
   description: |
@@ -1523,6 +1537,7 @@
   cast: 1
   recast: 60
   mp: 300
+  face: true
   location: |
     Caduceus / The Binding Coil of Bahamut T1
 
@@ -1940,6 +1955,7 @@
   cast: 2
   recast: 2.5
   mp: 200
+  face: true
   location: |
     Alte Roite / Deltascape V1.0
   description: |
@@ -1956,6 +1972,7 @@
   cast: 2
   recast: 2.5
   mp: 300
+  face: true
   location: |
     Omega / Alphascape V3.0
   description: |
@@ -2259,6 +2276,7 @@
   cast: 2
   recast: 2.5
   mp: 300
+  face: true
   location: |
     Level 80 - Whalaqee Totem
   description: |
@@ -2473,6 +2491,7 @@
   cast: 2
   recast: 2.5
   mp: 200
+  face: true
   location: |
     Eden's Promise / Eden's Promise: Eternity
   description: |
@@ -2553,6 +2572,7 @@
   cast: 0
   recast: 120
   mp: 300
+  face: true
   location: |
     Therion / Amaurot
   description: |

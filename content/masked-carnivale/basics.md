@@ -23,7 +23,7 @@ meaning the will take _double_ damage from that element. This is indicated by
 the elemental icon floating over their heads. Note that this is different from
 Eureka where the icon over an enemy's head indicates an element that it is
 _resistant_ to. [Stage 2 (Much Ado About
-Pudding)]({{< ref "/masked-carnivale/stages/02" >}}) serves as a tutorial for
+Pudding)]({{< stage 2 >}}) serves as a tutorial for
 this mechanic.
 
 ### Score & Bonuses
