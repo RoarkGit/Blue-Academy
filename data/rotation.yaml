@@ -30,7 +30,7 @@ moon_flute_winged:
         - being_mortal
     - gcd: bristle
       ogcd:
-        - role:swiftcast
+        - action:swiftcast
         - surpanakha
         - surpanakha
         - surpanakha
@@ -61,7 +61,7 @@ moon_flute_flame:
         - being_mortal
     - gcd: bristle
       ogcd:
-        - role:swiftcast
+        - action:swiftcast
         - surpanakha
         - surpanakha
         - surpanakha
@@ -92,7 +92,7 @@ moon_flute_breath:
         - being_mortal
     - gcd: bristle
       ogcd:
-        - role:swiftcast
+        - action:swiftcast
         - surpanakha
         - surpanakha
         - surpanakha
@@ -126,7 +126,7 @@ gavel_skip:
         - sea_shanty
     - gcd: bristle
       ogcd:
-        - role:swiftcast
+        - action:swiftcast
         - being_mortal
     - gcd: matra_magic
     - gcd: whistle

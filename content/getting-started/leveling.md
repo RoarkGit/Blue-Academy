@@ -83,14 +83,13 @@ for the kill.
 
 Similar to being powerleveled by someone else there's not a lot of preparation
 that is needed. {{< spell flying_sardine >}} can be helpful, but we can actually
-get away with using just {{< spell water_cannon >}} and {{< role sleep >}}.
+get away with using just {{< spell water_cannon >}} and {{< action sleep >}}.
 
 ### How It Works
 
 The goal is to tag a Leech and then have a Clionid eat it. You can cast any
-spell on a Leech and then bring it towards a Clionid, or you can cast
-{{< role sleep >}} on a Leech then aggro a Clionid and bring it next to the
-Leech.
+spell on a Leech and then bring it towards a Clionid, or you can cast {{< action
+sleep >}} on a Leech then aggro a Clionid and bring it next to the Leech.
 
 ### Expected Time
 
@@ -146,8 +145,8 @@ stage of the leveling process.
 
 At this point we are going to be killing enemies with
 {{< spell 1000_needles >}}. This will one-shit enemies for a bit, but eventually
-it will take two casts. For extra safety we can use {{< role sleep >}} which
-will allow us to get the full 6-second cast off. {{< role swiftcast >}} can be
+it will take two casts. For extra safety we can use {{< action sleep >}} which
+will allow us to get the full 6-second cast off. {{< action swiftcast >}} can be
 used to make the cast instant, but it has a 60 second cooldown.
 
 ### After 1000 Needles

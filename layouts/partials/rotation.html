@@ -30,9 +30,9 @@
       {{- end -}}
       {{- range $id := .ogcd -}}
         {{- $type := "spell" -}}
-        {{- if (strings.HasPrefix $id "role:") -}}
-          {{- $id = strings.TrimPrefix "role:" $id -}}
-          {{- $type = "role" -}}
+        {{- if (strings.HasPrefix $id "action:") -}}
+          {{- $id = strings.TrimPrefix "action:" $id -}}
+          {{- $type = "action" -}}
         {{- end -}}
         <div class="rotation-event-ogcd-wrapper">
           <div class="rotation-event-ogcd tooltip" data-tooltip-id="{{ $id }}">

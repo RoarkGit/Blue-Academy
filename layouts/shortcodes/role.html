@@ -1,4 +1,0 @@
-{{/* Creates a role action tooltip link. */}}
-{{- $roleId := .Get 0 -}}
-{{- .Page.Store.SetInMap "tooltips" $roleId "role" -}}
-{{ partial "tooltip-link" (dict "context" . "id" $roleId "type" "role") }}

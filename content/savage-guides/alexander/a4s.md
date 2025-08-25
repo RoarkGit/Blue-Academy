@@ -160,10 +160,10 @@ those colors. Instead, we will completely disregard the mechanic and cheese it.
 Six Steam Regulators will spawn in the center of the arena in a triangle
 formation (two on each side of the triangle). These explode when touched by a
 player, killing that player. If they are left up for too long they will explode
-and wipe the group. We handle this by assigning three DPS to {{< role sprint >}}
-and jump through them such that they each blow up two regulators. They will die
-and need to be resurrected, but then Royal Pentacle is done. See below for what
-that looks like:
+and wipe the group. We handle this by assigning three DPS to
+{{< action sprint >}} and jump through them such that they each blow up two
+regulators. They will die and need to be resurrected, but then Royal Pentacle is
+done. See below for what that looks like:
 
 ![Royal Pentacle](/images/raid-images/a4-pentacle.png)
 

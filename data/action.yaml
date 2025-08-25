@@ -1,13 +1,13 @@
-# File for storing role action tooltip information.
+# File for storing role/general action tooltip information.
 #
-# - id: the role action's ID
-#   name: the role action's name
+# - id: the action's ID
+#   name: the action's name
 #   actionType: Spell, Ability or null (for General Actions)
-#   range: the role action's range
-#   radius: the role action's radius
-#   cast: the role action's cast time
-#   recast: the role action's recast time
-#   description: the role action's in-game description
+#   range: the action's range
+#   radius: the action's radius
+#   cast: the action's cast time
+#   recast: the action's recast time
+#   description: the action's in-game description
 
 - id: addle
   name: Addle

@@ -162,13 +162,13 @@ lower left of debuff) needs to go up to a high platform, and High Arithmeticks
 (purple debuff, vuln icon in upper right of debuff) needs to go down to a low
 platform. At 50% Swindler uses **Bio-arithmeticks** which is a _very_
 heavy-hitting raidwide, so make sure everyone is at full health and mitigate
-with {{< spell bad_breath >}}, {{< role addle >}}, {{< spell magic_hammer >}},
+with {{< spell bad_breath >}}, {{< action addle >}}, {{< spell magic_hammer >}},
 and {{< spell gobskin >}} if possible. Pay extra attention to the off-tank here,
-and for extra safety you can wait for the off-tank to be in
-{{< spell diamondback >}} for a Brawler mechanic. Below 50% Swindler will use
-**Enumeration**, which puts a circle around two random players that requires a
-specific number of players to be inside the circle or it kills the target. As
-with Blaster Mirage, our goal is to just skip this entirely.
+and for extra safety you can wait for the off-tank to be in {{< spell
+diamondback >}} for a Brawler mechanic. Below 50% Swindler will use **Enumeration**,
+which puts a circle around two random players that requires a specific number of
+players to be inside the circle or it kills the target. As with Blaster Mirage, our
+goal is to just skip this entirely.
 
 After Blaster and Swindler are dead the party should move to the south where
 Vortexer will spawn.
@@ -200,9 +200,9 @@ The purple Power Plasma Beta orbs are targetable but not killable. They deal
 moderate raidwide damage when they reach Brawler. Orbs can and should be slowed
 to stagger their hits. Abilities like {{< spell bad_breath >}},
 {{< spell reflux >}}, and {{< spell 4-tonze_weight >}} are good for this.
-Additionally, things like {{< role addle >}} and {{< spell magic_hammer >}} can
-be used to reduce the damage they deal. However, the easiest way to handle this
-is to just let both orbs hit Brawler at the same time and have everyone
+Additionally, things like {{< action addle >}} and {{< spell magic_hammer >}}
+can be used to reduce the damage they deal. However, the easiest way to handle
+this is to just let both orbs hit Brawler at the same time and have everyone
 {{< spell diamondback >}} to survive.
 
 ### Push Vortexer and Finish Brawler
@@ -237,7 +237,7 @@ ready for Brute Justice.
 Have the party move to just east of the center of the arena and the tank just
 north of the center. The five bots will show up in the middle and fuse into
 Brute Justice. When they **Transform** there is a big knockback with moderate
-raidwide damage. Use {{< role surecast >}} when the lightning appears between
+raidwide damage. Use {{< action surecast >}} when the lightning appears between
 the bots to negate the knockback.
 
 Once Brute Justice is targetable, the tank should use {{< spell white_wind >}}
@@ -331,12 +331,11 @@ visible and look like a green and black swirling circle before becoming hidden.
 
 After Double Drill, Onslaughter will face a random person and start channeling
 Mega Beam. If it's facing you, just step to the side without hitting any mines.
-Once the beam actually fires, hardcast {{< spell diamondback >}} (no
-{{< role swiftcast >}}). This is based on the animation of the Mega Beam, not
-the cast bar. Once the beam fires and starts shrinking slightly that's when you
-should use {{< spell diamondback >}}. If you timed this correctly, then you will
-see a bunch of explosions, chakrams, and mirage charges, but everyone will be
-safe.
+Once the beam actually fires, hardcast {{< spell diamondback >}} (no {{< action
+swiftcast >}}). This is based on the animation of the Mega Beam, not the cast bar.
+Once the beam fires and starts shrinking slightly that's when you should use {{< spell diamondback >}}.
+If you timed this correctly, then you will see a bunch of explosions, chakrams, and
+mirage charges, but everyone will be safe.
 
 Once you're out of {{< spell diamondback >}} Vortexer will start casting **Ultra
 Flash** on the west side of the arena. Ultra Flash kills anyone in line of
@@ -351,11 +350,11 @@ mitigated by {{< spell diamondback >}} and is significantly easier than trying
 to solve it with random targets. The players who get targeted by Enumeration
 still need to avoid Ultra Flash, but need to stay away from the group to avoid
 getting people caught in Enumeration. These players should stand back, get out
-of line of sight of Vortexer, and then {{< role swiftcast >}}
-{{< spell diamondback >}}. The Enumeration targets will end up with a max HP
-down and damage down debuff, but these are inconsequential regardless of how you
-are handling Gavel in the next phase. _If you mess up Gavel in the next phase it
-is not because of these debuffs._
+of line of sight of Vortexer, and then {{< action swiftcast >}} {{< spell
+diamondback >}}. The Enumeration targets will end up with a max HP down and damage
+down debuff, but these are inconsequential regardless of how you are handling Gavel
+in the next phase. _If you mess up Gavel in the next phase it is not because of these
+debuffs._
 
 After all of this happens, the bots will rejoin to form Brute Justice. Brute
 Justice now has an HP up buff and will fully heal itself with **Justice** before
@@ -484,7 +483,8 @@ More specifically, the full rotation should look like this:
 6. {{< spell tingle >}}
 7. {{< spell moon_flute >}} and {{< spell nightbloom >}}
 8. {{< spell triple_trident >}} and {{< spell sea_shanty >}}
-9. {{< spell bristle >}}, {{< role swiftcast >}}, and {{< spell being_mortal >}}
+9. {{< spell bristle >}}, {{< action swiftcast >}}, and {{< spell being_mortal
+   > }}
 10. {{< spell matra_magic >}}
 11. {{< spell whistle >}} and {{< spell surpanakha >}}x4
 12. Wait for synchronized sting call, then {{< spell final_sting >}}.
@@ -495,7 +495,7 @@ More specifically, the full rotation should look like this:
 
 {{% /expand %}}
 
-It can be easier to synchronize stings if you use {{< role swiftcast >}} there
+It can be easier to synchronize stings if you use {{< action swiftcast >}} there
 instead of {{< spell matra_magic >}}. I recommend using a countdown macro,
 something simple like this works fine:
 
