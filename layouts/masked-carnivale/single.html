@@ -1,4 +1,4 @@
 {{- $outputFormat := partial "output-format.hugo" . }}
 {{- partial "output-partial.hugo" (dict "base" "header" "page" . "parameter" . "outputFormat" $outputFormat) }}
-{{- partial "single-article.hugo" (dict "page" . "content" (printf "%s\n%s" (partial "youtube-embed.html" (dict "id" "9SY2VwKthao")) .Content) "outputFormat" $outputFormat) }}
+{{- partial "single-article.hugo" (dict "page" . "content" (printf "%s\n%s" (partial "youtube-embed.html" (dict "id" .Params.youtube)) .Content) "outputFormat" $outputFormat) }}
 {{- partial "output-partial.hugo" (dict "base" "footer" "page" . "parameter" . "outputFormat" $outputFormat) }}
