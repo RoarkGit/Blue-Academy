@@ -1,5 +1,11 @@
 {{- $tooltip := index (where (index site.Data .type) "id" .id) 0 }}
+{{- if (not $tooltip) -}}
+  {{- errorf "Could not locate data for spell %s." .id -}}
+{{- end -}}
 {{- $image := printf "/images/tooltips/%s.png" .id | resources.Get -}}
+{{- if (not $image) -}}
+  {{- errorf "Could not locate image for spell %s." .id -}}
+{{- end -}}
 {{- $image := $image.Resize "16x webp" -}}
 
 

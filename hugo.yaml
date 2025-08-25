@@ -20,10 +20,21 @@ params:
   themeVariant: academy
   collapsibleMenu: true
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 build:
   noJSConfigInAssets: true
 
 menu:
+  main:
+    - name: Masked Carnivale Bonus Descriptions
+      url: https://www.google.com/
+      params:
+        rel: external
+      weight: 100
   shortcuts:
     - name: <i class='fab fa-discord'></i> Discord
       url: https://discord.mage.blue/
