@@ -1,3 +1,4 @@
+{{- $currentGcd := 0 -}}
 <div class="rotation">
   {{- range (index site.Data.rotation .rotation) -}}
     <div class="rotation-event">
@@ -7,6 +8,10 @@
           {{- $image = $image.Resize "48x webp" -}}
           {{- page.Store.SetInMap "tooltips" .gcd "spell" -}}
           <img src="{{ $image.RelPermalink }}" />
+        </div>
+        <div class="rotation-event-gcd-counter">
+          {{- $currentGcd -}}
+          {{- $currentGcd = add $currentGcd 1 -}}
         </div>
       </div>
       {{- range $id := .ogcd -}}

@@ -6,6 +6,7 @@
   --tooltip-image-padding: calc(
     var(--tooltip-image-size) + var(--tooltip-padding) / 2
   );
+  --rotation-event-width: 50px;
 }
 
 .ffxiv-ui-background {
@@ -379,33 +380,41 @@ dd {
 
 .rotation {
   display: flex;
-  width: max-content;
   gap: 10px;
+  width: max-content;
 }
 
 .rotation-event {
   display: inline-flex;
-  width: max-content;
-  height: 100px;
   gap: 2px;
+  width: max-content;
+  height: calc(var(--rotation-event-width) * 3);
 }
 
 .rotation-event-gcd-wrapper {
   position: relative;
-  width: 50px;
-  height: 100px;
+  width: var(--rotation-event-width);
+  height: 150px;
 }
 
 .rotation-event-gcd {
   position: absolute;
-  bottom: 0;
+  bottom: var(--rotation-event-width);
   margin-right: auto;
   margin-left: auto;
 }
 
+.rotation-event-gcd-counter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 .rotation-event-ogcd-wrapper {
   width: 36px;
-  height: 100px;
+  height: calc(var(--rotation-event-width) * 2);
 }
 
 .rotation-event-ogcd {
@@ -417,5 +426,5 @@ dd {
   margin: 60% 0 auto 0;
   border: solid 1px var(--MENU-SECTION-ACTIVE-CATEGORY-BG-color);
   background: var(--MENU-SECTIONS-BG-color);
-  height: 10px;
+  height: calc(var(--rotation-event-width) / 5);
 }
