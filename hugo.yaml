@@ -36,7 +36,7 @@ menu:
     - name: <i class='fab fa-youtube'></i> Blue Academy
       url: https://youtube.com/c/blueacademy
       weight: 20
-    - name: <i class='fab fa-github'></i> Gitub repo
+    - name: <i class='fab fa-github'></i> GitHub repo
       url: https://github.com/RoarkGit/Blue-Academy
       weight: 30
     - name: <i class='fas fa-donate'></i> Support
