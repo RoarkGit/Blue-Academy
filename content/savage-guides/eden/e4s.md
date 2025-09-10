@@ -265,7 +265,42 @@ mechanics is as follows:
 
 ### Plate Fracture 2
 
+After Earthen Fury, Titan will cast Plate Fracture again and start punching out
+2x2 squares. At the same time, he will use Megalith on the main tank again which
+should be mitigated with {{< spell diamondback >}}. Titan will punch out another
+2x2 square, leaving a 2x4 rectangle. When this happens, four players will
+receive orange square markers, three players will receive yellow triangle
+markers, and one player will receive a blue triangle marker. To resolve this,
+have the orange players stack on one of the inner-most squares (relative to the
+actual arena center), the yellow players spread around them, and the blue player
+move to the opposite side of the platform. My group did this relative, but you
+could do it true north if you want. Regardless of how you decide to do it, some
+example positions are shown below.
+
+#### Horizontal Positions
+
+![Plate Fracture 2 Horizontal Positions](/images/raid-images/e4-plate-fracture-horizontal.png)
+
+If using relative positions, this is what it would look like if the north
+platforms got punched out. We always had our orange/yellow players going to the
+left facing the center and the blue player go to the right facing the center.
+
+#### Vertical Positions
+
+![Plate Fracture 2 Vertical Positions](/images/raid-images/e4-plate-fracture-vertical.png)
+
+If using relative positions, this is what it would look like if the east
+platforms got punched out. As with the above example, orange/yellow players go
+left facing center and the blue player goes right facing center.
+
 ## Phase 3: Baby Titan
+
+Once Plate Fracture resolves, Titan will cast Earthen Fury again, followed by
+**Orogenesis** which spawns the little Titan from Phase 1 again where mechanics
+from Phase 1 and 2 will occur simultaneously. Truthfully this phase is extremely
+hectic, especially with the random targeting, so we won't even discuss it. This
+phase is quite easy to skip with a competent group so it's nothing to worry
+about, anyway.
 
 ## Final Sting
 
