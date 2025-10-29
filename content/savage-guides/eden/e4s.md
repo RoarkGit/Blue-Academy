@@ -4,13 +4,6 @@ weight: 1
 type: savage-guide
 ---
 
-_At first glance, the faintly glowing crystal brought back from Eden's core
-appears to be little more than a pretty bauble. As you gaze deep within,
-however, you are bombarded with images of your encounters in the Empty-but your
-adversaries have been twisted into monstrosities far more ferocious than those
-in your memory. Though you know these to be naught more than illusions, you find
-yourself compelled to see them through..._
-
 ## Overview
 
 This is the first fight in the Eden Blue raid series and is the easiest by quite

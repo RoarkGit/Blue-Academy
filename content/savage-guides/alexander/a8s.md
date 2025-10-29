@@ -4,11 +4,6 @@ weight: 2
 type: savage-guide
 ---
 
-_Sometimes even the most thrilling tale can benefit from slight embellishment,
-and the wandering minstrel's reimagining of your foray into Midas─while
-stretching the bounds of believability─proves to be even more invigorating than
-your memory of it. A memory you must relive in order to compare..._
-
 ## Overview
 
 This is the fifth fight in the Morbol series and for most groups will be the

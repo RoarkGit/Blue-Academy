@@ -4,13 +4,6 @@ weight: 2
 type: savage-guide
 ---
 
-_The urge to flip switches is almost irresistible... even when you know full
-well the consequences for doing so. Once more your finger moves as if of its own
-accord, and activates the second phase of the Savage Initiative. As the gentle
-arrangement drifts from the terminal, you are transported to a remembered vista
-of the Sigmascape, each lapping wave of the song swelling the boundary of your
-memories..._
-
 ## Overview
 
 This is the second fight in the Omega raid series and it can be a tricky one.

@@ -4,12 +4,6 @@ weight: 1
 type: savage-guide
 ---
 
-_Taken by curiosity, you activate something called the Savage Initiative at a
-Garlond Ironworks terminal. Apparently a program to address work-related stress,
-you are treated to a soothing song composed by a certain minstrel, its lush
-strains massaging your mind and adding vibrant flourishes to the memories of
-your trials within the Deltascape..._
-
 ## Overview
 
 This is the first fight in the Omega raid series, but it's no pushover. This

@@ -4,12 +4,6 @@ weight: 1
 type: savage-guide
 ---
 
-_What fun is there in merely restating the facts? Never one to be content with
-the truth, the wandering minstrel has taken the liberty of retelling the tale of
-your journey into Alexander with his trademark embellishments. Some may question
-the value of such entertainment, but none can deny the skill with which he
-weaves his tapestry of song and verse, immersing you in memory..._
-
 ## Overview
 
 This is the fourth fight in the Morbol raid series and is one of the easier
