@@ -161,7 +161,9 @@
 
     Cannot be executed while bound.
   notes: |
-    Loom is easiest to learn from Flame Sergeant Dalvag. Using Loom is not faster than just running normally.
+    Loom is easiest to learn from Flame Sergeant Dalvag.
+
+    You must be out of melee range for the enemy to cast this.
 - id: final_sting
   name: Final Sting
   number: 8
@@ -677,7 +679,8 @@
 
     {{< green "Duration: " >}}180s
   notes: |
-    Largely irrelevant due to most bosses having 100% accuracy.
+    Primarily used for buffing {{< spell toad_oil >}}. Has _some_ use for
+    dungeon tanking and soloing.
 - id: the_rams_voice
   name: The Ram's Voice
   number: 33

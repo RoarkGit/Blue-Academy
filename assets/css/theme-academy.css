@@ -5,6 +5,7 @@
     --MAIN-LINK-color: rgba( 110, 160, 222 ); /* Color of links */
     --MAIN-LINK-HOVER-color: rgba( 84, 135, 196, 1 ); /* Color of hovered links */
     --MAIN-BG-color: rgba( 54, 57, 69, 1 ); /* color of text by default */
+    --MAIN-WIDTH-MAX: 100rem;
 
     /* adjusted to base16-snazzy chroma style */
     --CODE-theme: learn;
