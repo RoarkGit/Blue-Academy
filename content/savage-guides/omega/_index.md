@@ -1,6 +1,6 @@
 ---
 title: Omega Raids
 weight: 30
-_build:
+build:
   render: never
 ---

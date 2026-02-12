@@ -1,6 +1,6 @@
 ---
 title: Eden Raids
 weight: 40
-_build:
+build:
   render: never
 ---

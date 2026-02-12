@@ -1,6 +1,7 @@
 ---
 title: Blue Mage Savage Guides
 type: section
+weight: 80
 ---
 
 Even though it's a Limited Job, Blue Mage does actually have endgame content! We

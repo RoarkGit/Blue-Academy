@@ -1,6 +1,6 @@
 ---
 title: Support
-_build:
+build:
   list: never
 ---
 

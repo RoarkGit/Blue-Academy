@@ -1,6 +1,6 @@
 ---
 title: Bahamut Raids
 weight: 10
-_build:
+build:
   render: never
 ---

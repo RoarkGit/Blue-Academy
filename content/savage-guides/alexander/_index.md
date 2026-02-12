@@ -1,6 +1,6 @@
 ---
 title: Alexander Raids
 weight: 20
-_build:
+build:
   render: never
 ---
