@@ -1,4 +1,4 @@
-import { ready } from './common'
+import { moveTooltip, ready } from './common'
 
 interface Spell {
   Id: string
@@ -15,33 +15,14 @@ const activeSpells: Spell[] = new Array<Spell>(24).fill({
 
 // Event listeners for spells added to the loadout. This is needed to be able to
 // remove them when a spell is removed from the loadout.
-const eventListeners = new Map<
+const eventListeners: Record<
   string,
   {
     element: HTMLElement
     event: string
     handler: (ev: MouseEvent) => void
   }[]
->()
-
-/**
- * Moves a tooltip based on the mouse's location.
- *
- * @param tooltip the tooltip being moved
- * @param event the event that triggered the movement
- */
-function moveTooltip(tooltip: HTMLElement, event: MouseEvent) {
-  let newX = event.clientX + 10
-  let newY = event.clientY
-  if (event.clientX + tooltip.offsetWidth > window.innerWidth) {
-    newX -= tooltip.offsetWidth + 20
-  }
-  if (event.clientY + tooltip.offsetHeight > window.innerHeight) {
-    newY -= tooltip.offsetHeight
-  }
-  tooltip.style.left = `${newX}px`
-  tooltip.style.top = `${newY}px`
-}
+> = {}
 
 function addListener(
   spellId: string,
@@ -66,10 +47,21 @@ function removeListener(spellId: string) {
   }
 }
 
+function encodeLoadout(): string {
+  const bytes = new Uint8Array(activeSpells.map((s) => Number(s.Number) || 0))
+  return bytes.toBase64({ alphabet: 'base64url', omitPadding: true })
+}
+
+function decodeLoadout(encoded: string): number[] {
+  if (encoded.includes(',')) {
+    return encoded.split(',').map((s) => Number.parseInt(s) || 0)
+  }
+  return Array.from(Uint8Array.fromBase64(encoded, { alphabet: 'base64url' }))
+}
+
 function updateSpellLoadoutLink() {
   const url = new URL(window.location.href)
-  const spellNumbers = activeSpells.map((s: Spell) => s.Number).join(',')
-  url.searchParams.set('spell_loadout', spellNumbers)
+  url.searchParams.set('spell_loadout', encodeLoadout())
   const spellLoadoutBuilderLink = document.getElementById(
     'spell-loadout-builder-link',
   )
@@ -89,7 +81,7 @@ function setSpell(spellLoadoutSpell: HTMLElement, spellbookSpell: HTMLElement) {
     spellLoadoutSpell,
     'mouseenter',
     function (event: MouseEvent) {
-      if (!(event instanceof MouseEvent)) return moveTooltip(tooltip, event)
+      if (!(event instanceof MouseEvent)) return
       tooltip.hidden = false
     },
   )
@@ -194,15 +186,14 @@ ready(function () {
   const params = new URLSearchParams(window.location.search)
   const preload = params.get('spell_loadout')
   if (preload) {
-    preload.split(',').forEach((s, i) => {
-      const spellNumber = Number.parseInt(s)
-      if (spellNumber) {
+    decodeLoadout(preload).forEach((spellNumber, i) => {
+      if (spellNumber && i < spellLoadoutSpells.length) {
         const spellTooltip = spellbookSpells[spellNumber - 1]
         const spellLoadoutSpell = spellLoadoutSpells[i]
         const spellId = spellTooltip.getAttribute('data-tooltip-id')
         const spellName = spellTooltip.getAttribute('data-spell-name')
-        if (spellId === null || spellName === null) return ''
-        activeSpells[i] = { Id: spellId, Name: spellName, Number: s }
+        if (spellId === null || spellName === null) return
+        activeSpells[i] = { Id: spellId, Name: spellName, Number: String(spellNumber) }
         setSpell(spellLoadoutSpell, spellTooltip)
       }
     })

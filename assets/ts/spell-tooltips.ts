@@ -1,23 +1,4 @@
-import { ready } from './common'
-
-/**
- * Moves a tooltip based on the mouse's location.
- *
- * @param tooltip the tooltip being moved
- * @param event the event that triggered the movement
- */
-function moveTooltip(tooltip: HTMLElement, event: MouseEvent) {
-  let newX = event.clientX + 10
-  let newY = event.clientY
-  if (event.clientX + tooltip.offsetWidth > window.innerWidth) {
-    newX -= tooltip.offsetWidth + 20
-  }
-  if (event.clientY + tooltip.offsetHeight > window.innerHeight) {
-    newY -= tooltip.offsetHeight
-  }
-  tooltip.style.left = `${newX}px`
-  tooltip.style.top = `${newY}px`
-}
+import { moveTooltip, ready } from './common'
 
 ready(function () {
   const tooltipObjects = document.getElementsByClassName(

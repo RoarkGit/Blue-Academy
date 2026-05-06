@@ -1,9 +1,10 @@
 {{- $spellbook := resources.Get "/ts/spellbook.ts" | js.Build (dict "targetPath" "/js/spellbook.js") -}}
 <script defer src="{{ $spellbook.RelPermalink }}"></script>
 {{- $numSpells := len site.Data.spell -}}
+{{- $numPages := math.Ceil (div $numSpells 16.0) -}}
 <div class="spellbook-wrapper">
   <div class="spellbook-wrapper-page-labels">
-    {{- range (seq 1 (math.Ceil (div $numSpells 16.0))) }}
+    {{- range (seq 1 $numPages) }}
       <label class="spellbook-wrapper-page-label" data-page-number="{{ . }}">
         {{ . }}
       </label>
@@ -28,7 +29,7 @@
     {{- range (seq (mod $numSpells 16) 15) -}}
       <div
         class="spellbook-spell"
-        data-page-number="{{ math.Ceil (div $numSpells 16.0) }}"></div>
+        data-page-number="{{ $numPages }}"></div>
     {{- end -}}
   </div>
 </div>

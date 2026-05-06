@@ -20,6 +20,19 @@ export function ready(fn: () => void) {
  * @param filterValue the value to filter by
  * @param elements the set of elements
  */
+export function moveTooltip(tooltip: HTMLElement, event: MouseEvent) {
+  let newX = event.clientX + 10
+  let newY = event.clientY
+  if (event.clientX + tooltip.offsetWidth > window.innerWidth) {
+    newX -= tooltip.offsetWidth + 20
+  }
+  if (event.clientY + tooltip.offsetHeight > window.innerHeight) {
+    newY -= tooltip.offsetHeight
+  }
+  tooltip.style.left = `${newX}px`
+  tooltip.style.top = `${newY}px`
+}
+
 export function toggleActive(
   filterAttribute: string,
   filterValue: string | null,
