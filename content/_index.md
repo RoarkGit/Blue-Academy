@@ -18,7 +18,7 @@ You'll find a navigation menu on the side of the page, but the big resources tha
 - [Getting Started]({{% relref "/getting-started" %}})
 - [Leveling]({{% relref "/getting-started/leveling" %}})
 - [Gear]({{% relref "/gearing/gear-sets" %}})
-- [Spell Locations]({{% relref "/getting-started/spell-list" %}})
+- [Spell Locations]({{% relref "/reference/spell-list" %}})
 - [Masked Carnivale Guide]({{% relref "/masked-carnivale" %}})
 - [Savage Guides]({{% relref "/savage-guides" %}})
 
