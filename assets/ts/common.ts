@@ -20,6 +20,21 @@ export function ready(fn: () => void) {
  * @param filterValue the value to filter by
  * @param elements the set of elements
  */
+export function attachTooltip(element: HTMLElement, tooltip: HTMLElement) {
+  element.addEventListener('mouseenter', function (event) {
+    if (!(event instanceof MouseEvent)) return
+    moveTooltip(tooltip, event)
+    tooltip.hidden = false
+  })
+  element.addEventListener('mouseleave', function () {
+    tooltip.hidden = true
+  })
+  element.addEventListener('mousemove', (event) => {
+    if (!(event instanceof MouseEvent)) return
+    moveTooltip(tooltip, event)
+  })
+}
+
 export function moveTooltip(tooltip: HTMLElement, event: MouseEvent) {
   let newX = event.clientX + 10
   let newY = event.clientY

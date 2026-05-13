@@ -25,6 +25,9 @@ markup:
     renderer:
       unsafe: true
 
+minify:
+  minifyOutput: true
+
 build:
   noJSConfigInAssets: true
 

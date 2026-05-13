@@ -82,6 +82,7 @@ function setSpell(spellLoadoutSpell: HTMLElement, spellbookSpell: HTMLElement) {
     'mouseenter',
     function (event: MouseEvent) {
       if (!(event instanceof MouseEvent)) return
+      moveTooltip(tooltip, event)
       tooltip.hidden = false
     },
   )

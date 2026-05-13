@@ -42,3 +42,7 @@
     --BOX-BG-color: rgba( 255, 255, 255, .833 ); /* color of the content background */
     --BOX-TEXT-color: rgba( 16, 16, 16, 1 ); /* fixed color of the content text */
 }
+
+.text-yellow { color: #ffff66; }
+.text-orange { color: #ff7b1a; }
+.text-green  { color: #00cc22; }
