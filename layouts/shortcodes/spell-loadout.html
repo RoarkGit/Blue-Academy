@@ -1,39 +1,18 @@
-{{- with .Get "loadout" -}}
-  {{- $b64 := replace (replace . "-" "+") "_" "/" -}}
-  {{- $decoded := $b64 | base64Decode -}}
-  <div class="spell-loadout ffxiv-ui-background">
-    {{- range $i, $r := $decoded -}}
-      {{- if lt $i 24 -}}
-        {{- if gt (int $r) 0 -}}
-          {{- partial "spell-loadout-tooltip" (dict "number" (int $r)) -}}
-        {{- else -}}
-          <div class="spell-loadout-spell"></div>
-        {{- end -}}
-      {{- end -}}
-    {{- end -}}
-    {{- $decodedLen := len $decoded -}}
-    {{- if lt $decodedLen 24 -}}
-      {{- range (seq (sub 24 $decodedLen)) -}}
+{{- $numRemaining := 24 -}}
+<div class="spell-loadout ffxiv-ui-background">
+  {{- with (.Get "loadout") | or (.Get "spells") -}}
+    {{- $spellNumbers := split . "," -}}
+    {{- $numRemaining = sub $numRemaining (len $spellNumbers) -}}
+    {{- range $spellNumbers -}}
+      {{- $n := int . -}}
+      {{- if gt $n 0 -}}
+        {{- partial "spell-loadout-tooltip" (dict "context" . "number" $n) -}}
+      {{- else -}}
         <div class="spell-loadout-spell"></div>
       {{- end -}}
     {{- end -}}
-  </div>
-{{- else -}}
-  {{- $numRemaining := 24 -}}
-  <div class="spell-loadout ffxiv-ui-background">
-    {{- with .Get "spells" -}}
-      {{- $spellNumbers := (split . ",") -}}
-      {{- $numRemaining = sub $numRemaining (len $spellNumbers) -}}
-      {{- range $spellNumbers -}}
-        {{- if (gt (len .) 0) -}}
-          {{- partial "spell-loadout-tooltip" (dict "context" . "number" (int .)) -}}
-        {{- else -}}
-          <div class="spell-loadout-spell"></div>
-        {{- end -}}
-      {{- end -}}
-    {{- end -}}
-    {{- range (seq $numRemaining) -}}
-      <div class="spell-loadout-spell"></div>
-    {{- end -}}
-  </div>
-{{- end -}}
+  {{- end -}}
+  {{- range (seq $numRemaining) -}}
+    <div class="spell-loadout-spell"></div>
+  {{- end -}}
+</div>
