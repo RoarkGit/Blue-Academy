@@ -35,7 +35,7 @@ is a complete list of bonuses and their meaning
 
 ## Recommended Spells
 
-{{< spell-loadout spells="77,,73,58,,53,,55,15,105,,,,,,,,,33,92,,109,104,44" >}}
+{{< spell-loadout loadout="TQBJOgA1ADcPaQAAAAAAAAAAIVwAbWgs" >}}
 
 Most of the stages don't require very many spells. At minimum you should have
 these on your bar:

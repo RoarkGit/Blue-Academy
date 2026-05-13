@@ -76,10 +76,12 @@ There are some shortcodes that are helpful to use for adding content:
   spell's full name, with punctuation removed, and spaces replaced with `_`.
   This also works for role/general actions, but with the `{{< action addle >}}`
   shortcode.
-- You can create a spell loadout by writing
-  `{{< spell-loadout spells="1,,32,,104" >}}`. In this example, you will create a
-  spell loadout with Water Cannon in the first spot, Toad Oil in the third spot,
-  and Nightbloom in the fifth spot.
+- You can embed a spell loadout using the base64url-encoded string from the
+  spell loadout builder's share link:
+  `{{< spell-loadout loadout="TQBJOgA1ADcP..." >}}`. Build your loadout on the
+  [Spell Loadout Builder](https://mage.blue/gameplay/spell-loadout-builder/)
+  page, copy the `spell_loadout` query parameter from the generated link, and
+  paste it as the `loadout` argument.
 - You can render a rotation and its timeline by adding its contents to
   `rotation.yaml` and then using its shortcode
   `{{< rotation "rotation_name" >}}`
