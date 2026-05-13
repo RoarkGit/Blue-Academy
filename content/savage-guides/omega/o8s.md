@@ -219,10 +219,10 @@ players remaining and only two need to step into the center tower. This can be
 called out verbally, but if multiple people call it out at once it can lead to
 confusion. I prefer to use a self-marking macro like this to make things easier:
 
-<pre>
-/mk ignore &lt;me&gt; &lt;wait.5&gt;
-/mk off &lt;me&gt;
-</pre>
+```
+/mk ignore <me> <wait.5>
+/mk off <me>
+```
 
 The way this works is that this will assign the red 1 and 2 markers to people in
 the order that they press it. If a few people hit it at the same time it's

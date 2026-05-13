@@ -32,7 +32,7 @@ stages:
   important spells!
 - {{< spell doom >}} for completing 20 stages
 - {{< spell angel_whisper >}} for completing 30 stages; this is also one of our
-  most important spells and is <em>not</em> just for healers.
+  most important spells and is _not_ just for healers.
 
 Some stages even have achievements associated with completing them in certain
 ways. If a stage has an achievement tied to it, it will be mentioned on that
@@ -47,6 +47,6 @@ One final reason for completing the Masked Carnivale is that it rewards Allied
 Seals. You earn some for completing stages in general, but there are also weekly
 targets which can reward 550 Allied Seals in total each week. You can buy
 Aetheryte Tickets for 5 Allied Seals each, so for a very small amount of time
-investment you can get <em>110</em> free teleports every week. It might not seem
+investment you can get _110_ free teleports every week. It might not seem
 like a lot, but over time it adds up to quite a bit. I haven't paid for a single
 teleport since I unlocked Blue Mage!

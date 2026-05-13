@@ -11,7 +11,7 @@ that are important to me!
 - [Electronic Frontier Foundation](https://supporters.eff.org/donate/): an
   organization that actively fights for digital rights
 - [Lollypop Farm](https://www.lollypop.org/ways-to-give/make-a-donation/): a
-  non-profit humane society near me that takes in a <em>ton</em> of different
+  non-profit humane society near me that takes in a _ton_ of different
   animals and provides great care for them
 - [Lambda Legal](https://lambdalegal.org/ways-to-give/): an American civil
   rights organization that focuses on issues pertaining to LGBTQ+ communities
@@ -19,5 +19,5 @@ that are important to me!
 
 ---
 
-<sup>If you really feel like supporting directly, you can do so
-[here](https://ko-fi.com/liam_galt).</sup>
+If you really feel like supporting directly, you can do so
+[here](https://ko-fi.com/liam_galt).

@@ -45,7 +45,7 @@ these on your bar:
   in the Masked Carnivale, so the extra DPS we get from DPS mimicry isn't
   particularly useful. However, using Healer mimicry gives us access to
   MP-efficient heals. Without mimicry we're really limited to using
-  {{< spell white_wind >}} for healing which costs <em>1500</em> MP. There are
+  {{< spell white_wind >}} for healing which costs _1500_ MP. There are
   some stages where healing isn't required and there are achievements associated
   with faster kill times (such as Stage 30: The Catch of the Siegfried) and we
   can benefit from using DPS mimicry, though. {{< /notice >}}

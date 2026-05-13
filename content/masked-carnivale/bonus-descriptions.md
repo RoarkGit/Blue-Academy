@@ -75,7 +75,7 @@ just needs to be six/nine unique debuffs used at some point during the stage.
 
 {{< notice style="note" >}}
 
-This one is <strong>extremely</strong> strict. All BLU actions that you use must
+This one is **extremely** strict. All BLU actions that you use must
 be explicitly listed as physical. An easy way to identify this is to filter your
 spellbook to blunt, piercing, and slashing actions. Targeted role actions such
 as Addle and Sleep will also make you fail this.

@@ -68,7 +68,7 @@ bit different. With DPS Mimicry we gain an additional +20% Direct Hit chance for
 free. Direct Hit is a flat +25% damage bonus and scales linearly, so as we add
 more Direct Hit each additional point becomes "weaker" relatively. Determination
 also scales linearly, but since we don't get a bunch of extra from DPS Mimicry
-it means that it is "stronger" relatively. The difference is <em>extremely</em>
+it means that it is "stronger" relatively. The difference is _extremely_
 slight, but it does make Determination slightly stronger.
 
 If we're playing as a tank or healer we definitely prefer Determination. As a

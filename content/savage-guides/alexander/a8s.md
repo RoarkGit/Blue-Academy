@@ -489,15 +489,15 @@ It can be easier to synchronize stings if you use {{< action swiftcast >}} there
 instead of {{< spell matra_magic >}}. I recommend using a countdown macro,
 something simple like this works fine:
 
-<pre>
-  /p Get ready to sting! &lt;se.1&gt; &lt;wait.1&gt;
-  /p 5 &lt;se.1&gt; &lt;wait.1&gt;
-  /p 4 &lt;se.1&gt; &lt;wait.1&gt;
-  /p 3 &lt;se.1&gt; &lt;wait.1&gt;
-  /p 2 &lt;se.1&gt; &lt;wait.1&gt;
-  /p 1 &lt;se.1&gt; &lt;wait.1&gt;
-  /p STING! &lt;se.1&gt; &lt;wait.1&gt;
-</pre>
+```
+/p Get ready to sting! <se.1> <wait.1>
+/p 5 <se.1> <wait.1>
+/p 4 <se.1> <wait.1>
+/p 3 <se.1> <wait.1>
+/p 2 <se.1> <wait.1>
+/p 1 <se.1> <wait.1>
+/p STING! <se.1> <wait.1>
+```
 
 #### Which strategy is better?
 

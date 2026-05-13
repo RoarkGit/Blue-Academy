@@ -20,10 +20,6 @@ params:
       disableTitle: true
   themeVariant: academy
 
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
 
 minify:
   minifyOutput: true
