@@ -43,6 +43,8 @@
     --BOX-TEXT-color: rgba( 16, 16, 16, 1 ); /* fixed color of the content text */
 }
 
+h1, h2, h3, h4, h5, h6 { hyphens: none; }
+
 .text-yellow { color: #ffff66; }
 .text-orange { color: #ff7b1a; }
 .text-green  { color: #00cc22; }

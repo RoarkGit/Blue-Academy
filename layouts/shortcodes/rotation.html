@@ -1,1 +1,60 @@
-{{ partial "rotation.html" (dict "context" . "rotation" (.Get 0)) }}
+{{- $rotation := index site.Data.rotation (.Get 0) -}}
+{{- $currentGcd := 0 -}}
+{{- with $rotation.starting_gcd -}}
+  {{- $currentGcd = . -}}
+{{- end -}}
+<div class="rotation">
+  {{- range $rotation.actions -}}
+    <div class="rotation-event">
+      <div class="rotation-event-gcd-wrapper">
+        <div class="rotation-event-gcd tooltip" data-tooltip-id="{{ .gcd }}">
+          {{- $image := (printf "/images/tooltips/%s.png" .gcd) | resources.Get -}}
+          {{- if not $image -}}
+            {{- errorf "Could not locate image for spell %s." .gcd -}}
+          {{- end -}}
+          {{- $image = $image.Resize "48x webp" -}}
+          {{- page.Store.SetInMap "tooltips" .gcd "spell" -}}
+          <img src="{{ $image.RelPermalink }}" />
+        </div>
+        <div class="rotation-event-gcd-counter">
+          {{- $currentGcd -}}
+          {{- $currentGcd = add $currentGcd 1 -}}
+        </div>
+      </div>
+      {{- if eq $currentGcd 0 -}}
+        <div class="rotation-event-pull-wrapper">
+          Pull
+          <div class="rotation-event-pull"></div>
+        </div>
+      {{- end -}}
+      {{- range $entry := .ogcd -}}
+        {{- $parts := split $entry "*" -}}
+        {{- $id := index $parts 0 -}}
+        {{- $count := 1 -}}
+        {{- if eq (len $parts) 2 -}}
+          {{- $count = int (index $parts 1) -}}
+        {{- end -}}
+        {{- $type := "spell" -}}
+        {{- if not (index (where site.Data.spell "id" $id) 0) -}}
+          {{- $type = "action" -}}
+        {{- end -}}
+        {{- page.Store.SetInMap "tooltips" $id $type -}}
+        {{- range seq $count -}}
+          <div class="rotation-event-ogcd-wrapper">
+            <div class="rotation-event-ogcd tooltip" data-tooltip-id="{{ $id }}">
+              {{- $img := (printf "/images/tooltips/%s.png" $id) | resources.Get -}}
+              {{- if not $img -}}
+                {{- errorf "Could not locate image for spell %s." $id -}}
+              {{- end -}}
+              {{- $img = $img.Resize "36x webp" -}}
+              <img src="{{ $img.RelPermalink }}" />
+            </div>
+            <div class="rotation-event-ogcd-timebox-wrapper">
+              <div class="rotation-event-ogcd-timebox"></div>
+            </div>
+          </div>
+        {{- end -}}
+      {{- end -}}
+    </div>
+  {{- end -}}
+</div>

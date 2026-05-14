@@ -1,138 +1,65 @@
-# File for writing out rotation timelines.
-#
 # rotation_name:
 #   starting_gcd: which GCD to start counting at (default 0)
 #   actions:
-#     - gcd: action_name
-#       ogcd: (optional)
-#         - action_name
-#         - action_name
+#     - {gcd: action_name}
+#     - {gcd: action_name, ogcd: [ogcd1, ogcd2]}
+#
+# Repeat an oGCD N times with spell*N (e.g. surpanakha*4).
+# Prefix role/general actions with action: (e.g. action:swiftcast).
 
 moon_flute_winged:
   starting_gcd: -2
   actions:
-    - gcd: whistle
-    - gcd: tingle
-    - gcd: the_rose_of_destruction
-    - gcd: moon_flute
-      ogcd:
-        - j_kick
-    - gcd: triple_trident
-      ogcd:
-        - nightbloom
-    - gcd: winged_reprobation
-      ogcd:
-        - feather_rain
-        - sea_shanty
-    - gcd: winged_reprobation
-      ogcd:
-        - shock_strike
-        - being_mortal
-    - gcd: bristle
-      ogcd:
-        - action:swiftcast
-        - surpanakha
-        - surpanakha
-        - surpanakha
-        - surpanakha
-    - gcd: matra_magic
-      ogcd:
-        - phantom_flurry
+    - {gcd: whistle}
+    - {gcd: tingle}
+    - {gcd: the_rose_of_destruction}
+    - {gcd: moon_flute, ogcd: [j_kick]}
+    - {gcd: triple_trident, ogcd: [nightbloom]}
+    - {gcd: winged_reprobation, ogcd: [feather_rain, sea_shanty]}
+    - {gcd: winged_reprobation, ogcd: [shock_strike, being_mortal]}
+    - {gcd: bristle, ogcd: [swiftcast, surpanakha*4]}
+    - {gcd: matra_magic, ogcd: [phantom_flurry]}
 
 moon_flute_flame:
   starting_gcd: -2
   actions:
-    - gcd: whistle
-    - gcd: tingle
-    - gcd: the_rose_of_destruction
-    - gcd: moon_flute
-      ogcd:
-        - j_kick
-    - gcd: triple_trident
-      ogcd:
-        - nightbloom
-    - gcd: bristle
-      ogcd:
-        - feather_rain
-        - sea_shanty
-    - gcd: mortal_flame
-      ogcd:
-        - shock_strike
-        - being_mortal
-    - gcd: bristle
-      ogcd:
-        - action:swiftcast
-        - surpanakha
-        - surpanakha
-        - surpanakha
-        - surpanakha
-    - gcd: matra_magic
-      ogcd:
-        - phantom_flurry
+    - {gcd: whistle}
+    - {gcd: tingle}
+    - {gcd: the_rose_of_destruction}
+    - {gcd: moon_flute, ogcd: [j_kick]}
+    - {gcd: triple_trident, ogcd: [nightbloom]}
+    - {gcd: bristle, ogcd: [feather_rain, sea_shanty]}
+    - {gcd: mortal_flame, ogcd: [shock_strike, being_mortal]}
+    - {gcd: bristle, ogcd: [swiftcast, surpanakha*4]}
+    - {gcd: matra_magic, ogcd: [phantom_flurry]}
 
 moon_flute_breath:
   starting_gcd: -2
   actions:
-    - gcd: whistle
-    - gcd: tingle
-    - gcd: the_rose_of_destruction
-    - gcd: moon_flute
-      ogcd:
-        - j_kick
-    - gcd: triple_trident
-      ogcd:
-        - nightbloom
-    - gcd: bristle
-      ogcd:
-        - feather_rain
-        - sea_shanty
-    - gcd: breath_of_magic
-      ogcd:
-        - shock_strike
-        - being_mortal
-    - gcd: bristle
-      ogcd:
-        - action:swiftcast
-        - surpanakha
-        - surpanakha
-        - surpanakha
-        - surpanakha
-    - gcd: matra_magic
-      ogcd:
-        - phantom_flurry
+    - {gcd: whistle}
+    - {gcd: tingle}
+    - {gcd: the_rose_of_destruction}
+    - {gcd: moon_flute, ogcd: [j_kick]}
+    - {gcd: triple_trident, ogcd: [nightbloom]}
+    - {gcd: bristle, ogcd: [feather_rain, sea_shanty]}
+    - {gcd: breath_of_magic, ogcd: [shock_strike, being_mortal]}
+    - {gcd: bristle, ogcd: [swiftcast, surpanakha*4]}
+    - {gcd: matra_magic, ogcd: [phantom_flurry]}
 
 gavel_skip:
   starting_gcd: -1
   actions:
-    - gcd: song_of_torment
-    - gcd: phantom_flurry
-    - gcd: phantom_flurry
-    - gcd: the_rose_of_destruction
-      ogcd:
-        - feather_rain
-    - gcd: winged_reprobation
-      ogcd:
-        - shock_strike
-    - gcd: winged_reprobation
-    - gcd: whistle
-      ogcd:
-        - off-guard
-    - gcd: tingle
-    - gcd: moon_flute
-      ogcd:
-        - nightbloom
-    - gcd: triple_trident
-      ogcd:
-        - sea_shanty
-    - gcd: bristle
-      ogcd:
-        - action:swiftcast
-        - being_mortal
-    - gcd: matra_magic
-    - gcd: whistle
-      ogcd:
-        - surpanakha
-        - surpanakha
-        - surpanakha
-        - surpanakha
-    - gcd: final_sting
+    - {gcd: song_of_torment}
+    - {gcd: phantom_flurry}
+    - {gcd: phantom_flurry}
+    - {gcd: the_rose_of_destruction, ogcd: [feather_rain]}
+    - {gcd: winged_reprobation, ogcd: [shock_strike]}
+    - {gcd: winged_reprobation}
+    - {gcd: whistle, ogcd: [off-guard]}
+    - {gcd: tingle}
+    - {gcd: moon_flute, ogcd: [nightbloom]}
+    - {gcd: triple_trident, ogcd: [sea_shanty]}
+    - {gcd: bristle, ogcd: [swiftcast, being_mortal]}
+    - {gcd: matra_magic}
+    - {gcd: whistle, ogcd: [surpanakha*4]}
+    - {gcd: final_sting}
