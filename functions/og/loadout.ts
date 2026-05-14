@@ -29,7 +29,10 @@ function fillRect(
   for (let py = 0; py < h; py++) {
     for (let px = 0; px < w; px++) {
       const i = ((y + py) * imgW + (x + px)) * 4
-      buf[i] = color[0]; buf[i + 1] = color[1]; buf[i + 2] = color[2]; buf[i + 3] = 255
+      buf[i] = color[0]
+      buf[i + 1] = color[1]
+      buf[i + 2] = color[2]
+      buf[i + 3] = 255
     }
   }
 }
@@ -48,7 +51,10 @@ function scalePixels(
       const sy = Math.floor((y * srcH) / dstH)
       const si = (sy * srcW + sx) * 4
       const di = (y * dstW + x) * 4
-      dst[di] = src[si]; dst[di + 1] = src[si + 1]; dst[di + 2] = src[si + 2]; dst[di + 3] = src[si + 3]
+      dst[di] = src[si]
+      dst[di + 1] = src[si + 1]
+      dst[di + 2] = src[si + 2]
+      dst[di + 3] = src[si + 3]
     }
   }
   return dst
@@ -75,7 +81,10 @@ function blitIcon(
       const a = scaled[si + 3] / 255
       if (a === 0) continue
       if (a === 1) {
-        dst[di] = scaled[si]; dst[di + 1] = scaled[si + 1]; dst[di + 2] = scaled[si + 2]; dst[di + 3] = 255
+        dst[di] = scaled[si]
+        dst[di + 1] = scaled[si + 1]
+        dst[di + 2] = scaled[si + 2]
+        dst[di + 3] = 255
       } else {
         dst[di] = Math.round(scaled[si] * a + dst[di] * (1 - a))
         dst[di + 1] = Math.round(scaled[si + 1] * a + dst[di + 1] * (1 - a))
@@ -86,10 +95,13 @@ function blitIcon(
   }
 }
 
-export const onRequestGet: PagesFunction<{ ASSETS: Fetcher }> = async (context) => {
+export const onRequestGet: PagesFunction<{ ASSETS: Fetcher }> = async (
+  context,
+) => {
   const url = new URL(context.request.url)
   const loadoutParam = url.searchParams.get('spell_loadout')
-  if (!loadoutParam) return new Response('Missing spell_loadout', { status: 400 })
+  if (!loadoutParam)
+    return new Response('Missing spell_loadout', { status: 400 })
 
   const cache = caches.default
   const cached = await cache.match(context.request)
@@ -108,11 +120,17 @@ export const onRequestGet: PagesFunction<{ ASSETS: Fetcher }> = async (context) 
       const spell = spellMap[String(spellNum)]
       if (!spell) return null
       try {
-        const resp = await context.env.ASSETS.fetch(new URL(spell.url, url).toString())
+        const resp = await context.env.ASSETS.fetch(
+          new URL(spell.url, url).toString(),
+        )
         const buf = await resp.arrayBuffer()
         const decoded = UPNG.decode(buf)
         const rgba = UPNG.toRGBA8(decoded)
-        return { pixels: new Uint8Array(rgba[0]), width: decoded.width, height: decoded.height }
+        return {
+          pixels: new Uint8Array(rgba[0]),
+          width: decoded.width,
+          height: decoded.height,
+        }
       } catch {
         return null
       }
@@ -134,7 +152,15 @@ export const onRequestGet: PagesFunction<{ ASSETS: Fetcher }> = async (context) 
 
     const spellNum = loadout[idx]
     if (spellNum) {
-      drawNumber(buf, IMG_W, spellNum, dx + ICON_SIZE / 2, dy + ICON_SIZE + 2, FONT_SCALE, TEXT_COLOR)
+      drawNumber(
+        buf,
+        IMG_W,
+        spellNum,
+        dx + ICON_SIZE / 2,
+        dy + ICON_SIZE + 2,
+        FONT_SCALE,
+        TEXT_COLOR,
+      )
     }
   }
 

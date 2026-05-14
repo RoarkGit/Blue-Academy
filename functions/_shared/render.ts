@@ -30,8 +30,12 @@ function drawChar(
       if (rows[row] & (1 << (FONT_W - 1 - col))) {
         for (let sy = 0; sy < scale; sy++) {
           for (let sx = 0; sx < scale; sx++) {
-            const i = ((y + row * scale + sy) * imgW + (x + col * scale + sx)) * 4
-            buf[i] = color[0]; buf[i + 1] = color[1]; buf[i + 2] = color[2]; buf[i + 3] = 255
+            const i =
+              ((y + row * scale + sy) * imgW + (x + col * scale + sx)) * 4
+            buf[i] = color[0]
+            buf[i + 1] = color[1]
+            buf[i + 2] = color[2]
+            buf[i + 3] = 255
           }
         }
       }
