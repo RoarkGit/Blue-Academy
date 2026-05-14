@@ -1,4 +1,4 @@
-<script defer data-domain="stats.mage.blue" src="https://stats.mage.blue/js/script.js"></script>
+<script defer data-domain="stats.mage.blue" src="https://stats.mage.blue/js/script.outbound-links.tagged-events.js"></script>
 {{- $spellTooltips := resources.Get "/ts/spell-tooltips.ts" | js.Build (dict "targetPath" "/js/spell-tooltips.js") -}}
 <script defer src="{{ $spellTooltips.RelPermalink }}"></script>
 {{ with .Params.customCss -}}

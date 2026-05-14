@@ -1,5 +1,7 @@
 import { moveTooltip, ready } from './common'
 
+declare function plausible(event: string, options?: { props?: Record<string, string> }): void
+
 interface Spell {
   Id: string
   Name: string
@@ -184,9 +186,14 @@ ready(function () {
       updateSpellLoadoutLink()
     })
   }
+  document.getElementById('spell-loadout-builder-link')?.addEventListener('click', () => {
+    plausible('Loadout Shared')
+  })
+
   const params = new URLSearchParams(window.location.search)
   const preload = params.get('spell_loadout')
   if (preload) {
+    plausible('Loadout Loaded')
     decodeLoadout(preload).forEach((spellNumber, i) => {
       if (spellNumber && i < spellLoadoutSpells.length) {
         const spellTooltip = spellbookSpells[spellNumber - 1]
