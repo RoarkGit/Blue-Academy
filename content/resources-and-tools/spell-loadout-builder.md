@@ -1,6 +1,6 @@
 ---
 title: Spell Loadout Builder
-weight: 50
+weight: 20
 ---
 
 {{< spellbook >}}

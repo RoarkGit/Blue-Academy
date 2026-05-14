@@ -1,7 +1,7 @@
 ---
 title: Spell List
 customCss: /css/full-page.css
-weight: 40
+weight: 10
 ---
 
 {{< spell-list >}}

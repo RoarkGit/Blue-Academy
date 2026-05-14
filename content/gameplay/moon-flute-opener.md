@@ -7,7 +7,10 @@ weight: 10
 
 Most jobs have what is called a "burst window," where most of your high potency
 actions will be combined with buffs to maximize damage. Blue Mage is similar but
-to a much more extreme degree.
+to a much more extreme degree, and this is all centered around the ability
+{{< spell moon_flute >}}. Moon Flute gives a 50% buff to _all_ damage for 15
+seconds, followed by a 15 second period where you cannot use any spells or
+abilities.
 
 ## Frequently Asked Questions
 
@@ -15,6 +18,13 @@ Before we even get to the openers, it's worth covering some frequently asked
 questions first.
 
 <!-- prettier-ignore -->
+##### Is it actually worth using Moon Flute if it means I can't attack for 15 seconds?
+
+Yes. With Moon Flute, a full opener does roughly ~15,000 potency worth of
+damage. That means that you gained about 5,000 potency just from using Moon
+Flute, which dramatically outweights any amount of potency you could use during
+the 15 second Waning period.
+
 ##### What if I don't want to use Moon Flute because 15 seconds of not pressing damage buttons will literally kill me IRL?
 
 That's rough, buddy.
