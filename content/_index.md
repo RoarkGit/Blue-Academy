@@ -19,7 +19,7 @@ that are covered here are:
 - [Getting Started](/getting-started/)
 - [Leveling](/getting-started/leveling/)
 - [Gear](/gearing/gear-sets/)
-- [Spell Locations](/reference/spell-list/)
+- [Spell Locations](/resources-and-tools/spell-list/)
 - [Masked Carnivale Guide](/masked-carnivale/)
 - [Savage Guides](/savage-guides/)
 

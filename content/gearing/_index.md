@@ -1,5 +1,5 @@
 ---
-title: Blue Mage Gearing
+title: Gearing
 type: section
 date: 2023-09-13
 weight: 20
@@ -15,4 +15,4 @@ If you _do_ want to optimize more, such as for Extreme trials or Savage raids
 You can read up on what our stat priorities are and what the recommended
 gearsets are.
 
-{{< children >}}
+{{% children %}}

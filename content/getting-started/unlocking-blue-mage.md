@@ -25,3 +25,5 @@ a new job. The general vibe of Blue Mage quests is pretty goofy and reminds me a
 bit of Hildibrand. If you enjoyed those quests, you'll probably enjoy the Blue
 Mage quests so I would recommend following along with the dialogue and
 cutscenes!
+
+{{< figure src="/images/zealous-yellowjacket.png" alt="Zealous Yellowjacket" width="35%" >}}

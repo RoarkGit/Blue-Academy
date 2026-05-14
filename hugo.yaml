@@ -20,6 +20,12 @@ params:
       disableTitle: true
   themeVariant: academy
 
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+
 ignoreLogs:
   - warning-goldmark-raw-html
 

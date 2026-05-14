@@ -1,5 +1,5 @@
 ---
-title: Getting Started With Blue Mage
+title: Getting Started
 type: section
 weight: 10
 date: 2023-09-13

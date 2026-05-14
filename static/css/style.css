@@ -1,3 +1,26 @@
+#R-sidebar {
+  z-index: 200;
+}
+
+#logo {
+  display: block;
+  padding: 0.5rem;
+}
+
+#logo img {
+  display: block;
+  max-height: 14rem;
+  width: auto;
+  margin: 0 auto;
+}
+
+
+#R-sidebar ul.collapsible-menu li.active > a,
+:has(~ #R-content-wrapper),
+#R-content-wrapper > * {
+  border-inline-end: none;
+}
+
 :root {
   --spellbook-gap: 12px;
   --tooltip-color-secondary: #bbac94;
@@ -315,8 +338,6 @@ dd {
 
 .spellbook-wrapper-page-labels {
   display: flex;
-  position: relative;
-  z-index: 1;
   margin: 0 0 -1px 0;
   font-size: 1.1rem;
 }

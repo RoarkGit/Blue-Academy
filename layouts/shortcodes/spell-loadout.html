@@ -44,7 +44,7 @@
     <div class="spell-loadout-spell"></div>
   {{- end -}}
   {{- if $loadoutParam -}}
-    {{- $builderPage := site.GetPage "gameplay/spell-loadout-builder" -}}
+    {{- $builderPage := site.GetPage "resources-and-tools/spell-loadout-builder" -}}
     <div class="spell-loadout-builder-link-wrapper">
       <a href="{{ $builderPage.RelPermalink }}?spell_loadout={{ $encoded }}" class="plausible-event-name=Open+in+Builder">Open in builder</a>
     </div>

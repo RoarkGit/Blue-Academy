@@ -1,5 +1,5 @@
 ---
-title: Blue Mage Savage Guides
+title: Savage Guides
 type: section
 weight: 80
 ---
