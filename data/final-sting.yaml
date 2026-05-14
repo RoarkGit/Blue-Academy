@@ -1,0 +1,156 @@
+base_stings:
+  50: 6400
+  60: 12500
+  70: 20500
+  80: 46000
+
+multipliers:
+  whistle: 1.8
+  bristle: 1.5
+  tingle: 1.5
+  moon_flute: 1.5
+  basic_instinct: 2.0
+  off_guard: 1.05
+  physical_libra: 1.05
+
+bosses:
+  - name: Alexander Prime (A12S)
+    hp: 2682219
+    level: 60
+  - name: Bahamut Prime (T13)
+    hp: 1116816
+    level: 50
+  - name: Bismarck (Extreme)
+    hp: 187713
+    level: 60
+  - name: Brute Justice (A8S)
+    hp: 914545
+    level: 60
+  - name: Byakko (Extreme)
+    hp: 3709234
+    level: 70
+  - name: Diamond Weapon (Extreme)
+    hp: 13792169
+    level: 80
+  - name: Eden's Promise (E12S P1)
+    hp: 13949684
+    level: 80
+  - name: Emerald Weapon P1 (Extreme)
+    hp: 6868765
+    level: 80
+  - name: Emerald Weapon P2 (Extreme)
+    hp: 7061710
+    level: 80
+  - name: Exdeath (O4S P1)
+    hp: 5325265
+    level: 70
+    kill_pct: 60
+  - name: Hades (Extreme)
+    hp: 3236101
+    level: 80
+  - name: Garuda (Extreme)
+    hp: 263120
+    level: 50
+  - name: God Kefka (O8S P2)
+    hp: 6655574
+    level: 70
+  - name: Innocence (Extreme)
+    hp: 9239174
+    level: 80
+  - name: Ifrit (Extreme)
+    hp: 298201
+    level: 50
+  - name: Kefka (O8S P1)
+    hp: 9926597
+    level: 70
+    kill_pct: 60
+  - name: Lakshmi (Extreme)
+    hp: 2942308
+    level: 70
+  - name: Leviathan (Extreme)
+    hp: 298848
+    level: 50
+  - name: Manipulator (A4S)
+    hp: 1198221
+    level: 60
+  - name: Nael deus Darnus (T9)
+    hp: 667547
+    level: 50
+  - name: Neo-Exdeath (O4S P2)
+    hp: 6023895
+    level: 70
+  - name: Nidhogg (Extreme)
+    hp: 1715650
+    level: 60
+  - name: Omega (O12S)
+    hp: 7732853
+    level: 70
+  - name: Omega M/F (O12S Door) (Each)
+    hp: 2634418
+    level: 70
+  - name: Oracle of Darkness (E12S P2)
+    hp: 13631666
+    level: 80
+  - name: Ramuh (Extreme)
+    hp: 487379
+    level: 50
+  - name: Ravana (Extreme)
+    hp: 1085549
+    level: 60
+  - name: Ruby Weapon P1 (Extreme)
+    hp: 6388109
+    level: 80
+  - name: Ruby Weapon P2 (Extreme)
+    hp: 3648884
+    level: 80
+  - name: Seiryu (Extreme)
+    hp: 5477083
+    level: 70
+  - name: Sephirot (Extreme)
+    hp: 1878018
+    level: 60
+  - name: Shinryu (Extreme)
+    hp: 6178624
+    level: 70
+  - name: Shiva (Extreme)
+    hp: 592777
+    level: 50
+  - name: Shiva (E8S)
+    hp: 17124316
+    level: 80
+  - name: Sophia (Extreme)
+    hp: 1931808
+    level: 60
+  - name: Susano (Extreme)
+    hp: 3203623
+    level: 70
+  - name: Suzaku (Extreme)
+    hp: 5722275
+    level: 70
+  - name: Thordan (Extreme)
+    hp: 1335796
+    level: 60
+  - name: Thornmarch (Extreme)
+    hp: 293644
+    level: 50
+  - name: Titan (Extreme)
+    hp: 326032
+    level: 50
+  - name: Titan (E4S)
+    hp: 15394639
+    level: 80
+  - name: Titania (Extreme)
+    hp: 8116506
+    level: 80
+  - name: Tsukuyomi (Extreme)
+    hp: 4551174
+    level: 70
+  - name: Twintania (T5)
+    hp: 514596
+    level: 50
+  - name: Ultima Weapon (Extreme)
+    hp: 418330
+    level: 50
+  - name: Zurvan (Extreme)
+    hp: 2040828
+    level: 60

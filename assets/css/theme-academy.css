@@ -52,3 +52,154 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
 .text-green  { color: #00cc22; }
 
 .text-muted { font-size: 0.8em; opacity: 0.55; }
+
+/* Final Sting Calculator */
+.fsc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.fsc-boss-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.fsc-boss-row label {
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.fsc-boss-row select {
+  flex: 1;
+  background: rgba(40, 42, 54, 0.9);
+  color: var(--MAIN-TEXT-color);
+  border: 1px solid rgba(134, 137, 149, 0.6);
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  font-family: var(--MAIN-font);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.fsc-boss-info {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.15rem;
+  opacity: 0.85;
+}
+
+.fsc-boss-info strong {
+  font-weight: 400;
+}
+
+.fsc-note {
+  margin: 0;
+  color: #ffff66;
+  font-size: 0.9rem;
+}
+
+.fsc-buffs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.fsc-debuffs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.fsc-debuffs h4,
+.fsc-player-buffs h4 {
+  margin: 0 0 0.4rem;
+}
+
+.fsc-debuffs label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+.fsc-buff-table {
+  border-collapse: collapse;
+}
+
+.fsc-buff-table th,
+.fsc-buff-table td {
+  padding: 0.2rem 0.75rem;
+  text-align: center;
+}
+
+.fsc-buff-table td:first-child {
+  text-align: left;
+  padding-left: 0;
+}
+
+.fsc-buff-table input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.fsc-buff-table input[type="number"] {
+  width: 3rem;
+  background: rgba(40, 42, 54, 0.9);
+  color: var(--MAIN-TEXT-color);
+  border: 1px solid rgba(134, 137, 149, 0.6);
+  border-radius: 4px;
+  padding: 0.15rem 0.3rem;
+  font-family: var(--MAIN-font);
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.fsc-results-table {
+  border-collapse: collapse;
+  min-width: 20rem;
+}
+
+.fsc-results-table th,
+.fsc-results-table td {
+  padding: 0.35rem 1rem;
+  border-bottom: 1px solid rgba(134, 137, 149, 0.3);
+  text-align: left;
+}
+
+.fsc-results-table th {
+  font-weight: 400;
+  opacity: 0.75;
+}
+
+.fsc-result-value {
+  font-weight: 400;
+}
+
+.fsc-result-kills {
+  color: #00cc22;
+}
+
+.fsc-result {
+  font-size: 1.5rem;
+  font-weight: 400;
+  background: rgba(40, 42, 54, 0.7);
+  border: 1px solid rgba(134, 137, 149, 0.4);
+  border-radius: 6px;
+  padding: 0.5rem 1.25rem;
+  text-align: center;
+  align-self: center;
+}
+
+.fsc-result .fsc-result-value {
+  font-size: 1.75rem;
+}
+
+.fsc-disclaimer {
+  margin: 0;
+}

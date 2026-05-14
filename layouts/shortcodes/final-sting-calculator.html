@@ -1,0 +1,79 @@
+{{- $script := resources.Get "ts/final-sting-calculator.ts" | js.Build (dict "targetPath" "/js/final-sting-calculator.js") -}}
+{{- $data := index site.Data "final-sting" -}}
+<script id="final-sting-data" type="application/json">{{ $data | jsonify | safeJS }}</script>
+<script defer src="{{ $script.RelPermalink }}"></script>
+<div id="final-sting-calculator" class="fsc">
+  <div class="fsc-boss-row">
+    <label for="boss-select">Boss</label>
+    <select id="boss-select"></select>
+  </div>
+  <div class="fsc-boss-info">
+    <span>HP: <strong id="boss-hp"></strong></span>
+    <span>Base Sting: <strong id="boss-base-sting"></strong></span>
+  </div>
+  <p id="boss-note" class="fsc-note" hidden></p>
+
+  <div class="fsc-buffs">
+    <div class="fsc-debuffs">
+      <h4>Boss Debuffs</h4>
+      <label><input type="checkbox" id="off-guard" checked> Off-Guard</label>
+      <label><input type="checkbox" id="physical-libra"> Physical Libra</label>
+    </div>
+    <div class="fsc-player-buffs">
+      <h4>Player Buffs</h4>
+      <table class="fsc-buff-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>DPS</th>
+            <th>Healer</th>
+            <th>Tank</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Count</td>
+            <td><input type="number" id="count-dps" min="0" max="8" value="5"></td>
+            <td><input type="number" id="count-healer" min="0" max="8" value="2"></td>
+            <td><input type="number" id="count-tank" min="0" max="8" value="1"></td>
+          </tr>
+          <tr>
+            <td>Whistle</td>
+            <td><input type="checkbox" id="whistle-dps" checked></td>
+            <td><input type="checkbox" id="whistle-healer" checked></td>
+            <td><input type="checkbox" id="whistle-tank" checked></td>
+          </tr>
+          <tr>
+            <td>Bristle</td>
+            <td><input type="checkbox" id="bristle-dps"></td>
+            <td><input type="checkbox" id="bristle-healer"></td>
+            <td><input type="checkbox" id="bristle-tank"></td>
+          </tr>
+          <tr>
+            <td>Tingle</td>
+            <td><input type="checkbox" id="tingle-dps"></td>
+            <td><input type="checkbox" id="tingle-healer"></td>
+            <td><input type="checkbox" id="tingle-tank"></td>
+          </tr>
+          <tr>
+            <td>Moon Flute</td>
+            <td><input type="checkbox" id="moonFlute-dps" checked></td>
+            <td><input type="checkbox" id="moonFlute-healer" checked></td>
+            <td><input type="checkbox" id="moonFlute-tank"></td>
+          </tr>
+          <tr>
+            <td>Basic Instinct</td>
+            <td><input type="checkbox" id="basicInstinct-dps"></td>
+            <td><input type="checkbox" id="basicInstinct-healer"></td>
+            <td><input type="checkbox" id="basicInstinct-tank"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="fsc-result">
+    Total Sting %: <span id="result-total" class="fsc-result-value"></span>
+  </div>
+  <p class="fsc-disclaimer text-muted">Calculations assume no critical hits or direct hits. Actual damage will be slightly higher if Primal spells are used before Final Sting.</p>
+</div>
