@@ -5,8 +5,8 @@ weight: 20
 
 {{% notice title="TL;DR" %}}
 
-Get any ilvl 530 gear, meld materia, and you’ll be fine for all content. If you
-want to optimize, read below. You can use the
+Get any ilvl 530 gear, meld materia, and you’ll be fine for all content.
+If you want to optimize, read below. You can use the
 [BLU DPS Sim](https://docs.google.com/spreadsheets/d/1IZBK7MMMuS4KABnWxDCUNrPRAf_hzUz89BmqYxjpMMA/edit?usp=sharing)
 to compare sets.
 

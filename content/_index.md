@@ -13,7 +13,8 @@ collection of Blue Mage theorycrafting, knowledge, and information!
 
 ## What Resources Are Available
 
-You'll find a navigation menu on the side of the page, but the big resources that are covered here are:
+You'll find a navigation menu on the side of the page, but the big resources
+that are covered here are:
 
 - [Getting Started]({{% relref "/getting-started" %}})
 - [Leveling]({{% relref "/getting-started/leveling" %}})

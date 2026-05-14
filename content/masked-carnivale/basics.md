@@ -56,11 +56,11 @@ these on your bar:
 - A magic filler GCD spell. My personal favorite is
   {{< spell electrogenesis >}}; it's not necessarily better than the others I
   just think it sounds cool.
-- A physical filler GCD spell. {{< spell sharpened_knife >}} is nice because it
-  has a fast cast time, but requires you to be in melee ranged. {{< spell
-  goblin_punch >}} is really powerful in stages with no positionals and is an
-  instant cast. For most purposes {{< spell abyssal_transfixion >}} is a good
-  option.
+- A physical filler GCD spell. {{< spell sharpened_knife >}} is nice because
+  it has a fast cast time, but requires you to be in melee ranged.
+  {{< spell goblin_punch >}} is really powerful in stages with no positionals
+  and is an instant cast. For most purposes
+  {{< spell abyssal_transfixion >}} is a good option.
 - {{< spell flying_sardine >}} to interrupt enemy spells.
 
 If a stage requires specific spells it will be mentioned on its guide page. In

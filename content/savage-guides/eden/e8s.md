@@ -71,8 +71,9 @@ for this is pretty brutal so don't waste too much time or try to greed as you
 
 Shortly after the red mirror goes off we will have our first major raid
 mechanic. Shiva will teleport to the center and begin casting **Diamond Frost**.
-Stack in the center and have the tank heal everyone up with {{< spell white_wind
->}}. There is about to be a lot of movement, so this is actually a good time for
+Stack in the center and have the tank heal everyone up with
+{{< spell white_wind >}}. There is about to be a lot of movement, so this is
+actually a good time for
 DPS to use {{< spell cold_fog >}}. This is also a good time for the off-tank to
 use {{< spell frog_legs >}} as it allows them to have a substantial lead in
 threat over everyone else, but also gives plenty of time for the tank to
@@ -90,8 +91,8 @@ little bit easier for us:
 - The same people will *always* be targeted by the Freezing debuff (assuming no
   deaths).
 - The tank *always* gets targeted by a flare, but the other flare is random.
-- Getting hit by both flares directly is survivable with {{< spell mighty_guard
-  >}}.
+- Getting hit by both flares directly is survivable with
+  {{< spell mighty_guard >}}.
 
 There are two ways to solve this mechanic: everyone gets knocked back to the
 same side (with {{< spell mighty_guard >}}) or everyone except the tank gets
@@ -105,18 +106,20 @@ which strat you do, the mechanic resolves as follows:
    appear, either E/W or N/S).
 3. Drop baited AOEs on intercardinal markers on the arena's inner circle (look
    at the lines on the ground).
-4. Make sure everyone gets knocked back to the same side (with {{< spell
-   mighty_guard >}}) or have the tank get knocked back to their own side.\
+4. Make sure everyone gets knocked back to the same side (with
+   {{< spell mighty_guard >}}) or have the tank get knocked back to their
+   own side.
 5. Heal up after knockback and flare damage.
 6. Dodge ground-targeted AOEs.
 
 Shiva will follow up with Driving Frost or Biting Frost, whichever she didn't
 use at the beginning of the fight. The tank should be able to position her such
 that the party doesn't really need to think about dodging, but be ready to
-dodge, anyway. While this is happening, the DPS should cast {{< spell wild_rage
->}} twice to reduce themselves to 1 HP and then start spamming {{< spell
-revenge_blast >}}. You may need to wait for a server tick to regen some HP
-before being able to cast the second {{< spell wild_rage >}}.
+dodge, anyway. While this is happening, the DPS should cast
+{{< spell wild_rage >}} twice to reduce themselves to 1 HP and then start
+spamming {{< spell revenge_blast >}}. You may need to wait for a server tick
+to regen some HP before being able to cast the second
+{{< spell wild_rage >}}.
 
 Shiva will then use **Double Slap**, a two-hit tankbuster that applies a
 Physical Vulnerability Up debuff. If {{< spell diamondback >}} is used just
@@ -162,8 +165,8 @@ comfortably. There is a raidplan for this mechanic
    markers on the inside circle.
 3. The remaining four players use their eyes to split into pairs in the north
    and south, just outside of the inner circle.
-4. As soon as the Path of Light cast starts, everyone casts {{< spell
-   diamondback >}}.
+4. As soon as the Path of Light cast starts, everyone casts
+   {{< spell diamondback >}}.
 5. Orbs will pop, chains will break, but everyone should survive.
 6. After the second Path of Light cleaves happen, the north and south pairs step
    into the tower in the center.
@@ -176,8 +179,9 @@ positions based on the orbs tethered to them and then backing away once chains
 disappear to pop their orbs. This strat has the benefit of having no damage
 downs, but is slightly (though not outrageously so) more difficult to execute.
 The start of Light Rampant happens to line up with our {{< spell moon_flute >}},
-but there isn't enough time to fit everything in and still get {{< spell
-diamondback >}} off. However, you can still use them afterwards without any loss
+but there isn't enough time to fit everything in and still get
+{{< spell diamondback >}} off. However, you can still use them afterwards
+without any loss
 since everything will eventually be back up after the adds phase.
 
 Shiva will cast **Mirror, Mirror** again followed by Axe Kick or Scythe Kick,
@@ -428,6 +432,7 @@ goal for the group.
 > HP is significantly higher. If you are able to fit it into your loadout then
 > great, but don't stress about it too much.
 
-Shiva's Final Sting threshold is roughly 7%. Once she is at 7%, apply {{< spell
-off-guard>}}, use {{< spell moon_flute >}}, any Primal abilities you have, then
-finish with {{< spell whistle >}} and {{< spell final_sting >}}.
+Shiva's Final Sting threshold is roughly 7%. Once she is at 7%, apply
+{{< spell off-guard >}}, use {{< spell moon_flute >}}, any Primal abilities
+you have, then finish with {{< spell whistle >}} and
+{{< spell final_sting >}}.

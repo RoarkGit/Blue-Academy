@@ -88,8 +88,9 @@ get away with using just {{< spell water_cannon >}} and {{< action sleep >}}.
 ### How It Works
 
 The goal is to tag a Leech and then have a Clionid eat it. You can cast any
-spell on a Leech and then bring it towards a Clionid, or you can cast {{< action
-sleep >}} on a Leech then aggro a Clionid and bring it next to the Leech.
+spell on a Leech and then bring it towards a Clionid, or you can cast
+{{< action sleep >}} on a Leech then aggro a Clionid and bring it next to
+the Leech.
 
 ### Expected Time
 

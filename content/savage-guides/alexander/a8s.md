@@ -153,11 +153,11 @@ platform. At 50% Swindler uses **Bio-arithmeticks** which is a _very_
 heavy-hitting raidwide, so make sure everyone is at full health and mitigate
 with {{< spell bad_breath >}}, {{< action addle >}}, {{< spell magic_hammer >}},
 and {{< spell gobskin >}} if possible. Pay extra attention to the off-tank here,
-and for extra safety you can wait for the off-tank to be in {{< spell
-diamondback >}} for a Brawler mechanic. Below 50% Swindler will use **Enumeration**,
-which puts a circle around two random players that requires a specific number of
-players to be inside the circle or it kills the target. As with Blaster Mirage, our
-goal is to just skip this entirely.
+and for extra safety you can wait for the off-tank to be in
+{{< spell diamondback >}} for a Brawler mechanic. Below 50% Swindler will use
+**Enumeration**, which puts a circle around two random players that requires
+a specific number of players to be inside the circle or it kills the target.
+As with Blaster Mirage, our goal is to just skip this entirely.
 
 After Blaster and Swindler are dead the party should move to the south where
 Vortexer will spawn.
@@ -340,11 +340,11 @@ mitigated by {{< spell diamondback >}} and is significantly easier than trying
 to solve it with random targets. The players who get targeted by Enumeration
 still need to avoid Ultra Flash, but need to stay away from the group to avoid
 getting people caught in Enumeration. These players should stand back, get out
-of line of sight of Vortexer, and then {{< action swiftcast >}} {{< spell
-diamondback >}}. The Enumeration targets will end up with a max HP down and damage
-down debuff, but these are inconsequential regardless of how you are handling Gavel
-in the next phase. _If you mess up Gavel in the next phase it is not because of these
-debuffs._
+of line of sight of Vortexer, and then {{< action swiftcast >}}
+{{< spell diamondback >}}. The Enumeration targets will end up with a max HP
+down and damage down debuff, but these are inconsequential regardless of how
+you are handling Gavel in the next phase. _If you mess up Gavel in the next
+phase it is not because of these debuffs._
 
 After all of this happens, the bots will rejoin to form Brute Justice. Brute
 Justice now has an HP up buff and will fully heal itself with **Justice** before
@@ -614,7 +614,7 @@ the tank while the tank uses {{< spell white_wind >}} instead.
 ## Final Sting
 
 Brute Justice's Final Sting threshold is about 25%. Once it is at 25%, apply
-{{< spell off-guard>}}, use {{< spell moon_flute >}}, any Primal abilities you
-have, then finish with {{< spell whistle >}} and {{< spell final_sting >}}. If
-your group maintains good DPS during Gavel then this will be almost immediately
-after the Gavel phase ends.
+{{< spell off-guard >}}, use {{< spell moon_flute >}}, any Primal abilities
+you have, then finish with {{< spell whistle >}} and
+{{< spell final_sting >}}. If your group maintains good DPS during Gavel then
+this will be almost immediately after the Gavel phase ends.

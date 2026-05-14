@@ -112,7 +112,7 @@ which is a heavy-hitting raidwide AOE, before looping from The Decisive Battle.
 ### Final Sting
 
 Exdeaths's Final Sting threshold is roughly 67%, since he transitions at 60%.
-Once he is at 67%, apply {{< spell off-guard>}}, use {{< spell moon_flute >}},
+Once he is at 67%, apply {{< spell off-guard >}}, use {{< spell moon_flute >}},
 any Primal abilities you have, then finish with {{< spell whistle >}} and
 {{< spell final_sting >}}. Most groups will be able to sting before Black Hole,
 and being able to skip Black Hole makes this phase considerably easier. At least
@@ -371,6 +371,7 @@ mechanic is also skippable with decent DPS.
 ### Final Sting
 
 Neo Exdeaths's Final Sting threshold is roughly 7%. Once he is at 7%, apply
-{{< spell off-guard>}}, use {{< spell moon_flute >}}, any Primal abilities you
-have, then finish with {{< spell whistle >}} and {{< spell final_sting >}}. Most
-groups will be able to sting just before or after Grand Cross Omega.
+{{< spell off-guard >}}, use {{< spell moon_flute >}}, any Primal abilities
+you have, then finish with {{< spell whistle >}} and
+{{< spell final_sting >}}. Most groups will be able to sting just before or
+after Grand Cross Omega.

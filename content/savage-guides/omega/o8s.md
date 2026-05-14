@@ -61,22 +61,23 @@ edge of the arena. This mechanic will drop a bunch of **Inexorable Will** AOEs
 on the ground, target players with **Wave Cannon** line AOEs and **Pulse Wave**
 knockback tethers, and then target players with **Indomitable Will** stack AOEs.
 The targeting for every component of this is completely random, so there's no
-safe and consistent way to resolve it. Instead, we will make use of {{< spell
-mighty_guard >}} and {{< spell diamondback >}} to survive everything! Have
-everyone put up {{< spell mighty_guard >}} and stack in the center of the arena.
-As soon as the first AOEs appear, spread out to clock positions, wait about one
-second, and then hardcast (no {{< action swiftcast >}}) {{< spell diamondback
->}}. All of the previously mentioned effects will go off but everyone should
-survive.
+safe and consistent way to resolve it. Instead, we will make use of
+{{< spell mighty_guard >}} and {{< spell diamondback >}} to survive everything!
+Have everyone put up {{< spell mighty_guard >}} and stack in the center of the
+arena. As soon as the first AOEs appear, spread out to clock positions, wait
+about one second, and then hardcast (no {{< action swiftcast >}})
+{{< spell diamondback >}}. All of the previously mentioned effects will go off
+but everyone should survive.
 
-Once out of {{< spell diamondback >}} look for where Kefka teleports to and run
-behind him. {{< action sprint >}} can be helpful for making it in time. Kefka
-will use **Revolting Ruin**, a frontal AOE. Kefka will follow up with **Light of
-Judgment**, a raidwide which will hit _extremely_ hard due to our Vulnerability
-Up debuffs from the previous mechanic. Mitigate with {{< action addle >}}, {{<
-spell bad_breath >}}, and {{< spell gobskin >}}. {{< spell magic_hammer >}} can
-be helpful here, and if you want to play it extra safe you can just keep {{<
-spell mighty_guard >}} on until after the cast finishes.
+Once out of {{< spell diamondback >}} look for where Kefka teleports to and
+run behind him. {{< action sprint >}} can be helpful for making it in time.
+Kefka will use **Revolting Ruin**, a frontal AOE. Kefka will follow up with
+**Light of Judgment**, a raidwide which will hit _extremely_ hard due to our
+Vulnerability Up debuffs from the previous mechanic. Mitigate with
+{{< action addle >}}, {{< spell bad_breath >}}, and {{< spell gobskin >}}.
+{{< spell magic_hammer >}} can be helpful here, and if you want to play it
+extra safe you can just keep {{< spell mighty_guard >}} on until after the
+cast finishes.
 
 ### Graven Image 2
 
@@ -106,9 +107,10 @@ puddles disappear from the center, everyone needs to move _back_ into the center
 to bait the final Gravitas, and then use {{< action surecast >}} to prevent the
 knockback from Aero Assault.
 
-There is a _ton_ of damage going out during this mechanic, so {{< spell
-angels_snack >}} and {{< spell white_wind >}} are crucial here. Kefka will
-finish the mechanic off with another Light of Judgment, so heal up and mitigate
+There is a _ton_ of damage going out during this mechanic, so
+{{< spell angels_snack >}} and {{< spell white_wind >}} are crucial here.
+Kefka will finish the mechanic off with another Light of Judgment, so heal up
+and mitigate
 appropriately.
 
 After Graven Image 3, Kefka will cast Mana Charge and Flagrant Fire, Ultima
@@ -124,9 +126,10 @@ phase's hard enrage.
 ### Final Sting
 
 Kefka's Final Sting threshold is roughly 65%, since he transitions at 60%. Once
-he is at 65%, apply {{< spell off-guard>}}, use {{< spell moon_flute >}}, any
-Primal abilities you have, then finish with {{< spell whistle >}} and {{< spell
-final_sting >}}. Most groups will be able to sting shortly after Graven Image 3.
+he is at 65%, apply {{< spell off-guard >}}, use {{< spell moon_flute >}},
+any Primal abilities you have, then finish with {{< spell whistle >}} and
+{{< spell final_sting >}}. Most groups will be able to sting shortly after
+Graven Image 3.
 
 ## Phase 2: God Kefka
 
@@ -167,14 +170,15 @@ it will take practice, but there are also a couple of things to keep in mind:
 - The tank will be in {{< spell diamondback >}} from the tankbuster as
   Celestriad starts. They can immediately {{< spell diamondback >}} a second
   time in order to ignore all of the Celestriad mechanics.
-- Celestriad starts 29 seconds after pull. To be able to {{< spell diamondback
-  >}}, you _need_ to be out of Waning before this happens. This means that {{<
-  spell moon_flute >}} will be cast at -2 seconds from pull to start right at 0
-  seconds. That means that you will not be able to precast {{< spell tingle >}}
-  before {{< spell moon_flute >}}. The easiest change to make is to just drop
-  {{< spell tingle >}} entirely. It is slightly more potency to keep {{< spell
-  tingle >}} and drop {{< spell bristle >}} from {{< spell matra_magic >}}, but
-  this is a bit harder to pull off and the gain isn't huge.
+- Celestriad starts 29 seconds after pull. To be able to
+  {{< spell diamondback >}}, you _need_ to be out of Waning before this
+  happens. This means that {{< spell moon_flute >}} will be cast at -2 seconds
+  from pull to start right at 0 seconds. That means that you will not be able
+  to precast {{< spell tingle >}} before {{< spell moon_flute >}}. The easiest
+  change to make is to just drop {{< spell tingle >}} entirely. It is slightly
+  more potency to keep {{< spell tingle >}} and drop {{< spell bristle >}} from
+  {{< spell matra_magic >}}, but this is a bit harder to pull off and the gain
+  isn't huge.
 
 Kefka will finish Celestriad with another Ultima and then cast **Forsaken**, a
 heavy-hitting raidwide AOE.
@@ -366,8 +370,9 @@ mechanic. The full mechanic plays out like this:
    cleaves either east or west.
 10. Light of Judgment.
 
-Fortunately the difficult parts of this mechanic can also be cheesed with {{<
-spell diamondback >}}. Split the party up into one group of two (Wing baiters),
+Fortunately the difficult parts of this mechanic can also be cheesed with
+{{< spell diamondback >}}. Split the party up into one group of two (Wing
+baiters),
 another group of two (healers), and a group of four (remaining DPS). Have the
 first group take the west tower, the second group take the east tower, and the
 third group take the south tower. Everything gets resolved in this order:
@@ -380,7 +385,8 @@ third group take the south tower. Everything gets resolved in this order:
 3. When the next set of tethers appear, everyone {{< spell diamondback >}}. This
    prevents the sleep and confusion combo from killing anyone.
 4. Handle Forsaken 1 the same way as before.
-5. Group of four soaks south tower again, while Wing baiters handle Wings (Double).
+5. Group of four soaks south tower again, while Wing baiters handle
+   Wings (Double).
 6. Point Kefka east or west.
 7. Dodge Wings (Single) and statue cleave.
 8. Mitigate Light of Judgment.
@@ -407,5 +413,6 @@ minutes of mechanics after that to stabilize and finish the fight.
 ### Final Sting
 
 God Kefka's Final Sting threshold is roughly 7%. Once he is at 7%, apply
-{{< spell off-guard>}}, use {{< spell moon_flute >}}, any Primal abilities you
-have, then finish with {{< spell whistle >}} and {{< spell final_sting >}}.
+{{< spell off-guard >}}, use {{< spell moon_flute >}}, any Primal abilities
+you have, then finish with {{< spell whistle >}} and
+{{< spell final_sting >}}.

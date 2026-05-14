@@ -62,9 +62,10 @@ AOE.
 ### Geocrush
 
 Titan will cast **Geocrush**, which is a _massive_ knockback from the target
-square. Positioning for this can be tricky, but you can also use {{< action
-surecast >}}. He will then go into either Car form or Fist form; it is random
-which one he uses first, but he will use each one exactly once during this
+square. Positioning for this can be tricky, but you can also use
+{{< action surecast >}}. He will then go into either Car form or Fist form;
+it is random which one he uses first, but he will use each one exactly once
+during this
 phase. In both cases there will be five orange markers and three yellow markers
 that will need to stack/spread appropriately.
 
@@ -80,9 +81,9 @@ Titan will charge through the arena and knock everyone back. Stay on the outside
 row until the row in front of you explodes, then step forward. Titan will also
 target the tank with a line AOE tankbuster that deals proximity-based damage
 based on how close the target is to Titan. Instead of lining up on the side of
-Titan, the tank can actually just stand in the square where Titan is and use {{<
-spell diamondback >}}. They will not get knocked back and will survive all of
-the damage, which dramatically simplifies the movement. Titan will then cast
+Titan, the tank can actually just stand in the square where Titan is and use
+{{< spell diamondback >}}. They will not get knocked back and will survive all
+of the damage, which dramatically simplifies the movement. Titan will then cast
 **Magnitude 5.0** which is a donut-style AOE, so everyone just needs to move
 underneath him. To complicate things, he will also apply yellow spread markers
 to everyone. Assign Titan-relative clock positions to spread to after the donut
@@ -162,9 +163,9 @@ the ones from before, but it does a _lot_ of damage and has an explosion radius
 of 2. This means that the square the player is on and all adjacent squares will
 all blow up. To resolve this, have the tank position on the west and the
 off-tank position on the east. The off-tank can just {{< spell diamondback >}}
-to avoid the knockback and mitigate their buster. The main tank should use {{<
-action surecast >}} and mitigate with {{< spell dragon_force >}}, and mitigate
-the Earthen Anguish with Diamondback after.
+to avoid the knockback and mitigate their buster. The main tank should use
+{{< action surecast >}} and mitigate with {{< spell dragon_force >}}, and
+mitigate the Earthen Anguish with Diamondback after.
 
 ### Tectonic Uplift 1
 
@@ -252,8 +253,8 @@ mechanics is as follows:
    players stand in their own safe squares.
 6. While the orange markers are going out, the last two players will be marked
    with blue markers. As before, they need to move to the outer corner of their
-   platform. If they happen to be on the same side, they will need to use {{<
-   spell diamondback >}} to survive.
+   platform. If they happen to be on the same side, they will need to use
+   {{< spell diamondback >}} to survive.
 7. Return to the center to get healed up for Earthen Fury.
 
 ### Plate Fracture 2
@@ -302,6 +303,7 @@ about, anyway.
 > HP is significantly higher. If you are able to fit it into your loadout then
 > great, but don't stress about it too much.
 
-Titan's Final Sting threshold is roughly 7%. Once he is at 7%, apply {{< spell
-off-guard>}}, use {{< spell moon_flute >}}, any Primal abilities you have, then
-finish with {{< spell whistle >}} and {{< spell final_sting >}}.
+Titan's Final Sting threshold is roughly 7%. Once he is at 7%, apply
+{{< spell off-guard >}}, use {{< spell moon_flute >}}, any Primal abilities
+you have, then finish with {{< spell whistle >}} and
+{{< spell final_sting >}}.
