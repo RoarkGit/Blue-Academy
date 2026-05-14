@@ -1,3 +1,8 @@
+{{- if not (page.Store.Get "rotationScriptIncluded") -}}
+  {{- page.Store.Set "rotationScriptIncluded" true -}}
+  {{- $script := resources.Get "/ts/rotation.ts" | js.Build (dict "targetPath" "/js/rotation.js") -}}
+  <script defer src="{{ $script.RelPermalink }}"></script>
+{{- end -}}
 {{- $rotation := index site.Data.rotation (.Get 0) -}}
 {{- $currentGcd := 0 -}}
 {{- with $rotation.starting_gcd -}}
