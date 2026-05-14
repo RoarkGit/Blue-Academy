@@ -2,4 +2,4 @@
 title: Solo Gameplay
 ---
 
-bingus
+{{< spell-loadout loadout="DB4hKiwvS01OUFlbXF9naGlsbW9wewAA" >}}

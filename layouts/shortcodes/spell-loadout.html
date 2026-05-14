@@ -1,11 +1,11 @@
 {{- $numRemaining := 24 -}}
-{{- $loadoutParam := (.Get "loadout") | or (.Get "spells") -}}
+{{- $loadoutStr := "" -}}
 {{- $encoded := "" -}}
+{{- $loadoutParam := (.Get "loadout") | or (.Get "spells") -}}
 <div class="spell-loadout ffxiv-ui-background">
   {{- if $loadoutParam -}}
     {{- if strings.Contains $loadoutParam "," -}}
       {{- /* comma-separated: render slots and encode for the builder link */ -}}
-      {{- $loadoutStr := "" -}}
       {{- $spellNumbers := split $loadoutParam "," -}}
       {{- $numRemaining = sub $numRemaining (len $spellNumbers) -}}
       {{- range $spellNumbers -}}
@@ -25,14 +25,15 @@
       {{- $b64 := base64Encode $loadoutStr -}}
       {{- $encoded = replace (replace (replace $b64 "+" "-") "/" "_") "=" "" -}}
     {{- else -}}
-      {{- /* base64url: decode for rendering, use directly for the builder link */ -}}
+      {{- /* base64url: index into decoded bytes by position to avoid ranging over a string */ -}}
       {{- $encoded = $loadoutParam -}}
       {{- $numRemaining = 0 -}}
       {{- $stdB64 := replace (replace $loadoutParam "-" "+") "_" "/" -}}
       {{- $decoded := base64Decode $stdB64 -}}
-      {{- range $i, $r := $decoded -}}
-        {{- if gt $r 0 -}}
-          {{- partial "spell-loadout-tooltip" (dict "context" . "number" $r) -}}
+      {{- range seq 0 23 -}}
+        {{- $n := int (index $decoded .) -}}
+        {{- if gt $n 0 -}}
+          {{- partial "spell-loadout-tooltip" (dict "context" . "number" $n) -}}
         {{- else -}}
           <div class="spell-loadout-spell"></div>
         {{- end -}}
