@@ -3,14 +3,14 @@ title: 'Gear Sets'
 weight: 20
 ---
 
-{{% notice title="TL;DR" %}}
+{{< notice title="TL;DR" >}}
 
 Get any ilvl 530 gear, meld materia, and you’ll be fine for all content.
 If you want to optimize, read below. You can use the
-[BLU DPS Sim](https://docs.google.com/spreadsheets/d/1IZBK7MMMuS4KABnWxDCUNrPRAf_hzUz89BmqYxjpMMA/edit?usp=sharing)
+<a href="https://docs.google.com/spreadsheets/d/1IZBK7MMMuS4KABnWxDCUNrPRAf_hzUz89BmqYxjpMMA/edit?usp=sharing">BLU DPS Sim</a>
 to compare sets.
 
-{{% /notice %}}
+{{< /notice >}}
 
 ## Video
 
@@ -73,17 +73,13 @@ overall damage.
 Synced down level 80 gear should be fine, but consider grabbing a weapon for
 each level so you still get stats from the materia your weapon.
 
-{{% expand title="Expand me to see synced sets..." %}}
-
-##### 2.20 Crit/SpS
+{{< expand title="Expand me to see synced sets..." >}}
 
 {{< etro title="Synced 2.20 Crit/SpS" id="819991f5-baf2-4bfd-a1c3-7a6cf063f25e">}}
 
-##### 2.13 SpS/Det
-
 {{< etro title="Synced 2.13 SpS/Det" id="7f0adbf9-668b-4e83-9b83-a62d6d809a7c">}}
 
-{{% /expand %}}
+{{< /expand >}}
 
 #### What about free trial?
 

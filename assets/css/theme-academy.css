@@ -46,3 +46,5 @@
 .text-yellow { color: #ffff66; }
 .text-orange { color: #ff7b1a; }
 .text-green  { color: #00cc22; }
+
+.text-muted { font-size: 0.8em; opacity: 0.55; }

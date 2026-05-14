@@ -16,12 +16,12 @@ collection of Blue Mage theorycrafting, knowledge, and information!
 You'll find a navigation menu on the side of the page, but the big resources
 that are covered here are:
 
-- [Getting Started]({{% relref "/getting-started" %}})
-- [Leveling]({{% relref "/getting-started/leveling" %}})
-- [Gear]({{% relref "/gearing/gear-sets" %}})
-- [Spell Locations]({{% relref "/reference/spell-list" %}})
-- [Masked Carnivale Guide]({{% relref "/masked-carnivale" %}})
-- [Savage Guides]({{% relref "/savage-guides" %}})
+- [Getting Started](/getting-started/)
+- [Leveling](/getting-started/leveling/)
+- [Gear](/gearing/gear-sets/)
+- [Spell Locations](/reference/spell-list/)
+- [Masked Carnivale Guide](/masked-carnivale/)
+- [Savage Guides](/savage-guides/)
 
 ## About Blue Academy
 

@@ -21,6 +21,13 @@ params:
   themeVariant: academy
 
 
+
+
+
+ignoreLogs:
+  - warning-goldmark-raw-html
+
+
 minify:
   minifyOutput: true
 

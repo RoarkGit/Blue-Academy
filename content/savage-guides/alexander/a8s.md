@@ -479,11 +479,11 @@ More specifically, the full rotation should look like this:
 11. {{< spell whistle >}} and {{< spell surpanakha >}}x4
 12. Wait for synchronized sting call, then {{< spell final_sting >}}.
 
-{{% expand title="Expand to see full timeline..." %}}
+{{< expand title="Expand to see full timeline..." >}}
 
 {{< rotation gavel_skip >}}
 
-{{% /expand %}}
+{{< /expand >}}
 
 It can be easier to synchronize stings if you use {{< action swiftcast >}} there
 instead of {{< spell matra_magic >}}. I recommend using a countdown macro,

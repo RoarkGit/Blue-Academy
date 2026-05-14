@@ -98,11 +98,11 @@ This is referring to the actual casting animation itself coming from your face.
 You also do not even need to hit an enemy with the spell, all that matters is
 that you cast it at some point.
 
-{{% expand title="List of eligible spells" %}}
+{{< expand title="List of eligible spells" >}}
 
 {{< face-spells >}}
 
-{{% /expand %}}
+{{< /expand >}}
 
 {{< /notice >}}
 
