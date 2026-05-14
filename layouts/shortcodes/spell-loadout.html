@@ -1,14 +1,41 @@
 {{- $numRemaining := 24 -}}
+{{- $loadoutParam := (.Get "loadout") | or (.Get "spells") -}}
+{{- $encoded := "" -}}
 <div class="spell-loadout ffxiv-ui-background">
-  {{- with (.Get "loadout") | or (.Get "spells") -}}
-    {{- $spellNumbers := split . "," -}}
-    {{- $numRemaining = sub $numRemaining (len $spellNumbers) -}}
-    {{- range $spellNumbers -}}
-      {{- $n := int . -}}
-      {{- if gt $n 0 -}}
-        {{- partial "spell-loadout-tooltip" (dict "context" . "number" $n) -}}
-      {{- else -}}
+  {{- if $loadoutParam -}}
+    {{- if strings.Contains $loadoutParam "," -}}
+      {{- /* comma-separated: render slots and encode for the builder link */ -}}
+      {{- $loadoutStr := "" -}}
+      {{- $spellNumbers := split $loadoutParam "," -}}
+      {{- $numRemaining = sub $numRemaining (len $spellNumbers) -}}
+      {{- range $spellNumbers -}}
+        {{- $n := int . -}}
+        {{- $loadoutStr = printf "%s%c" $loadoutStr $n -}}
+        {{- if gt $n 0 -}}
+          {{- partial "spell-loadout-tooltip" (dict "context" . "number" $n) -}}
+        {{- else -}}
+          <div class="spell-loadout-spell"></div>
+        {{- end -}}
+      {{- end -}}
+      {{- range (seq $numRemaining) -}}
+        {{- $loadoutStr = printf "%s%c" $loadoutStr 0 -}}
         <div class="spell-loadout-spell"></div>
+      {{- end -}}
+      {{- $numRemaining = 0 -}}
+      {{- $b64 := base64Encode $loadoutStr -}}
+      {{- $encoded = replace (replace (replace $b64 "+" "-") "/" "_") "=" "" -}}
+    {{- else -}}
+      {{- /* base64url: decode for rendering, use directly for the builder link */ -}}
+      {{- $encoded = $loadoutParam -}}
+      {{- $numRemaining = 0 -}}
+      {{- $stdB64 := replace (replace $loadoutParam "-" "+") "_" "/" -}}
+      {{- $decoded := base64Decode $stdB64 -}}
+      {{- range $i, $r := $decoded -}}
+        {{- if gt $r 0 -}}
+          {{- partial "spell-loadout-tooltip" (dict "context" . "number" $r) -}}
+        {{- else -}}
+          <div class="spell-loadout-spell"></div>
+        {{- end -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
@@ -16,3 +43,9 @@
     <div class="spell-loadout-spell"></div>
   {{- end -}}
 </div>
+{{- if $loadoutParam -}}
+  {{- $builderPage := site.GetPage "gameplay/spell-loadout-builder" -}}
+  <div class="spell-loadout-builder-link-wrapper">
+    <a href="{{ $builderPage.RelPermalink }}?spell_loadout={{ $encoded }}">Load in builder</a>
+  </div>
+{{- end -}}
