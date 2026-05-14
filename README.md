@@ -2,7 +2,7 @@
 <p align="center">
 <a href="https://mage.blue/">
 <img src="https://github.com/RoarkGit/Blue-Academy/blob/main/static/images/audrey.png" style="width: 50%;"></br></a>
-<a href="https://discord.gg/blueacademy"><img src="https://dcbadge.limes.pink/api/server/blueacademy"></a>
+<a href="https://discord.mage.blue/"><img src="https://dcbadge.limes.pink/api/server/blueacademy"></a>
 <a href="https://youtube.com/blueacademy"><img src="https://img.shields.io/youtube/channel/subscribers/UCN1yOhovsQdM7jbPNMKAj0Q?style=for-the-badge"></a>
 </p>
 <h3 align="center">A website for aggregating and storing FFXIV Blue Mage knowledge and resources!</h3>

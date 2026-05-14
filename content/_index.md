@@ -43,7 +43,7 @@ Savage guides and theorycrafting.
 At the time there were a bunch of Blue Mage Discord servers, usually one for
 each data center (except Crystal had _three_!), and there wasn't a ton of
 cohesion across those servers, either. I spun up the
-[Blue Academy](https://discord.gg/blueacademy) Discord server to try to create a
+[Blue Academy](https://discord.mage.blue/) Discord server to try to create a
 more centralized location.. and it grew really fast! After about a month it was
 already the largest Blue Mage Discord server and we started having some great
 conversations and standardizing on some resources and strategies.
