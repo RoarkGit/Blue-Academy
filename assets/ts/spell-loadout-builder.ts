@@ -1,6 +1,11 @@
 import { moveTooltip, ready } from './common'
 
-declare function plausible(event: string, options?: { props?: Record<string, string> }): void
+declare function plausible(
+  event: string,
+  options?: { props?: Record<string, string> },
+): void
+const trackEvent = (event: string) =>
+  typeof plausible !== 'undefined' && plausible(event)
 
 interface Spell {
   Id: string
@@ -120,18 +125,25 @@ ready(function () {
       continue
     }
     spell.addEventListener('click', function () {
-      const nextOpen = activeSpells.findIndex((s: Spell) => s.Id === '')
-      if (
-        nextOpen !== -1 &&
-        activeSpells.findIndex((s: Spell) => s.Id === spellId) === -1
-      ) {
-        activeSpells[nextOpen] = {
-          Id: spellId,
-          Name: spellName,
-          Number: spellNumber,
-        }
-        setSpell(spellLoadoutSpells[nextOpen], spell)
+      const existingIndex = activeSpells.findIndex(
+        (s: Spell) => s.Id === spellId,
+      )
+      if (existingIndex !== -1) {
+        activeSpells[existingIndex] = { Id: '', Name: '', Number: '' }
+        removeListener(spellId)
+        unsetSpell(spellLoadoutSpells[existingIndex])
         updateSpellLoadoutLink()
+      } else {
+        const nextOpen = activeSpells.findIndex((s: Spell) => s.Id === '')
+        if (nextOpen !== -1) {
+          activeSpells[nextOpen] = {
+            Id: spellId,
+            Name: spellName,
+            Number: spellNumber,
+          }
+          setSpell(spellLoadoutSpells[nextOpen], spell)
+          updateSpellLoadoutLink()
+        }
       }
     })
     spell.addEventListener('dragstart', function () {
@@ -186,14 +198,16 @@ ready(function () {
       updateSpellLoadoutLink()
     })
   }
-  document.getElementById('spell-loadout-builder-link')?.addEventListener('click', () => {
-    plausible('Loadout Shared')
-  })
+  document
+    .getElementById('spell-loadout-builder-link')
+    ?.addEventListener('click', () => {
+      trackEvent('Loadout Shared')
+    })
 
   const params = new URLSearchParams(window.location.search)
   const preload = params.get('spell_loadout')
   if (preload) {
-    plausible('Loadout Loaded')
+    trackEvent('Loadout Loaded')
     decodeLoadout(preload).forEach((spellNumber, i) => {
       if (spellNumber && i < spellLoadoutSpells.length) {
         const spellTooltip = spellbookSpells[spellNumber - 1]
@@ -201,7 +215,11 @@ ready(function () {
         const spellId = spellTooltip.getAttribute('data-tooltip-id')
         const spellName = spellTooltip.getAttribute('data-spell-name')
         if (spellId === null || spellName === null) return
-        activeSpells[i] = { Id: spellId, Name: spellName, Number: String(spellNumber) }
+        activeSpells[i] = {
+          Id: spellId,
+          Name: spellName,
+          Number: String(spellNumber),
+        }
         setSpell(spellLoadoutSpell, spellTooltip)
       }
     })
