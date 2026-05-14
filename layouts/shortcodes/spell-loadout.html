@@ -43,10 +43,10 @@
   {{- range (seq $numRemaining) -}}
     <div class="spell-loadout-spell"></div>
   {{- end -}}
+  {{- if $loadoutParam -}}
+    {{- $builderPage := site.GetPage "gameplay/spell-loadout-builder" -}}
+    <div class="spell-loadout-builder-link-wrapper">
+      <a href="{{ $builderPage.RelPermalink }}?spell_loadout={{ $encoded }}" class="plausible-event-name=Open+in+Builder">Open in builder</a>
+    </div>
+  {{- end -}}
 </div>
-{{- if $loadoutParam -}}
-  {{- $builderPage := site.GetPage "gameplay/spell-loadout-builder" -}}
-  <div class="spell-loadout-builder-link-wrapper">
-    <a href="{{ $builderPage.RelPermalink }}?spell_loadout={{ $encoded }}" class="plausible-event-name=Load+in+Builder">Load in builder</a>
-  </div>
-{{- end -}}

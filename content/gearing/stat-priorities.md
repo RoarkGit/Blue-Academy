@@ -77,3 +77,5 @@ which means the already small difference can be completely ignored. As a healer,
 we can strengthen our healing potency by adding Determination.
 
 ### Materia Melding
+
+[Gearing](/gearing/gear-sets/)

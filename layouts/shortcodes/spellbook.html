@@ -2,18 +2,17 @@
 <script defer src="{{ $spellbook.RelPermalink }}"></script>
 {{- $numSpells := len site.Data.spell -}}
 {{- $numPages := math.Ceil (div $numSpells 16.0) -}}
-<div class="spellbook-wrapper">
+<div class="spellbook-wrapper ffxiv-ui-background">
   <div class="spellbook-wrapper-page-labels">
-    {{- range (seq 1 $numPages) }}
-      <label class="spellbook-wrapper-page-label" data-page-number="{{ . }}">
-        {{ . }}
-      </label>
+    {{- range (seq 1 $numPages) -}}
+      <label class="spellbook-wrapper-page-label" data-page-number="{{ . }}">{{- . -}}</label>
     {{- end -}}
   </div>
   <div class="spellbook">
     {{- range $spellData :=  site.Data.spell -}}
       <div
         class="spellbook-spell tooltip"
+        draggable="true"
         data-tooltip-id="{{ $spellData.id }}"
         data-spell-name="{{ $spellData.name }}"
         data-spell-number="{{ $spellData.number }}"

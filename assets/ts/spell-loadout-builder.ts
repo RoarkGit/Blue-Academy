@@ -22,11 +22,12 @@ const activeSpells: Spell[] = new Array<Spell>(24).fill({
 
 // Event listeners for spells added to the loadout. This is needed to be able to
 // remove them when a spell is removed from the loadout.
+type ListenerEvent = 'mouseenter' | 'mouseleave' | 'mousemove'
 const eventListeners: Record<
   string,
   {
     element: HTMLElement
-    event: string
+    event: ListenerEvent
     handler: (ev: MouseEvent) => void
   }[]
 > = {}
@@ -48,7 +49,7 @@ function removeListener(spellId: string) {
   const listeners = eventListeners[spellId]
   for (const listener of listeners) {
     if (listener.event === 'mouseleave') {
-      listener.handler()
+      listener.element.dispatchEvent(new MouseEvent('mouseleave'))
     }
     listener.element.removeEventListener(listener.event, listener.handler)
   }
@@ -81,6 +82,7 @@ function setSpell(spellLoadoutSpell: HTMLElement, spellbookSpell: HTMLElement) {
   const tooltip = document.getElementById(spellId + '-tooltip')
   if (tooltip === null) return
   spellLoadoutSpell.setAttribute('data-tooltip-id', spellId)
+  spellLoadoutSpell.draggable = true
   spellLoadoutSpell.innerHTML = spellbookSpell.innerHTML
   spellLoadoutSpell.style.cursor = 'pointer'
   addListener(
@@ -106,6 +108,7 @@ function unsetSpell(spellLoadoutSpell: HTMLElement) {
   const spellId = spellLoadoutSpell.getAttribute('data-tooltip-id')
   if (spellId === null) return
   spellLoadoutSpell.removeAttribute('data-tooltip-id')
+  spellLoadoutSpell.draggable = false
   spellLoadoutSpell.innerHTML = ''
   spellLoadoutSpell.style.cursor = ''
 }
@@ -152,16 +155,13 @@ ready(function () {
       tooltip.hidden = true
     })
     spell.addEventListener('dragend', function (event: DragEvent) {
-      const element = document.elementFromPoint(
-        event.clientX,
-        event.clientY,
-      ) as HTMLElement
-      if (
-        element !== null &&
-        element.classList.contains('spell-loadout-spell')
-      ) {
-        for (const setSpell of spellLoadoutSpells) {
-          if (setSpell.getAttribute('data-tooltip-id') === spellId) {
+      const under = document.elementFromPoint(event.clientX, event.clientY)
+      const element = under?.closest(
+        '.spell-loadout-spell',
+      ) as HTMLElement | null
+      if (element !== null && element !== undefined) {
+        for (const slot of spellLoadoutSpells) {
+          if (slot.getAttribute('data-tooltip-id') === spellId) {
             return
           }
         }
@@ -184,9 +184,53 @@ ready(function () {
       }
     })
   }
-  for (const spell of spellLoadoutSpells) {
-    spell.addEventListener('click', function () {
-      const spellId = spell.getAttribute('data-tooltip-id')
+  let draggingLoadoutIndex = -1
+  for (let i = 0; i < spellLoadoutSpells.length; ++i) {
+    const slot = spellLoadoutSpells[i]
+    slot.addEventListener('dragover', function (event: DragEvent) {
+      event.preventDefault()
+    })
+    slot.addEventListener('dragstart', function () {
+      if (slot.getAttribute('data-tooltip-id') === null) return
+      draggingLoadoutIndex = i
+    })
+    slot.addEventListener('dragend', function (event: DragEvent) {
+      if (draggingLoadoutIndex === -1) return
+      const fromIndex = draggingLoadoutIndex
+      draggingLoadoutIndex = -1
+      const under = document.elementFromPoint(event.clientX, event.clientY)
+      const target = under?.closest(
+        '.spell-loadout-spell',
+      ) as HTMLElement | null
+      if (!target || target === slot) return
+      let toIndex = -1
+      for (let j = 0; j < spellLoadoutSpells.length; ++j) {
+        if (spellLoadoutSpells[j] === target) {
+          toIndex = j
+          break
+        }
+      }
+      if (toIndex === -1) return
+      const fromSpell = { ...activeSpells[fromIndex] }
+      const toSpell = { ...activeSpells[toIndex] }
+      if (fromSpell.Id) removeListener(fromSpell.Id)
+      if (toSpell.Id) removeListener(toSpell.Id)
+      unsetSpell(spellLoadoutSpells[fromIndex])
+      unsetSpell(spellLoadoutSpells[toIndex])
+      activeSpells[fromIndex] = toSpell
+      activeSpells[toIndex] = fromSpell
+      const fromEl = document.querySelector<HTMLElement>(
+        `.spellbook-spell[data-tooltip-id="${toSpell.Id}"]`,
+      )
+      const toEl = document.querySelector<HTMLElement>(
+        `.spellbook-spell[data-tooltip-id="${fromSpell.Id}"]`,
+      )
+      if (fromEl) setSpell(spellLoadoutSpells[fromIndex], fromEl)
+      if (toEl) setSpell(spellLoadoutSpells[toIndex], toEl)
+      updateSpellLoadoutLink()
+    })
+    slot.addEventListener('click', function () {
+      const spellId = slot.getAttribute('data-tooltip-id')
       if (spellId === null) return
       activeSpells[activeSpells.findIndex((s: Spell) => s.Id === spellId)] = {
         Id: '',
@@ -194,7 +238,7 @@ ready(function () {
         Number: '',
       }
       removeListener(spellId)
-      unsetSpell(spell)
+      unsetSpell(slot)
       updateSpellLoadoutLink()
     })
   }
