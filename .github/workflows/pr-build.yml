@@ -1,0 +1,42 @@
+name: Build PR Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install Hugo
+        run: |
+          wget -q https://github.com/gohugoio/hugo/releases/download/v0.152.2/hugo_extended_0.152.2_linux-amd64.tar.gz
+          tar xf hugo_extended_0.152.2_linux-amd64.tar.gz hugo
+          sudo mv hugo /usr/local/bin/
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Package artifact
+        run: |
+          mkdir artifact
+          cp -r public artifact/
+          echo "${{ github.event.number }}" > artifact/pr_number
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pr-preview
+          path: artifact/
+          retention-days: 1

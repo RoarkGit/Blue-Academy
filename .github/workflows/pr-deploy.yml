@@ -1,0 +1,71 @@
+name: Deploy PR Preview
+
+on:
+  workflow_run:
+    workflows: [Build PR Preview]
+    types: [completed]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  deploy:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: pr-preview
+          path: artifact/
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Read PR number
+        id: pr
+        run: echo "number=$(cat artifact/pr_number)" >> $GITHUB_OUTPUT
+
+      - uses: cloudflare/pages-action@v1
+        id: deploy
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: blue-academy  # update if your Pages project name differs
+          directory: artifact/public
+          branch: pr-${{ steps.pr.outputs.number }}
+
+      - uses: actions/github-script@v7
+        env:
+          DEPLOY_URL: ${{ steps.deploy.outputs.url }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        with:
+          script: |
+            const prNumber = parseInt('${{ steps.pr.outputs.number }}')
+            const url = process.env.DEPLOY_URL
+            const sha = process.env.HEAD_SHA
+
+            const comments = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+            })
+            const marker = '<!-- pr-preview -->'
+            const existing = comments.data.find(c => c.body.includes(marker))
+
+            const body = `${marker}\n## Preview deployment\n\n${url}\n\nBuilt from ${sha}`
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              })
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body,
+              })
+            }
