@@ -2,6 +2,6 @@ import { init } from '@plausible-analytics/tracker'
 
 init({
   domain: 'mage.blue',
-  endpoint: 'https://stats.mage.blue/api/event',
+  endpoint: '/proxy/event',
   outboundLinks: true,
 })

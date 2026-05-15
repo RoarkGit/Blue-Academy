@@ -1,5 +1,6 @@
 {{- $spellbook := resources.Get "/ts/spellbook.ts" | js.Build (dict "targetPath" "/js/spellbook.js") -}}
 <script defer src="{{ $spellbook.RelPermalink }}"></script>
+<div class="spellbook-outer">
 {{- $numSpells := len site.Data.spell -}}
 {{- $numPages := math.Ceil (div $numSpells 16.0) -}}
 <div class="spellbook-wrapper ffxiv-ui-background">
@@ -9,13 +10,30 @@
     {{- end -}}
   </div>
   <div class="spellbook">
-    {{- range $spellData :=  site.Data.spell -}}
+    {{- range $spellData := site.Data.spell -}}
+      {{- $type := "magic" -}}
+      {{- $aspect := "none" -}}
+      {{- if eq $spellData.spellType "Physical" -}}
+        {{- $parts := split $spellData.spellAspect "/" -}}
+        {{- $type = lower (index $parts 0) -}}
+        {{- if gt (len $parts) 1 -}}
+          {{- $aspect = lower (index $parts (sub (len $parts) 1)) -}}
+        {{- end -}}
+      {{- else -}}
+        {{- if ne $spellData.spellAspect "Unaspected" -}}
+          {{- $aspect = lower $spellData.spellAspect -}}
+        {{- end -}}
+      {{- end -}}
       <div
         class="spellbook-spell tooltip"
         draggable="true"
         data-tooltip-id="{{ $spellData.id }}"
         data-spell-name="{{ $spellData.name }}"
         data-spell-number="{{ $spellData.number }}"
+        data-spell-type="{{ $type }}"
+        data-spell-aspect="{{ $aspect }}"
+        data-spell-rank="{{ $spellData.rank }}"
+        data-spell-status=""
         data-page-number="{{ math.Ceil (div $spellData.number 16.0) }}"
         hidden>
         {{- $image := (printf "/images/tooltips/%s.png" $spellData.id) | resources.Get }}
@@ -31,4 +49,52 @@
         data-page-number="{{ $numPages }}"></div>
     {{- end -}}
   </div>
+</div>
+<div class="spellbook-filters ffxiv-ui-background">
+  <div class="spellbook-filter-group">
+    <div class="spellbook-filter-group-label">Type</div>
+    <div class="spellbook-filter-options spellbook-filter-options--column">
+      <label><input type="checkbox" data-filter="type" value="magic"> Magical</label>
+      <label><input type="checkbox" data-filter="type" value="slashing"> Slashing</label>
+      <label><input type="checkbox" data-filter="type" value="piercing"> Piercing</label>
+      <label><input type="checkbox" data-filter="type" value="blunt"> Blunt</label>
+    </div>
+  </div>
+  <div class="spellbook-filter-group">
+    <div class="spellbook-filter-group-label">Aspect</div>
+    <div class="spellbook-filter-options spellbook-filter-options--grid3">
+      <label><input type="checkbox" data-filter="aspect" value="fire"> Fire</label>
+      <label><input type="checkbox" data-filter="aspect" value="ice"> Ice</label>
+      <label><input type="checkbox" data-filter="aspect" value="wind"> Wind</label>
+      <label><input type="checkbox" data-filter="aspect" value="earth"> Earth</label>
+      <label><input type="checkbox" data-filter="aspect" value="lightning"> Lightning</label>
+      <label><input type="checkbox" data-filter="aspect" value="water"> Water</label>
+      <label class="spellbook-filter-span3"><input type="checkbox" data-filter="aspect" value="none"> None</label>
+    </div>
+  </div>
+  <div class="spellbook-filter-group">
+    <div class="spellbook-filter-group-label">Rank</div>
+    <div class="spellbook-filter-options spellbook-filter-options--grid3">
+      <label><input type="checkbox" data-filter="rank" value="1"> ★</label>
+      <label><input type="checkbox" data-filter="rank" value="2"> ★★</label>
+      <label><input type="checkbox" data-filter="rank" value="3"> ★★★</label>
+      <label><input type="checkbox" data-filter="rank" value="4"> ★★★★</label>
+      <label><input type="checkbox" data-filter="rank" value="5"> ★★★★★</label>
+    </div>
+  </div>
+  <div class="spellbook-filter-group">
+    <div class="spellbook-filter-group-label">Status Inflicted</div>
+    <div class="spellbook-filter-options spellbook-filter-options--grid3">
+      <label><input type="checkbox" data-filter="status" value="slow"> Slow</label>
+      <label><input type="checkbox" data-filter="status" value="petrify"> Petrify</label>
+      <label><input type="checkbox" data-filter="status" value="paralyze"> Paralyze</label>
+      <label><input type="checkbox" data-filter="status" value="silence"> Silence</label>
+      <label><input type="checkbox" data-filter="status" value="blind"> Blind</label>
+      <label><input type="checkbox" data-filter="status" value="heavy"> Heavy</label>
+      <label><input type="checkbox" data-filter="status" value="sleep"> Sleep</label>
+      <label><input type="checkbox" data-filter="status" value="bind"> Bind</label>
+      <label><input type="checkbox" data-filter="status" value="death"> Death</label>
+    </div>
+  </div>
+</div>
 </div>

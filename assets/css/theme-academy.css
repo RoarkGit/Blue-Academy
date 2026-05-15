@@ -53,6 +53,65 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
 
 .text-muted { font-size: 0.8em; opacity: 0.55; }
 
+/* Spellbook filters */
+.spellbook-outer {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.spellbook-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1rem;
+  flex-shrink: 0;
+}
+
+.spellbook-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.spellbook-filter-group-label {
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.spellbook-filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.spellbook-filter-options--grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 0.2rem 1rem;
+  align-items: center;
+}
+
+.spellbook-filter-span3 {
+  grid-column: 1 / -1;
+}
+
+.spellbook-filter-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.spellbook-filter-options input[type="checkbox"] {
+  cursor: pointer;
+}
+
 /* Final Sting Calculator */
 .fsc {
   display: flex;
@@ -106,6 +165,7 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+  padding-left: 1rem;
 }
 
 .fsc-debuffs {
@@ -138,7 +198,7 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
 
 .fsc-buff-table td:first-child {
   text-align: left;
-  padding-left: 0;
+  padding-left: 0.5rem;
 }
 
 .fsc-buff-table input[type="checkbox"] {
