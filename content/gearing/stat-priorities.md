@@ -78,4 +78,5 @@ we can strengthen our healing potency by adding Determination.
 
 ### Materia Melding
 
-[Gearing](/gearing/gear-sets/)
+Detailed information about melding can be found on the
+[Gearing](/gearing/gear-sets/) page.

@@ -286,7 +286,7 @@ Intermission 1 if you haven't killed it yet.
 
 {{< notice style="warning" >}}
 
-Since the level 80 patch came out it is actually possible to do _too_ much
+Since the level 80 patch came out it is actually possible to do <em>too</em> much
 damage and push Brute Justice before the Super Jump. If that happens you will be
 in Waning Nocturne when Intermission 2 starts and probably die. If this is the
 case, consider dropping {{< spell breath_of_magic >}} from one of the openers or
