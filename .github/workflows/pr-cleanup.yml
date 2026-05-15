@@ -17,11 +17,14 @@ jobs:
           CF_PROJECT: blue-academy  # update if your Pages project name differs
           BRANCH: pr-${{ github.event.number }}
         run: |
-          ids=$(curl -s \
+          response=$(curl -s \
             -H "Authorization: Bearer $CF_API_TOKEN" \
-            "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$CF_PROJECT/deployments?per_page=100" \
-            | jq -r --arg branch "$BRANCH" \
-              '.result[] | select(.deployment_trigger.metadata.branch == $branch) | .id')
+            "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$CF_PROJECT/deployments?per_page=100")
+
+          echo "API response: $response"
+
+          ids=$(echo "$response" | jq -r --arg branch "$BRANCH" \
+            '(.result // [])[] | select(.deployment_trigger.metadata.branch == $branch) | .id')
 
           if [ -z "$ids" ]; then
             echo "No deployments found for branch $BRANCH"
