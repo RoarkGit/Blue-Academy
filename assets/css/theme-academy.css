@@ -53,6 +53,136 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
 
 .text-muted { font-size: 0.8em; opacity: 0.55; }
 
+/* Reusable button styles */
+.btn-ffxiv {
+  background: linear-gradient(
+    to bottom,
+    rgba(210, 215, 230, 0.9) 0%,
+    rgba(150, 155, 175, 0.56) 55%,
+    rgba(100, 105, 130, 0.8) 100%
+  );
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  color: inherit;
+  cursor: pointer;
+  font-family: var(--MAIN-font);
+  font-weight: 400;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.45);
+  &:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(230, 235, 250, 1.0) 0%,
+      rgba(170, 175, 195, 0.76) 55%,
+      rgba(120, 125, 150, 1.0) 100%
+    );
+  }
+}
+
+/* Shared filter styles */
+.filter-header {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+.filter-group-label {
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding-top: 0.15rem;
+  white-space: nowrap;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-left: 3px;
+}
+
+.filter-options--row {
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.filter-options--grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 0 1rem;
+  align-items: center;
+}
+
+.filter-span3 {
+  grid-column: 1 / -1;
+}
+
+.filter-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.filter-options input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.filter-search {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 3px;
+  color: inherit;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.4rem;
+  width: 100%;
+  &:focus {
+    outline: 2px solid rgba(110, 160, 222, 0.8);
+    border-color: transparent;
+  }
+}
+
+.filter-status-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-status-icon {
+  display: block;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.15s;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.filter-status-icon input {
+  display: none;
+}
+
+.filter-status-icon img {
+  display: block;
+  width: 24px;
+  height: auto;
+}
+
+.filter-status-icon:has(input:checked) {
+  outline: 2px solid rgba(110, 160, 222, 0.8);
+  background: rgba(110, 160, 222, 0.2);
+}
+
 /* Spellbook filters */
 .spellbook-outer {
   display: flex;
@@ -72,134 +202,10 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
   border: solid 1px #fff;
 }
 
-.spellbook-filter-header {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 400;
-  margin-bottom: 0.25rem;
-}
-
+/* Spellbook filter styles use shared filter classes */
 .spellbook-filter-reset {
-  background: linear-gradient(
-    to bottom,
-    rgba(210, 215, 230, 0.9) 0%,
-    rgba(150, 155, 175, 0.56) 55%,
-    rgba(100, 105, 130, 0.8) 100%
-  );
-  border: none;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
-  color: inherit;
-  cursor: pointer;
-  font-family: var(--MAIN-font);
   font-size: 0.75rem;
-  font-weight: 400;
   padding: 0.15rem 0.6rem;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.45);
-  &:hover {
-    background: linear-gradient(
-      to bottom,
-      rgba(230, 235, 250, 1.0) 0%,
-      rgba(170, 175, 195, 0.76) 55%,
-      rgba(120, 125, 150, 1.0) 100%
-    );
-  }
-}
-
-.spellbook-filter-group-label {
-  font-size: 0.8rem;
-  font-weight: 400;
-  opacity: 0.6;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding-top: 0.15rem;
-  white-space: nowrap;
-}
-
-.spellbook-filter-options {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  padding-left: 3px;
-}
-
-.spellbook-filter-options--row {
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.spellbook-filter-options--grid3 {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: 0 1rem;
-  align-items: center;
-}
-
-.spellbook-filter-span3 {
-  grid-column: 1 / -1;
-}
-
-.spellbook-filter-options label {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  cursor: pointer;
-  font-size: 0.9rem;
-  line-height: 1.2;
-  white-space: nowrap;
-}
-
-.spellbook-filter-options input[type="checkbox"] {
-  cursor: pointer;
-}
-
-.spellbook-filter-search {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 3px;
-  color: inherit;
-  font-size: 0.9rem;
-  padding: 0.2rem 0.4rem;
-  width: 100%;
-  &:focus {
-    outline: 2px solid rgba(110, 160, 222, 0.8);
-    border-color: transparent;
-  }
-}
-
-.spellbook-filter-status-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1px;
-  margin: 0;
-  padding: 0;
-}
-
-.spellbook-filter-status-icon {
-  display: block;
-  cursor: pointer;
-  border-radius: 3px;
-  transition: background 0.15s;
-  margin: 0;
-  padding: 0;
-  line-height: 0;
-}
-
-.spellbook-filter-status-icon input {
-  display: none;
-}
-
-.spellbook-filter-status-icon img {
-  display: block;
-  width: 24px;
-  height: auto;
-}
-
-.spellbook-filter-status-icon:has(input:checked) {
-  outline: 2px solid rgba(110, 160, 222, 0.8);
-  background: rgba(110, 160, 222, 0.2);
 }
 
 /* Final Sting Calculator */
@@ -421,136 +427,8 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
   }
 }
 
-.spell-list-filter-header {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 400;
-  margin-bottom: 0.25rem;
-}
-
-.spell-list-filter-group-label {
-  font-size: 0.8rem;
-  font-weight: 400;
-  opacity: 0.6;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding-top: 0.15rem;
-  white-space: nowrap;
-}
-
-.spell-list-filter-options {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  padding-left: 3px;
-}
-
-.spell-list-filter-options--column {
-  flex-direction: column;
-}
-
-.spell-list-filter-options--row {
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.spell-list-filter-options--grid3 {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: 0 1rem;
-  align-items: center;
-}
-
-.spell-list-filter-span3 {
-  grid-column: 1 / -1;
-}
-
-.spell-list-filter-options label {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  cursor: pointer;
-  font-size: 0.9rem;
-  line-height: 1.2;
-  white-space: nowrap;
-}
-
-.spell-list-filter-options input[type="checkbox"] {
-  cursor: pointer;
-}
-
-.spell-list-filter-search {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 3px;
-  color: inherit;
-  font-size: 0.9rem;
-  padding: 0.2rem 0.4rem;
-  width: 100%;
-  &:focus {
-    outline: 2px solid rgba(110, 160, 222, 0.8);
-    border-color: transparent;
-  }
-}
-
-.spell-list-filter-status-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1px;
-  margin: 0;
-  padding: 0;
-}
-
-.spell-list-filter-status-icon {
-  display: block;
-  cursor: pointer;
-  border-radius: 3px;
-  transition: background 0.15s;
-  margin: 0;
-  padding: 0;
-  line-height: 0;
-}
-
-.spell-list-filter-status-icon input {
-  display: none;
-}
-
-.spell-list-filter-status-icon img {
-  display: block;
-  width: 24px;
-  height: auto;
-}
-
-.spell-list-filter-status-icon:has(input:checked) {
-  outline: 2px solid rgba(110, 160, 222, 0.8);
-  background: rgba(110, 160, 222, 0.2);
-}
-
+/* Spell list filter styles use shared filter classes */
 .spell-list-filter-reset {
-  background: linear-gradient(
-    to bottom,
-    rgba(210, 215, 230, 0.9) 0%,
-    rgba(150, 155, 175, 0.56) 55%,
-    rgba(100, 105, 130, 0.8) 100%
-  );
-  border: none;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
-  color: inherit;
-  cursor: pointer;
-  font-family: var(--MAIN-font);
   font-size: 0.75rem;
-  font-weight: 400;
   padding: 0.15rem 0.6rem;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.45);
-  &:hover {
-    background: linear-gradient(
-      to bottom,
-      rgba(230, 235, 250, 1.0) 0%,
-      rgba(170, 175, 195, 0.76) 55%,
-      rgba(120, 125, 150, 1.0) 100%
-    );
-  }
 }

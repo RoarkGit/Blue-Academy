@@ -47,41 +47,41 @@
   </div>
 </div>
 <div class="spellbook-filters ffxiv-ui-background">
-  <div class="spellbook-filter-header">Select Filters<button class="spellbook-filter-reset" type="button">Reset</button></div>
-  <div class="spellbook-filter-group-label">Name</div>
-  <input type="text" class="spellbook-filter-search" placeholder="Search…">
-  <div class="spellbook-filter-group-label">Type</div>
-  <div class="spellbook-filter-options spellbook-filter-options--column">
+  <div class="spellbook-filter-header filter-header">Select Filters<button class="spellbook-filter-reset btn-ffxiv" type="button">Reset</button></div>
+  <div class="spellbook-filter-group-label filter-group-label">Name</div>
+  <input type="text" class="spellbook-filter-search filter-search" placeholder="Search…">
+  <div class="spellbook-filter-group-label filter-group-label">Type</div>
+  <div class="spellbook-filter-options filter-options spellbook-filter-options--column filter-options--column">
     <label><input type="checkbox" data-filter="type" value="magic"> Magical</label>
     <label><input type="checkbox" data-filter="type" value="slashing"> Slashing</label>
     <label><input type="checkbox" data-filter="type" value="piercing"> Piercing</label>
     <label><input type="checkbox" data-filter="type" value="blunt"> Blunt</label>
   </div>
-  <div class="spellbook-filter-group-label">Aspect</div>
-  <div class="spellbook-filter-options spellbook-filter-options--grid3">
+  <div class="spellbook-filter-group-label filter-group-label">Aspect</div>
+  <div class="spellbook-filter-options filter-options spellbook-filter-options--grid3 filter-options--grid3">
     <label><input type="checkbox" data-filter="aspect" value="fire"> Fire</label>
     <label><input type="checkbox" data-filter="aspect" value="ice"> Ice</label>
     <label><input type="checkbox" data-filter="aspect" value="wind"> Wind</label>
     <label><input type="checkbox" data-filter="aspect" value="earth"> Earth</label>
     <label><input type="checkbox" data-filter="aspect" value="lightning"> Lightning</label>
     <label><input type="checkbox" data-filter="aspect" value="water"> Water</label>
-    <label class="spellbook-filter-span3"><input type="checkbox" data-filter="aspect" value="none"> None</label>
+    <label class="spellbook-filter-span3 filter-span3"><input type="checkbox" data-filter="aspect" value="none"> None</label>
   </div>
-  <div class="spellbook-filter-group-label">Rank</div>
-  <div class="spellbook-filter-options spellbook-filter-options--grid3">
+  <div class="spellbook-filter-group-label filter-group-label">Rank</div>
+  <div class="spellbook-filter-options filter-options spellbook-filter-options--grid3 filter-options--grid3">
     <label><input type="checkbox" data-filter="rank" value="1"> ★</label>
     <label><input type="checkbox" data-filter="rank" value="2"> ★★</label>
     <label><input type="checkbox" data-filter="rank" value="3"> ★★★</label>
     <label><input type="checkbox" data-filter="rank" value="4"> ★★★★</label>
     <label><input type="checkbox" data-filter="rank" value="5"> ★★★★★</label>
   </div>
-  <div class="spellbook-filter-group-label">Target</div>
-  <div class="spellbook-filter-options spellbook-filter-options--row">
+  <div class="spellbook-filter-group-label filter-group-label">Target</div>
+  <div class="spellbook-filter-options filter-options spellbook-filter-options--row filter-options--row">
     <label><input type="checkbox" data-filter="target" value="enemy"> Enemy</label>
     <label><input type="checkbox" data-filter="target" value="ally"> Ally</label>
   </div>
-  <div class="spellbook-filter-group-label">Status Inflicted</div>
-  <div class="spellbook-filter-status-icons">
+  <div class="spellbook-filter-group-label filter-group-label">Status Inflicted</div>
+  <div class="spellbook-filter-status-icons filter-status-icons">
     {{- range slice
       (dict "value" "slow"          "label" "Slow")
       (dict "value" "petrification" "label" "Petrification/Freeze")
@@ -94,7 +94,7 @@
       (dict "value" "bind"          "label" "Bind")
       (dict "value" "death"         "label" "Flat Damage/Death")
     -}}
-      <label class="spellbook-filter-status-icon" title="{{ .label }}">
+      <label class="spellbook-filter-status-icon filter-status-icon" title="{{ .label }}">
         <input type="checkbox" data-filter="status" value="{{ .value }}">
         <img src="/images/status/{{ .value }}.png" alt="{{ .label }}">
       </label>
