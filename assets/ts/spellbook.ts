@@ -7,6 +7,7 @@ function getFilters(): Map<string, Set<string>> {
     ['type', new Set()],
     ['aspect', new Set()],
     ['rank', new Set()],
+    ['target', new Set()],
     ['status', new Set()],
   ])
   for (const cb of document.querySelectorAll<HTMLInputElement>(
@@ -31,6 +32,10 @@ function matchesFilters(
 
   const rankF = filters.get('rank')!
   if (rankF.size > 0 && !rankF.has(spell.dataset.spellRank ?? '')) return false
+
+  const targetF = filters.get('target')!
+  if (targetF.size > 0 && !targetF.has(spell.dataset.spellTarget ?? ''))
+    return false
 
   const statusF = filters.get('status')!
   if (statusF.size > 0) {
@@ -68,13 +73,12 @@ function rebuildLabels(numPages: number) {
   }
 }
 
+let totalPages = 1
+
 function applyFilters() {
   const filters = getFilters()
   const realSpells = document.querySelectorAll<HTMLElement>(
     '.spellbook-spell[data-spell-number]',
-  )
-  const emptySlots = document.querySelectorAll<HTMLElement>(
-    '.spellbook-spell:not([data-spell-number])',
   )
 
   let count = 0
@@ -86,14 +90,16 @@ function applyFilters() {
     }
   }
 
-  const numPages = Math.max(1, Math.ceil(count / PAGE_SIZE))
-  for (const slot of emptySlots) slot.dataset.pageNumber = String(numPages)
-
-  rebuildLabels(numPages)
   goToPage('1')
 }
 
 ready(function () {
+  const realSpells = document.querySelectorAll<HTMLElement>(
+    '.spellbook-spell[data-spell-number]',
+  )
+  totalPages = Math.max(1, Math.ceil(realSpells.length / PAGE_SIZE))
+  rebuildLabels(totalPages)
+
   document
     .querySelectorAll<HTMLInputElement>(
       '.spellbook-filters input[type="checkbox"]',
