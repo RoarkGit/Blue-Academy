@@ -70,10 +70,12 @@ function decodeLoadout(encoded: string): number[] {
 function updateSpellLoadoutLink() {
   const url = new URL(window.location.href)
   url.searchParams.set('spell_loadout', encodeLoadout())
+  const urlString = url.toString()
+  window.history.replaceState(null, '', urlString)
   const spellLoadoutBuilderLink = document.getElementById(
     'spell-loadout-builder-link',
   )
-  spellLoadoutBuilderLink?.setAttribute('href', url.toString())
+  spellLoadoutBuilderLink?.setAttribute('href', urlString)
 }
 
 function setSpell(spellLoadoutSpell: HTMLElement, spellbookSpell: HTMLElement) {
