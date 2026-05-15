@@ -42,7 +42,31 @@ For a quick video detailing this process, click
 [here](https://youtu.be/7iDyRq9S4po). The video itself is quite old but the
 concepts are still the same.
 
+## Whalaqee Totems
+
+Some spells cannot be learned from enemies at all and are instead obtained by
+trading Whalaqee Totems to Wayward Gaheel Ja in Ul'dah - Steps of Thal
+(x:13, y:13). Totems are awarded automatically for reaching certain milestones.
+
+| Spell | Milestone |
+|---|---|
+| {{< spell off-guard >}} | Learn 5 spells |
+| {{< spell white_wind >}} | Learn 10 spells |
+| {{< spell mighty_guard >}} | Learn 10 spells |
+| {{< spell transfusion >}} | Learn 20 spells |
+| {{< spell revenge_blast >}} | Learn 50 spells |
+| {{< spell angels_snack >}} | Reach level 70 |
+| {{< spell dragon_force >}} | Learn 100 spells |
+| {{< spell matra_magic >}} | Learn 100 spells |
+| {{< spell breath_of_magic >}} | Reach level 80 |
+| {{< spell force_field >}} | Learn 120 spells [^1] |
+
 ## Where do I learn all the spells?
 
 Check out the [full spell list]({{% relref "spell-list" %}}) to see
 all the spells and where to learn them!
+
+[^1]: {{< spell force_field >}} can also be learned consistently from Sephirot
+(Extreme). When the level cap was 70 this was the only way for free trial
+players to obtain it, since reaching 120 spells requires content beyond level
+70. This is no longer relevant now that the cap is 80.
