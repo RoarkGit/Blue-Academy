@@ -1,66 +1,7 @@
 import { ready, toggleActive } from './common'
+import { getFilters, matchesFilters } from './spell-filters'
 
 const PAGE_SIZE = 16
-
-function getFilters(): Map<string, Set<string>> {
-  const filters = new Map<string, Set<string>>([
-    ['type', new Set()],
-    ['aspect', new Set()],
-    ['rank', new Set()],
-    ['target', new Set()],
-    ['status', new Set()],
-  ])
-  for (const cb of document.querySelectorAll<HTMLInputElement>(
-    '.spellbook-filters input[type="checkbox"]:checked',
-  )) {
-    const cat = cb.dataset.filter
-    if (cat && filters.has(cat)) filters.get(cat)!.add(cb.value)
-  }
-  return filters
-}
-
-function matchesFilters(
-  spell: HTMLElement,
-  filters: Map<string, Set<string>>,
-  nameQuery: string,
-): boolean {
-  if (nameQuery && !(spell.dataset.spellName ?? '').toLowerCase().includes(nameQuery))
-    return false
-
-  const typeF = filters.get('type')!
-  if (typeF.size > 0 && !typeF.has(spell.dataset.spellType ?? '')) return false
-
-  const aspectF = filters.get('aspect')!
-  if (aspectF.size > 0 && !aspectF.has(spell.dataset.spellAspect ?? ''))
-    return false
-
-  const rankF = filters.get('rank')!
-  if (rankF.size > 0 && !rankF.has(spell.dataset.spellRank ?? '')) return false
-
-  const targetF = filters.get('target')!
-  if (targetF.size > 0) {
-    const targets = (spell.dataset.spellTarget ?? '').split(' ').filter(Boolean)
-    if (!targets.some((t) => targetF.has(t))) return false
-  }
-
-  // Some filter categories group multiple internal tags (e.g. petrification
-  // covers both "petrification" and "freeze").
-  const STATUS_GROUPS: Record<string, string[]> = {
-    petrification: ['petrification', 'freeze'],
-  }
-  const statusF = filters.get('status')!
-  if (statusF.size > 0) {
-    const statuses = (spell.dataset.spellStatus ?? '').split(' ').filter(Boolean)
-    const expanded = new Set<string>()
-    for (const s of statusF) {
-      expanded.add(s)
-      STATUS_GROUPS[s]?.forEach((alias) => expanded.add(alias))
-    }
-    if (!statuses.some((s) => expanded.has(s))) return false
-  }
-
-  return true
-}
 
 function goToPage(page: string) {
   const spells = document.getElementsByClassName(
@@ -94,14 +35,18 @@ function updateLabelStates(activePages: number) {
     '.spellbook-wrapper-page-label',
   )) {
     const page = Number(label.dataset.pageNumber ?? '0')
-    label.classList.toggle('spellbook-wrapper-page-label--empty', page > activePages)
+    label.classList.toggle(
+      'spellbook-wrapper-page-label--empty',
+      page > activePages,
+    )
   }
 }
 
 function applyFilters() {
-  const filters = getFilters()
+  const filters = getFilters('.spellbook-filters')
   const nameQuery = (
-    document.querySelector<HTMLInputElement>('.spellbook-filter-search')?.value ?? ''
+    document.querySelector<HTMLInputElement>('.spellbook-filter-search')
+      ?.value ?? ''
   )
     .toLowerCase()
     .trim()
@@ -139,16 +84,20 @@ ready(function () {
     .querySelector<HTMLInputElement>('.spellbook-filter-search')
     ?.addEventListener('input', applyFilters)
 
-  document.querySelector('.spellbook-filter-reset')?.addEventListener('click', () => {
-    for (const cb of document.querySelectorAll<HTMLInputElement>(
-      '.spellbook-filters input[type="checkbox"]',
-    )) {
-      cb.checked = false
-    }
-    const search = document.querySelector<HTMLInputElement>('.spellbook-filter-search')
-    if (search) search.value = ''
-    applyFilters()
-  })
+  document
+    .querySelector('.spellbook-filter-reset')
+    ?.addEventListener('click', () => {
+      for (const cb of document.querySelectorAll<HTMLInputElement>(
+        '.spellbook-filters input[type="checkbox"]',
+      )) {
+        cb.checked = false
+      }
+      const search = document.querySelector<HTMLInputElement>(
+        '.spellbook-filter-search',
+      )
+      if (search) search.value = ''
+      applyFilters()
+    })
 
   applyFilters()
 })
