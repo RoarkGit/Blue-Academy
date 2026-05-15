@@ -95,9 +95,9 @@ export function updateBadge(
 
   if (activeCount > 0) {
     badge.textContent = String(activeCount)
-    badge.hidden = false
+    badge.style.display = 'inline-block'
   } else {
-    badge.hidden = true
+    badge.style.display = 'none'
   }
 }
 

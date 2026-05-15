@@ -400,36 +400,24 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
   margin-left: 0.35rem;
 }
 
-.spell-list-drawer-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 150;
-  &[hidden] {
-    display: none;
-  }
-}
-
-.spell-list-drawer {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: min(360px, 90vw);
+.spell-list-filters {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 0.4rem 0.75rem;
   padding: 1rem;
-  overflow-y: auto;
-  z-index: 151;
-  transform: translateX(100%);
-  transition: transform 0.25s ease;
-  border-left: solid 1px #fff;
-  &[hidden] {
-    display: none;
-  }
-  &:not([hidden]) {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: start;
-    gap: 0.4rem 0.75rem;
+  margin-bottom: 0.75rem;
+  border: solid 1px #fff;
+  max-height: 1000px;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+  opacity: 1;
+  &.spell-list-filters--closed {
+    max-height: 0;
+    opacity: 0;
+    padding: 0 1rem;
+    margin-bottom: 0;
+    border: none;
   }
 }
 
@@ -440,33 +428,6 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
   align-items: center;
   font-weight: 400;
   margin-bottom: 0.25rem;
-}
-
-.spell-list-drawer-close {
-  background: linear-gradient(
-    to bottom,
-    rgba(210, 215, 230, 0.9) 0%,
-    rgba(150, 155, 175, 0.56) 55%,
-    rgba(100, 105, 130, 0.8) 100%
-  );
-  border: none;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
-  color: inherit;
-  cursor: pointer;
-  font-family: var(--MAIN-font);
-  font-size: 0.875rem;
-  font-weight: 400;
-  padding: 0.15rem 0.5rem;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.45);
-  &:hover {
-    background: linear-gradient(
-      to bottom,
-      rgba(230, 235, 250, 1.0) 0%,
-      rgba(170, 175, 195, 0.76) 55%,
-      rgba(120, 125, 150, 1.0) 100%
-    );
-  }
 }
 
 .spell-list-filter-group-label {
@@ -528,7 +489,6 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
   font-size: 0.9rem;
   padding: 0.2rem 0.4rem;
   width: 100%;
-  grid-column: 1 / -1;
   &:focus {
     outline: 2px solid rgba(110, 160, 222, 0.8);
     border-color: transparent;
@@ -541,7 +501,6 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
   gap: 1px;
   margin: 0;
   padding: 0;
-  grid-column: 1 / -1;
 }
 
 .spell-list-filter-status-icon {

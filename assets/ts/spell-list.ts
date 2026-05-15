@@ -1,14 +1,8 @@
 import { ready } from './common'
-import {
-  getFilters,
-  matchesFilters,
-  updateBadge,
-  openDrawer,
-  closeDrawer,
-} from './spell-filters'
+import { getFilters, matchesFilters, updateBadge } from './spell-filters'
 
 function applyFilters() {
-  const filters = getFilters('.spell-list-drawer')
+  const filters = getFilters('.spell-list-filters')
   const nameQuery = (
     document.querySelector<HTMLInputElement>('.spell-list-filter-search')
       ?.value ?? ''
@@ -26,15 +20,24 @@ function applyFilters() {
   }
 }
 
+function toggleFilters() {
+  const filtersPanel = document.querySelector<HTMLElement>(
+    '.spell-list-filters',
+  )
+  if (filtersPanel) {
+    filtersPanel.classList.toggle('spell-list-filters--closed')
+  }
+}
+
 ready(function () {
   document
     .querySelectorAll<HTMLInputElement>(
-      '.spell-list-drawer input[type="checkbox"]',
+      '.spell-list-filters input[type="checkbox"]',
     )
     .forEach((cb) => {
       cb.addEventListener('change', () => {
         applyFilters()
-        updateBadge('.spell-list-filter-badge', '.spell-list-drawer')
+        updateBadge('.spell-list-filter-badge', '.spell-list-filters')
       })
     })
 
@@ -42,52 +45,48 @@ ready(function () {
     .querySelector<HTMLInputElement>('.spell-list-filter-search')
     ?.addEventListener('input', () => {
       applyFilters()
-      updateBadge('.spell-list-filter-badge', '.spell-list-drawer')
+      updateBadge('.spell-list-filter-badge', '.spell-list-filters')
     })
 
   document
     .querySelector('.spell-list-filter-reset')
     ?.addEventListener('click', () => {
       for (const cb of document.querySelectorAll<HTMLInputElement>(
-        '.spell-list-drawer input[type="checkbox"]',
+        '.spell-list-filters input[type="checkbox"]',
       )) {
         cb.checked = false
+        cb.dispatchEvent(new Event('change', { bubbles: true }))
       }
       const search = document.querySelector<HTMLInputElement>(
         '.spell-list-filter-search',
       )
-      if (search) search.value = ''
+      if (search) {
+        search.value = ''
+        search.dispatchEvent(new Event('input', { bubbles: true }))
+      }
       applyFilters()
-      updateBadge('.spell-list-filter-badge', '.spell-list-drawer')
+      updateBadge('.spell-list-filter-badge', '.spell-list-filters')
     })
 
-  // Drawer controls
   document
     .querySelector('.spell-list-filter-button')
     ?.addEventListener('click', () => {
-      openDrawer('.spell-list-drawer-overlay', '.spell-list-drawer')
-    })
-
-  document
-    .querySelector('.spell-list-drawer-overlay')
-    ?.addEventListener('click', () => {
-      closeDrawer('.spell-list-drawer-overlay', '.spell-list-drawer')
-    })
-
-  document
-    .querySelector('.spell-list-drawer-close')
-    ?.addEventListener('click', () => {
-      closeDrawer('.spell-list-drawer-overlay', '.spell-list-drawer')
+      toggleFilters()
     })
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      const drawer = document.querySelector<HTMLElement>('.spell-list-drawer')
-      if (drawer && !drawer.hidden) {
-        closeDrawer('.spell-list-drawer-overlay', '.spell-list-drawer')
+      const filtersPanel = document.querySelector<HTMLElement>(
+        '.spell-list-filters',
+      )
+      if (
+        filtersPanel &&
+        !filtersPanel.classList.contains('spell-list-filters--closed')
+      ) {
+        toggleFilters()
       }
     }
   })
 
-  updateBadge('.spell-list-filter-badge', '.spell-list-drawer')
+  updateBadge('.spell-list-filter-badge', '.spell-list-filters')
 })
