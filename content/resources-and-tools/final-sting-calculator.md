@@ -1,5 +1,5 @@
 ---
-title: Final Sting Percentages
+title: Final Sting Calculator
 weight: 30
 ---
 
