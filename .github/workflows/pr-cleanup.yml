@@ -17,14 +17,32 @@ jobs:
           CF_PROJECT: blue-academy  # update if your Pages project name differs
           BRANCH: pr-${{ github.event.number }}
         run: |
-          response=$(curl -s \
-            -H "Authorization: Bearer $CF_API_TOKEN" \
-            "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$CF_PROJECT/deployments?per_page=100")
+          ids=""
+          page=1
+          while true; do
+            response=$(curl -s \
+              -H "Authorization: Bearer $CF_API_TOKEN" \
+              "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$CF_PROJECT/deployments?page=$page&per_page=25")
 
-          echo "API response: $response"
+            if [ "$(echo "$response" | jq -r '.success')" != "true" ]; then
+              echo "ERROR: Failed to list deployments (page $page)"
+              echo "$response" | jq '.errors // []'
+              exit 1
+            fi
 
-          ids=$(echo "$response" | jq -r --arg branch "$BRANCH" \
-            '(.result // [])[] | select(.deployment_trigger.metadata.branch == $branch) | .id')
+            page_ids=$(echo "$response" | jq -r --arg branch "$BRANCH" \
+              '(.result // [])[] | select(.deployment_trigger.metadata.branch == $branch) | .id')
+            ids="$ids $page_ids"
+
+            total=$(echo "$response" | jq -r '.result_info.total_count // 0')
+            fetched=$((page * 25))
+            if [ "$fetched" -ge "$total" ]; then
+              break
+            fi
+            page=$((page + 1))
+          done
+
+          ids=$(echo "$ids" | tr ' ' '\n' | grep -v '^$')
 
           if [ -z "$ids" ]; then
             echo "No deployments found for branch $BRANCH"
@@ -33,7 +51,15 @@ jobs:
 
           for id in $ids; do
             echo "Deleting deployment $id"
-            curl -s -X DELETE \
+            delete_response=$(curl -s -X DELETE \
               -H "Authorization: Bearer $CF_API_TOKEN" \
-              "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$CF_PROJECT/deployments/$id?force=true"
+              "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$CF_PROJECT/deployments/$id?force=true")
+            echo "Delete response for $id: $delete_response"
+
+            success=$(echo "$delete_response" | jq -r '.success // false')
+            if [ "$success" != "true" ]; then
+              echo "ERROR: Failed to delete deployment $id"
+              echo "$delete_response" | jq '.errors // []'
+              exit 1
+            fi
           done
