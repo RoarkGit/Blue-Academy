@@ -32,6 +32,8 @@
     Learned First
   description: |
     Deals water damage with a potency of 200.
+  target:
+    - enemy
 - id: flame_thrower
   name: Flame Thrower
   number: 2
@@ -52,6 +54,8 @@
     Omega / Alphascape V3.0
   description: |
     Deals fire damage to all enemies in a cone before you with a potency of 220 for the first enemy, and 50% less for all remaining enemies.
+  target:
+    - enemy
 - id: aqua_breath
   name: Aqua Breath
   number: 3
@@ -78,6 +82,8 @@
     {{< green "Potency: " >}}20
 
     {{< green "Duration: " >}}12s
+  target:
+    - enemy
 - id: flying_frenzy
   name: Flying Frenzy
   number: 4
@@ -96,6 +102,8 @@
     Delivers a jumping physical attack to target and all enemies nearby it with a potency of 150 for the first enemy, and 50% less for all remaining enemies.
 
     Cannot be executed while bound.
+  target:
+    - enemy
 - id: drill_cannons
   name: Drill Cannons
   number: 5
@@ -114,6 +122,8 @@
     Deals physical damage to all enemies in a straight line before you with a potency of 200 for the first enemy, and 50% less for all remaining enemies.
 
     {{< green "Additional Effect: " >}}Potency is increased to 600 when target is afflicted with {{< yellow "Petrification" >}}. The {{< yellow "Petrification" >}} effect is also removed.
+  target:
+    - enemy
 - id: high_voltage
   name: High Voltage
   number: 6
@@ -139,6 +149,10 @@
     {{< green "Additional Effect: " >}}Potency increased to 220 when target is afflicted with {{< yellow "Dropsy" >}}
 
     {{< green "Additional Effect: " >}}Duration of {{< yellow "Paralysis" >}} is increased to 30 seconds when target is afflicted with {{< yellow "Dropsy" >}}
+  target:
+    - enemy
+  status:
+    - paralysis
 - id: loom
   name: Loom
   number: 7
@@ -186,6 +200,9 @@
     Effect will not be removed upon revival or further incapacitation.
 
     Cannot be executed while under the effect of {{< yellow "Brush with Death" >}}.
+  target:
+    - enemy
+    - ally
 - id: song_of_torment
   name: Song Of Torment
   number: 9
@@ -207,6 +224,8 @@
     {{< green "Potency: " >}}50
 
     {{< green "Duration: " >}}30s
+  target:
+    - enemy
 - id: glower
   name: Glower
   number: 10
@@ -230,6 +249,10 @@
     {{< green "Duration: " >}}6s
   notes: |
     Guaranteed learn even when running unsynced.
+  target:
+    - enemy
+  status:
+    - paralysis
 - id: plaincracker
   name: Plaincracker
   number: 11
@@ -249,6 +272,8 @@
     Azulmagia / The Masked Carnivale #25
   description: |
     Deals earth damage to all nearby enemies with a potency of 220 for the first enemy, and 50% less for all remaining enemies.
+  target:
+    - enemy
 - id: bristle
   name: Bristle
   number: 12
@@ -269,6 +294,8 @@
     Effect cannot be stacked with {{< yellow "Harmonized" >}}.
   notes: |
     Buffs *spells*, not *abilities*. Spells are *usually* tied to the GCD, while abilities are not (usually Primal spells).
+  target:
+    - ally
 - id: white_wind
   name: White Wind
   number: 13
@@ -284,6 +311,8 @@
     Learn 10 Spells - Whalaqee Totem
   description: |
     Restores own HP and the HP of all nearby party members by an amount equal to your current HP.
+  target:
+    - ally
 - id: level_5_petrify
   name: Level 5 Petrify
   number: 14
@@ -306,6 +335,10 @@
     Chance of successful attack is low.
 
     Enemy level must be a multiple of 5. Has no effect on enemies whose level is higher than your own.
+  target:
+    - enemy
+  status:
+    - petrification
 - id: sharpened_knife
   name: Sharpened Knife
   number: 15
@@ -323,6 +356,8 @@
     Deals physical damage with a potency of 220.
 
     {{< green "Additional Effect: " >}}Potency is increased to 450 when target is stunned
+  target:
+    - enemy
 - id: ice_spikes
   name: Ice Spikes
   number: 16
@@ -347,6 +382,10 @@
     {{< green "Additional Effect: " >}}50% chance that when you are struck, the striker will be afflicted with {{< yellow "Slow" >}} +20%
 
     {{< green "Duration: " >}}15s
+  target:
+    - ally
+  status:
+    - slow
 - id: blood_drain
   name: Blood Drain
   number: 17
@@ -364,6 +403,9 @@
     Deals unaspected damage with a potency of 50.
 
     {{< green "Additional Effect: " >}}Restores MP
+  target:
+    - enemy
+    - ally
 - id: acorn_bomb
   name: Acorn Bomb
   number: 18
@@ -386,6 +428,10 @@
     Cancels auto-attack upon execution.
   notes: |
     Largely irrelevant due to the Sleep role action.
+  target:
+    - enemy
+  status:
+    - sleep
 - id: bomb_toss
   name: Bomb Toss
   number: 19
@@ -408,6 +454,10 @@
     {{< green "Additional Effect: " >}}{{< yellow "Stun" >}}
 
     {{< green "Duration: " >}}3s
+  target:
+    - enemy
+  status:
+    - stun
 - id: off-guard
   name: Off-guard
   number: 20
@@ -429,6 +479,8 @@
     Recast timer cannot be affected by other spells. However, this action shares a recast timer with {{< orange "Peculiar Light" >}}.
   notes: |
     Stacks with Peculiar Light.
+  target:
+    - enemy
 - id: self-destruct
   name: Self-destruct
   number: 21
@@ -453,6 +505,8 @@
     Effect will not be removed upon revival or further incapacitation.
 
     Cannot be executed while under the effect of {{< yellow "Brush with Death" >}}.
+  target:
+    - enemy
 - id: transfusion
   name: Transfusion
   number: 22
@@ -475,6 +529,8 @@
     Effect will not be removed upon revival or further incapacitation.
 
     Cannot be executed while under the effect of {{< yellow "Brush with Death" >}}.
+  target:
+    - ally
 - id: faze
   name: Faze
   number: 23
@@ -492,6 +548,10 @@
     Stuns all enemies in a cone before you.
 
     {{< green "Duration: " >}}6s
+  target:
+    - enemy
+  status:
+    - stun
 - id: flying_sardine
   name: Flying Sardine
   number: 24
@@ -510,6 +570,10 @@
     Deals physical damage with a potency of 10.
 
     {{< green "Additional Effect: " >}}Interrupts target
+  target:
+    - enemy
+  status:
+    - interruption
 - id: snort
   name: Snort
   number: 25
@@ -530,6 +594,8 @@
     Deals a 20-yalm knockback to all enemies in a cone before you.
   notes: |
     Only the ability actually called *Snort* will teach the spell; it is cast quite late into The Dragon's Neck.
+  target:
+    - enemy
 - id: 4-tonze_weight
   name: 4-tonze Weight
   number: 26
@@ -550,6 +616,10 @@
     {{< green "Additional Effect: " >}}{{< yellow "Heavy" >}} +40%
 
     {{< green "Duration: " >}}30s
+  target:
+    - enemy
+  status:
+    - heavy
 - id: the_look
   name: The Look
   number: 27
@@ -572,6 +642,8 @@
     {{< green "Additional Effect: " >}}Increased enmity
   notes: |
     Largely irrelevant due to Mighty Guard threat modifier.
+  target:
+    - enemy
 - id: bad_breath
   name: Bad Breath
   number: 28
@@ -600,6 +672,14 @@
     {{< green "Duration: " >}}15s
 
     {{< green "Additional Effect: " >}}Interrupts target
+  target:
+    - enemy
+  status:
+    - slow
+    - paralysis
+    - interruption
+    - blind
+    - heavy
 - id: diamondback
   name: Diamondback
   number: 29
@@ -622,6 +702,8 @@
     If used when {{< yellow "Waxing Nocturne" >}} is active, its effect will transition immediately to {{< yellow "Waning Nocturne" >}}.
 
     The effect of this action cannot be ended manually.
+  target:
+    - ally
 - id: mighty_guard
   name: Mighty Guard
   number: 30
@@ -638,6 +720,8 @@
     Reduces damage taken by 40% while reducing damage dealt by 40%, increasing enmity generation, and preventing casting interruptions via damage taken.
 
     Effect ends upon reuse.
+  target:
+    - ally
 - id: sticky_tongue
   name: Sticky Tongue
   number: 31
@@ -662,6 +746,10 @@
     {{< green "Duration:" >}} 4s
 
     {{< green "Additional Effect:" >}} Increased enmity
+  target:
+    - enemy
+  status:
+    - stun
 - id: toad_oil
   name: Toad Oil
   number: 32
@@ -681,6 +769,8 @@
   notes: |
     Primarily used for buffing {{< spell toad_oil >}}. Has _some_ use for
     dungeon tanking and soloing.
+  target:
+    - ally
 - id: the_rams_voice
   name: The Ram's Voice
   number: 33
@@ -704,6 +794,10 @@
     {{< green "Additional Effect: " >}}{{< yellow "Deep Freeze" >}}
 
     {{< green "Duration: " >}}12s
+  target:
+    - enemy
+  status:
+    - freeze
 - id: the_dragons_voice
   name: The Dragon's Voice
   number: 34
@@ -731,6 +825,10 @@
     {{< green "Duration: " >}}9s
 
     {{< green "Additional Effect: " >}}Potency is increased to 400 against most enemies afflicted with {{< yellow "Deep Freeze" >}}. The {{< yellow "Deep Freeze" >}} effect is also removed.
+  target:
+    - enemy
+  status:
+    - paralysis
 - id: missile
   name: Missile
   number: 35
@@ -752,6 +850,10 @@
     Chance of successful attack is low. Has no effect on enemies whose level is higher than your own.
   notes: |
     Has approximately 67% accuracy.
+  target:
+    - enemy
+  status:
+    - death
 - id: 1000_needles
   name: 1000 Needles
   number: 36
@@ -769,6 +871,8 @@
     Deals a fixed 1,000 points of physical damage which is shared by all enemies around you.
   notes: |
     Always deals exactly 1,000 damage unless the enemy is invulnerable.
+  target:
+    - enemy
 - id: ink_jet
   name: Ink Jet
   number: 37
@@ -789,6 +893,10 @@
     {{< green "Additional Effect: " >}}{{< yellow "Blind" >}}
 
     {{< green "Duration: " >}}30s
+  target:
+    - enemy
+  status:
+    - blind
 - id: fire_angon
   name: Fire Angon
   number: 38
@@ -805,6 +913,8 @@
     Fruminoius Koheel Ja / The Wanderer's Palace (Hard)
   description: |
     Deals physical fire damage to target and all enemies nearby it with a potency of 200 for the first enemy, and 50% less for all remaining enemies.
+  target:
+    - enemy
 - id: moon_flute
   name: Moon Flute
   number: 39
@@ -827,6 +937,8 @@
     {{< green "Duration: " >}}15s
   notes: |
     Yes, it is worth using even with the Waning Nocturne debuff. The damage we gain during Moon Flute outweighs the handful of Sonic Booms we would miss during Waning Nocturne.
+  target:
+    - ally
 - id: tail_screw
   name: Tail Screw
   number: 40
@@ -850,6 +962,10 @@
     Chance of successful attack is low. Has no effect on enemies whose level is higher than your own.
   notes: |
     Has approximately 10% accuracy.
+  target:
+    - enemy
+  status:
+    - death
 - id: mind_blast
   name: Mind Blast
   number: 41
@@ -871,6 +987,10 @@
     {{< green "Duration: " >}}30s
   notes: |
     Guaranteed learn even when running unsynced.
+  target:
+    - enemy
+  status:
+    - paralysis
 - id: doom
   name: Doom
   number: 42
@@ -894,6 +1014,10 @@
     Chance of successful attack is low. Has no effect on enemies whose level is higher than your own.
   notes: |
     Has approximately 33% accuracy.
+  target:
+    - enemy
+  status:
+    - death
 - id: peculiar_light
   name: Peculiar Light
   number: 43
@@ -915,6 +1039,8 @@
     Recast timer cannot be affected by other spells. However, this action shares a recast timer with {{< orange "Off-guard" >}}.
   notes: |
     Stacks with Off-guard.
+  target:
+    - enemy
 - id: feather_rain
   name: Feather Rain
   number: 44
@@ -939,6 +1065,8 @@
     {{< green "Duration: " >}}6s
 
     Shares a recast timer with {{< orange "Eruption" >}}.
+  target:
+    - enemy
 - id: eruption
   name: Eruption
   number: 45
@@ -959,6 +1087,8 @@
     Shares a recast timer with {{< orange "Feather Rain" >}}.
   notes: |
     Can trivially be learned solo synced on normal difficulty with 1000 Needles.
+  target:
+    - enemy
 - id: mountain_buster
   name: Mountain Buster
   number: 46
@@ -976,6 +1106,8 @@
     Deals physical earth damage to all enemies in a cone before you with a potency of 400 for the first enemy, and 50% less for all remaining enemies.
 
     Shares a recast timer with {{< orange "Shock Strike" >}}.
+  target:
+    - enemy
 - id: shock_strike
   name: Shock Strike
   number: 47
@@ -994,6 +1126,8 @@
     Deals lightning damage to target and all enemies nearby it with a potency of 400 for the first enemy, and 50% less for all remaining enemies.
 
     Shares a recast timer with {{< orange "Mountain Buster" >}}.
+  target:
+    - enemy
 - id: glass_dance
   name: Glass Dance
   number: 48
@@ -1011,6 +1145,8 @@
     Deals ice damage to all enemies in a wide arc to your fore and flanks with a potency of 350 for the first enemy, and 50% less for all remaining enemies.
 
     Shares a recast timer with {{< orange "Veil of the Whorl" >}}.
+  target:
+    - enemy
 - id: veil_of_the_whorl
   name: Veil Of The Whorl
   number: 49
@@ -1035,6 +1171,8 @@
     Shares a recast timer with {{< orange "Glass Dance" >}}.
   notes: |
     This is inferior to Glass Dance.
+  target:
+    - ally
 - id: alpine_draft
   name: Alpine Draft
   number: 50
@@ -1053,6 +1191,8 @@
     Opinicus / The Dusk Vigil
   description: |
     Deals wind damage to all enemies in a straight line before you with a potency of 220 for the first enemy, and 50% less for all remaining enemies.
+  target:
+    - enemy
 - id: protean_wave
   name: Protean Wave
   number: 51
@@ -1074,6 +1214,8 @@
     {{< green "Additional Effect: " >}}15-yalm knockback
   notes: |
     Can be learned from the tornadoes during Act 2 of Red, Fraught, and Blue (Stage 29).
+  target:
+    - enemy
 - id: northerlies
   name: Northerlies
   number: 52
@@ -1096,6 +1238,10 @@
     {{< green "Additional Effect: " >}}Enemies affected by {{< yellow "Dropsy" >}} are frozen. The {{< yellow "Dropsy" >}} effect is also removed.
 
     {{< green "Duration: " >}}20s
+  target:
+    - enemy
+  status:
+    - freeze
 - id: electrogenesis
   name: Electrogenesis
   number: 53
@@ -1115,6 +1261,8 @@
     Hikagiri / Shisui of the Violet Tides
   description: |
     Deals lightning damage to target and all enemies nearby it with a potency of 220 for the first enemy, and 50% less for all remaining enemies.
+  target:
+    - enemy
 - id: kaltstrahl
   name: Kaltstrahl
   number: 54
@@ -1132,6 +1280,8 @@
     Jagd Doll / Alexander - The Cuff of the Father
   description: |
     Deals physical damage to all enemies in a cone before you with a potency of 220 for the first enemy, and 50% less for all remaining enemies.
+  target:
+    - enemy
 - id: abyssal_transfixion
   name: Abyssal Transfixion
   number: 55
@@ -1153,6 +1303,10 @@
     {{< green "Additional Effect: " >}}{{< yellow "Paralysis" >}}
 
     {{< green "Duration: " >}}30s
+  target:
+    - enemy
+  status:
+    - paralysis
 - id: chirp
   name: Chirp
   number: 56
@@ -1174,6 +1328,10 @@
     Cancels auto-attack upon execution.
   notes: |
     Largely irrelevant due to the Sleep role action.
+  target:
+    - enemy
+  status:
+    - sleep
 - id: eerie_soundwave
   name: Eerie Soundwave
   number: 57
@@ -1193,6 +1351,8 @@
     Empuse / Azys Lla (30, 12)
   description: |
     Removes one beneficial effect from all nearby enemies.
+  target:
+    - enemy
 - id: pom_cure
   name: Pom Cure
   number: 58
@@ -1212,6 +1372,8 @@
     {{< green "Cure Potency: " >}}100
 
     Cure potency is increased to 500 when you are under the effect of {{< yellow "Aetheric Mimicry: Healer" >}}.
+  target:
+    - ally
 - id: gobskin
   name: Gobskin
   number: 59
@@ -1233,6 +1395,8 @@
     Barrier strength is increased to absorb damage equivalent to a heal of 250 potency when you are under the effect of {{< yellow "Aetheric Mimicry: Healer" >}}.
 
     Effect cannot be stacked with those of scholar's {{< yellow "Galvanize" >}} or sage's {{< yellow "Eukrasian Diagnosis" >}} and {{< yellow "Eukrasian Prognosis" >}}.
+  target:
+    - ally
 - id: magic_hammer
   name: Magic Hammer
   number: 60
@@ -1259,6 +1423,9 @@
     {{< green "Additional Effect: " >}}Restores 10% of maximum MP
 
     Shares a recast timer with {{< orange "Candy Cane" >}}.
+  target:
+    - enemy
+    - ally
 - id: avail
   name: Avail
   number: 61
@@ -1280,6 +1447,8 @@
     Can only be executed when member is within 10 yalms. Does not activate with certain attacks.
 
     This action does not share a recast timer with any other actions.
+  target:
+    - ally
 - id: frog_legs
   name: Frog Legs
   number: 62
@@ -1297,6 +1466,8 @@
     Provoke nearby enemies, placing yourself at the top of their enmity list.
   notes: |
     This is not a proper provoke; it has a very small range and only sets your enmity to 1 more than the current highest enmity.
+  target:
+    - enemy
 - id: sonic_boom
   name: Sonic Boom
   number: 63
@@ -1314,6 +1485,8 @@
     Zu / Pharos Sirius
   description: |
     Deals wind damage with a potency of 210.
+  target:
+    - enemy
 - id: whistle
   name: Whistle
   number: 64
@@ -1338,6 +1511,8 @@
     Effect cannot be stacked with {{< yellow "Boost" >}}.
   notes: |
     Buffs *spells*, not *abilities*. Spells are *usually* tied to the GCD, while abilities are not (usually Primal spells).
+  target:
+    - ally
 - id: white_knights_tour
   name: White Knight's Tour
   number: 65
@@ -1360,6 +1535,10 @@
     {{< green "Additional Effect: " >}}{{< yellow "Slow" >}} +20%
 
     {{< green "Duration:" >}} 20s
+  target:
+    - enemy
+  status:
+    - slow
 - id: black_knights_tour
   name: Black Knight's Tour
   number: 66
@@ -1382,6 +1561,10 @@
     {{< green "Additional Effect: " >}}{{< yellow "Bind" >}}
 
     {{< green "Duration:" >}} 20s
+  target:
+    - enemy
+  status:
+    - bind
 - id: level_5_death
   name: Level 5 Death
   number: 67
@@ -1405,6 +1588,10 @@
     Shares a recast timer with {{< orange "Ultravibration" >}}.
   notes: |
     Has approximately 90% accuracy.
+  target:
+    - enemy
+  status:
+    - death
 - id: launcher
   name: Launcher
   number: 68
@@ -1426,6 +1613,10 @@
     Has no effect on enemies whose level is higher than your own.
   notes: |
     Has 100% accuracy, but MP cost makes it a bad choice.
+  target:
+    - enemy
+  status:
+    - death
 - id: perpetual_ray
   name: Perpetual Ray
   number: 69
@@ -1448,6 +1639,10 @@
     {{< green "Duration: " >}}1s
 
     Ignores target's {{< yellow "Stun" >}} resistance.
+  target:
+    - enemy
+  status:
+    - stun
 - id: cactguard
   name: Cactguard
   number: 70
@@ -1469,6 +1664,8 @@
     Increases damage reduction to 15% when you are under the effect of {{< yellow "Aetheric Mimicry: Tank" >}}.
   notes: |
     Largely irrelevant since it can only be cast on other players.
+  target:
+    - ally
 - id: revenge_blast
   name: Revenge Blast
   number: 71
@@ -1486,6 +1683,8 @@
     Deals physical damage with a potency of 50.
 
     Potency is increased to 500 when your HP is below 20%.
+  target:
+    - enemy
 - id: angel_whisper
   name: Angel Whisper
   number: 72
@@ -1503,6 +1702,8 @@
     Resurrects target to a weakened state.
 
     This action does not share a recast timer with any other actions.
+  target:
+    - ally
 - id: exuviation
   name: Exuviation
   number: 73
@@ -1526,6 +1727,8 @@
     {{< green "Additional Effect: " >}}Removes one detrimental effect from all nearby party members
 
     Cure potency is increased to 300 when you are under the effect of {{< yellow "Aetheric Mimicry: Healer" >}}.
+  target:
+    - ally
 - id: reflux
   name: Reflux
   number: 74
@@ -1548,6 +1751,10 @@
     {{< green "Duration: " >}}10s
 
     Ignores target's {{< yellow "Heavy" >}} resistance.
+  target:
+    - enemy
+  status:
+    - heavy
 - id: devour
   name: Devour
   number: 75
@@ -1578,6 +1785,9 @@
     {{< green "Additional Effect: " >}}Restores an amount of own HP equal to damage dealt
 
     This action does not share a recast timer with any other actions.
+  target:
+    - enemy
+    - ally
 - id: condensed_libra
   name: Condensed Libra
   number: 76
@@ -1607,6 +1817,8 @@
     Only one of these statuses can be applied to a target at a time.
   notes: |
     Largely irrelevant with level 70 spells since we don't have the slots for three filler spells.
+  target:
+    - enemy
 - id: aetheric_mimicry
   name: Aetheric Mimicry
   number: 77
@@ -1632,6 +1844,8 @@
     Cannot be cast on self. Effect ends upon reuse.
   notes: |
     Can easily be learned solo. Unsynced is fine here, since we just keep killing adds on the first boss until it's learned.
+  target:
+    - ally
 - id: surpanakha
   name: Surpanakha
   number: 78
@@ -1657,6 +1871,8 @@
     {{< green "Maximum Charges: " >}}4
 
     Effect is canceled upon execution of any action other than {{< orange "Surpanakha" >}}.
+  target:
+    - enemy
 - id: quasar
   name: Quasar
   number: 79
@@ -1674,6 +1890,8 @@
     Deals unaspected damage to all nearby enemies with a potency of 300 for the first enemy, and 50% less for all remaining enemies.
 
     Shares a recast timer with {{< orange "J Kick" >}}.
+  target:
+    - enemy
 - id: j_kick
   name: J Kick
   number: 80
@@ -1694,6 +1912,8 @@
     Cannot be executed while bound.
 
     Shares a recast timer with {{< orange "Quasar" >}}.
+  target:
+    - enemy
 - id: triple_trident
   name: Triple Trident
   number: 81
@@ -1713,6 +1933,8 @@
     Delivers a threefold attack, each hit with a potency of 150.
 
     This action does not share a recast timer with any other actions.
+  target:
+    - enemy
 - id: tingle
   name: Tingle
   number: 82
@@ -1735,6 +1957,9 @@
     {{< green "Additional Effect: " >}}Increases the potency of the next physical damage spell cast by 100
 
     {{< green "Duration: " >}}15s
+  target:
+    - enemy
+    - ally
 - id: tatami-gaeshi
   name: Tatami-gaeshi
   number: 83
@@ -1755,6 +1980,10 @@
     {{< green "Additional Effect: " >}}{{< yellow "Stun" >}}
 
     {{< green "Duration: " >}}3s
+  target:
+    - enemy
+  status:
+    - stun
 - id: cold_fog
   name: Cold Fog
   number: 84
@@ -1792,6 +2021,11 @@
     Can only be executed while under the effect of {{< yellow "Touch of Frost" >}}.
   notes: |
     In order to learn the spell you must *fail* the three heads mechanic during Mist Dragon.
+  target:
+    - enemy
+    - ally
+  status:
+    - freeze
 - id: stotram
   name: Stotram
   number: 85
@@ -1811,6 +2045,9 @@
     Action effect changes, restoring own HP and the HP of all nearby party members when you are under the effect of {{< yellow "Aetheric Mimicry: Healer" >}}.
 
     {{< green "Cure Potency: " >}}300
+  target:
+    - enemy
+    - ally
 - id: saintly_beam
   name: Saintly Beam
   number: 86
@@ -1831,6 +2068,8 @@
     Potency increases to 500 when used against undead enemies.
   notes: |
     A decent list of vulnerable enemies can be found [here](https://finalfantasy.fandom.com/wiki/Final_Fantasy_XIV_enemies/Ashkin).
+  target:
+    - enemy
 - id: feculent_flood
   name: Feculent Flood
   number: 87
@@ -1849,6 +2088,8 @@
     The Mudman (A Rank) / Il Mheg
   description: |
     Deals earth damage to all enemies in a straight line before you with a potency of 220 for the first enemy, and 50% less for all remaining enemies.
+  target:
+    - enemy
 - id: angels_snack
   name: Angel's Snack
   number: 88
@@ -1911,6 +2152,9 @@
     Potency increases to 1,000 when you are under the effect of {{< yellow "Aetheric Mimicry: Tank" >}}.
 
     Can only be executed when under the effect of {{< yellow "Auspicious Trance" >}}.
+  target:
+    - enemy
+    - ally
 - id: the_rose_of_destruction
   name: The Rose Of Destruction
   number: 90
@@ -1930,6 +2174,8 @@
     {{< green "Additional Effect:" >}} 10-yalm knockback
 
     Shares a recast timer with {{< orange "Chelonian Gate" >}} and {{< orange "Ruby Dynamics" >}}.
+  target:
+    - enemy
 - id: basic_instinct
   name: Basic Instinct
   number: 91
@@ -1948,6 +2194,8 @@
     Increases movement speed by 30%, and healing magic potency and damage dealt by 100%. Also ignores the damage penalty inflicted by {{< orange "Mighty Guard" >}}.
 
     Can only be used in duties intended for two or more players while playing alone, while no other party members are in the instance, or when all party members are incapacitated. Effect ends when joined by one or more party members.
+  target:
+    - ally
 - id: ultravibration
   name: Ultravibration
   number: 92
@@ -1965,6 +2213,10 @@
     KOs all nearby enemies afflicted with {{< yellow "Deep Freeze" >}} or {{< yellow "Petrification" >}}. Has no effect on enemies whose level is higher than your own, and certain others.
 
     Shares a recast timer with {{< orange "Level 5 Death" >}}.
+  target:
+    - enemy
+  status:
+    - death
 - id: blaze
   name: Blaze
   number: 93
@@ -1982,6 +2234,8 @@
     Alte Roite / Deltascape V1.0
   description: |
     Deals ice damage to target and all enemies nearby it with a potency of 220 for the first enemy, and 50% less for all remaining enemies.
+  target:
+    - enemy
 - id: mustard_bomb
   name: Mustard Bomb
   number: 94
@@ -2005,6 +2259,8 @@
     {{< green "Potency: " >}}50
 
     {{< green "Duration: " >}}15s
+  target:
+    - enemy
 - id: dragon_force
   name: Dragon Force
   number: 95
@@ -2025,6 +2281,8 @@
     Increases damage reduction to 40% when you are under the effect of {{< yellow "Aetheric Mimicry: Tank" >}}.
 
     Shares a recast timer with {{< orange "Angel's Snack" >}} and {{< orange "Matra Magic" >}}.
+  target:
+    - ally
 - id: aetherial_spark
   name: Aetherial Spark
   number: 96
@@ -2049,6 +2307,8 @@
     {{< green "Potency:" >}} 50
 
     {{< green "Duration:" >}} 15s
+  target:
+    - enemy
 - id: hydro_pull
   name: Hydro Pull
   number: 97
@@ -2066,6 +2326,8 @@
     Deals water damage to all nearby enemies with a potency of 220 for the first enemy, and 50% less for all remaining enemies.
 
     {{< green "Additional Effect: " >}}Draw-in</span>
+  target:
+    - enemy
 - id: malediction_of_water
   name: Malediction Of Water
   number: 98
@@ -2085,6 +2347,9 @@
     {{< green "Additional Effect: " >}}10-yalm knockback to all enemies and party members in range
 
     Cannot be used outside of combat or when target is suffering from certain enfeeblements.
+  target:
+    - enemy
+    - ally
 - id: choco_meteor
   name: Choco Meteor
   number: 99
@@ -2105,6 +2370,8 @@
     Potency increases to 300 when partied with your personal chocobo.
   notes: |
     This is our best spell in the overworld (outside of duties), but only does 200 potency inside duties.
+  target:
+    - enemy
 - id: matra_magic
   name: Matra Magic
   number: 100
@@ -2124,6 +2391,8 @@
     Potency is increased to 100 when you are under the effect of {{< yellow "Aetheric Mimicry: DPS" >}}.
 
     Shares a recast timer with {{< orange "Angel's Snack" >}} and {{< orange "Dragon Force" >}}.
+  target:
+    - enemy
 - id: peripheral_synthesis
   name: Peripheral Synthesis
   number: 101
@@ -2148,6 +2417,10 @@
     {{< green "Duration: " >}}5s
 
     Repeated use of this action in a short period will reduce the additional effect's duration, eventually rendering targets immune to {{< yellow "Lightheaded" >}}.
+  target:
+    - enemy
+  status:
+    - stun
 - id: both_ends
   name: Both Ends
   number: 102
@@ -2165,6 +2438,8 @@
     Deals physical damage with a potency of 600 to all nearby enemies.
 
     Shares a recast timer with {{< orange "Nightbloom" >}}.
+  target:
+    - enemy
 - id: phantom_flurry
   name: Phantom Flurry
   number: 103
@@ -2186,6 +2461,8 @@
     Executing {{< orange "Phantom Flurry" >}} again before its effect expires deals physical damage to all enemies in a cone before you with a potency of 600 for the first enemy, and 50% less for all remaining enemies.
 
     Effect ends upon using an action other than {{< orange "Phantom Flurry" >}} or moving (including facing a different direction).
+  target:
+    - enemy
 - id: nightbloom
   name: Nightbloom
   number: 104
@@ -2209,6 +2486,8 @@
     {{< green "Duration: " >}}60s
 
     Shares a recast timer with {{< orange "Both Ends" >}}.
+  target:
+    - enemy
 - id: goblin_punch
   name: Goblin Punch
   number: 105
@@ -2230,6 +2509,8 @@
     Potency is increased to 220 when you are under the effect of {{< yellow "Mighty Guard" >}}.
 
     320 when executed in front of a target while you are under the effect of {{< yellow "Mighty Guard" >}}.
+  target:
+    - enemy
 - id: right_round
   name: Right Round
   number: 106
@@ -2249,6 +2530,9 @@
     {{< green "Additional Effect:" >}} 10-yalm knockback to all enemies and party members in range
 
     Cannot be used outside of combat or when target is suffering from certain enfeeblements.
+  target:
+    - enemy
+    - ally
 - id: schiltron
   name: Schiltron
   number: 107
@@ -2271,6 +2555,8 @@
     Potency is increased to 100 when you are under the effect of {{< yellow "Aetheric Mimicry: Tank" >}}.
 
     Effect cannot be stacked with {{< yellow "Veil of the Whorl" >}} or {{< yellow "Ice Spikes" >}}.
+  target:
+    - ally
 - id: rehydration
   name: Rehydration
   number: 108
@@ -2287,6 +2573,8 @@
     Restores own HP.
 
     {{< green "Cure Potency:" >}} 600
+  target:
+    - ally
 - id: breath_of_magic
   name: Breath of Magic
   number: 109
@@ -2307,6 +2595,8 @@
     {{< green "Duration: " >}}60s
 
     Only one effect inflicted by this action can be active at a time.
+  target:
+    - enemy
 - id: wild_rage
   name: Wild Rage
   number: 110
@@ -2326,6 +2616,8 @@
     Consumes 50% of your maximum HP when executed.
   notes: |
     Two casts of this from full health will put you into Revenge Blast range
+  target:
+    - enemy
 - id: peat_pelt
   name: Peat Pelt
   number: 111
@@ -2350,6 +2642,8 @@
     {{< green "Potency:" >}} 10
 
     {{< green "Duration:" >}} 9s
+  target:
+    - enemy
 - id: deep_clean
   name: Deep Clean
   number: 112
@@ -2380,6 +2674,9 @@
     {{< green "Duration:" >}} 15s
 
     Additional stacks of {{< yellow "Spick-and-span" >}} accumulated while the effect is active will not affect duration.
+  target:
+    - enemy
+    - ally
 - id: ruby_dynamics
   name: Ruby Dynamics
   number: 113
@@ -2397,6 +2694,8 @@
     Deals physical damage with a potency of 220 to all enemies before you.
 
     Shares a recast timer with {{< orange "Chelonian Gate" >}} and {{< orange "The Rose of Destruction" >}}.
+  target:
+    - enemy
 - id: divination_rune
   name: Divination Rune
   number: 114
@@ -2414,6 +2713,9 @@
     Deals unaspected damage with a potency of 100 to all enemies in a cone before you.
 
     {{< green "Additional Effect:" >}} Restores MP
+  target:
+    - enemy
+    - ally
 - id: dimensional_shift
   name: Dimensional Shift
   number: 115
@@ -2431,6 +2733,10 @@
     Delivers an attack to all nearby enemies dealing damage equal to 30% of their current HP.
 
     Has no effect on enemies whose level is higher than your own.
+  target:
+    - enemy
+  status:
+    - death
 - id: conviction_marcato
   name: Conviction Marcato
   number: 116
@@ -2449,6 +2755,8 @@
     Deals unaspected damage to all enemies in a straight line before you with a potency of 220 for the first enemy, and 50% less for all remaining enemies.
 
     Potency is increased to 440 when you are under the effect of {{< yellow "Winged Redemption" >}}.
+  target:
+    - enemy
 - id: force_field
   name: Force Field
   number: 117
@@ -2471,6 +2779,8 @@
     {{< green "Magic Vulnerability Down Effect:" >}} Reduces magic damage taken by 50%
 
     This action does not share a recast timer with any other actions.
+  target:
+    - ally
 - id: winged_reprobation
   name: Winged Reprobation
   number: 118
@@ -2501,6 +2811,8 @@
     {{< green "Duration:" >}} 10s
 
     This action does not share a recast timer with any other actions.
+  target:
+    - enemy
 - id: laser_eye
   name: Laser Eye
   number: 119
@@ -2520,6 +2832,8 @@
     Deals unaspected damage to target and all enemies nearby it with a potency of 220 for the first enemy, and 50% less for all remaining enemies.
 
     {{< green "Additional Effect:" >}} 5-yalm knockback to all enemies within 8 yalms of target
+  target:
+    - enemy
 - id: candy_cane
   name: Candy Cane
   number: 120
@@ -2544,6 +2858,9 @@
     {{< green "Additional Effect:" >}} Restores 10% of maximum MP
 
     Shares a recast timer with {{< orange "Magic Hammer" >}}.
+  target:
+    - enemy
+    - ally
 - id: mortal_flame
   name: Mortal Flame
   number: 121
@@ -2565,6 +2882,8 @@
     Has no effect on targets outside of combat.
 
     Effect ends upon target leaving combat.
+  target:
+    - enemy
 - id: sea_shanty
   name: Sea Shanty
   number: 122
@@ -2582,6 +2901,8 @@
     Deals water damage with a potency of 500 to all nearby enemies.
 
     {{< green "Additional Effect:" >}} Potency increases to 1,000 during rain, showers, and thunderstorms
+  target:
+    - enemy
 - id: apokalypsis
   name: Apokalypsis
   number: 123
@@ -2605,6 +2926,8 @@
     Effect ends upon using another action or moving (including facing a different direction).
 
     Shares a recast timer with {{< orange "Being Mortal" >}}.
+  target:
+    - enemy
 - id: being_mortal
   name: Being Mortal
   number: 124
@@ -2622,3 +2945,5 @@
     Deals unaspected damage to all nearby enemies with a potency of 800 for the first enemy, and 50% less for all remaining enemies.
 
     Shares a recast timer with {{< orange "Apokalypsis" >}}.
+  target:
+    - enemy

@@ -22,7 +22,11 @@ function getFilters(): Map<string, Set<string>> {
 function matchesFilters(
   spell: HTMLElement,
   filters: Map<string, Set<string>>,
+  nameQuery: string,
 ): boolean {
+  if (nameQuery && !(spell.dataset.spellName ?? '').toLowerCase().includes(nameQuery))
+    return false
+
   const typeF = filters.get('type')!
   if (typeF.size > 0 && !typeF.has(spell.dataset.spellType ?? '')) return false
 
@@ -34,15 +38,25 @@ function matchesFilters(
   if (rankF.size > 0 && !rankF.has(spell.dataset.spellRank ?? '')) return false
 
   const targetF = filters.get('target')!
-  if (targetF.size > 0 && !targetF.has(spell.dataset.spellTarget ?? ''))
-    return false
+  if (targetF.size > 0) {
+    const targets = (spell.dataset.spellTarget ?? '').split(' ').filter(Boolean)
+    if (!targets.some((t) => targetF.has(t))) return false
+  }
 
+  // Some filter categories group multiple internal tags (e.g. petrification
+  // covers both "petrification" and "freeze").
+  const STATUS_GROUPS: Record<string, string[]> = {
+    petrification: ['petrification', 'freeze'],
+  }
   const statusF = filters.get('status')!
   if (statusF.size > 0) {
-    const statuses = (spell.dataset.spellStatus ?? '')
-      .split(' ')
-      .filter(Boolean)
-    if (!statuses.some((s) => statusF.has(s))) return false
+    const statuses = (spell.dataset.spellStatus ?? '').split(' ').filter(Boolean)
+    const expanded = new Set<string>()
+    for (const s of statusF) {
+      expanded.add(s)
+      STATUS_GROUPS[s]?.forEach((alias) => expanded.add(alias))
+    }
+    if (!statuses.some((s) => expanded.has(s))) return false
   }
 
   return true
@@ -77,13 +91,18 @@ let totalPages = 1
 
 function applyFilters() {
   const filters = getFilters()
+  const nameQuery = (
+    document.querySelector<HTMLInputElement>('.spellbook-filter-search')?.value ?? ''
+  )
+    .toLowerCase()
+    .trim()
   const realSpells = document.querySelectorAll<HTMLElement>(
     '.spellbook-spell[data-spell-number]',
   )
 
   let count = 0
   for (const spell of realSpells) {
-    if (matchesFilters(spell, filters)) {
+    if (matchesFilters(spell, filters, nameQuery)) {
       spell.dataset.pageNumber = String(Math.ceil(++count / PAGE_SIZE))
     } else {
       spell.dataset.pageNumber = '0'
@@ -105,6 +124,10 @@ ready(function () {
       '.spellbook-filters input[type="checkbox"]',
     )
     .forEach((cb) => cb.addEventListener('change', applyFilters))
+
+  document
+    .querySelector<HTMLInputElement>('.spellbook-filter-search')
+    ?.addEventListener('input', applyFilters)
 
   applyFilters()
 })

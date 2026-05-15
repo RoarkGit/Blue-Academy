@@ -125,6 +125,20 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
   cursor: pointer;
 }
 
+.spellbook-filter-search {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 3px;
+  color: inherit;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.4rem;
+  width: 100%;
+  &:focus {
+    outline: 2px solid rgba(110, 160, 222, 0.8);
+    border-color: transparent;
+  }
+}
+
 .spellbook-filter-status-icons {
   display: flex;
   flex-wrap: wrap;

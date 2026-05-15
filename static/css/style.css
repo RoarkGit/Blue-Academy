@@ -333,6 +333,7 @@ dd {
 
 .spellbook-wrapper {
   width: calc(48px * 4 + var(--spellbook-gap) * 8);
+  align-self: center;
 }
 
 .spellbook-wrapper-page-labels {

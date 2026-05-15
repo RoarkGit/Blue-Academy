@@ -33,8 +33,8 @@
         data-spell-type="{{ $type }}"
         data-spell-aspect="{{ $aspect }}"
         data-spell-rank="{{ $spellData.rank }}"
-        data-spell-target=""
-        data-spell-status=""
+        data-spell-target="{{ delimit ($spellData.target | default slice) " " }}"
+        data-spell-status="{{ delimit ($spellData.status | default slice) " " }}"
         data-page-number="{{ math.Ceil (div $spellData.number 16.0) }}"
         hidden>
         {{- $image := (printf "/images/tooltips/%s.png" $spellData.id) | resources.Get }}
@@ -48,6 +48,8 @@
 </div>
 <div class="spellbook-filters ffxiv-ui-background">
   <div class="spellbook-filter-header">Select Filters</div>
+  <div class="spellbook-filter-group-label">Name</div>
+  <input type="text" class="spellbook-filter-search" placeholder="Search…">
   <div class="spellbook-filter-group-label">Type</div>
   <div class="spellbook-filter-options spellbook-filter-options--column">
     <label><input type="checkbox" data-filter="type" value="magic"> Magical</label>
@@ -80,10 +82,21 @@
   </div>
   <div class="spellbook-filter-group-label">Status Inflicted</div>
   <div class="spellbook-filter-status-icons">
-    {{- range slice "slow" "petrify" "paralysis" "silence" "blind" "heavy" "stun" "sleep" "bind" "death" -}}
-      <label class="spellbook-filter-status-icon" title="{{ . | title }}">
-        <input type="checkbox" data-filter="status" value="{{ . }}">
-        <img src="/images/status/{{ . }}.png" alt="{{ . | title }}">
+    {{- range slice
+      (dict "value" "slow"          "label" "Slow")
+      (dict "value" "petrification" "label" "Petrification/Freeze")
+      (dict "value" "paralysis"     "label" "Paralysis")
+      (dict "value" "interruption"  "label" "Interruption")
+      (dict "value" "blind"         "label" "Blind")
+      (dict "value" "heavy"         "label" "Heavy")
+      (dict "value" "stun"          "label" "Stun")
+      (dict "value" "sleep"         "label" "Sleep")
+      (dict "value" "bind"          "label" "Bind")
+      (dict "value" "death"         "label" "Flat Damage/Death")
+    -}}
+      <label class="spellbook-filter-status-icon" title="{{ .label }}">
+        <input type="checkbox" data-filter="status" value="{{ .value }}">
+        <img src="/images/status/{{ .value }}.png" alt="{{ .label }}">
       </label>
     {{- end -}}
   </div>
