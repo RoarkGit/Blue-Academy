@@ -6,6 +6,7 @@
     --MAIN-TITLES-H1-color: rgb( 204, 204, 255, 1 ); /* text color of h1 titles */
     --MAIN-LINK-color: rgba( 110, 160, 222 ); /* Color of links */
     --MAIN-LINK-HOVER-color: rgba( 84, 135, 196, 1 ); /* Color of hovered links */
+    --BOX-LINK-color: rgba( 30, 90, 180, 1 ); /* Color of links on light box backgrounds */
     --MAIN-BG-color: rgba( 54, 57, 69, 1 ); /* color of text by default */
     --MAIN-WIDTH-MAX: 100rem;
 

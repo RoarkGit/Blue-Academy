@@ -505,3 +505,14 @@ dd {
   white-space: pre;
   display: inline-block;
 }
+
+.box.notices .box-content a,
+.box.notices .box-content .tooltip-link,
+.box.notices .box-content .box-label,
+.box.notices .box-content .box.expand.cstyle.transparent > .box-label {
+  color: var(--BOX-LINK-color);
+}
+
+.box.notices .box-content li::marker {
+  color: var(--BOX-TEXT-color);
+}
