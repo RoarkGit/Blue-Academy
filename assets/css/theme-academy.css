@@ -353,3 +353,245 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
 .fsc-disclaimer {
   margin: 0;
 }
+
+/* Spell List Filters */
+.spell-list-container {
+  position: relative;
+}
+
+.spell-list-filter-button {
+  background: linear-gradient(
+    to bottom,
+    rgba(210, 215, 230, 0.9) 0%,
+    rgba(150, 155, 175, 0.56) 55%,
+    rgba(100, 105, 130, 0.8) 100%
+  );
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  color: inherit;
+  cursor: pointer;
+  font-family: var(--MAIN-font);
+  font-size: 0.85rem;
+  font-weight: 400;
+  padding: 0.35rem 0.75rem;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.45);
+  margin-bottom: 0.75rem;
+  &:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(230, 235, 250, 1.0) 0%,
+      rgba(170, 175, 195, 0.76) 55%,
+      rgba(120, 125, 150, 1.0) 100%
+    );
+  }
+}
+
+.spell-list-filter-badge {
+  display: inline-block;
+  background: rgba(110, 160, 222, 0.8);
+  border-radius: 50%;
+  min-width: 1.2rem;
+  height: 1.2rem;
+  text-align: center;
+  line-height: 1.2rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-left: 0.35rem;
+}
+
+.spell-list-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 150;
+  &[hidden] {
+    display: none;
+  }
+}
+
+.spell-list-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(360px, 90vw);
+  padding: 1rem;
+  overflow-y: auto;
+  z-index: 151;
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+  border-left: solid 1px #fff;
+  &[hidden] {
+    display: none;
+  }
+  &:not([hidden]) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: 0.4rem 0.75rem;
+  }
+}
+
+.spell-list-filter-header {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+.spell-list-drawer-close {
+  background: linear-gradient(
+    to bottom,
+    rgba(210, 215, 230, 0.9) 0%,
+    rgba(150, 155, 175, 0.56) 55%,
+    rgba(100, 105, 130, 0.8) 100%
+  );
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  color: inherit;
+  cursor: pointer;
+  font-family: var(--MAIN-font);
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0.15rem 0.5rem;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.45);
+  &:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(230, 235, 250, 1.0) 0%,
+      rgba(170, 175, 195, 0.76) 55%,
+      rgba(120, 125, 150, 1.0) 100%
+    );
+  }
+}
+
+.spell-list-filter-group-label {
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding-top: 0.15rem;
+  white-space: nowrap;
+}
+
+.spell-list-filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-left: 3px;
+}
+
+.spell-list-filter-options--column {
+  flex-direction: column;
+}
+
+.spell-list-filter-options--row {
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.spell-list-filter-options--grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 0 1rem;
+  align-items: center;
+}
+
+.spell-list-filter-span3 {
+  grid-column: 1 / -1;
+}
+
+.spell-list-filter-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.spell-list-filter-options input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.spell-list-filter-search {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 3px;
+  color: inherit;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.4rem;
+  width: 100%;
+  grid-column: 1 / -1;
+  &:focus {
+    outline: 2px solid rgba(110, 160, 222, 0.8);
+    border-color: transparent;
+  }
+}
+
+.spell-list-filter-status-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+  grid-column: 1 / -1;
+}
+
+.spell-list-filter-status-icon {
+  display: block;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.15s;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.spell-list-filter-status-icon input {
+  display: none;
+}
+
+.spell-list-filter-status-icon img {
+  display: block;
+  width: 24px;
+  height: auto;
+}
+
+.spell-list-filter-status-icon:has(input:checked) {
+  outline: 2px solid rgba(110, 160, 222, 0.8);
+  background: rgba(110, 160, 222, 0.2);
+}
+
+.spell-list-filter-reset {
+  background: linear-gradient(
+    to bottom,
+    rgba(210, 215, 230, 0.9) 0%,
+    rgba(150, 155, 175, 0.56) 55%,
+    rgba(100, 105, 130, 0.8) 100%
+  );
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  color: inherit;
+  cursor: pointer;
+  font-family: var(--MAIN-font);
+  font-size: 0.75rem;
+  font-weight: 400;
+  padding: 0.15rem 0.6rem;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.45);
+  &:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(230, 235, 250, 1.0) 0%,
+      rgba(170, 175, 195, 0.76) 55%,
+      rgba(120, 125, 150, 1.0) 100%
+    );
+  }
+}

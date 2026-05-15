@@ -1,24 +1,101 @@
-<table class="spell-list">
-  <tr>
-    <th>No.</th>
-    <th>Name</th>
-    <th>Rank</th>
-    <th>Location</th>
-    <th>Notes</th>
-  </tr>
-  {{- range $.Site.Data.spell -}}
-    {{- $imagePath := (printf "/images/spell/%s.png" .id) }}
+{{- $spellList := resources.Get "/ts/spell-list.ts" | js.Build (dict "targetPath" "/js/spell-list.js") -}}
+<script defer src="{{ $spellList.RelPermalink }}"></script>
+
+<div class="spell-list-container">
+  <button class="spell-list-filter-button" type="button" aria-label="Open filters">Filters <span class="spell-list-filter-badge" hidden>0</span></button>
+
+  <table class="spell-list">
     <tr>
-      <td class="spell-list-number-cell">{{ .number }}</td>
-      <td class="spell-list-nowrap-cell">
-        {{ partial "tooltip-link" (dict "context" . "id" .id "type" "spell") }}
-      </td>
-      <td>{{- strings.Repeat .rank "★" -}}</td>
-      <td class="spell-list-nowrap-cell">{{ .location | markdownify }}</td>
-      <td>{{ .notes | markdownify }}</td>
+      <th>No.</th>
+      <th>Name</th>
+      <th>Rank</th>
+      <th>Location</th>
+      <th>Notes</th>
     </tr>
-  {{- end -}}
-</table>
+    {{- range $.Site.Data.spell -}}
+      {{- $type := "magic" -}}
+      {{- $aspect := "none" -}}
+      {{- if eq .spellType "Physical" -}}
+        {{- $parts := split .spellAspect "/" -}}
+        {{- $type = lower (index $parts 0) -}}
+        {{- if gt (len $parts) 1 -}}
+          {{- $aspect = lower (index $parts (sub (len $parts) 1)) -}}
+        {{- end -}}
+      {{- else -}}
+        {{- if ne .spellAspect "Unaspected" -}}
+          {{- $aspect = lower .spellAspect -}}
+        {{- end -}}
+      {{- end -}}
+      {{- $imagePath := (printf "/images/spell/%s.png" .id) }}
+      <tr class="spell-list-row" data-spell-type="{{ $type }}" data-spell-aspect="{{ $aspect }}" data-spell-rank="{{ .rank }}" data-spell-target="{{ delimit (.target | default slice) " " }}" data-spell-status="{{ delimit (.status | default slice) " " }}" data-spell-name="{{ .name }}">
+        <td class="spell-list-number-cell">{{ .number }}</td>
+        <td class="spell-list-nowrap-cell">
+          {{ partial "tooltip-link" (dict "context" . "id" .id "type" "spell") }}
+        </td>
+        <td>{{- strings.Repeat .rank "★" -}}</td>
+        <td class="spell-list-nowrap-cell">{{ .location | markdownify }}</td>
+        <td>{{ .notes | markdownify }}</td>
+      </tr>
+    {{- end -}}
+  </table>
+</div>
+
+<div class="spell-list-drawer-overlay" hidden></div>
+<div class="spell-list-drawer ffxiv-ui-background" hidden>
+  <div class="spell-list-filter-header">Filters<button class="spell-list-filter-reset" type="button">Reset</button><button class="spell-list-drawer-close" type="button" aria-label="Close filters">✕</button></div>
+  <div class="spell-list-filter-group-label">Name</div>
+  <input type="text" class="spell-list-filter-search" placeholder="Search…">
+  <div class="spell-list-filter-group-label">Type</div>
+  <div class="spell-list-filter-options spell-list-filter-options--column">
+    <label><input type="checkbox" data-filter="type" value="magic"> Magical</label>
+    <label><input type="checkbox" data-filter="type" value="slashing"> Slashing</label>
+    <label><input type="checkbox" data-filter="type" value="piercing"> Piercing</label>
+    <label><input type="checkbox" data-filter="type" value="blunt"> Blunt</label>
+  </div>
+  <div class="spell-list-filter-group-label">Aspect</div>
+  <div class="spell-list-filter-options spell-list-filter-options--grid3">
+    <label><input type="checkbox" data-filter="aspect" value="fire"> Fire</label>
+    <label><input type="checkbox" data-filter="aspect" value="ice"> Ice</label>
+    <label><input type="checkbox" data-filter="aspect" value="wind"> Wind</label>
+    <label><input type="checkbox" data-filter="aspect" value="earth"> Earth</label>
+    <label><input type="checkbox" data-filter="aspect" value="lightning"> Lightning</label>
+    <label><input type="checkbox" data-filter="aspect" value="water"> Water</label>
+    <label class="spell-list-filter-span3"><input type="checkbox" data-filter="aspect" value="none"> None</label>
+  </div>
+  <div class="spell-list-filter-group-label">Rank</div>
+  <div class="spell-list-filter-options spell-list-filter-options--grid3">
+    <label><input type="checkbox" data-filter="rank" value="1"> ★</label>
+    <label><input type="checkbox" data-filter="rank" value="2"> ★★</label>
+    <label><input type="checkbox" data-filter="rank" value="3"> ★★★</label>
+    <label><input type="checkbox" data-filter="rank" value="4"> ★★★★</label>
+    <label><input type="checkbox" data-filter="rank" value="5"> ★★★★★</label>
+  </div>
+  <div class="spell-list-filter-group-label">Target</div>
+  <div class="spell-list-filter-options spell-list-filter-options--row">
+    <label><input type="checkbox" data-filter="target" value="enemy"> Enemy</label>
+    <label><input type="checkbox" data-filter="target" value="ally"> Ally</label>
+  </div>
+  <div class="spell-list-filter-group-label">Status Inflicted</div>
+  <div class="spell-list-filter-status-icons">
+    {{- range slice
+      (dict "value" "slow"          "label" "Slow")
+      (dict "value" "petrification" "label" "Petrification/Freeze")
+      (dict "value" "paralysis"     "label" "Paralysis")
+      (dict "value" "interruption"  "label" "Interruption")
+      (dict "value" "blind"         "label" "Blind")
+      (dict "value" "heavy"         "label" "Heavy")
+      (dict "value" "stun"          "label" "Stun")
+      (dict "value" "sleep"         "label" "Sleep")
+      (dict "value" "bind"          "label" "Bind")
+      (dict "value" "death"         "label" "Flat Damage/Death")
+    -}}
+      <label class="spell-list-filter-status-icon" title="{{ .label }}">
+        <input type="checkbox" data-filter="status" value="{{ .value }}">
+        <img src="/images/status/{{ .value }}.png" alt="{{ .label }}">
+      </label>
+    {{- end -}}
+  </div>
+</div>
 
 {{- range $.Site.Data.spell -}}
   {{- partial "tooltip.html" (dict "context" . "id" .id "type" "spell") }}
