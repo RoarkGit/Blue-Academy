@@ -8,7 +8,8 @@
   --MENU-L-width: 22rem;
 }
 </style>
-<script defer data-domain="mage.blue" src="https://stats.mage.blue/js/script.outbound-links.tagged-events.js"></script>
+{{- $plausible := resources.Get "ts/plausible-init.ts" | js.Build (dict "targetPath" "/js/plausible-init.js") -}}
+<script defer src="{{ $plausible.RelPermalink }}"></script>
 {{- $spellTooltips := resources.Get "/ts/spell-tooltips.ts" | js.Build (dict "targetPath" "/js/spell-tooltips.js") -}}
 <script defer src="{{ $spellTooltips.RelPermalink }}"></script>
 {{ with .Params.customCss -}}

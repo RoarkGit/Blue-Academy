@@ -19,6 +19,7 @@
     "wrangler": "^4.91.0"
   },
   "dependencies": {
+    "@plausible-analytics/tracker": "^0.4.5",
     "js-yaml": "^4.1.1",
     "upng-js": "^2.1.0"
   }
