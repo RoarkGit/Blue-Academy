@@ -57,7 +57,9 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
 .spellbook-outer {
   display: flex;
   align-items: stretch;
-  gap: 1rem;
+  gap: 0.35rem;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .spellbook-filters {

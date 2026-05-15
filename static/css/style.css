@@ -332,7 +332,6 @@ dd {
 }
 
 .spellbook-wrapper {
-  margin: auto;
   width: calc(48px * 4 + var(--spellbook-gap) * 8);
 }
 
