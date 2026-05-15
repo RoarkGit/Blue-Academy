@@ -1,0 +1,13 @@
+{{- $id := .Get 0 | default (.Get "id") -}}
+{{- $width := .Get "width" | default "100%" -}}
+{{- if not $id }}
+  {{- errorf "The %q shortcode requires a video id. See %s" .Name .Position }}
+{{- end }}
+<div style="max-width: {{ $width }}; margin-left: auto; margin-right: auto;">
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe
+      style="height: 100%; width: 100%; position: absolute; top: 0; left: 0; border: 0;"
+      src="https://youtube.com/embed/{{ $id }}"
+      allowfullscreen></iframe>
+  </div>
+</div>

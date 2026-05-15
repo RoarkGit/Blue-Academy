@@ -3,6 +3,8 @@ title: Moon Flute Opener
 weight: 10
 ---
 
+{{< youtube id="O3zJ7kHahLA" width="50%" >}}
+
 ## What is a Moon Flute Opener?
 
 Most jobs have what is called a "burst window," where most of your high potency
@@ -43,7 +45,7 @@ before your next Moon Flute opener).
 ##### What do I do if I can't fit everything into Moon Flute?
 
 The DOT opener requires a faster GCD than the Winged Reprobation opener. Players
-can complete the DOT opener with a GCD as high as 2.20 and the WInged
+can complete the DOT opener with a GCD as high as 2.20 and the Winged
 Reprobation opener with a GCD as high as 2.50 (no SpS). That being said, both
 openers will be highly ping and skill dependent.
 
@@ -74,7 +76,8 @@ the opener is so tight.
 
 There are three variations of the Moon Flute Opener but they all are pretty
 nearly identical. In a group of eight you will want one person doing each of the
-DOT openers and everyone else will do the Winged Reprobation opener.
+DOT openers (DOT stands for "damage over time") and everyone else will do the
+Winged Reprobation opener.
 
 ### Winged Reprobation Opener
 

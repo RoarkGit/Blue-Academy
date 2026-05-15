@@ -12,12 +12,7 @@
     {{ partial "heading-post.html" . }}
 
     {{ partial "youtube-embed.html" (dict "id" page.Params.youtube) }}
-    <h2>Note</h2>
-    <p>
-      This guide assumes that you have read the
-      <a href="/masked-carnivale/basics">Basics & Spell Recommendations</a>
-      page and have the baseline spells recommended there.
-    </p>
+    {{ partial "shortcodes/notice.html" (dict "page" $page "style" "info" "content" "<p>This guide assumes that you have read the <a href=\"/masked-carnivale/basics\">Basics &amp; Spell Recommendations</a> page and have the baseline spells recommended there.</p>") }}
     {{ $content | safeHTML }}
     <footer class="footline">
       {{- partial "content-footer.html" . }}
