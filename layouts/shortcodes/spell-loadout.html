@@ -1,3 +1,8 @@
+{{- if not (page.Store.Get "spellLoadoutScriptIncluded") -}}
+  {{- page.Store.Set "spellLoadoutScriptIncluded" true -}}
+  {{- $script := resources.Get "/ts/spell-loadout.ts" | js.Build (dict "targetPath" "/js/spell-loadout.js") -}}
+  <script defer src="{{ $script.RelPermalink }}"></script>
+{{- end -}}
 {{- $numRemaining := 24 -}}
 {{- $loadoutStr := "" -}}
 {{- $encoded := "" -}}
