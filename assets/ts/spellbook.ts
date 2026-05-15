@@ -89,6 +89,15 @@ function rebuildLabels(numPages: number) {
 
 let totalPages = 1
 
+function updateLabelStates(activePages: number) {
+  for (const label of document.querySelectorAll<HTMLElement>(
+    '.spellbook-wrapper-page-label',
+  )) {
+    const page = Number(label.dataset.pageNumber ?? '0')
+    label.classList.toggle('spellbook-wrapper-page-label--empty', page > activePages)
+  }
+}
+
 function applyFilters() {
   const filters = getFilters()
   const nameQuery = (
@@ -109,6 +118,7 @@ function applyFilters() {
     }
   }
 
+  updateLabelStates(Math.max(1, Math.ceil(count / PAGE_SIZE)))
   goToPage('1')
 }
 
@@ -128,6 +138,17 @@ ready(function () {
   document
     .querySelector<HTMLInputElement>('.spellbook-filter-search')
     ?.addEventListener('input', applyFilters)
+
+  document.querySelector('.spellbook-filter-reset')?.addEventListener('click', () => {
+    for (const cb of document.querySelectorAll<HTMLInputElement>(
+      '.spellbook-filters input[type="checkbox"]',
+    )) {
+      cb.checked = false
+    }
+    const search = document.querySelector<HTMLInputElement>('.spellbook-filter-search')
+    if (search) search.value = ''
+    applyFilters()
+  })
 
   applyFilters()
 })

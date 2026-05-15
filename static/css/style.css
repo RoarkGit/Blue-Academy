@@ -334,6 +334,7 @@ dd {
 .spellbook-wrapper {
   width: calc(48px * 4 + var(--spellbook-gap) * 8);
   align-self: center;
+  overflow: hidden;
 }
 
 .spellbook-wrapper-page-labels {
@@ -347,13 +348,16 @@ dd {
   cursor: pointer;
   margin-bottom: 0;
   border: solid 1px #fff;
-  border-radius: 5px 5px 0 0;
   background: color-mix(in srgb, var(--MENU-SECTIONS-BG-color) 60%, transparent);
   padding: 0 0.5rem;
   text-align: center;
   &.spellbook-wrapper-page-label--active {
     background: transparent;
     border-bottom: none;
+  }
+  &.spellbook-wrapper-page-label--empty {
+    opacity: 0.35;
+    pointer-events: none;
   }
 }
 
