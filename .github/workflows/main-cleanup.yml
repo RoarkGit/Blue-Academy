@@ -47,18 +47,33 @@ jobs:
           echo "Found $count production deployments, keeping newest $KEEP"
 
           # Get the currently active deployment
-          active_id=$(curl -s \
+          project_info=$(curl -s \
             -H "Authorization: Bearer $CF_API_TOKEN" \
-            "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$CF_PROJECT" | \
-            jq -r '.result.deployment_configs.production.deployment_id // empty')
-          echo "Active production deployment: $active_id"
+            "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$CF_PROJECT")
 
-          # Sort by creation date (newest first) and exclude the active deployment
-          to_delete=$(echo "$all_deployments" | \
-            sort -t'|' -k2 -r | \
-            awk -F'|' -v keep="$KEEP" -v active="$active_id" \
-            'NR > keep && $1 != active { print $1 }' | \
-            head -n "$((count - KEEP))")
+          if [ "$(echo "$project_info" | jq -r '.success')" != "true" ]; then
+            echo "WARNING: Could not fetch project info, being conservative with deletions"
+            active_id=""
+          else
+            active_id=$(echo "$project_info" | jq -r '.result.deployment_configs.production.deployment_id // empty')
+          fi
+
+          if [ -z "$active_id" ]; then
+            echo "WARNING: Could not determine active deployment ID, will only keep newest $KEEP deployments"
+            # Without knowing the active deployment, only keep the KEEP newest ones
+            to_delete=$(echo "$all_deployments" | \
+              sort -t'|' -k2 -r | \
+              awk -F'|' -v keep="$KEEP" \
+              'NR > keep { print $1 }')
+          else
+            echo "Active production deployment: $active_id"
+            # Sort by creation date (newest first) and exclude the active deployment
+            to_delete=$(echo "$all_deployments" | \
+              sort -t'|' -k2 -r | \
+              awk -F'|' -v keep="$KEEP" -v active="$active_id" \
+              'NR > keep && $1 != active { print $1 }' | \
+              head -n "$((count - KEEP))")
+          fi
 
           if [ -z "$to_delete" ]; then
             echo "Nothing to delete"
