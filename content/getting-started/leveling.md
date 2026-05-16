@@ -1,8 +1,9 @@
 ---
-title: 'Leveling'
+title: "Level Blue Mage to 90: Leveling Guide"
 date: 2026-05-16
 weight: 20
 patch: "7.5"
+description: "Blue Mage leveling guide: efficient paths to level 80, gear recommendations, and spell acquisition tips."
 ---
 
 Blue Mage starts at level 1 and has a maximum level of 80. The overall leveling

@@ -1,8 +1,9 @@
 ---
-title: Moon Flute Opener
+title: "Moon Flute Opener: Blue Mage Burst Rotation"
 date: 2026-05-16
 weight: 10
 patch: "7.5"
+description: "Blue Mage Moon Flute opener guide: rotation breakdown, positioning, timings, and damage optimization."
 ---
 
 {{< youtube id="O3zJ7kHahLA" width="50%" >}}

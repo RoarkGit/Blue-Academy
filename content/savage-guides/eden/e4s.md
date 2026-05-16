@@ -4,6 +4,7 @@ date: 2026-05-16
 weight: 1
 type: savage-guide
 patch: "7.5"
+description: "Eden Savage E4S guide: mechanics, strategy, spell recommendations, and positioning."
 ---
 
 ## Overview

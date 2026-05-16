@@ -1,0 +1,24 @@
+{{- $faqs := .Get "faqs" -}}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{- range $index, $faq := split $faqs "||" -}}
+    {{- $pair := split $faq "|" -}}
+    {{- if ge (len $pair) 2 -}}
+    {{- if gt $index 0 }},{{ end }}
+    {
+      "@type": "Question",
+      "name": "{{ trim (index $pair 0) }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ trim (index $pair 1) }}"
+      }
+    }
+    {{- end -}}
+    {{- end }}
+  ]
+}
+</script>

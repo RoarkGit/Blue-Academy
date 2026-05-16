@@ -1,8 +1,9 @@
 ---
-title: Solo Gameplay
+title: "Solo Blue Mage: Unsynced Farming Strategies"
 date: 2026-05-16
 weight: 50
 patch: "7.5"
+description: "Solo Blue Mage strategies: unsynced duties, soloing high-level content, and efficient spell farming."
 ---
 
 {{< youtube id="lzBuHUS9rEg" width="50%" >}}

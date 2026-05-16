@@ -1,8 +1,9 @@
 ---
-title: Healer Rotation & Loadouts
+title: Blue Mage Healer Guide & Build
 date: 2026-05-16
 weight: 30
 patch: "7.5"
+description: "Blue Mage healer guide: healing spell selection, dispel usage, party support, and recovery strategies."
 ---
 
 {{< youtube id="wjo4P5QrQ6c" width="50%" >}}

@@ -1,8 +1,9 @@
 ---
-title: DPS Rotation & Loadouts
+title: Blue Mage DPS Rotation & Loadouts
 date: 2026-05-16
 weight: 20
 patch: "7.5"
+description: "DPS rotation guide for Blue Mage: Moon Flute opener, two-minute loop, flex slots, and burst optimization."
 ---
 
 {{< youtube id="xG-ngi5FQX4" width="50%" >}}

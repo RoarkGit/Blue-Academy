@@ -1,7 +1,8 @@
 ---
-title: Credits
+title: Blue Academy Credits & Contributors
 date: 2026-05-16
 patch: "7.5"
+description: "Credits and acknowledgments for Blue Academy contributors and resources."
 ---
 
 ## Contributors
