@@ -69,13 +69,16 @@ function decodeLoadout(encoded: string): number[] {
 
 function updateSpellLoadoutLink() {
   const url = new URL(window.location.href)
-  url.searchParams.set('spell_loadout', encodeLoadout())
+  const encoded = encodeLoadout()
+  url.searchParams.set('spell_loadout', encoded)
   const urlString = url.toString()
   window.history.replaceState(null, '', urlString)
   const spellLoadoutBuilderLink = document.getElementById(
     'spell-loadout-builder-link',
   )
-  spellLoadoutBuilderLink?.setAttribute('href', urlString)
+  // Share link uses the short subdomain format
+  const shareUrl = `https://loadout.mage.blue/${encoded}`
+  spellLoadoutBuilderLink?.setAttribute('href', shareUrl)
 }
 
 function setSpell(spellLoadoutSpell: HTMLElement, spellbookSpell: HTMLElement) {
@@ -249,6 +252,21 @@ ready(function () {
     ?.addEventListener('click', () => {
       trackEvent('Loadout Shared')
     })
+
+  const copyButton = document.getElementById('copy-loadout-link')
+  if (copyButton) {
+    copyButton.addEventListener('click', async () => {
+      const encoded = encodeLoadout()
+      const shareUrl = `https://loadout.mage.blue/${encoded}`
+      await navigator.clipboard.writeText(shareUrl)
+      trackEvent('Loadout Link Copied')
+      const originalText = copyButton.textContent
+      copyButton.textContent = 'Copied!'
+      setTimeout(() => {
+        copyButton.textContent = originalText
+      }, 2000)
+    })
+  }
 
   const params = new URLSearchParams(window.location.search)
   const preload = params.get('spell_loadout')

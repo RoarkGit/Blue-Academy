@@ -15,7 +15,7 @@ There are two types of FATEs to think about. For **group FATEs**, the basic
 flow is to gather enemies with {{< spell hydro_pull >}}, freeze them with
 {{< spell the_rams_voice >}}, then finish them with death spells,
 {{< spell choco_meteor >}}, and AoE primal spells. For **boss FATEs**, use a
-Moon Flute opener. See the [Moon Flute Opener]({{< ref "moon-flute-opener" >}})
+Moon Flute opener. See the [Moon Flute Opener]({{% ref "moon-flute-opener" %}})
 page for details.
 
 ## Key Spells

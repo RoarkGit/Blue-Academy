@@ -6,7 +6,7 @@ weight: 20
 {{< youtube id="xG-ngi5FQX4" width="50%" >}}
 
 The bulk of DPS damage comes from the Moon Flute opener, covered in detail on
-the [Moon Flute Opener]({{< ref "moon-flute-opener" >}}) page. This page covers
+the [Moon Flute Opener]({{% ref "moon-flute-opener" %}}) page. This page covers
 the loadout, the two-minute filler loop, and how to handle the flex spell slots.
 
 {{< spell-loadout loadout="CQwnLC8_QEhNTlBRUlRaZGdodnp8AABt" >}}
@@ -44,7 +44,7 @@ Other candidates for open slots, in rough priority order:
 ## Rotation
 
 Moon Flute every two minutes is the default. See the
-[Moon Flute Opener]({{< ref "moon-flute-opener" >}}) page for the full opener
+[Moon Flute Opener]({{% ref "moon-flute-opener" %}}) page for the full opener
 sequence.
 
 Between openers, the priority is:
@@ -69,5 +69,5 @@ Drop the raid-buff spells and pick up a pack-clear kit:
 - {{< spell the_rams_voice >}} + {{< spell ultravibration >}} to wipe packs
 - {{< spell missile >}} for bosses; many dungeon bosses are vulnerable to
   instant-kill effects. You can find a full list in the
-  [Death Vulnerability Table]({{< ref "death-vulnerability" >}}).
+  [Death Vulnerability Table]({{% ref "death-vulnerability" %}}).
 

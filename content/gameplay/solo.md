@@ -36,7 +36,7 @@ tools worth using on larger pulls.
   {{< spell phantom_flurry >}}, and other big AoE spells to clear packs.
 - **Bosses:** Use {{< spell doom >}} to kill the boss instantly if it is
   vulnerable to death spells (see the
-  [Death Vulnerability Table]({{< ref "death-vulnerability" >}})). Otherwise,
+  [Death Vulnerability Table]({{% ref "death-vulnerability" %}}). Otherwise,
   use {{< spell goblin_punch >}} as your main GCD filler; with
   {{< spell mighty_guard >}} and {{< spell basic_instinct >}} active, it hits
   for an effective 640 potency per cast. Keep {{< spell breath_of_magic >}}
