@@ -1,5 +1,5 @@
 ---
-title: "Level Blue Mage to 90: Leveling Guide"
+title: "Level Blue Mage to 80: Leveling Guide"
 date: 2026-05-16
 weight: 20
 patch: "7.5"
