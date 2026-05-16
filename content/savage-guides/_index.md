@@ -36,7 +36,7 @@ special achievements and titles.
 - **Alexander**: Masked Conqueror + "Blue Justice" title
 - **Omega**: Omega Blue + "The Azure and Omega" title
 - **Eden**: Bluetopia + "Forbidden Blue" title
-- **Ultimate**: True Blue achievement + Morbol mount (Bahamut + Alexander)
+- **Morbol**: True Blue achievement + Morbol mount (Bahamut + Alexander)
 
 
 ## Getting Started
