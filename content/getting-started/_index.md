@@ -6,8 +6,8 @@ date: 2023-09-13
 ---
 
 Blue Mage is an interesting job in that there isn't really an obvious path to
-getting started on the job. In general, this is the expected order in which you
-can tackle content:
+getting started on the job. In general, this is the recommended order for
+tackling content:
 
 - [Unlock Blue Mage]({{% relref "/getting-started/unlocking-blue-mage" %}}).
 - [Reach level cap]({{% relref "/getting-started/leveling" %}}).

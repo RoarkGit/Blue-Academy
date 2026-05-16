@@ -3,8 +3,8 @@ title: What is Blue Mage?
 weight: 10
 ---
 
-Blue Mage is a Limited Job that is categorized as a caster DPS that is very
-different from the other jobs in FFXIV. It learns its abilities from enemies
+Blue Mage is a Limited Job that is categorized as a Caster DPS, yet functions
+very differently to other jobs in FFXIV. It learns its abilities from enemies
 rather than by leveling up. Due to its classification as a Limited Job it has
 some restrictions on playing with others, but it is _because_ of this
 classification that it is so unique and interesting! Blue Mage is extremely
@@ -23,6 +23,7 @@ The current restrictions for a Limited Job are:
 - Unable to enter certain types of duties, such as Eureka/Bozja, Squadron/Duty
   Support/Trust duties, Deep Dungeons, PvP, and Ultimate Raids.
 - Unable to progress the Main Scenario Questline.
+- Unable to undertake sidequests that aren't available to all jobs.
 
 These restrictions mean that Blue Mage gameplay is basically separate from the
 rest of the game and functions as its own game-within-the-game. While Blue Mage

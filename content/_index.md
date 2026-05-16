@@ -32,7 +32,7 @@ spells, blasted through the Masked Carnivale, and completed the Blue Mage log in
 just two weekends!
 
 I wanted to jump right into Savage raiding and work towards getting the Morbol
-mount.. but there was a serious lack of resources. Most Blue Mage knowledge was
+mount... but there was a serious lack of resources. Most Blue Mage knowledge was
 spread across random Discord screenshots or Reddit posts and there was no
 cohesion between any of them. This frustrated the hell out of me, so I started
 the [Blue Academy](https://www.youtube.com/blueacademy) YouTube channel! The

@@ -80,16 +80,3 @@ each level so you still get stats from the materia your weapon.
 {{< etro title="Synced 2.13 SpS/Det" id="7f0adbf9-668b-4e83-9b83-a62d6d809a7c">}}
 
 {{< /expand >}}
-
-#### What about free trial?
-
-If you're a trial player and only have access to level 70, these are the sets I
-was recommending at level 70:
-
-- [Crit/Det (DPS)](https://etro.gg/gearset/3db73aab-2968-4eb7-b392-d524f5a1b783)
-- [SpS/Det (DPS/Tank/Heal)](https://etro.gg/gearset/20928f5b-53c9-4d93-9ce2-66d96a2b3bed)
-
-Regardless of which set you use, your group will be impacted in O12S if they are
-trying to use {{< spell revenge_blast >}} strats. The food you have available to
-you will cause a big gap in HP. If you are tanking (which you really should be
-as a free trial player) then you're fine.
