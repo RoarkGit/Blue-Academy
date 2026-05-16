@@ -1,5 +1,6 @@
 ---
 title: O4S (Exdeath)
+date: 2026-05-16
 weight: 1
 type: savage-guide
 patch: "7.5"

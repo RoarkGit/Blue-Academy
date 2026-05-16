@@ -1,5 +1,6 @@
 ---
 title: What is Blue Mage?
+date: 2026-05-16
 weight: 10
 patch: "7.5"
 ---

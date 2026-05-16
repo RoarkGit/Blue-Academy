@@ -1,5 +1,6 @@
 ---
 title: Tank Rotation & Loadouts
+date: 2026-05-16
 weight: 40
 patch: "7.5"
 ---

@@ -1,5 +1,6 @@
 ---
 title: A8S (Brute Justice)
+date: 2026-05-16
 weight: 2
 type: savage-guide
 patch: "7.5"

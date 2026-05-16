@@ -1,5 +1,6 @@
 ---
 title: Moon Flute Opener
+date: 2026-05-16
 weight: 10
 patch: "7.5"
 ---
