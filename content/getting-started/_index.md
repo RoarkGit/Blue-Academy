@@ -32,14 +32,12 @@ content:
     that don't require instances, so you can grab them anytime.
 
 - **Pick up {{< spell white_wind >}} and {{< spell mighty_guard >}}**
-  - These two totem spells are essential and usually available early. White
-    Wind is your primary healing spell; Mighty Guard is your strongest
-    defensive cooldown.
+  - These two totem spells are essential and available early.
 
 - **Learn {{< spell aetheric_mimicry >}} from Pharos Sirius (Hard)**
-  - This spell is a game-changer because it duplicates your party's job gauge.
-    You can do this solo unsynced since adds spawn continuously for free
-    learning.
+  - This spell is a game-changer because it augments certain abilities depending
+    on your active mimicry. You can do this solo unsynced since adds spawn
+    continuously for free learning.
 
 - **Start 4-player duty spells**
   - Begin learning from dungeons either [solo unsynced]({{% relref
@@ -50,13 +48,12 @@ content:
 - **Progress to 8-player duties**
   - Join raids in a party to learn from bosses. Starting with older expansions
     (A Realm Reborn) makes progression smoother. Work toward finishing Masked
-    Carnivale and learning {{< spell angel_whisper >}}, which opens up advanced
-    strategies.
+    Carnivale and learning {{< spell angel_whisper >}}, which makes the process
+    smoother still.
 
 ## Important Tips
 
 At each step, complete your job quests when available. Spells required by job
 quests have a guaranteed learn rate **even when run unsynced**, so you won't get
 stuck. Gear doesn't matter much - focus on spell collection. Tomestone of
-Poetics gear is affordable and sufficient for everything except high-end Savage
-content.
+Poetics gear is affordable and sufficient for just about everything.
