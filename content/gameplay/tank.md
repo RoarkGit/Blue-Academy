@@ -31,14 +31,14 @@ situations where front positioning is not reliable.
 
 Your core loop:
 
-- Keep {{< spell devour >}} up at all times.
+- Keep {{< spell devour >}} up at all times
 - Use {{< spell goblin_punch >}} from the front as your primary GCD filler;
-  fall back to {{< spell sonic_boom >}} when out of position.
-- Use {{< spell white_wind >}} to maintain threat and top up the party.
-- Apply {{< spell bad_breath >}} for mitigation when needed.
-- Keep {{< spell peculiar_light >}} up during Moon Flute windows.
-- Use {{< spell blood_drain >}} to keep your mana high.
-- Pop {{< spell chelonian_gate >}} before tank busters when convenient.
+  fall back to {{< spell sonic_boom >}} when out of position
+- Use {{< spell white_wind >}} to maintain threat and top up the party
+- Apply {{< spell bad_breath >}} for mitigation when needed
+- Keep {{< spell peculiar_light >}} up during Moon Flute windows
+- Use {{< spell blood_drain >}} to keep your mana high
+- Pop {{< spell chelonian_gate >}} before tank busters when convenient
 
 {{< spell rehydration >}} is a self-sustain option with a very slow cast time.
 It lets you top yourself off without spending mana on

@@ -58,11 +58,11 @@ phase transitions entirely, which Missile cannot do.
 
 The last two slots in the loadout are situational. Some options:
 
-- {{< spell white_wind >}}: Faster healing if you can manage the MP cost.
-- {{< spell mortal_flame >}}: Extra damage on bosses.
-- {{< spell moon_flute >}}: A significant damage boost on your main spells.
+- {{< spell white_wind >}}: Faster healing if you can manage the MP cost
+- {{< spell mortal_flame >}}: Extra damage on bosses
+- {{< spell moon_flute >}}: A significant damage boost on your main spells
 - {{< spell sea_shanty >}}: No damage falloff on multiple targets, making it
-  very strong for trash packs.
+  very strong for trash packs
 - {{< spell dimensional_shift >}}: Useful for weakening enemies when Vibe Check
   is unavailable, though its slow cast time and HP-scaling damage limit how
-  often you want to use it.
+  often you want to use it

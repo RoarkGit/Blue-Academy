@@ -27,13 +27,13 @@ Before we talk about how Blue Mage functions as a whole it's important to
 understand what it means to be a Limited Job and what those restrictions entail.
 The current restrictions for a Limited Job are:
 
-- Maximum level of 80.
+- Maximum level of 80
 - Unable to use Duty Finder matchmaking. Duty Finder _can_ be used to enter
-  duties, but it has to be with a preformed party.
+  duties, but it has to be with a preformed party
 - Unable to enter certain types of duties, such as Eureka/Bozja, Squadron
-  Duties, Trust Duties, Deep Dungeons, PvP, and Ultimate Raids.
-- Unable to progress the Main Scenario Questline.
-- Unable to undertake sidequests that aren't available to all jobs.
+  Duties, Trust Duties, Deep Dungeons, PvP, and Ultimate Raids
+- Unable to progress the Main Scenario Questline
+- Unable to undertake sidequests that aren't available to all jobs
 
 These restrictions mean that Blue Mage gameplay is basically separate from the
 rest of the game and functions as its own game-within-the-game. While Blue

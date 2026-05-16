@@ -25,15 +25,15 @@ page for details.
 
 - {{< spell hydro_pull >}}: Wide-range AoE that deals 200 potency and pulls
   enemies toward you. Use this to round up enemies as they spawn before killing
-  them with Choco Meteor or death effects.
+  them with Choco Meteor or death effects
 - {{< spell the_rams_voice >}}: 220-potency point-blank AoE that applies Deep
   Freeze, preventing enemies from acting. Even players outside your party
-  benefit from having enemies frozen.
+  benefit from having enemies frozen
 - {{< spell choco_meteor >}}: 300-potency spell requiring your Chocobo
   companion to be summoned. This is your strongest spammable filler and will
-  melt groups of enemies quickly.
+  melt groups of enemies quickly
 - {{< spell breath_of_magic >}}: Extremely strong AoE DoT for clearing groups
-  when the Vibe Check is on cooldown.
+  when the Vibe Check is on cooldown
 
 ## Death Spells
 
@@ -52,22 +52,22 @@ clear faster is not.
 {{< /notice >}}
 
 - {{< spell missile >}}: Deals damage equal to 50% of the target's current HP.
-  Single target, can be resisted. Good for softening up bosses or large enemies.
+  Single target, can be resisted. Good for softening up bosses or large enemies
 - {{< spell launcher >}}: Deals 10%, 20%, 30%, or 50% of maximum HP (chosen at
   random) to all enemies in a 15y radius. Cannot be resisted unless the target
-  is entirely immune.
+  is entirely immune
 - {{< spell dimensional_shift >}}: An alternative to Launcher for weakening
   groups of enemies. Unlike Launcher it can be resisted, its damage scales with
   the target's current HP (making it weaker as enemies are worn down), and its
-  slow cast time limits how often you can use it.
+  slow cast time limits how often you can use it
 - {{< spell level_5_death >}}: Instantly kills enemies within a 6y radius whose
-  level is divisible by 5. Can be resisted.
+  level is divisible by 5. Can be resisted
 - {{< spell ultravibration >}}: Instantly kills any enemy affected by Deep
   Freeze or Petrification, even those immune to other death effects. Pairs
-  naturally with {{< spell the_rams_voice >}}.
+  naturally with {{< spell the_rams_voice >}}
 - {{< spell 1000_needles >}}: Deals 1,000 damage split among enemies in a 4y
   radius. Not technically a death effect, but useful in low-level FATEs where
-  it will one-shot most enemies.
+  it will one-shot most enemies
 
 {{< spell tail_screw >}} and {{< spell doom >}} also count as death effects but
 have too low a hit chance to be reliable.

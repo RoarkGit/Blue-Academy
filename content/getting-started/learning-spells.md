@@ -13,11 +13,11 @@ important to understand how the mechanics for learning spells actually work!
 
 ### Requirements for learning spells
 
-- The enemy must cast the spell before it dies.
+- The enemy must cast the spell before it dies
 - The enemy must _actually_ die. If the enemy just disappears you will not learn
   the spell (e.g. you cannot learn {{< spell perpetual_ray >}} from Onslaughter
   in A8)
-- You are alive when the enemy dies.
+- You are alive when the enemy dies
 
 ### Things that affect learning rate
 
@@ -27,12 +27,12 @@ important to understand how the mechanics for learning spells actually work!
 
 ### Things that do not affect learning rate
 
-- Number of times the enemy casts the spell.
-- Number of Blue Mages in the party.
-- Having non-Blue Mages in the party.
+- Number of times the enemy casts the spell
+- Number of Blue Mages in the party
+- Having non-Blue Mages in the party
 - Party item level (minimum ilvl does nothing)
-- Getting hit by the spell.
-- Silencing Echo.
+- Getting hit by the spell
+- Silencing Echo
 
 ### Special Cases
 

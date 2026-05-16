@@ -41,7 +41,7 @@ is a complete list of bonuses and their meaning
 Most of the stages don't require very many spells. At minimum you should have
 these on your bar:
 
-- {{< spell aetheric_mimicry >}} set to Healer mimicry.
+- {{< spell aetheric_mimicry >}} set to Healer mimicry
   {{< notice title="Why Healer mimicry?" style="blue" >}} Damage rarely matters
   in the Masked Carnivale, so the extra DPS we get from DPS mimicry isn't
   particularly useful. However, using Healer mimicry gives us access to
@@ -62,7 +62,7 @@ these on your bar:
   {{< spell goblin_punch >}} is really powerful in stages with no positionals
   and is an instant cast. For most purposes
   {{< spell abyssal_transfixion >}} is a good option.
-- {{< spell flying_sardine >}} to interrupt enemy spells.
+- {{< spell flying_sardine >}} to interrupt enemy spells
 
 If a stage requires specific spells it will be mentioned on its guide page. In
 general we can get away with just the spells listed above for most stages, but

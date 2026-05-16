@@ -24,25 +24,25 @@ in the group.
   rising to 3,600 when applied under {{< spell bristle >}}. A Moon Flute window
   on top of that adds another 1,800 potency to the tick, so reapplying it is
   worthwhile even if all you do is recast it. If you are the Breath of Magic
-  player, try to Moon Flute every minute to keep it rolling.
+  player, try to Moon Flute every minute to keep it rolling
 - {{< spell mortal_flame >}}: One per group. This DoT has no duration, so a
-  single application lasts the entire fight.
+  single application lasts the entire fight
 - {{< spell final_sting >}}: Loses value as boss HP scales up; the damage
   percentage becomes negligible at higher tiers. Worth taking if you have a free
-  slot.
+  slot
 
 Other candidates for open slots, in rough priority order:
 
 - {{< spell off-guard >}} / {{< spell peculiar_light >}}: Take either if
-  no one else is covering it.
+  no one else is covering it
 - {{< spell conviction_marcato >}}: Has a natural synergy with
   {{< spell winged_reprobation >}} and serves as a 220-potency filler useful
-  for weaving and slidecasting. Take it if you have room.
-- {{< spell magic_hammer >}} / {{< spell candy_cane >}}: Utility options.
+  for weaving and slidecasting. Take it if you have room
+- {{< spell magic_hammer >}} / {{< spell candy_cane >}}: Utility options
 - {{< spell wild_rage >}} + {{< spell revenge_blast >}}: Strong combo in fights
   with repeated Revenge Blast opportunities (e.g. E8S). Drop spells in this
   order to make room: {{< spell bristle >}}, then {{< spell sea_shanty >}},
-  then {{< spell the_rose_of_destruction >}}.
+  then {{< spell the_rose_of_destruction >}}
 
 ## Rotation
 
@@ -72,5 +72,5 @@ Drop the raid-buff spells and pick up a pack-clear kit:
 - {{< spell the_rams_voice >}} + {{< spell ultravibration >}} to wipe packs
 - {{< spell missile >}} for bosses; many dungeon bosses are vulnerable to
   instant-kill effects. You can find a full list in the
-  [Death Vulnerability Table]({{% ref "death-vulnerability" %}}).
+  [Death Vulnerability Table]({{% ref "death-vulnerability" %}})
 
