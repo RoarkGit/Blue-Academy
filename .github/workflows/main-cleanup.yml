@@ -31,7 +31,7 @@ jobs:
             fi
 
             page_deployments=$(echo "$response" | jq -r \
-              '(.result // [])[] | select(.environment == "production") | "\(.id)|\(.created_on)"')
+              '(.result // [])[] | select(.environment == "production") | "\(.id)|\(.created_on)|\(.status)"')
             all_deployments="$all_deployments"$'\n'"$page_deployments"
 
             total=$(echo "$response" | jq -r '.result_info.total_count // 0')
@@ -46,33 +46,17 @@ jobs:
           count=$(echo "$all_deployments" | wc -l | tr -d ' ')
           echo "Found $count production deployments, keeping newest $KEEP"
 
-          # Get the currently active deployment
-          project_info=$(curl -s \
-            -H "Authorization: Bearer $CF_API_TOKEN" \
-            "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$CF_PROJECT")
+          # Sort by creation date (newest first) and exclude deployments with "active" status
+          to_delete=$(echo "$all_deployments" | \
+            sort -t'|' -k2 -r | \
+            awk -F'|' -v keep="$KEEP" \
+            'NR > keep && $3 != "active" { print $1 }')
 
-          if [ "$(echo "$project_info" | jq -r '.success')" != "true" ]; then
-            echo "WARNING: Could not fetch project info, being conservative with deletions"
-            active_id=""
-          else
-            active_id=$(echo "$project_info" | jq -r '.result.deployment_configs.production.deployment_id // empty')
-          fi
-
-          if [ -z "$active_id" ]; then
-            echo "WARNING: Could not determine active deployment ID, will only keep newest $KEEP deployments"
-            # Without knowing the active deployment, only keep the KEEP newest ones
-            to_delete=$(echo "$all_deployments" | \
-              sort -t'|' -k2 -r | \
-              awk -F'|' -v keep="$KEEP" \
-              'NR > keep { print $1 }')
-          else
-            echo "Active production deployment: $active_id"
-            # Sort by creation date (newest first) and exclude the active deployment
-            to_delete=$(echo "$all_deployments" | \
-              sort -t'|' -k2 -r | \
-              awk -F'|' -v keep="$KEEP" -v active="$active_id" \
-              'NR > keep && $1 != active { print $1 }' | \
-              head -n "$((count - KEEP))")
+          # Verify we found the active deployment in the list
+          has_active=$(echo "$all_deployments" | awk -F'|' '$3 == "active" { count++ } END { print count }')
+          if [ -z "$has_active" ] || [ "$has_active" = "0" ]; then
+            echo "WARNING: Could not identify active deployment in list, aborting deletion to be safe"
+            exit 0
           fi
 
           if [ -z "$to_delete" ]; then
