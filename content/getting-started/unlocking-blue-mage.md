@@ -8,9 +8,6 @@ description: 'How to unlock Blue Mage in FFXIV: quest location, requirements, an
 
 ## How to Unlock Blue Mage
 
-**To unlock Blue Mage, you need a level 50 job and must complete "The Ultimate
-Weapon" MSQ.**
-
 ### Requirements
 
 - At least one combat class/job at **level 50**
@@ -30,6 +27,8 @@ in Limsa Lominsa (x:9.9, y:11.0)
 **Quest Type:** Straightforward job unlock quest with goofy, Hildibrand-style
 humor and dialogue.
 
+{{< img src="/images/zealous-yellowjacket.png" alt="Zealous Yellowjacket NPC in Limsa Lominsa offering Blue Mage quest" width="35%" >}}
+
 ### After Unlocking
 
 Once you complete the quest, you'll have Blue Mage unlocked and can:
@@ -40,5 +39,3 @@ Once you complete the quest, you'll have Blue Mage unlocked and can:
   progression
 
 The quest takes about 15 minutes to complete.
-
-{{< img src="/images/zealous-yellowjacket.png" alt="Zealous Yellowjacket NPC in Limsa Lominsa offering Blue Mage quest" width="35%" >}}

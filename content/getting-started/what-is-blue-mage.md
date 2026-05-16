@@ -15,7 +15,8 @@ raids. Despite restrictions on group content, Blue Mage can fill all three
 roles (Tank, Healer, DPS) and access most duties, making it one of the most
 flexible jobs in the game.
 
-**Key Characteristics:**
+**Key Characteristics**
+
 - Learns spells from defeated enemies
 - Categorized as Caster DPS but adapts to any role
 - Limited Job with unique restrictions and benefits
