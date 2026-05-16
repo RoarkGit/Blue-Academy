@@ -17,7 +17,7 @@ jobs:
           CF_PROJECT: blue-academy  # update if your Pages project name differs
           KEEP: 2  # newest deployments to retain (current + one rollback)
         run: |
-          all_ids=""
+          all_deployments=""
           page=1
           while true; do
             response=$(curl -s \
@@ -30,9 +30,9 @@ jobs:
               exit 1
             fi
 
-            page_ids=$(echo "$response" | jq -r \
-              '(.result // [])[] | select(.environment == "production") | .id')
-            all_ids="$all_ids $page_ids"
+            page_deployments=$(echo "$response" | jq -r \
+              '(.result // [])[] | select(.environment == "production") | "\(.id)|\(.created_on)"')
+            all_deployments="$all_deployments"$'\n'"$page_deployments"
 
             total=$(echo "$response" | jq -r '.result_info.total_count // 0')
             fetched=$((page * 25))
@@ -42,11 +42,23 @@ jobs:
             page=$((page + 1))
           done
 
-          all_ids=$(echo "$all_ids" | tr ' ' '\n' | grep -v '^$')
-          count=$(echo "$all_ids" | wc -l | tr -d ' ')
+          all_deployments=$(echo "$all_deployments" | grep -v '^$')
+          count=$(echo "$all_deployments" | wc -l | tr -d ' ')
           echo "Found $count production deployments, keeping newest $KEEP"
 
-          to_delete=$(echo "$all_ids" | tail -n +$((KEEP + 1)))
+          # Get the currently active deployment
+          active_id=$(curl -s \
+            -H "Authorization: Bearer $CF_API_TOKEN" \
+            "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$CF_PROJECT" | \
+            jq -r '.result.deployment_configs.production.deployment_id // empty')
+          echo "Active production deployment: $active_id"
+
+          # Sort by creation date (newest first) and exclude the active deployment
+          to_delete=$(echo "$all_deployments" | \
+            sort -t'|' -k2 -r | \
+            awk -F'|' -v keep="$KEEP" -v active="$active_id" \
+            'NR > keep && $1 != active { print $1 }' | \
+            head -n "$((count - KEEP))")
 
           if [ -z "$to_delete" ]; then
             echo "Nothing to delete"
@@ -57,7 +69,7 @@ jobs:
             echo "Deleting deployment $id"
             delete_response=$(curl -s -X DELETE \
               -H "Authorization: Bearer $CF_API_TOKEN" \
-              "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$CF_PROJECT/deployments/$id?force=true")
+              "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$CF_PROJECT/deployments/$id")
             echo "Delete response for $id: $delete_response"
 
             success=$(echo "$delete_response" | jq -r '.success // false')
