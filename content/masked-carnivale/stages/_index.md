@@ -5,6 +5,6 @@ type: section
 weight: 100
 build:
   render: never
-patch: "7.5"
-description: "Masked Carnivale guides: strategies and solutions for all 32 solo duty stages."
+patch: '7.5'
+description: 'Masked Carnivale guides: strategies and solutions for all 32 solo duty stages.'
 ---

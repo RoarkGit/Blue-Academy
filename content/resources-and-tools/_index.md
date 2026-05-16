@@ -3,7 +3,7 @@ title: Resources & Tools
 type: section
 date: 2026-05-16
 weight: 100
-patch: "7.5"
+patch: '7.5'
 description: >-
   Blue Mage spell reference, DPS calculators, and planning tools. Find spell
   locations, optimal loadouts, and damage calculations.

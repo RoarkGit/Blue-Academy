@@ -2,8 +2,10 @@
 title: Blue Mage Tank Guide & Build
 date: 2026-05-16
 weight: 40
-patch: "7.5"
-description: "Blue Mage tank guide: threat management, defensive spell selection, cooldown rotation, and party support."
+patch: '7.5'
+description: >-
+  Blue Mage tank guide: threat management, defensive spell selection,
+  cooldown rotation, and party support.
 ---
 
 {{< youtube id="hvme7Mc6DRw" width="50%" >}}

@@ -3,7 +3,7 @@ title: Gearing
 type: section
 date: 2026-05-16
 weight: 20
-patch: "7.5"
+patch: '7.5'
 description: >-
   Blue Mage gearing guide: stat priorities, recommended gear sets, and
   optimization tips for tank, healer, and DPS roles.

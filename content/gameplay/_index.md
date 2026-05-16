@@ -3,7 +3,7 @@ title: Gameplay
 date: 2026-05-16
 weight: 30
 type: section
-patch: "7.5"
+patch: '7.5'
 description: >-
   Blue Mage gameplay guides for tank, healer, and DPS roles. Learn
   role-specific strategies, spell selection, and optimal playstyles.

@@ -3,8 +3,10 @@ title: Support
 date: 2026-05-16
 build:
   list: never
-patch: "7.5"
-description: "Support Blue Academy: donation information and recommended charitable organizations."
+patch: '7.5'
+description: >-
+  Support Blue Academy: donation information and recommended charitable
+  organizations.
 ---
 
 Blue Academy is a passion project created freely for the community. Instead of

@@ -1,9 +1,11 @@
 ---
-title: Masked Carnivale Bonus Stages Guide
+title: Masked Carnivale Bonuses Guide
 date: 2026-05-16
 weight: 20
-patch: "7.5"
-description: "Masked Carnivale bonus stage descriptions: additional challenges and optional encounters."
+patch: '7.5'
+description: >-
+  Masked Carnivale bonus descriptions: additional challenges and
+  optional achievements.
 ---
 
 ## Basic Bonuses

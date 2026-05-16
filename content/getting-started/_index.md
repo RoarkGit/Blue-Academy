@@ -3,7 +3,7 @@ title: Getting Started with Blue Mage
 type: section
 weight: 10
 date: 2026-05-16
-patch: "7.5"
+patch: '7.5'
 description: >-
   Complete Blue Mage starter guide: unlock the job, level to cap, learn
   spells, and progress through content. Step-by-step learning path for new

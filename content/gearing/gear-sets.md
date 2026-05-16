@@ -2,8 +2,10 @@
 title: Blue Mage Gear Sets & Recommendations
 date: 2026-05-16
 weight: 20
-patch: "7.5"
-description: "Blue Mage gear sets: recommended equipment for tank, healer, and DPS roles by content type."
+patch: '7.5'
+description: >-
+  Blue Mage gear sets: recommended equipment for tank, healer, and DPS
+  roles by content type.
 ---
 
 {{< notice title="TL;DR" >}}

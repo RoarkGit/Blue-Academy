@@ -3,7 +3,7 @@ title: Masked Carnivale
 type: section
 date: 2026-05-16
 weight: 50
-patch: "7.5"
+patch: '7.5'
 description: >-
   Masked Carnivale guide for Blue Mage: strategies for all stages, boss fight
   tactics, and puzzle solutions.

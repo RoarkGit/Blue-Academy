@@ -2,8 +2,8 @@
 title: How to Unlock Blue Mage in FFXIV
 date: 2026-05-16
 weight: 12
-patch: "7.5"
-description: "How to unlock Blue Mage in FFXIV: quest location, requirements, and next steps."
+patch: '7.5'
+description: 'How to unlock Blue Mage in FFXIV: quest location, requirements, and next steps.'
 ---
 
 ## How to Unlock Blue Mage

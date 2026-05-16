@@ -3,7 +3,7 @@ title: Savage Guides
 date: 2026-05-16
 type: section
 weight: 80
-patch: "7.5"
+patch: '7.5'
 description: >-
   Blue Mage Savage raid guides: strategies for Bahamut, Alexander, Omega, and
   Eden series. Learn raid mechanics and optimal tactics.

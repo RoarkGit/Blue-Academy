@@ -3,7 +3,7 @@ title: Basics & Spell Recommendations
 date: 2026-05-16
 weight: 10
 youtube: nUycEslagbU
-patch: "7.5"
+patch: '7.5'
 ---
 
 ## How Does the Masked Carnivale Work?

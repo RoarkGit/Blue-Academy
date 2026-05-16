@@ -2,8 +2,10 @@
 title: Blue Mage FATE Farming Guide
 date: 2026-05-16
 weight: 50
-patch: "7.5"
-description: "Blue Mage FATE farming guide: spell acquisition, loadout optimization, and efficient grinding."
+patch: '7.5'
+description: >-
+  Blue Mage FATE farming guide: spell acquisition, loadout optimization,
+  and efficient grinding.
 ---
 
 {{< youtube id="vWbOrLxqPmw" width="50%" >}}
