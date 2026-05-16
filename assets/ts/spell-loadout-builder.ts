@@ -32,6 +32,9 @@ const eventListeners: Record<
   }[]
 > = {}
 
+// Track if a touch is in progress to prevent drag interfering with click
+let touchInProgress = false
+
 function addListener(
   spellId: string,
   element: HTMLElement,
@@ -132,7 +135,7 @@ ready(function () {
     if (spellId === null || spellName === null || spellNumber === null) {
       continue
     }
-    spell.addEventListener('click', function () {
+    const handleSpellClick = () => {
       const existingIndex = activeSpells.findIndex(
         (s: Spell) => s.Id === spellId,
       )
@@ -153,13 +156,27 @@ ready(function () {
           updateSpellLoadoutLink()
         }
       }
+    }
+
+    spell.addEventListener('click', handleSpellClick)
+    spell.addEventListener('touchstart', (ev) => {
+      touchInProgress = true
+    })
+    spell.addEventListener('touchend', (ev) => {
+      if (touchInProgress) {
+        ev.preventDefault()
+        handleSpellClick()
+      }
+      touchInProgress = false
     })
     spell.addEventListener('dragstart', function () {
+      if (touchInProgress) return
       const tooltip = document.getElementById(spellId + '-tooltip')
       if (tooltip === null) return
       tooltip.hidden = true
     })
     spell.addEventListener('dragend', function (event: DragEvent) {
+      if (touchInProgress) return
       const under = document.elementFromPoint(event.clientX, event.clientY)
       const element = under?.closest(
         '.spell-loadout-spell',
@@ -234,7 +251,7 @@ ready(function () {
       if (toEl) setSpell(spellLoadoutSpells[toIndex], toEl)
       updateSpellLoadoutLink()
     })
-    slot.addEventListener('click', function () {
+    const handleSlotClick = () => {
       const spellId = slot.getAttribute('data-tooltip-id')
       if (spellId === null) return
       activeSpells[activeSpells.findIndex((s: Spell) => s.Id === spellId)] = {
@@ -245,6 +262,18 @@ ready(function () {
       removeListener(spellId)
       unsetSpell(slot)
       updateSpellLoadoutLink()
+    }
+
+    slot.addEventListener('click', handleSlotClick)
+    slot.addEventListener('touchstart', () => {
+      touchInProgress = true
+    })
+    slot.addEventListener('touchend', (ev) => {
+      if (touchInProgress) {
+        ev.preventDefault()
+        handleSlotClick()
+      }
+      touchInProgress = false
     })
   }
   document
