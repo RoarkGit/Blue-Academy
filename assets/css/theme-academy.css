@@ -192,6 +192,7 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
   gap: 0.35rem;
   justify-content: space-evenly;
   width: 100%;
+  position: relative;
 }
 
 .spellbook-filters {
@@ -202,6 +203,28 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
   padding: 1rem;
   flex-shrink: 0;
   border: solid 1px #fff;
+}
+
+/* Mobile responsive: filters move below spellbook */
+@media (max-width: 1300px) {
+  .spellbook-outer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .spellbook-filter-toggle {
+    display: none;
+  }
+
+  .spellbook-filters {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: 0.4rem 0.75rem;
+    padding: 1rem;
+    border: solid 1px #fff;
+    margin-top: 0.35rem;
+  }
 }
 
 /* Spellbook filter styles use shared filter classes */
