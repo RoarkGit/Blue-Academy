@@ -10,21 +10,21 @@ weight: 25
 
 ## Quick Navigation
 
-1. [Spell requirements for group content](#spell-requirements-for-group-content)
-2. [Spell learning mechanics](#spell-learning-mechanics)
-3. [Gear](#gear)
-4. [Spells that share cooldowns](#spells-that-share-cooldowns)
-5. [Why didn't I learn Cold Fog?](#why-didnt-i-learn-cold-fog)
-6. [FATE Farming](#fate-farming)
-7. [Should I use Conviction Marcato?](#should-i-use-conviction-marcato)
-8. [Mortal Flame](#mortal-flame-a-dot-with-special-mechanics)
-9. [Stat squish](#stat-squish)
-10. [Apokalypsis vs Being Mortal](#apokalypsis-vs-being-mortal)
-11. [Blue Mage Log](#blue-mage-log)
-12. [Gavel Skip](#gavel-skip)
-13. [Death spell accuracy](#death-spell-accuracy)
-14. [Spells for Enfeeble Me Tenderer and Beginner
-    Spellcasting](#spells-for-enfeeble-me-tenderer-and-beginner-spellcasting)
+- [Quick Navigation](#quick-navigation)
+- [Spell requirements for group content](#spell-requirements-for-group-content)
+- [Spell learning mechanics](#spell-learning-mechanics)
+- [Gear](#gear)
+- [Spells that share cooldowns](#spells-that-share-cooldowns)
+- [Why didn't I learn Cold Fog?](#why-didnt-i-learn-cold-fog)
+- [FATE Farming](#fate-farming)
+- [Should I use Conviction Marcato?](#should-i-use-conviction-marcato)
+- [Mortal Flame: A DOT with special mechanics](#mortal-flame-a-dot-with-special-mechanics)
+- [Stat squish](#stat-squish)
+- [Apokalypsis vs Being Mortal](#apokalypsis-vs-being-mortal)
+- [Blue Mage Log](#blue-mage-log)
+- [Gavel Skip](#gavel-skip)
+- [Death spell accuracy](#death-spell-accuracy)
+- [Spells for Enfeeble Me Tenderer and Beginner Spellcasting](#spells-for-enfeeble-me-tenderer-and-beginner-spellcasting)
 
 ---
 
@@ -50,8 +50,6 @@ DPS is the most demanding role.
 - DPS should learn as many Primal spells as possible
   ({{< spell feather_rain >}}, {{< spell surpanakha >}},
   {{< spell nightbloom >}}, etc.)
-- DPS players need {{< spell angel_whisper >}} for Extremes/Savages
-- Healers do not need {{< spell angel_whisper >}} to be effective in any content
 
 **Spell-learning content:**
 
