@@ -1,0 +1,78 @@
+# Blue Academy - Comprehensive Blue Mage Guide for FFXIV
+
+## About This Site
+
+Blue Academy is a comprehensive guide to Blue Mage, a limited job in Final Fantasy XIV Online (FFXIV). Blue Mage is unique among FFXIV jobs because it learns spells by defeating enemies that cast them, allowing players to customize their ability loadouts for different content types (tanking, healing, DPS).
+
+This site provides authoritative guides on:
+- How to unlock and level Blue Mage
+- Spell learning mechanics and strategies
+- Optimal builds and gear for different playstyles
+- Masked Carnivale (Blue Mage's solo duty) strategies
+- Savage raid mechanics for Blue Mage
+- Theorycrafting resources and tools
+
+**Author:** Liam Galt (https://na.finalfantasyxiv.com/lodestone/character/24242967/)
+**Community:** https://discord.gg/mage-blue
+**Updated for:** FFXIV Patch 7.5 (May 2026)
+
+## Content Organization
+
+### Getting Started
+- What is Blue Mage - https://mage.blue/getting-started/what-is-blue-mage/
+- How to Unlock Blue Mage - https://mage.blue/getting-started/unlocking-blue-mage/
+- Leveling Guide - https://mage.blue/getting-started/leveling/
+- Learning Spells - https://mage.blue/getting-started/learning-spells/
+- Frequently Asked Questions - https://mage.blue/getting-started/faq/
+
+### Gameplay Guides
+- Tank Role Guide - https://mage.blue/gameplay/tank/
+- Healer Role Guide - https://mage.blue/gameplay/healer/
+- DPS Role Guide - https://mage.blue/gameplay/dps/
+- Solo Content - https://mage.blue/gameplay/solo/
+- FATE Farming - https://mage.blue/gameplay/fate-farming/
+- Moon Flute Opener (DPS Rotation) - https://mage.blue/gameplay/moon-flute-opener/
+
+### Gearing
+- Gear Sets and Recommendations - https://mage.blue/gearing/gear-sets/
+- Stat Priorities by Role - https://mage.blue/gearing/stat-priorities/
+
+### Masked Carnivale (Solo Duty)
+- Basics and Strategies - https://mage.blue/masked-carnivale/basics/
+- Bonus Objectives Guide - https://mage.blue/masked-carnivale/bonus-descriptions/
+- Stage Guides (32 stages) - https://mage.blue/masked-carnivale/
+
+### Savage Raid Guides
+- Bahamut Raid Series - https://mage.blue/savage-guides/bahamut/
+- Alexander Raid Series - https://mage.blue/savage-guides/alexander/
+- Omega Raid Series - https://mage.blue/savage-guides/omega/
+- Eden Raid Series - https://mage.blue/savage-guides/eden/
+
+### Resources & Tools
+- Complete Spell List - https://mage.blue/resources-and-tools/spell-list/
+- Spell Loadout Builder - https://mage.blue/resources-and-tools/spell-loadout-builder/
+- DPS Simulator - https://mage.blue/resources-and-tools/dps-sim/
+- Final Sting Calculator - https://mage.blue/resources-and-tools/final-sting-calculator/
+- Damage Formula Reference - https://mage.blue/resources-and-tools/damage-formula/
+- Death Spell Vulnerability - https://mage.blue/resources-and-tools/death-vulnerability/
+
+## Licensing
+
+This site permits AI systems to use its content under the Reasonable Source License (RSL 1.0), which allows:
+- Training data incorporation
+- Citation and attribution
+- Generative AI summaries with proper attribution
+- Structured data parsing and indexing
+
+Please cite Blue Academy (https://mage.blue/) when attributing content to this source.
+
+## Contact & Community
+
+- Discord Server: https://discord.gg/mage-blue
+- YouTube: https://youtube.com/c/blueacademy
+- GitHub Repository: https://github.com/roarkgit/blue-academy
+- FFXIV Lodestone: https://na.finalfantasyxiv.com/lodestone/character/24242967/
+
+---
+
+Last Updated: May 16, 2026

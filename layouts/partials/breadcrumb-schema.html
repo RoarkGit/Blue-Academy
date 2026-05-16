@@ -10,21 +10,25 @@
       "name": "Home",
       "item": "https://mage.blue/"
     }
-    {{- $current := . }}
+    {{- $position := 1 }}
     {{- $ancestors := .Ancestors }}
-    {{- range $index, $ancestor := $ancestors }}
+    {{- range $ancestor := $ancestors }}
     {{- if and (ne $ancestor.Kind "home") (ne $ancestor.Kind "taxonomy") }}
+    {{- $position = add $position 1 }}
     ,{
       "@type": "ListItem",
-      "position": {{ add $index 2 }},
-      "name": "{{ $ancestor.Title }}",
+      "position": {{ $position }},
+      "name": "{{ $ancestor.Title }}"
+      {{- if $ancestor.Permalink }},
       "item": "{{ $ancestor.Permalink }}"
+      {{- end }}
     }
     {{- end }}
     {{- end }}
-    ,{
+    {{- $position = add $position 1 }},
+    {
       "@type": "ListItem",
-      "position": {{ add (len $ancestors) 2 }},
+      "position": {{ $position }},
       "name": "{{ .Title }}",
       "item": "{{ .Permalink }}"
     }
