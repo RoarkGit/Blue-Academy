@@ -17,7 +17,8 @@ jobs:
           CF_PROJECT: blue-academy  # update if your Pages project name differs
           KEEP: 2  # newest deployments to retain (current + one rollback)
         run: |
-          all_deployments=""
+          # Fetch all production deployments (handle pagination)
+          all_deployments="[]"
           page=1
           while true; do
             response=$(curl -s \
@@ -30,9 +31,9 @@ jobs:
               exit 1
             fi
 
-            page_deployments=$(echo "$response" | jq -r \
-              '(.result // [])[] | select(.environment == "production") | "\(.id)|\(.created_on)|\(.status)"')
-            all_deployments="$all_deployments"$'\n'"$page_deployments"
+            page_deployments=$(echo "$response" | jq \
+              '[(.result // [])[] | select(.environment == "production") | {id: .id, created_on: .created_on, aliases: .aliases}]')
+            all_deployments=$(echo "$all_deployments" "$page_deployments" | jq -s 'add')
 
             total=$(echo "$response" | jq -r '.result_info.total_count // 0')
             fetched=$((page * 25))
@@ -42,22 +43,24 @@ jobs:
             page=$((page + 1))
           done
 
-          all_deployments=$(echo "$all_deployments" | grep -v '^$')
-          count=$(echo "$all_deployments" | wc -l | tr -d ' ')
+          count=$(echo "$all_deployments" | jq 'length')
           echo "Found $count production deployments, keeping newest $KEEP"
 
-          # Sort by creation date (newest first) and exclude deployments with "active" status
-          to_delete=$(echo "$all_deployments" | \
-            sort -t'|' -k2 -r | \
-            awk -F'|' -v keep="$KEEP" \
-            'NR > keep && $3 != "active" { print $1 }')
+          # Identify the active deployment (has non-null aliases)
+          active_id=$(echo "$all_deployments" | jq -r \
+            '.[] | select(.aliases != null) | .id' | head -1)
 
-          # Verify we found the active deployment in the list
-          has_active=$(echo "$all_deployments" | awk -F'|' '$3 == "active" { count++ } END { print count }')
-          if [ -z "$has_active" ] || [ "$has_active" = "0" ]; then
-            echo "WARNING: Could not identify active deployment in list, aborting deletion to be safe"
+          if [ -z "$active_id" ]; then
+            echo "WARNING: Could not identify active deployment, aborting deletion to be safe"
             exit 0
           fi
+
+          echo "Active deployment: $active_id"
+
+          # Sort by creation date (newest first) and select deployments to delete
+          # Keep KEEP newest deployments, never delete the active one
+          to_delete=$(echo "$all_deployments" | jq -r \
+            "sort_by(.created_on) | reverse | .[${KEEP}:] | map(select(.id != \"$active_id\")) | .[].id")
 
           if [ -z "$to_delete" ]; then
             echo "Nothing to delete"
@@ -69,12 +72,13 @@ jobs:
             delete_response=$(curl -s -X DELETE \
               -H "Authorization: Bearer $CF_API_TOKEN" \
               "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$CF_PROJECT/deployments/$id")
-            echo "Delete response for $id: $delete_response"
 
             success=$(echo "$delete_response" | jq -r '.success // false')
             if [ "$success" != "true" ]; then
               echo "ERROR: Failed to delete deployment $id"
               echo "$delete_response" | jq '.errors // []'
               exit 1
+            else
+              echo "Successfully deleted deployment $id"
             fi
           done
