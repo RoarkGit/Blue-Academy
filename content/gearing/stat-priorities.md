@@ -3,11 +3,14 @@ title: 'Stat Priorities'
 date: 2026-05-16
 weight: 10
 patch: '7.5'
+description: >-
+  Blue Mage stat priorities and melding guide: learn which stats matter
+  most for tank, healer, and DPS roles.
 ---
 
 ## Stat and Melding Priorities for Blue Mage
 
-This page will cover the general logic behind stat and melding priorites for
+This page will cover the general logic behind stat and melding priorities for
 Blue Mage. For full gear sets refer to the [Gear Sets]({{% ref "gear-sets" %}}
 "Full Gear Sets") page.
 
@@ -58,8 +61,8 @@ consistently, while focusing on high Critical Hit has a slightly higher damage
 ceiling.
 
 If you intend to play Blue Mage as a tank or healer, Spell Speed will be the
-best choice. ALl of our mitigations are tied to a cast time, so minimizating
-that cast time is crucial. As healer, all of our healing seplls are also tied to
+best choice. All of our mitigations are tied to a cast time, so minimizating
+that cast time is crucial. As healer, all of our healing spells are also tied to
 the GCD so we want to minimize that cast time as well for smoother healing.
 
 #### Why Determination over Direct Hit?

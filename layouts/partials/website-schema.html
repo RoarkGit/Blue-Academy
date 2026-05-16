@@ -1,0 +1,19 @@
+{{- if eq .Kind "home" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Blue Academy",
+  "url": "https://mage.blue/",
+  "description": "Complete Blue Mage guide for FFXIV: spell learning guide, optimal builds, Masked Carnivale strategies, tank/healer/DPS loadouts, gearing, and rotations.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://mage.blue/search/index.html?search-by={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+{{- end }}

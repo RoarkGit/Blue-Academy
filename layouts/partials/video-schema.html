@@ -1,0 +1,22 @@
+{{- with .Params.youtube }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "{{ $.Title }} — Blue Academy",
+  "description": "{{ with $.Description }}{{ . }}{{ else }}{{ $.Summary }}{{ end }}",
+  "thumbnailUrl": "https://i.ytimg.com/vi/{{ . }}/maxresdefault.jpg",
+  "uploadDate": "{{ $.Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "contentUrl": "https://www.youtube.com/watch?v={{ . }}",
+  "embedUrl": "https://www.youtube.com/embed/{{ . }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blue Academy",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mage.blue/images/logo.png"
+    }
+  }
+}
+</script>
+{{- end }}

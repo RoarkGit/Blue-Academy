@@ -1,4 +1,4 @@
-{{- if ne .Kind "home" }}
+{{- if and (ne .Kind "home") (ne .Kind "section") }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
