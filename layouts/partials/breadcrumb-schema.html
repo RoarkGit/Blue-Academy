@@ -1,0 +1,34 @@
+{{- if and (ne .Kind "home") (ne .Kind "section") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://mage.blue/"
+    }
+    {{- $current := . }}
+    {{- $ancestors := .Ancestors }}
+    {{- range $index, $ancestor := $ancestors }}
+    {{- if and (ne $ancestor.Kind "home") (ne $ancestor.Kind "taxonomy") }}
+    ,{
+      "@type": "ListItem",
+      "position": {{ add $index 2 }},
+      "name": "{{ $ancestor.Title }}",
+      "item": "{{ $ancestor.Permalink }}"
+    }
+    {{- end }}
+    {{- end }}
+    ,{
+      "@type": "ListItem",
+      "position": {{ add (len $ancestors) 2 }},
+      "name": "{{ .Title }}",
+      "item": "{{ .Permalink }}"
+    }
+  ]
+}
+</script>
+{{- end }}

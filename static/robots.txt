@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Disallow: /search
+Disallow: /categories/
+Disallow: /tags/
+Disallow: /index.xml
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /

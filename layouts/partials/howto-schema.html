@@ -1,0 +1,21 @@
+{{- if and (eq .Kind "page") .Params.howto }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "{{ .Title }}",
+  "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}",
+  "step": [
+    {{- $steps := .Params.howto }}
+    {{- range $index, $step := $steps }}
+    {
+      "@type": "HowToStep",
+      "position": {{ add $index 1 }},
+      "name": "{{ $step.name }}",
+      "text": "{{ $step.description }}"
+    }{{ if lt $index (sub (len $steps) 1) }},{{ end }}
+    {{- end }}
+  ]
+}
+</script>
+{{- end }}

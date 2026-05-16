@@ -2,6 +2,7 @@
 title: Savage Guides
 type: section
 weight: 80
+patch: "7.5"
 ---
 
 Even though it's a Limited Job, Blue Mage does actually have endgame content! We

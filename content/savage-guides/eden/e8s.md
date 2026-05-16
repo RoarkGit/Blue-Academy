@@ -2,6 +2,7 @@
 title: E8S (Shiva)
 weight: 2
 type: savage-guide
+patch: "7.5"
 ---
 
 ## Overview

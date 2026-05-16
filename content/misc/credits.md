@@ -1,5 +1,6 @@
 ---
 title: Credits
+patch: "7.5"
 ---
 
 ## Contributors

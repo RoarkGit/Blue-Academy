@@ -1,6 +1,7 @@
 ---
 title: DPS Rotation & Loadouts
 weight: 20
+patch: "7.5"
 ---
 
 {{< youtube id="xG-ngi5FQX4" width="50%" >}}

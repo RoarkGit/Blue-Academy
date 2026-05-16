@@ -2,6 +2,7 @@
 title: Support
 build:
   list: never
+patch: "7.5"
 ---
 
 Blue Academy is a passion project created freely for the community. Instead of

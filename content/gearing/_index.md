@@ -1,8 +1,9 @@
 ---
 title: Gearing
 type: section
-date: 2023-09-13
+date: 2026-05-16
 weight: 20
+patch: "7.5"
 ---
 
 Gear on Blue Mage does not actually make too much of a difference in what you're

@@ -1,6 +1,7 @@
 ---
 title: Healer Rotation & Loadouts
 weight: 30
+patch: "7.5"
 ---
 
 {{< youtube id="wjo4P5QrQ6c" width="50%" >}}

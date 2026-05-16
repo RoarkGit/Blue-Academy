@@ -1,6 +1,7 @@
 ---
 title: Bonus Descriptions
 weight: 20
+patch: "7.5"
 ---
 
 ## Basic Bonuses

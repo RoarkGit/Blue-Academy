@@ -1,7 +1,8 @@
 ---
 title: 'Stat Priorities'
-date: 2023-09-17T12:24:34-04:00
+date: 2026-05-16
 weight: 10
+patch: "7.5"
 ---
 
 ## Stat and Melding Priorities for Blue Mage

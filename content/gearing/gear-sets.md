@@ -1,6 +1,7 @@
 ---
 title: 'Gear Sets'
 weight: 20
+patch: "7.5"
 ---
 
 {{< notice title="TL;DR" >}}

@@ -1,8 +1,9 @@
 ---
 title: Masked Carnivale
 type: section
-date: 2023-09-13
+date: 2026-05-16
 weight: 50
+patch: "7.5"
 ---
 
 The Masked Carnivale is a set of solo duties for Blue Mage, and it's where the

@@ -1,6 +1,7 @@
 ---
 title: Solo Gameplay
 weight: 50
+patch: "7.5"
 ---
 
 {{< youtube id="lzBuHUS9rEg" width="50%" >}}

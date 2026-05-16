@@ -1,6 +1,7 @@
 ---
 title: FATE Farming
 weight: 50
+patch: "7.5"
 ---
 
 {{< youtube id="vWbOrLxqPmw" width="50%" >}}

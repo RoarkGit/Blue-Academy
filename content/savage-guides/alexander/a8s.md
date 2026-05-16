@@ -2,6 +2,7 @@
 title: A8S (Brute Justice)
 weight: 2
 type: savage-guide
+patch: "7.5"
 ---
 
 ## Overview

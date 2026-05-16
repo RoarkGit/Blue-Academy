@@ -1,6 +1,7 @@
 ---
 title: Tank Rotation & Loadouts
 weight: 40
+patch: "7.5"
 ---
 
 {{< youtube id="hvme7Mc6DRw" width="50%" >}}

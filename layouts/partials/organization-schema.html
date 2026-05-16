@@ -1,0 +1,20 @@
+{{- if eq .Kind "home" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Blue Academy",
+  "url": "https://mage.blue/",
+  "logo": "https://mage.blue/images/logo.png",
+  "sameAs": [
+    "https://www.youtube.com/@liam_galt",
+    "https://discord.gg/mage-blue",
+    "https://github.com/roarkgit/blue-academy"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Liam Galt"
+  }
+}
+</script>
+{{- end }}

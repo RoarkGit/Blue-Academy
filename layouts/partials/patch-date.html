@@ -1,0 +1,5 @@
+{{- if .Params.patch }}
+<div style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">
+  Updated for Patch {{ .Params.patch }} ({{ .Date.Format "Jan 2, 2006" }})
+</div>
+{{- end }}

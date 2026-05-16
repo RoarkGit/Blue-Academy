@@ -2,29 +2,53 @@
 title: Getting Started
 type: section
 weight: 10
-date: 2023-09-13
+date: 2026-05-16
+patch: "7.5"
 ---
 
 Blue Mage is an interesting job in that there isn't really an obvious path to
-getting started on the job. In general, this is the recommended order for
-tackling content:
+getting started on the job. Unlike other jobs, your progression is defined by
+spell acquisition rather than a linear leveling path. You'll be exploring the
+world, joining duties strategically, and hunting down specific monsters to learn
+the abilities you need. Here's the recommended order for tackling Blue Mage
+content:
 
-- [Unlock Blue Mage]({{% relref "/getting-started/unlocking-blue-mage" %}}).
-- [Reach level cap]({{% relref "/getting-started/leveling" %}}).
-- Learn all overworld (non-duty) spells.
-- Pick up totem spells that are currently available to you. The important ones
-  are {{< spell white_wind >}} and {{< spell mighty_guard >}}.
-- Learn {{< spell aetheric_mimicry >}} from the first boss in Pharos Sirius
-  (Hard). This can be done solo unsynced, since the adds spawn continuously.
-- Start learning spells from 4-player duties either
-  [solo]({{% relref "/gameplay/solo" %}}) or in a party. You should also
-  start your job quests and complete any [Masked
-  Carnivale]({{% relref "/masked-carnivale/" %}}) stages you are capable of
-- Start learning spells from 8-player duties in a party. This is easiest if you
-  do it in expansion order (starting with A Realm Reborn). You should also try
-  to finish Masked Carnivale and learn {{< spell angel_whisper >}}.
+## Recommended Learning Path
 
-At each step you should be trying to complete your job quests. Spells that are
-required for job quests are a guaranteed learn from dungeons **even if
-unsynced**. Gear doesn't matter much and you can use Tomestone of Poetics gear
-once you reach level cap.
+- **[Unlock Blue Mage]({{% relref "/getting-started/unlocking-blue-mage" %}})**
+  — Start here if you haven't picked up the job yet. It's a simple quest that
+  takes just a few minutes.
+
+- **[Reach Level Cap]({{% relref "/getting-started/leveling" %}})**
+  — Level to 90 (or the current max). You don't need gear to level, but Tomestone
+  of Poetics gear is cheap and makes everything faster.
+
+- **Learn overworld (non-duty) spells**
+  — Wander around Eorzea and defeat overworld monsters. These are free spells that
+  don't require instances, so you can grab them anytime.
+
+- **Pick up {{< spell white_wind >}} and {{< spell mighty_guard >}}**
+  — These two totem spells are essential and usually available early. White Wind
+  is your primary healing spell; Mighty Guard is your strongest defensive cooldown.
+
+- **Learn {{< spell aetheric_mimicry >}} from Pharos Sirius (Hard)**
+  — This spell is a game-changer because it duplicates your party's job gauge. You
+  can do this solo unsynced since adds spawn continuously for free learning.
+
+- **Start 4-player duty spells**
+  — Begin learning from dungeons either [solo unsynced]({{% relref
+  "/gameplay/solo" %}}) or in a party. This is also a good time to start your job
+  quests and attempt [Masked Carnivale]({{% relref "/masked-carnivale/" %}}})
+  stages you're ready for.
+
+- **Progress to 8-player duties**
+  — Join raids in a party to learn from bosses. Starting with older expansions (A
+  Realm Reborn) makes progression smoother. Work toward finishing Masked Carnivale
+  and learning {{< spell angel_whisper >}}, which opens up advanced strategies.
+
+## Important Tips
+
+At each step, complete your job quests when available. Spells required by job
+quests have a guaranteed learn rate **even when run unsynced**, so you won't get
+stuck. Gear doesn't matter much—focus on spell collection. Tomestone of Poetics
+gear is affordable and sufficient for everything except high-end Savage content.

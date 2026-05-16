@@ -2,6 +2,7 @@
 title: O4S (Exdeath)
 weight: 1
 type: savage-guide
+patch: "7.5"
 ---
 
 ## Overview

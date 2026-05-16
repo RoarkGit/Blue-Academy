@@ -1,6 +1,7 @@
 ---
 title: What is Blue Mage?
 weight: 10
+patch: "7.5"
 ---
 
 Blue Mage is a Limited Job that is categorized as a Caster DPS, yet functions

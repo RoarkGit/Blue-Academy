@@ -2,6 +2,7 @@
 title: A4S (Manipulator)
 weight: 1
 type: savage-guide
+patch: "7.5"
 ---
 
 ## Overview

@@ -12,6 +12,9 @@
 <script defer src="{{ $plausible.RelPermalink }}"></script>
 {{- $spellTooltips := resources.Get "/ts/spell-tooltips.ts" | js.Build (dict "targetPath" "/js/spell-tooltips.js") -}}
 <script defer src="{{ $spellTooltips.RelPermalink }}"></script>
+{{ partial "article-schema.html" . }}
+{{ partial "organization-schema.html" . }}
+{{ partial "breadcrumb-schema.html" . }}
 {{ with .Params.customCss -}}
   <link rel="stylesheet" href="{{ . }}" />
 {{- end }}
