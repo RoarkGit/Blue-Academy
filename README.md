@@ -77,11 +77,9 @@ There are some shortcodes that are helpful to use for adding content:
   This also works for role/general actions, but with the `{{< action addle >}}`
   shortcode.
 - You can embed a spell loadout using `{{< spell-loadout loadout="..." >}}`.
-  The `loadout` argument is a comma-separated list of spell numbers with `0`
-  for empty slots. Spell numbers match the in-game Blue Mage spellbook order
-  and can be found by building a loadout on the
-  [Spell Loadout Builder](https://mage.blue/gameplay/spell-loadout-builder/)
-  page and decoding the `spell_loadout` URL parameter.
+  The `loadout` argument is the value of the `spell_loadout` URL parameter
+  from the [Spell Loadout Builder](https://mage.blue/gameplay/spell-loadout-builder/)
+  page. Just build your loadout there and copy the parameter value directly.
 - You can render a rotation and its timeline by adding its contents to
   `rotation.yaml` and then using its shortcode
   `{{< rotation "rotation_name" >}}`
