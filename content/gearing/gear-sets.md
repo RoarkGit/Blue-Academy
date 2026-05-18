@@ -46,10 +46,13 @@ DPS, but it won't be _quite_ as high as the 2.20 Crit/SpS set.
 
 {{< etro title="2.16 SpS/Det" id="aac075e6-7d9b-4a00-89c8-74b5bd797870" >}}
 
-### 2.49 Crit/Det (will struggle with opener)
+### 2.49 Crit/Det (will struggle with 2-Minute Openers)
 
 This set has a higher theoretical damage ceiling, but is not capable of doing
-the DOT Moon Flute Opener. It is for people who prefer slower sets.
+the DOT Moon Flute Opener. It is for people who prefer slower sets. With a set
+like this, I would recommend using the
+[Even/Odd Opener]({{% relref "/gameplay/moon-flute-opener/#evenodd-opener" %}})
+since it is slightly more forgiving (and higher damage).
 
 {{< etro title="2.49 Crit/Det" id="2039770e-31f7-4288-938f-8b16897be223" >}}
 
@@ -65,13 +68,6 @@ for fights has been dominated by 2.20 Crit/SpS.
 #### Are there any "BIS" sets without Edenmorn gear?
 
 No. That is by definition not "BIS."
-
-#### Why don't we use Phantasmal Earring?
-
-It's subtle, but the way stat tiering works out means that we don't actually
-gain much from Phantasmal Earring. We have the same GCD with no actual benefit.
-Using other earrings lets us get more of other stats, thus a small increase in
-overall damage.
 
 #### What about level 70 and below?
 

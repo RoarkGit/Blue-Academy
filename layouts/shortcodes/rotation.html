@@ -4,10 +4,15 @@
   <script defer src="{{ $script.RelPermalink }}"></script>
 {{- end -}}
 {{- $rotation := index site.Data.rotation (.Get 0) -}}
+
+{{- /* ------------------------------------------------------------------ */}}
+{{- /* Rotation display                                                     */}}
+{{- /* ------------------------------------------------------------------ */}}
 {{- $currentGcd := 0 -}}
 {{- with $rotation.starting_gcd -}}
-  {{- $currentGcd = . -}}
+  {{- $currentGcd = int . -}}
 {{- end -}}
+<div class="rotation-wrapper">
 <div class="rotation">
   {{- range $rotation.actions -}}
     <div class="rotation-event">
@@ -17,9 +22,10 @@
           {{- if not $image -}}
             {{- errorf "Could not locate image for spell %s." .gcd -}}
           {{- end -}}
-          {{- $image = $image.Resize "48x webp" -}}
+          {{- $image1x := $image.Resize "48x webp" -}}
+          {{- $image2x := $image.Resize "96x webp" -}}
           {{- page.Store.SetInMap "tooltips" .gcd "spell" -}}
-          <img src="{{ $image.RelPermalink }}" />
+          <img src="{{ $image1x.RelPermalink }}" srcset="{{ $image2x.RelPermalink }} 2x" />
         </div>
         <div class="rotation-event-gcd-counter">
           {{- $currentGcd -}}
@@ -51,8 +57,9 @@
               {{- if not $img -}}
                 {{- errorf "Could not locate image for spell %s." $id -}}
               {{- end -}}
-              {{- $img = $img.Resize "36x webp" -}}
-              <img src="{{ $img.RelPermalink }}" />
+              {{- $img1x := $img.Resize "36x webp" -}}
+              {{- $img2x := $img.Resize "72x webp" -}}
+              <img src="{{ $img1x.RelPermalink }}" srcset="{{ $img2x.RelPermalink }} 2x" />
             </div>
             <div class="rotation-event-ogcd-timebox-wrapper">
               <div class="rotation-event-ogcd-timebox"></div>
@@ -62,4 +69,5 @@
       {{- end -}}
     </div>
   {{- end -}}
+</div>
 </div>

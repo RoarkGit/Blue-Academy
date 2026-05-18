@@ -77,7 +77,7 @@ deal _more_ damage by letting it run out this way rather than trying to squeeze
 in the second activation. You probably wouldn't be able to use it anyway since
 the opener is so tight.
 
-## The Openers
+## Standard 2-Minute Openers
 
 There are three variations of the Moon Flute Opener but they all are pretty
 nearly identical. In a group of eight you will want one person doing each of the
@@ -103,3 +103,29 @@ The player applying {{< spell breath_of_magic >}} should actually try to Moon
 Flute every minute when reapplying Breath of Magic.
 
 {{< rotation "moon_flute_breath" >}}
+
+### Even/Odd Opener
+
+We can actually squeeze out even more potency by using two alternating Moon
+Flute openers. This is especially nice for players with
+{{< spell breath_of_magic >}} since they want to Moon Flute every minute anyway
+to reapply the DOT. The actual order of even/odd windows may change depending
+on what each fight's mobility requirements allow you to do (e.g. using
+{{< spell phantom_flurry >}} during even windows and {{< spell apokalypsis >}}
+during odd windows).
+
+#### Even (Standard)
+
+{{< rotation "moon_flute_even" >}}
+
+#### Odd (Standard)
+
+{{< rotation "moon_flute_odd" >}}
+
+#### Even (Breath of Magic)
+
+{{< rotation "moon_flute_breath_even" >}}
+
+#### Odd (Breath of Magic)
+
+{{< rotation "moon_flute_breath_odd" >}}

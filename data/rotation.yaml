@@ -46,6 +46,54 @@ moon_flute_breath:
     - {gcd: bristle, ogcd: [swiftcast, surpanakha*4]}
     - {gcd: matra_magic, ogcd: [phantom_flurry]}
 
+moon_flute_even:
+  starting_gcd: -2
+  actions:
+    - {gcd: whistle}
+    - {gcd: tingle}
+    - {gcd: moon_flute, ogcd: [nightbloom]}
+    - {gcd: triple_trident, ogcd: [shock_strike]}
+    - {gcd: the_rose_of_destruction, ogcd: [feather_rain]}
+    - {gcd: bristle, ogcd: [swiftcast, sea_shanty]}
+    - {gcd: matra_magic, ogcd: [j_kick, surpanakha*4, apokalypsis]}
+
+moon_flute_odd:
+  starting_gcd: -1
+  actions:
+    - {gcd: bristle}
+    - {gcd: moon_flute}
+    - {gcd: song_of_torment, ogcd: [shock_strike]}
+    - {gcd: the_rose_of_destruction, ogcd: [feather_rain]}
+    - {gcd: winged_reprobation, ogcd: [glass_dance]}
+    - {gcd: winged_reprobation, ogcd: [j_kick]}
+    - {gcd: winged_reprobation}
+    - {gcd: winged_reprobation, ogcd: [phantom_flurry]}
+    
+moon_flute_breath_even:
+  starting_gcd: -2
+  actions:
+    - {gcd: whistle}
+    - {gcd: tingle}
+    - {gcd: moon_flute, ogcd: [nightbloom]}
+    - {gcd: triple_trident, ogcd: [shock_strike]}
+    - {gcd: bristle, ogcd: [feather_rain]}
+    - {gcd: breath_of_magic, ogcd: [j_kick]}
+    - {gcd: bristle, ogcd: [swiftcast, sea_shanty]}
+    - {gcd: matra_magic, ogcd: [surpanakha*4, apokalypsis]}
+
+moon_flute_breath_odd:
+  starting_gcd: -2
+  actions:
+    - {gcd: winged_reprobation}
+    - {gcd: bristle}
+    - {gcd: moon_flute}
+    - {gcd: song_of_torment, ogcd: [shock_strike]}
+    - {gcd: bristle, ogcd: [feather_rain]}
+    - {gcd: breath_of_magic}
+    - {gcd: winged_reprobation, ogcd: [glass_dance]}
+    - {gcd: winged_reprobation, ogcd: [j_kick]}
+    - {gcd: winged_reprobation, ogcd: [phantom_flurry]}
+
 gavel_skip:
   starting_gcd: -1
   actions:

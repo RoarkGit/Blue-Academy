@@ -408,6 +408,11 @@ dd {
   z-index: 10;
 }
 
+.rotation-wrapper {
+  width: max-content;
+  margin: 0 auto;
+}
+
 .rotation {
   display: flex;
   gap: 4px;
