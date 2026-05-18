@@ -18,10 +18,8 @@
     ,{
       "@type": "ListItem",
       "position": {{ $position }},
-      "name": "{{ $ancestor.Title }}"
-      {{- if $ancestor.Permalink }},
+      "name": "{{ $ancestor.Title }}",
       "item": "{{ $ancestor.Permalink }}"
-      {{- end }}
     }
     {{- end }}
     {{- end }}
