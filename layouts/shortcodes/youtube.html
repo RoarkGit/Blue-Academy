@@ -8,7 +8,7 @@
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "name": "{{ .Page.Title }} — Blue Academy",
-  "description": "{{ partial "page-description.gotmpl" .Page }}",
+  "description": "{{ partial "page-description.html" .Page }}",
   "thumbnailUrl": "https://i.ytimg.com/vi/{{ $id }}/maxresdefault.jpg",
   "uploadDate": "{{ .Page.Date.Format "2006-01-02T15:04:05Z07:00" }}",
   "contentUrl": "https://www.youtube.com/watch?v={{ $id }}",

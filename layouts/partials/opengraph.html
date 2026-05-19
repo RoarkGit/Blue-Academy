@@ -9,7 +9,7 @@
     <meta property="og:title" content="{{ . }}">
 {{- end }}
 
-{{- with trim (partial "page-description.gotmpl" . | plainify | htmlUnescape) "\n\r\t " }}
+{{- with trim (partial "page-description.html" . | plainify | htmlUnescape) "\n\r\t " }}
     <meta property="og:description" content="{{ . }}">
 {{- end }}
 

@@ -4,7 +4,7 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "{{ .Title }}",
-  "description": "{{ partial "page-description.gotmpl" . }}",
+  "description": "{{ partial "page-description.html" . }}",
   "url": "{{ .Permalink }}",
   "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
   "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
