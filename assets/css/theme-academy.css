@@ -460,7 +460,7 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
 
 /* Spell loadout builder */
 .spell-loadout-builder-link-wrapper {
-  padding-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
   grid-column: 1 / -1;
 }
 
