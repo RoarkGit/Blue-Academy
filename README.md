@@ -18,7 +18,6 @@ through markdown.
 
 The directories in the project map to the following content:
 
-- `archetypes`: layouts for a given _type_ of content (e.g. stage guide)
 - `assets`: static resources that get compiled for deploying on the website,
   such as image tooltips and TypeScript files
 - `content`: the actual content for the website; sections are subdirectories and
@@ -27,22 +26,24 @@ The directories in the project map to the following content:
 - `layouts`: shortcodes and partial layouts used for constructing a part of a
   page; this is where you can add more complicated stuff that cannot be done
   natively in the content files
-- `static`: static content such as `.css` stylesheets and some images
+- `scripts`: Node.js scripts for build tasks such as generating spell icons
+- `static`: static assets served directly, including CSS, images, `robots.txt`,
+  and pre-generated data files
 - `themes`: contains the theme submodule
 
 # Contributing
 
-Anyone is welcome to contribute! At the simplest level, you can submit a merge
+Anyone is welcome to contribute! At the simplest level, you can submit a pull
 request with new content files or additions to existing content files. If it's
 just simple markdown then rendering would work as expected.
 
 To actually build a local version of the website and verify that things like
 shortcodes work and that stuff _does_ look like you expect, you need to install:
 
-- [`hugo-extended`](https://github.com/gohugoio/hugo/releases), make sure it's
-  the `-extended` version!
-- `npm` is helpful for things like auto-formatting, but it's not actually used
-  for building anything.
+- [`hugo`](https://gohugo.io/installation/) (standard edition is fine, extended
+  is not required)
+- `npm` for linting, formatting, and regenerating spell icons when spell data
+  changes (`npm run build` runs the full build including icon generation)
 
 After snagging the requirements, you can clone the repo:
 
