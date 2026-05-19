@@ -206,12 +206,17 @@ That's a feeling, not reality. The balance is identical to before.
 
 ## Apokalypsis vs Being Mortal
 
-{{< spell apokalypsis >}} is a theoretical gain over
-{{< spell being_mortal >}} if you never move. In optimal
-conditions ({{< spell moon_flute >}} every minute), you can
-alternate {{< spell phantom_flurry >}} and {{< spell apokalypsis >}}
-finishers. Impractical in most content - use
-{{< spell being_mortal >}} instead.
+{{< spell apokalypsis >}} deals more potency than
+{{< spell being_mortal >}} but requires you to stand still for its
+full channel duration, making it risky in most content. In practice,
+{{< spell being_mortal >}} is the safer default.
+
+The exception is the [Even/Odd opener](/gameplay/moon-flute-opener/#evenodd-opener),
+where you Moon Flute every minute and can plan your movement around the
+openers. In that setup you alternate {{< spell phantom_flurry >}} and
+{{< spell apokalypsis >}} as your finisher, using one per window, which
+lets you get the full potency of both without channeling them back to
+back.
 
 ## Blue Mage Log
 
