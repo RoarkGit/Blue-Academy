@@ -22,8 +22,8 @@ jobs:
 
       - name: Install Hugo
         run: |
-          wget -q https://github.com/gohugoio/hugo/releases/download/v0.152.2/hugo_extended_0.152.2_linux-amd64.tar.gz
-          tar xf hugo_extended_0.152.2_linux-amd64.tar.gz hugo
+          wget -q https://github.com/gohugoio/hugo/releases/download/v0.152.2/hugo_0.152.2_linux-amd64.tar.gz
+          tar xf hugo_0.152.2_linux-amd64.tar.gz hugo
           sudo mv hugo /usr/local/bin/
 
       - run: npm ci
