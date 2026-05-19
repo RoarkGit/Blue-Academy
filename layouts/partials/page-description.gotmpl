@@ -1,0 +1,14 @@
+{{- /*
+  Returns the page description for use in meta tags and schema markup.
+  Falls back to a generated description for savage-guide and stage-guide
+  page types, then to .Summary if neither applies.
+*/ -}}
+{{- if .Description -}}
+  {{- .Description -}}
+{{- else if eq .Type "stage-guide" -}}
+  {{- printf "Masked Carnivale %s guide: strategy, recommended spells, mechanics, and solution." .Title -}}
+{{- else if .Params.descriptionPrefix -}}
+  {{- printf "%s %s guide: mechanics, strategy, spell recommendations, and positioning." .Params.descriptionPrefix .Title -}}
+{{- else -}}
+  {{- .Summary | plainify | htmlUnescape -}}
+{{- end -}}

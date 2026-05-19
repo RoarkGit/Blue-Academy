@@ -4,9 +4,6 @@ date: 2026-05-16
 weight: 2
 type: savage-guide
 patch: '7.5'
-description: >-
-  Alexander Savage A8S guide: mechanics, strategy, spell
-  recommendations, and positioning.
 ---
 
 ## Overview
