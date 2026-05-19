@@ -11,6 +11,8 @@ outputs:
 params:
   custom_css: ['css/full-page.css']
 
+  disableExplicitIndexURLs: true
+
   # Relearn Theme Settings
   collapsibleMenu: true
   hideAuthorDate: true

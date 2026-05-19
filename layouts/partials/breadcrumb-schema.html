@@ -1,4 +1,11 @@
 {{- if and (ne .Kind "home") (ne .Kind "section") }}
+{{- $ancestors := slice }}
+{{- range .Ancestors }}
+  {{- if and (ne .Kind "home") (ne .Kind "taxonomy") }}
+    {{- $ancestors = $ancestors | append . }}
+  {{- end }}
+{{- end }}
+{{- $ancestorLen := len $ancestors }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -11,9 +18,9 @@
       "item": "https://mage.blue/"
     }
     {{- $position := 1 }}
-    {{- $ancestors := .Ancestors }}
-    {{- range $ancestor := $ancestors }}
-    {{- if and (ne $ancestor.Kind "home") (ne $ancestor.Kind "taxonomy") }}
+    {{- range $i, $_ := $ancestors }}
+    {{- $ancestor := index $ancestors (sub (sub $ancestorLen 1) $i) }}
+    {{- if $ancestor.Permalink }}
     {{- $position = add $position 1 }}
     ,{
       "@type": "ListItem",
