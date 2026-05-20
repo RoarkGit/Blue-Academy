@@ -71,42 +71,46 @@ function decodeLoadout(encoded: string): number[] {
 }
 
 function updateMacro() {
-  const spells = activeSpells.filter((s) => s.Name !== '')
-  const macro1El = document.getElementById('spell-loadout-macro-1')
-  const macro2El = document.getElementById('spell-loadout-macro-2')
-  const block1 = document.getElementById('spell-loadout-macro-block-1')
-  const block2 = document.getElementById('spell-loadout-macro-block-2')
-  const macroToggle = document.getElementById('spell-loadout-macro-toggle')
-  const macroContent = document.getElementById('spell-loadout-macro-content')
-  if (!macro1El || !macro2El || !block1 || !block2 || !macroToggle || !macroContent)
-    return
+  try {
+    const spells = activeSpells.filter((s) => s.Name !== '')
+    const macro1El = document.getElementById('spell-loadout-macro-1')
+    const macro2El = document.getElementById('spell-loadout-macro-2')
+    const block1 = document.getElementById('spell-loadout-macro-block-1')
+    const block2 = document.getElementById('spell-loadout-macro-block-2')
+    const macroToggle = document.getElementById('spell-loadout-macro-toggle')
+    const macroContent = document.getElementById('spell-loadout-macro-content')
+    if (!macro1El || !macro2El || !block1 || !block2 || !macroToggle || !macroContent)
+      return
 
-  if (spells.length === 0) {
-    macroToggle.hidden = true
-    macroContent.hidden = true
-    block1.hidden = true
-    block2.hidden = true
-    return
+    if (spells.length === 0) {
+      macroToggle.hidden = true
+      macroContent.hidden = true
+      block1.hidden = true
+      block2.hidden = true
+      return
+    }
+
+    const lines = [
+      '/bluespellbook clear',
+      ...spells.map((s) => `/bluespellbook set "${s.Name}" on`),
+    ]
+    const macro1Lines = lines.slice(0, 15)
+    const macro2Lines = lines.slice(15)
+
+    macro1El.textContent = macro1Lines.join('\n')
+    block1.hidden = false
+
+    if (macro2Lines.length > 0) {
+      macro2El.textContent = macro2Lines.join('\n')
+      block2.hidden = false
+    } else {
+      block2.hidden = true
+    }
+
+    macroToggle.hidden = false
+  } catch (e) {
+    // Silently fail to not break spell loading
   }
-
-  const lines = [
-    '/bluespellbook clear',
-    ...spells.map((s) => `/bluespellbook set "${s.Name}" on`),
-  ]
-  const macro1Lines = lines.slice(0, 15)
-  const macro2Lines = lines.slice(15)
-
-  macro1El.textContent = macro1Lines.join('\n')
-  block1.hidden = false
-
-  if (macro2Lines.length > 0) {
-    macro2El.textContent = macro2Lines.join('\n')
-    block2.hidden = false
-  } else {
-    block2.hidden = true
-  }
-
-  macroToggle.hidden = false
 }
 
 function updateSpellLoadoutLink() {
