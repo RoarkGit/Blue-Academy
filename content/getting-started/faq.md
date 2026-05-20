@@ -298,8 +298,7 @@ frozen/petrified, {{< spell ultravibration >}} works 100%.
 | Candy | {{< spell candy_cane >}} |
 | Conked | {{< spell magic_hammer >}} |
 | Deep Freeze | {{< spell the_rams_voice >}} |
-| Off-guard | {{< spell off-guard >}} /
-{{< spell peculiar_light >}} (shared CD) |
+| Off-guard | {{< spell off-guard >}} / {{< spell peculiar_light >}} (shared CD) |
 | Paralysis | The Dragon's Voice, {{< spell mind_blast >}} |
 | Petrify | Level 5 Petrify |
 | Sleep | Acorn Bomb, Chirp, Role Action |
