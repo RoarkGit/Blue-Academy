@@ -50,6 +50,7 @@ function addListener(
 
 function removeListener(spellId: string) {
   const listeners = eventListeners[spellId]
+  if (!listeners) return
   for (const listener of listeners) {
     if (listener.event === 'mouseleave') {
       listener.element.dispatchEvent(new MouseEvent('mouseleave'))
