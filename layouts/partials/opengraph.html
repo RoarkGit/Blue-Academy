@@ -39,13 +39,7 @@
 {{- with .Params.image }}
     <meta property="og:image" content="{{ . | absURL }}">
 {{- else }}
-  {{- with (partial "_funcs/get-page-images" .) }}
-    {{- range . | first 6 }}
-      <meta property="og:image" content="{{ .Permalink }}">
-    {{- end }}
-  {{- else }}
     <meta property="og:image" content="{{ "/images/banner.png" | absURL }}">
-  {{- end }}
 {{- end }}
 
 {{- with .Params.audio }}
