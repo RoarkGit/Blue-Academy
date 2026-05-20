@@ -43,6 +43,8 @@
     {{- range . | first 6 }}
       <meta property="og:image" content="{{ .Permalink }}">
     {{- end }}
+  {{- else }}
+    <meta property="og:image" content="{{ "/images/banner.png" | absURL }}">
   {{- end }}
 {{- end }}
 
