@@ -497,6 +497,7 @@ dd {
   font-size: 0.9rem;
   text-align: center;
   margin-top: 0.5rem;
+  width: calc(100% + var(--spellbook-gap) * 2);
 }
 
 .spell-loadout-builder-macro-wrapper {
