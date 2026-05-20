@@ -1,4 +1,4 @@
-{{- if and (ne .Kind "home") (ne .Kind "section") }}
+{{- if ne .Kind "home" }}
 {{- $ancestors := slice }}
 {{- range .Ancestors }}
   {{- if and (ne .Kind "home") (ne .Kind "taxonomy") }}
