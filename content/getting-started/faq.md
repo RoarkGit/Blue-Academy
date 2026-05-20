@@ -292,15 +292,15 @@ frozen/petrified, {{< spell ultravibration >}} works 100%.
 
 | Effect | Spells |
 |--------|--------|
-| Addle | Role Action |
-| Bind | White Knight's Tour |
-| Bleeding | Aetherial Spark, {{< spell song_of_torment >}} |
+| Addle | {{< action addle >}} |
+| Bind | {{< spell white_knights_tour >}} |
+| Bleeding | {{< spell aetherial_spark >}}, {{< spell song_of_torment >}} |
 | Candy | {{< spell candy_cane >}} |
 | Conked | {{< spell magic_hammer >}} |
 | Deep Freeze | {{< spell the_rams_voice >}} |
 | Off-guard | {{< spell off-guard >}} / {{< spell peculiar_light >}} (shared CD) |
-| Paralysis | The Dragon's Voice, {{< spell mind_blast >}} |
-| Petrify | Level 5 Petrify |
-| Sleep | Acorn Bomb, Chirp, Role Action |
-| Slow | Black Knight's Tour, {{< spell ice_spikes >}} |
+| Paralysis | {{< spell the_dragons_voice >}}, {{< spell mind_blast >}} |
+| Petrify | {{< spell level_5_petrify >}} |
+| Sleep | {{< spell acorn_bomb >}}, {{< spell chirp >}}, {{< action sleep >}} |
+| Slow | {{< spell black_knights_tour >}}, {{< spell ice_spikes >}} |
 | Stun | {{< spell bomb_toss >}} |
