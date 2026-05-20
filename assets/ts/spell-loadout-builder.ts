@@ -181,22 +181,26 @@ ready(function () {
       continue
     }
     const handleSpellClick = () => {
+      console.log('spell clicked:', spellId)
       const existingIndex = activeSpells.findIndex(
         (s: Spell) => s.Id === spellId,
       )
       if (existingIndex !== -1) {
+        console.log('removing spell from index:', existingIndex)
         activeSpells[existingIndex] = { Id: '', Name: '', Number: '' }
         removeListener(spellId)
         unsetSpell(spellLoadoutSpells[existingIndex])
         updateSpellLoadoutLink()
       } else {
         const nextOpen = activeSpells.findIndex((s: Spell) => s.Id === '')
+        console.log('next open slot:', nextOpen, 'total slots:', spellLoadoutSpells.length)
         if (nextOpen !== -1) {
           activeSpells[nextOpen] = {
             Id: spellId,
             Name: spellName,
             Number: spellNumber,
           }
+          console.log('calling setSpell for slot:', nextOpen)
           setSpell(spellLoadoutSpells[nextOpen], spell)
           updateSpellLoadoutLink()
         }
