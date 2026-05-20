@@ -131,23 +131,13 @@ function updateSpellLoadoutLink() {
 
 function setSpell(spellLoadoutSpell: HTMLElement, spellbookSpell: HTMLElement) {
   const spellId = spellbookSpell.getAttribute('data-tooltip-id')
-  console.log('setSpell called with spellId:', spellId)
-  if (spellId === null) {
-    console.log('no spellId, returning')
-    return
-  }
+  if (spellId === null) return
   const tooltip = document.getElementById(spellId + '-tooltip')
-  if (tooltip === null) {
-    console.log('no tooltip found, returning')
-    return
-  }
-  const innerHTML = spellbookSpell.innerHTML
-  console.log('setting innerHTML:', innerHTML.substring(0, 100))
   spellLoadoutSpell.setAttribute('data-tooltip-id', spellId)
   spellLoadoutSpell.draggable = true
-  spellLoadoutSpell.innerHTML = innerHTML
-  console.log('spell element after update:', spellLoadoutSpell.innerHTML.substring(0, 100))
+  spellLoadoutSpell.innerHTML = spellbookSpell.innerHTML
   spellLoadoutSpell.style.cursor = 'pointer'
+  if (tooltip === null) return
   addListener(
     spellId,
     spellLoadoutSpell,
@@ -191,26 +181,22 @@ ready(function () {
       continue
     }
     const handleSpellClick = () => {
-      console.log('spell clicked:', spellId)
       const existingIndex = activeSpells.findIndex(
         (s: Spell) => s.Id === spellId,
       )
       if (existingIndex !== -1) {
-        console.log('removing spell from index:', existingIndex)
         activeSpells[existingIndex] = { Id: '', Name: '', Number: '' }
         removeListener(spellId)
         unsetSpell(spellLoadoutSpells[existingIndex])
         updateSpellLoadoutLink()
       } else {
         const nextOpen = activeSpells.findIndex((s: Spell) => s.Id === '')
-        console.log('next open slot:', nextOpen, 'total slots:', spellLoadoutSpells.length)
         if (nextOpen !== -1) {
           activeSpells[nextOpen] = {
             Id: spellId,
             Name: spellName,
             Number: spellNumber,
           }
-          console.log('calling setSpell for slot:', nextOpen)
           setSpell(spellLoadoutSpells[nextOpen], spell)
           updateSpellLoadoutLink()
         }
