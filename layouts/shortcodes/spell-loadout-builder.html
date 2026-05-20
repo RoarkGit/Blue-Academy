@@ -5,6 +5,12 @@
   {{- $script := resources.Get "/ts/spell-loadout.ts" | js.Build (dict "targetPath" "/js/spell-loadout.js") -}}
   <script defer src="{{ $script.RelPermalink }}"></script>
 {{- end -}}
+{{- if not (page.Store.Get "spellLoadoutTooltipsIncluded") -}}
+  {{- page.Store.Set "spellLoadoutTooltipsIncluded" true -}}
+  {{- range (where (index site.Data.spell) "id" "!=" nil) -}}
+    {{- page.Store.SetInMap "tooltips" .id "spell" -}}
+  {{- end -}}
+{{- end -}}
 <div id="spell-loadout-builder" class="spell-loadout ffxiv-ui-background">
   {{- range (seq 24) -}}
     <div class="spell-loadout-spell tooltip"></div>
