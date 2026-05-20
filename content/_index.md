@@ -7,7 +7,7 @@ description: >-
   Masked Carnivale strategies, tank/healer/DPS loadouts, gearing, and rotations.
   Learn how to master the Blue Mage Limited Job with theorycrafting and expert tips.
 patch: '7.5'
-image: /banner.png
+image: /images/banner.png
 ---
 
 Welcome to Blue Academy! Eorzea's biggest and best (no bias whatsoever)
