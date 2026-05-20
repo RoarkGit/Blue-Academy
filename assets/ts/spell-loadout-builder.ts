@@ -80,14 +80,22 @@ function updateMacro() {
     const block2 = document.getElementById('spell-loadout-macro-block-2')
     const macroToggle = document.getElementById('spell-loadout-macro-toggle')
     const macroContent = document.getElementById('spell-loadout-macro-content')
-    if (!macro1El || !macro2El || !block1 || !block2 || !macroToggle || !macroContent)
+    const copyMacro1Btn = document.getElementById('copy-macro-1')
+    if (
+      !macro1El ||
+      !macro2El ||
+      !block1 ||
+      !block2 ||
+      !macroToggle ||
+      !macroContent
+    )
       return
 
     if (spells.length === 0) {
-      macroToggle.hidden = true
-      macroContent.hidden = true
-      block1.hidden = true
-      block2.hidden = true
+      macroToggle.classList.add('hidden')
+      macroContent.classList.add('hidden')
+      block1.classList.add('hidden')
+      block2.classList.add('hidden')
       return
     }
 
@@ -99,17 +107,26 @@ function updateMacro() {
     const macro2Lines = lines.slice(15)
 
     macro1El.textContent = macro1Lines.join('\n')
-    block1.hidden = false
+    block1.removeAttribute('hidden')
+    block1.classList.remove('hidden')
 
     if (macro2Lines.length > 0) {
       macro2El.textContent = macro2Lines.join('\n')
-      block2.hidden = false
+      block2.removeAttribute('hidden')
+      block2.classList.remove('hidden')
+      if (copyMacro1Btn) {
+        copyMacro1Btn.textContent = 'Copy macro 1'
+      }
     } else {
-      block2.hidden = true
+      block2.classList.add('hidden')
+      if (copyMacro1Btn) {
+        copyMacro1Btn.textContent = 'Copy macro'
+      }
     }
 
-    macroToggle.hidden = false
-  } catch (e) {
+    macroToggle.removeAttribute('hidden')
+    macroToggle.classList.remove('hidden')
+  } catch {
     // Silently fail to not break spell loading
   }
 }
@@ -204,7 +221,7 @@ ready(function () {
     }
 
     spell.addEventListener('click', handleSpellClick)
-    spell.addEventListener('touchstart', (ev) => {
+    spell.addEventListener('touchstart', () => {
       touchInProgress = true
     })
     spell.addEventListener('touchend', (ev) => {
@@ -378,15 +395,21 @@ ready(function () {
   const macroContent = document.getElementById('spell-loadout-macro-content')
   if (macroToggle && macroContent) {
     macroToggle.addEventListener('click', () => {
-      const isHidden = macroContent.hidden
-      macroContent.hidden = !isHidden
+      const isHidden =
+        macroContent.classList.contains('hidden') ||
+        macroContent.hasAttribute('hidden')
+      if (isHidden) {
+        macroContent.classList.remove('hidden')
+        macroContent.removeAttribute('hidden')
+      } else {
+        macroContent.classList.add('hidden')
+      }
       const icon = macroToggle.querySelector('.spell-loadout-macro-toggle-icon')
       if (icon) {
         icon.textContent = isHidden ? '▲' : '▼'
       }
     })
   }
-
 
   const params = new URLSearchParams(window.location.search)
   const preload = params.get('spell_loadout')

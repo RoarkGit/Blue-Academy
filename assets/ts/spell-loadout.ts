@@ -11,7 +11,9 @@ function scaleLoadout(loadout: HTMLElement): void {
 }
 
 ready(function () {
-  for (const loadout of document.querySelectorAll<HTMLElement>('.spell-loadout')) {
+  for (const loadout of document.querySelectorAll<HTMLElement>(
+    '.spell-loadout',
+  )) {
     scaleLoadout(loadout)
     const observer = new ResizeObserver(() => scaleLoadout(loadout))
     if (loadout.parentElement) {

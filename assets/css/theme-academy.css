@@ -501,6 +501,17 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
   align-items: center;
 }
 
+#copy-macro-1 {
+  margin-bottom: 1rem;
+}
+
+#spell-loadout-macro-block-1.hidden,
+#spell-loadout-macro-block-2.hidden,
+#spell-loadout-macro-toggle.hidden,
+#spell-loadout-macro-content.hidden {
+  display: none !important;
+}
+
 /* Rotation display */
 .rotation {
   display: flex;

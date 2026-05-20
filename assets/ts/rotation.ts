@@ -15,7 +15,8 @@ ready(function () {
   for (const rotation of document.querySelectorAll<HTMLElement>('.rotation')) {
     scaleRotation(rotation)
     const observer = new ResizeObserver(() => scaleRotation(rotation))
-    const container = rotation.closest<HTMLElement>('.rotation-wrapper')?.parentElement
+    const container =
+      rotation.closest<HTMLElement>('.rotation-wrapper')?.parentElement
     if (container) {
       observer.observe(container)
     }
