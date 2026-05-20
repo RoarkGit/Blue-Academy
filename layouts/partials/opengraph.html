@@ -36,11 +36,7 @@
     <meta property="og:type" content="website">
 {{- end }}
 
-{{- with .Params.image }}
-    <meta property="og:image" content="{{ . | absURL }}">
-{{- else }}
     <meta property="og:image" content="{{ "/images/banner.png" | absURL }}">
-{{- end }}
 
 {{- with .Params.audio }}
   {{- range . | first 6  }}
@@ -48,11 +44,6 @@
   {{- end }}
 {{- end }}
 
-{{- with .Params.videos }}
-  {{- range . | first 6 }}
-    <meta property="og:video" content="{{ . | absURL }}">
-  {{- end }}
-{{- end }}
 
 {{- range .GetTerms "series" }}
   {{- range .Pages | first 7 }}
