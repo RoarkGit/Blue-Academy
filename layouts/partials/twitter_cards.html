@@ -4,7 +4,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="{{ .Permalink }}">
 {{- else }}
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ "/images/banner.png" | absURL }}">
 {{- end }}
 
 {{- with (partial "title.gotmpl" (dict "page" . "fullyQualified" true "reverse" true) | plainify) }}
