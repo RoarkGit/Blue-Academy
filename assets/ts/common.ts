@@ -39,6 +39,7 @@ export function moveTooltip(tooltip: HTMLElement, event: MouseEvent) {
   const scale = Math.max(0.75, Math.min(1, (window.innerWidth - 20) / 500))
   const scaledWidth = tooltip.offsetWidth * scale
   const scaledHeight = tooltip.offsetHeight * scale
+  const padding = 10
 
   let newX = event.clientX + 10
   let newY = event.clientY
@@ -53,8 +54,13 @@ export function moveTooltip(tooltip: HTMLElement, event: MouseEvent) {
     newY -= scaledHeight
   }
   tooltip.style.transform = scale < 1 ? `scale(${scale})` : ''
-  tooltip.style.left = `${Math.max(0, newX)}px`
-  tooltip.style.top = `${Math.max(0, newY)}px`
+  newX = Math.max(padding, newX)
+  newX = Math.min(
+    newX,
+    Math.max(0, window.innerWidth - tooltip.offsetWidth - padding),
+  )
+  tooltip.style.left = `${newX}px`
+  tooltip.style.top = `${Math.max(padding, newY)}px`
 }
 
 export function toggleActive(
