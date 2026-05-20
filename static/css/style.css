@@ -60,6 +60,7 @@
 }
 
 .tooltip {
+  display: inline-block;
   white-space: nowrap;
 }
 
