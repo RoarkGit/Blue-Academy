@@ -5,7 +5,7 @@ archetype: home
 description: >-
   Complete Blue Mage guide for FFXIV: spell learning guide, optimal builds,
   Masked Carnivale strategies, tank/healer/DPS loadouts, gearing, and rotations.
-  Learn how to master Blue Mage limited job with theorycrafting and expert tips.
+  Learn how to master the Blue Mage Limited Job with theorycrafting and expert tips.
 patch: '7.5'
 ---
 
