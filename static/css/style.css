@@ -153,6 +153,7 @@
 .tooltip-popup-type {
   flex-basis: 35%;
   color: var(--tooltip-color-secondary);
+  font-size: 0.9rem;
 }
 
 .tooltip-popup-range,
@@ -161,6 +162,7 @@
   justify-content: flex-end;
   margin: 0;
   line-height: 1rem;
+  font-size: 0.9rem;
 }
 
 .tooltip-popup-range > * + * {
@@ -193,6 +195,7 @@ dd {
   margin-left: calc(var(--tooltip-image-padding) * -1);
   height: auto;
   text-align: right;
+  font-size: 0.9rem;
 }
 
 .tooltip-popup-cast > * {
@@ -262,10 +265,12 @@ dd {
 
 .tooltip-popup-additional-info dt {
   color: rgb(0, 204, 34);
+  font-weight: normal;
 }
 
 .tooltip-popup-additional-info dt + dd {
   margin-left: 0.25rem;
+  font-weight: normal;
 }
 
 .spell-list p {
