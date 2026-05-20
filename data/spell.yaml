@@ -850,6 +850,8 @@
     Chance of successful attack is low. Has no effect on enemies whose level is higher than your own.
   notes: |
     Has approximately 67% accuracy.
+
+    Accuracy increases by about ~2.5% per level you have over your target; this is the only spell that behaves this way.
   target:
     - enemy
   status:
