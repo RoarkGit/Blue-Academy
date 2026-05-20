@@ -55,13 +55,11 @@ clear faster is not.
 
 - {{< spell missile >}}: Deals damage equal to 50% of the target's current HP.
   Single target, can be resisted. Good for softening up bosses or large enemies
-- {{< spell launcher >}}: Deals 10%, 20%, 30%, or 50% of maximum HP (chosen at
+- {{< spell launcher >}}: Deals 10%, 20%, 30%, or 50% of current HP (chosen at
   random) to all enemies in a 15y radius. Cannot be resisted unless the target
   is entirely immune
 - {{< spell dimensional_shift >}}: An alternative to Launcher for weakening
-  groups of enemies. Its damage scales with the target's current HP (making it
-  weaker as enemies are worn down), and its slow cast time limits how often you
-  can use it
+  groups of enemies. Its slow cast time makes it less useful overall.
 - {{< spell level_5_death >}}: Instantly kills enemies within a 6y radius whose
   level is divisible by 5. Can be resisted
 - {{< spell ultravibration >}}: Instantly kills any enemy affected by Deep
