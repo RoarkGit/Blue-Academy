@@ -70,6 +70,45 @@ function decodeLoadout(encoded: string): number[] {
   return Array.from(Uint8Array.fromBase64(encoded, { alphabet: 'base64url' }))
 }
 
+function updateMacro() {
+  const spells = activeSpells.filter((s) => s.Name !== '')
+  const macro1El = document.getElementById('spell-loadout-macro-1')
+  const macro2El = document.getElementById('spell-loadout-macro-2')
+  const block1 = document.getElementById('spell-loadout-macro-block-1')
+  const block2 = document.getElementById('spell-loadout-macro-block-2')
+  const macroToggle = document.getElementById('spell-loadout-macro-toggle')
+  const macroContent = document.getElementById('spell-loadout-macro-content')
+  if (!macro1El || !macro2El || !block1 || !block2 || !macroToggle || !macroContent)
+    return
+
+  if (spells.length === 0) {
+    macroToggle.hidden = true
+    macroContent.hidden = true
+    block1.hidden = true
+    block2.hidden = true
+    return
+  }
+
+  const lines = [
+    '/bluespellbook clear',
+    ...spells.map((s) => `/bluespellbook set "${s.Name}" on`),
+  ]
+  const macro1Lines = lines.slice(0, 15)
+  const macro2Lines = lines.slice(15)
+
+  macro1El.textContent = macro1Lines.join('\n')
+  block1.hidden = false
+
+  if (macro2Lines.length > 0) {
+    macro2El.textContent = macro2Lines.join('\n')
+    block2.hidden = false
+  } else {
+    block2.hidden = true
+  }
+
+  macroToggle.hidden = false
+}
+
 function updateSpellLoadoutLink() {
   const url = new URL(window.location.href)
   const encoded = encodeLoadout()
@@ -82,6 +121,7 @@ function updateSpellLoadoutLink() {
   // Share link uses the short subdomain format
   const shareUrl = `https://loadout.mage.blue/${encoded}`
   spellLoadoutBuilderLink?.setAttribute('href', shareUrl)
+  updateMacro()
 }
 
 function setSpell(spellLoadoutSpell: HTMLElement, spellbookSpell: HTMLElement) {
@@ -297,6 +337,52 @@ ready(function () {
     })
   }
 
+  const copyMacro1 = document.getElementById('copy-macro-1')
+  if (copyMacro1) {
+    copyMacro1.addEventListener('click', async () => {
+      const macro1El = document.getElementById('spell-loadout-macro-1')
+      if (macro1El?.textContent) {
+        await navigator.clipboard.writeText(macro1El.textContent)
+        trackEvent('Macro Copied')
+        const originalText = copyMacro1.textContent
+        copyMacro1.textContent = 'Copied!'
+        setTimeout(() => {
+          copyMacro1.textContent = originalText
+        }, 2000)
+      }
+    })
+  }
+
+  const copyMacro2 = document.getElementById('copy-macro-2')
+  if (copyMacro2) {
+    copyMacro2.addEventListener('click', async () => {
+      const macro2El = document.getElementById('spell-loadout-macro-2')
+      if (macro2El?.textContent) {
+        await navigator.clipboard.writeText(macro2El.textContent)
+        trackEvent('Macro Copied')
+        const originalText = copyMacro2.textContent
+        copyMacro2.textContent = 'Copied!'
+        setTimeout(() => {
+          copyMacro2.textContent = originalText
+        }, 2000)
+      }
+    })
+  }
+
+  const macroToggle = document.getElementById('spell-loadout-macro-toggle')
+  const macroContent = document.getElementById('spell-loadout-macro-content')
+  if (macroToggle && macroContent) {
+    macroToggle.addEventListener('click', () => {
+      const isHidden = macroContent.hidden
+      macroContent.hidden = !isHidden
+      const icon = macroToggle.querySelector('.spell-loadout-macro-toggle-icon')
+      if (icon) {
+        icon.textContent = isHidden ? '▲' : '▼'
+      }
+    })
+  }
+
+
   const params = new URLSearchParams(window.location.search)
   const preload = params.get('spell_loadout')
   if (preload) {
@@ -318,4 +404,5 @@ ready(function () {
     })
   }
   updateSpellLoadoutLink()
+  updateMacro()
 })
