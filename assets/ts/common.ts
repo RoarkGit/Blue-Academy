@@ -23,8 +23,8 @@ export function ready(fn: () => void) {
 export function attachTooltip(element: HTMLElement, tooltip: HTMLElement) {
   element.addEventListener('mouseenter', function (event) {
     if (!(event instanceof MouseEvent)) return
-    moveTooltip(tooltip, event)
     tooltip.hidden = false
+    moveTooltip(tooltip, event)
   })
   element.addEventListener('mouseleave', function () {
     tooltip.hidden = true
@@ -36,16 +36,25 @@ export function attachTooltip(element: HTMLElement, tooltip: HTMLElement) {
 }
 
 export function moveTooltip(tooltip: HTMLElement, event: MouseEvent) {
+  const scale = Math.max(0.75, Math.min(1, (window.innerWidth - 20) / 500))
+  const scaledWidth = tooltip.offsetWidth * scale
+  const scaledHeight = tooltip.offsetHeight * scale
+
   let newX = event.clientX + 10
   let newY = event.clientY
-  if (event.clientX + tooltip.offsetWidth > window.innerWidth) {
-    newX -= tooltip.offsetWidth + 20
+  const onLeft = event.clientX + scaledWidth + 10 > window.innerWidth
+  if (onLeft) {
+    newX = event.clientX - scaledWidth - 10
+    tooltip.style.transformOrigin = 'top right'
+  } else {
+    tooltip.style.transformOrigin = 'top left'
   }
-  if (event.clientY + tooltip.offsetHeight > window.innerHeight) {
-    newY -= tooltip.offsetHeight
+  if (event.clientY + scaledHeight > window.innerHeight) {
+    newY -= scaledHeight
   }
+  tooltip.style.transform = scale < 1 ? `scale(${scale})` : ''
   tooltip.style.left = `${Math.max(0, newX)}px`
-  tooltip.style.top = `${newY}px`
+  tooltip.style.top = `${Math.max(0, newY)}px`
 }
 
 export function toggleActive(
