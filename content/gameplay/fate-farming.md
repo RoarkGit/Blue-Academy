@@ -59,9 +59,9 @@ clear faster is not.
   random) to all enemies in a 15y radius. Cannot be resisted unless the target
   is entirely immune
 - {{< spell dimensional_shift >}}: An alternative to Launcher for weakening
-  groups of enemies. Unlike Launcher it can be resisted, its damage scales with
-  the target's current HP (making it weaker as enemies are worn down), and its
-  slow cast time limits how often you can use it
+  groups of enemies. Its damage scales with the target's current HP (making it
+  weaker as enemies are worn down), and its slow cast time limits how often you
+  can use it
 - {{< spell level_5_death >}}: Instantly kills enemies within a 6y radius whose
   level is divisible by 5. Can be resisted
 - {{< spell ultravibration >}}: Instantly kills any enemy affected by Deep
