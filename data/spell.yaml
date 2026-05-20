@@ -767,7 +767,7 @@
 
     {{< green "Duration: " >}}180s
   notes: |
-    Primarily used for buffing {{< spell toad_oil >}}. Has _some_ use for
+    Primarily used for buffing {{< spell self_destruct >}}. Has _some_ use for
     dungeon tanking and soloing.
   target:
     - ally
