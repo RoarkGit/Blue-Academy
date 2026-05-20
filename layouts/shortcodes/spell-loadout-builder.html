@@ -29,3 +29,9 @@
     </div>
   </div>
 </div>
+{{- if not (page.Store.Get "spellLoadoutTooltipsRendered") -}}
+  {{- page.Store.Set "spellLoadoutTooltipsRendered" true -}}
+  {{- range (index site.Data.spell) -}}
+    {{- partial "tooltip.html" (dict "context" $ "id" .id "type" "spell") -}}
+  {{- end -}}
+{{- end -}}
