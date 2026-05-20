@@ -4,7 +4,7 @@ date: 2026-05-16
 weight: 10
 patch: '7.5'
 description: >-
-  What is Blue Mage? Learn about the job's unique mechanics, limited job
+  What is Blue Mage? Learn about the job's unique mechanics, Limited Job
   status, and role flexibility.
 ---
 
