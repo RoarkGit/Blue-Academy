@@ -44,7 +44,7 @@ export function moveTooltip(tooltip: HTMLElement, event: MouseEvent) {
   if (event.clientY + tooltip.offsetHeight > window.innerHeight) {
     newY -= tooltip.offsetHeight
   }
-  tooltip.style.left = `${newX}px`
+  tooltip.style.left = `${Math.max(0, newX)}px`
   tooltip.style.top = `${newY}px`
 }
 

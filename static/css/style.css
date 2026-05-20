@@ -89,6 +89,7 @@
   position: fixed;
   z-index: 100;
   box-shadow: 0 0 0.25rem 0.25rem #182326;
+  pointer-events: none;
 }
 
 .tooltip-popup {
