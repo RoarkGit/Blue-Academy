@@ -121,9 +121,9 @@ For details, see the [Gear Sets]({{% ref "gear-sets" %}}) page.
 - {{< spell the_rose_of_destruction >}}, {{< spell chelonian_gate >}},
   and {{< spell ruby_dynamics >}}
 - {{< spell being_mortal >}} and {{< spell apokalypsis >}}
-The DoT from {{< spell song_of_torment >}},
-{{< spell aetherial_spark >}}, and {{< spell nightbloom >}}
-will overwrite one another and can't be stacked.
+- The DOT from {{< spell song_of_torment >}},
+  {{< spell aetherial_spark >}}, and {{< spell nightbloom >}}
+  will overwrite one another and can't be stacked.
 
 ## Why didn't I learn Cold Fog?
 
