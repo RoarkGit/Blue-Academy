@@ -131,12 +131,22 @@ function updateSpellLoadoutLink() {
 
 function setSpell(spellLoadoutSpell: HTMLElement, spellbookSpell: HTMLElement) {
   const spellId = spellbookSpell.getAttribute('data-tooltip-id')
-  if (spellId === null) return
+  console.log('setSpell called with spellId:', spellId)
+  if (spellId === null) {
+    console.log('no spellId, returning')
+    return
+  }
   const tooltip = document.getElementById(spellId + '-tooltip')
-  if (tooltip === null) return
+  if (tooltip === null) {
+    console.log('no tooltip found, returning')
+    return
+  }
+  const innerHTML = spellbookSpell.innerHTML
+  console.log('setting innerHTML:', innerHTML.substring(0, 100))
   spellLoadoutSpell.setAttribute('data-tooltip-id', spellId)
   spellLoadoutSpell.draggable = true
-  spellLoadoutSpell.innerHTML = spellbookSpell.innerHTML
+  spellLoadoutSpell.innerHTML = innerHTML
+  console.log('spell element after update:', spellLoadoutSpell.innerHTML.substring(0, 100))
   spellLoadoutSpell.style.cursor = 'pointer'
   addListener(
     spellId,
