@@ -1,5 +1,9 @@
 import { moveTooltip, ready } from './common'
-import { track } from './plausible-init'
+
+declare const plausible: (
+  event: string,
+  options?: { props?: Record<string, string> },
+) => void
 
 interface Spell {
   Id: string
@@ -338,7 +342,7 @@ ready(function () {
       const encoded = encodeLoadout()
       const shareUrl = `https://loadout.mage.blue/${encoded}`
       await navigator.clipboard.writeText(shareUrl)
-      track('Loadout Link Copied', { props: { loadout_code: encoded } })
+      plausible('Loadout Link Copied', { props: { loadout_code: encoded } })
       const originalText = copyButton.textContent
       copyButton.textContent = 'Copied!'
       setTimeout(() => {
@@ -353,7 +357,7 @@ ready(function () {
       const macro1El = document.getElementById('spell-loadout-macro-1')
       if (macro1El?.textContent) {
         await navigator.clipboard.writeText(macro1El.textContent)
-        track('Macro Copied', {})
+        plausible('Macro Copied', {})
         const originalText = copyMacro1.textContent
         copyMacro1.textContent = 'Copied!'
         setTimeout(() => {
@@ -369,7 +373,7 @@ ready(function () {
       const macro2El = document.getElementById('spell-loadout-macro-2')
       if (macro2El?.textContent) {
         await navigator.clipboard.writeText(macro2El.textContent)
-        track('Macro Copied', {})
+        plausible('Macro Copied', {})
         const originalText = copyMacro2.textContent
         copyMacro2.textContent = 'Copied!'
         setTimeout(() => {
@@ -413,7 +417,7 @@ ready(function () {
         }
         updateSpellLoadoutLink()
         updateMacro()
-        track('Loadout Cleared', {})
+        plausible('Loadout Cleared', {})
       }
     })
   }
@@ -458,14 +462,14 @@ ready(function () {
       updateSpellLoadoutLink()
       updateMacro()
       const sortedCode = encodeLoadout()
-      track('Loadout Sorted', { props: { loadout_code: sortedCode } })
+      plausible('Loadout Sorted', { props: { loadout_code: sortedCode } })
     })
   }
 
   const params = new URLSearchParams(window.location.search)
   const preload = params.get('spell_loadout')
   if (preload) {
-    track('Loadout Loaded', { props: { loadout_code: preload } })
+    plausible('Loadout Loaded', { props: { loadout_code: preload } })
     decodeLoadout(preload).forEach((spellNumber, i) => {
       if (spellNumber && i < spellLoadoutSpells.length) {
         const spellTooltip = spellbookSpells[spellNumber - 1]
