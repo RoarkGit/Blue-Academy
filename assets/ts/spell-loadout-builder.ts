@@ -1,9 +1,5 @@
 import { moveTooltip, ready } from './common'
-
-declare function plausible(
-  event: string,
-  options?: { props?: Record<string, string> },
-): void
+import { track } from './plausible-init'
 
 interface Spell {
   Id: string
@@ -342,7 +338,7 @@ ready(function () {
       const encoded = encodeLoadout()
       const shareUrl = `https://loadout.mage.blue/${encoded}`
       await navigator.clipboard.writeText(shareUrl)
-      plausible('Loadout Link Copied', { props: { loadout_code: encoded } })
+      track('Loadout Link Copied', { props: { loadout_code: encoded } })
       const originalText = copyButton.textContent
       copyButton.textContent = 'Copied!'
       setTimeout(() => {
@@ -357,7 +353,7 @@ ready(function () {
       const macro1El = document.getElementById('spell-loadout-macro-1')
       if (macro1El?.textContent) {
         await navigator.clipboard.writeText(macro1El.textContent)
-        plausible('Macro Copied', {})
+        track('Macro Copied', {})
         const originalText = copyMacro1.textContent
         copyMacro1.textContent = 'Copied!'
         setTimeout(() => {
@@ -373,7 +369,7 @@ ready(function () {
       const macro2El = document.getElementById('spell-loadout-macro-2')
       if (macro2El?.textContent) {
         await navigator.clipboard.writeText(macro2El.textContent)
-        plausible('Macro Copied', {})
+        track('Macro Copied', {})
         const originalText = copyMacro2.textContent
         copyMacro2.textContent = 'Copied!'
         setTimeout(() => {
@@ -417,7 +413,7 @@ ready(function () {
         }
         updateSpellLoadoutLink()
         updateMacro()
-        plausible('Loadout Cleared', {})
+        track('Loadout Cleared', {})
       }
     })
   }
@@ -462,14 +458,14 @@ ready(function () {
       updateSpellLoadoutLink()
       updateMacro()
       const sortedCode = encodeLoadout()
-      plausible('Loadout Sorted', { props: { loadout_code: sortedCode } })
+      track('Loadout Sorted', { props: { loadout_code: sortedCode } })
     })
   }
 
   const params = new URLSearchParams(window.location.search)
   const preload = params.get('spell_loadout')
   if (preload) {
-    plausible('Loadout Loaded', {
+    track('Loadout Loaded', {
       props: {
         loadout_code: preload,
         referrer: document.referrer || '(direct)',
