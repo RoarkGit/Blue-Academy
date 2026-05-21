@@ -411,6 +411,68 @@ ready(function () {
     })
   }
 
+  const clearButton = document.getElementById('clear-loadout')
+  if (clearButton) {
+    clearButton.addEventListener('click', () => {
+      if (confirm('Clear all spells from loadout?')) {
+        for (let i = 0; i < activeSpells.length; i++) {
+          const oldSpellId = spellLoadoutSpells[i].getAttribute('data-tooltip-id')
+          if (oldSpellId !== null) {
+            removeListener(oldSpellId)
+          }
+          activeSpells[i] = { Id: '', Name: '', Number: '' }
+          unsetSpell(spellLoadoutSpells[i])
+        }
+        updateSpellLoadoutLink()
+        updateMacro()
+        trackEvent('Loadout Cleared')
+      }
+    })
+  }
+
+  const sortButton = document.getElementById('sort-loadout')
+  if (sortButton) {
+    sortButton.addEventListener('click', () => {
+      const spellsWithIndex = activeSpells
+        .map((spell, index) => ({ spell, index }))
+        .filter(({ spell }) => spell.Id !== '')
+        .sort((a, b) => Number(a.spell.Number) - Number(b.spell.Number))
+
+      const newActiveSpells = new Array<Spell>(24).fill({
+        Id: '',
+        Name: '',
+        Number: '',
+      })
+      spellsWithIndex.forEach(({ spell }, newIndex) => {
+        newActiveSpells[newIndex] = spell
+      })
+
+      for (let i = 0; i < activeSpells.length; i++) {
+        const oldSpellId = activeSpells[i].Id
+        if (oldSpellId !== '') {
+          removeListener(oldSpellId)
+        }
+        unsetSpell(spellLoadoutSpells[i])
+      }
+
+      for (let i = 0; i < newActiveSpells.length; i++) {
+        activeSpells[i] = newActiveSpells[i]
+        if (activeSpells[i].Id !== '') {
+          const spellTooltip = document.querySelector<HTMLElement>(
+            `.spellbook-spell[data-tooltip-id="${activeSpells[i].Id}"]`,
+          )
+          if (spellTooltip) {
+            setSpell(spellLoadoutSpells[i], spellTooltip)
+          }
+        }
+      }
+
+      updateSpellLoadoutLink()
+      updateMacro()
+      trackEvent('Loadout Sorted')
+    })
+  }
+
   const params = new URLSearchParams(window.location.search)
   const preload = params.get('spell_loadout')
   if (preload) {
