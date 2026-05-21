@@ -2,3 +2,10 @@
   width: 80%;
   max-width: 80%;
 }
+
+@media (max-width: 768px) {
+  #R-body .flex-block-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+}

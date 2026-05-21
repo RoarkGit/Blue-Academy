@@ -224,6 +224,9 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
     padding: 1rem;
     border: solid 1px #fff;
     margin-top: 0.35rem;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 600px;
   }
 }
 
@@ -443,6 +446,8 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
   overflow: hidden;
   transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
   opacity: 1;
+  box-sizing: border-box;
+  width: 100%;
   &.spell-list-filters--closed {
     max-height: 0;
     opacity: 0;
@@ -456,6 +461,17 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
 .spell-list-filter-reset {
   font-size: 0.75rem;
   padding: 0.15rem 0.6rem;
+}
+
+/* Spell list table */
+.spell-list-table-wrapper {
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .spell-list-notes-col {
+    display: none;
+  }
 }
 
 /* Spell loadout builder */
@@ -524,4 +540,33 @@ h1, h2, h3, h4, h5, h6 { hyphens: none; }
 .rotation-event {
   flex-shrink: 1;
   min-width: 0;
+}
+
+/* Small screen: pull spell list to the edges to reclaim body padding */
+@media (max-width: 768px) {
+  .spell-list-container {
+    margin-inline: -1.25rem;
+    padding-inline: 0.5rem;
+  }
+}
+
+/* Small screen: single-column filter layout */
+@media (max-width: 600px) {
+  .spell-list-filters,
+  .spellbook-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-options--grid3 {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  .filter-options--row {
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+
+  .spellbook-filters {
+    max-width: 100%;
+  }
 }

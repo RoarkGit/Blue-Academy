@@ -63,13 +63,14 @@
     </div>
   </div>
 
+  <div class="spell-list-table-wrapper">
   <table class="spell-list">
     <tr>
       <th>No.</th>
       <th>Name</th>
       <th>Rank</th>
       <th>Location</th>
-      <th>Notes</th>
+      <th class="spell-list-notes-col">Notes</th>
     </tr>
     {{- range $.Site.Data.spell -}}
       {{- $type := "magic" -}}
@@ -93,10 +94,11 @@
         </td>
         <td>{{- strings.Repeat .rank "★" -}}</td>
         <td class="spell-list-nowrap-cell">{{ .location | markdownify }}</td>
-        <td>{{ .notes | markdownify }}</td>
+        <td class="spell-list-notes-col">{{ .notes | markdownify }}</td>
       </tr>
     {{- end -}}
   </table>
+  </div>
 </div>
 
 {{- range $.Site.Data.spell -}}
