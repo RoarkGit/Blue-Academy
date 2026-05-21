@@ -1,9 +1,9 @@
 import { moveTooltip, ready } from './common'
 
-declare const plausible: (
+declare function plausible(
   event: string,
   options?: { props?: Record<string, string> },
-) => void
+): void
 
 interface Spell {
   Id: string
@@ -469,7 +469,12 @@ ready(function () {
   const params = new URLSearchParams(window.location.search)
   const preload = params.get('spell_loadout')
   if (preload) {
-    plausible('Loadout Loaded', { props: { loadout_code: preload } })
+    plausible('Loadout Loaded', {
+      props: {
+        loadout_code: preload,
+        referrer: document.referrer || '(direct)',
+      },
+    })
     decodeLoadout(preload).forEach((spellNumber, i) => {
       if (spellNumber && i < spellLoadoutSpells.length) {
         const spellTooltip = spellbookSpells[spellNumber - 1]
