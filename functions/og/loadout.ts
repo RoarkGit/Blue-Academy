@@ -8,7 +8,7 @@ const ROWS = 2
 const GAP = 6
 const PAD = 20
 const FONT_SCALE = 2
-const TEXT_H = 7 * FONT_SCALE + 20 // 34px: font height + padding
+const TEXT_H = 7 * FONT_SCALE + 40 // 54px: font height + padding
 
 const IMG_W = COLS * ICON_SIZE + (COLS - 1) * GAP + PAD * 2
 const IMG_H = ROWS * (ICON_SIZE + TEXT_H) + (ROWS - 1) * GAP + PAD * 2
