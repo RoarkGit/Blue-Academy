@@ -152,12 +152,14 @@ export const onRequestGet: PagesFunction<{ ASSETS: Fetcher }> = async (
 
     const spellNum = loadout[idx]
     if (spellNum) {
+      const fontHeight = 7 * FONT_SCALE
+      const numberY = dy + ICON_SIZE + (TEXT_H - fontHeight) / 2
       drawNumber(
         buf,
         IMG_W,
         spellNum,
         dx + ICON_SIZE / 2,
-        dy + ICON_SIZE + 2,
+        numberY,
         FONT_SCALE,
         TEXT_COLOR,
       )
