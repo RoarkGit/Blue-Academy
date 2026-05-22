@@ -8,6 +8,9 @@ export const onRequestPost: PagesFunction = async (context) => {
       'Content-Type': request.headers.get('Content-Type') ?? 'text/plain',
       'User-Agent': request.headers.get('User-Agent') ?? '',
       'X-Forwarded-For': ip,
+      'X-Real-IP': ip,
+      'Forwarded': `for=${ip}`,
+      'CF-Connecting-IP': ip,
     },
     body: request.body,
   })
