@@ -36,7 +36,11 @@
     <meta property="og:type" content="website">
 {{- end }}
 
+{{- if .Params.image }}
+    <meta property="og:image" content="{{ .Params.image | absURL }}">
+{{- else }}
     <meta property="og:image" content="{{ "/images/banner.png" | absURL }}">
+{{- end }}
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
