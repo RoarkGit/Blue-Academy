@@ -404,7 +404,8 @@ ready(function () {
     clearButton.addEventListener('click', () => {
       if (confirm('Clear all spells from loadout?')) {
         for (let i = 0; i < activeSpells.length; i++) {
-          const oldSpellId = spellLoadoutSpells[i].getAttribute('data-tooltip-id')
+          const oldSpellId =
+            spellLoadoutSpells[i].getAttribute('data-tooltip-id')
           if (oldSpellId !== null) {
             removeListener(oldSpellId)
           }
