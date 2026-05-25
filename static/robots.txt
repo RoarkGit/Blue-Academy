@@ -1,9 +1,9 @@
 User-agent: *
 Allow: /
 Disallow: /search
-Disallow: /categories/
 Disallow: /tags/
 Disallow: /index.xml
+Disallow: /*.js
 
 User-agent: GPTBot
 Allow: /
