@@ -71,6 +71,6 @@ Check out the [full spell list]({{% relref "spell-list" %}}) to see
 all the spells and where to learn them!
 
 [^1]: {{< spell force_field >}} can also be learned consistently from Sephirot
-(Extreme). When the level cap was 70 this was the only way for free trial
-players to obtain it, since reaching 120 spells requires content beyond level
-70. This is no longer relevant now that the cap is 80.
+    (Extreme). When the level cap was 70 this was the only way for free trial
+    players to obtain it, since reaching 120 spells requires content beyond
+    level 70. This is no longer relevant now that the cap is 80.
