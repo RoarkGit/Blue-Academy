@@ -40,7 +40,7 @@ content:
     continuously for free learning.
 
 - **Start 4-player duty spells**
-  - Begin learning from dungeons either [solo unsync]({{% relref
+  - Begin learning from dungeons either [solo synced]({{% relref
     "/gameplay/solo" %}}) or in a party. This is a good time to start job
     quests and attempt [Masked Carnivale]({{% relref "/masked-carnivale/"
     %}}) stages you're ready for.
