@@ -60,7 +60,7 @@ use since they are mostly playing DPS. {{< spell gobskin >}} and
 {{< spell stotram >}} are dropped: the main healer handles Gobskin, and the
 slot is better used elsewhere.
 
-{{< spell-loadout loadout="CQwnLC8_QEhNTlBRUlRaZGdodnp8AABt" >}}
+{{< spell-loadout loadout="CQ0UJywvOjw_QEhNTlBRUlRYWmdoenwA" >}}
 
 ### Gameplay
 
