@@ -37,6 +37,19 @@ minify:
 build:
   noJSConfigInAssets: true
 
+module:
+  mounts:
+    - source: data
+      target: data
+      excludeFiles: ["blue-mage-data/**"]
+    - source: data/blue-mage-data
+      target: data
+      includeFiles: ["*.yaml"]
+    - source: assets
+      target: assets
+    - source: data/blue-mage-data/images
+      target: assets/images/tooltips
+
 menu:
   shortcuts:
     - name: <i class='fab fa-discord'></i> Discord

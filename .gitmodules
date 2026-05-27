@@ -1,3 +1,6 @@
 [submodule "themes/relearn"]
 	path = themes/relearn
 	url = https://github.com/McShelby/hugo-theme-relearn.git
+[submodule "data/blue-mage-data"]
+	path = data/blue-mage-data
+	url = https://github.com/RoarkGit/Blue-Mage-Data
