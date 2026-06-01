@@ -11,7 +11,7 @@ on:
 jobs:
   notify:
     runs-on: ubuntu-latest
-    if: "github.event_name != 'push' || !startsWith(github.event.head_commit.message, 'chore:')"
+    if: "github.event_name != 'push' || (!startsWith(github.event.head_commit.message, 'chore:') && !startsWith(github.event.head_commit.message, 'seo:'))"
     steps:
       - name: Send push notification
         if: github.event_name == 'push'
