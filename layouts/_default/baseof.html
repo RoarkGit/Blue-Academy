@@ -52,7 +52,7 @@
           {{- $showBreadcrumb := (and (not .Params.disableBreadcrumb) (not site.Params.disableBreadcrumb)) }}
           {{- if $showBreadcrumb }}
           <ol class="topbar-breadcrumbs breadcrumbs highlightable">
-            {{- partial "breadcrumbs.html" (dict "page" . "schema" true) }}
+            {{- partial "breadcrumbs.html" (dict "page" . "schema" false) }}
           </ol>
           {{- else }}
           <span class="topbar-breadcrumbs highlightable">

@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Allow: /searchindex*.js
 Disallow: /search
 Disallow: /tags/
 Disallow: /index.xml
