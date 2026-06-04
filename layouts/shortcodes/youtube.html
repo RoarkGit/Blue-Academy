@@ -3,25 +3,6 @@
 {{- if not $id }}
   {{- errorf "The %q shortcode requires a video id. See %s" .Name .Position }}
 {{- end }}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": "{{ .Page.Title }} — Blue Academy",
-  "description": "{{ partial "page-description.html" .Page }}",
-  "thumbnailUrl": "https://i.ytimg.com/vi/{{ $id }}/maxresdefault.jpg",
-  "uploadDate": "{{ .Page.Date.Format "2006-01-02T15:04:05Z07:00" }}",
-  "embedUrl": "https://www.youtube.com/embed/{{ $id }}",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Blue Academy",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://mage.blue/images/logo.png"
-    }
-  }
-}
-</script>
 <div style="max-width: {{ $width }}; margin-left: auto; margin-right: auto;">
   <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
     <iframe
