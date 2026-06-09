@@ -50,7 +50,7 @@ Moon Flute window while you sustain yourself.
 
 ## Dungeons
 
-{{ spell-loadout loadout="CQ0RHB0eICEjLC9IS01OUFxfYWdoaXp8" }}
+{{< spell-loadout loadout="CQ0RHB0eICEjLC9IS01OUFxfYWdoaXp8" >}}
 
 For dungeons, drop {{< spell chelonian_gate >}}, {{< spell sonic_boom >}}, 
 {{< spell magic_hammer >}}, and {{< spell peculiar_light >}} to make room for:
