@@ -50,12 +50,15 @@ Moon Flute window while you sustain yourself.
 
 ## Dungeons
 
-For dungeons, drop {{< spell chelonian_gate >}}, {{< spell sonic_boom >}}, and
-{{< spell peculiar_light >}} to make room for:
+{{ spell-loadout loadout="CQ0RHB0eICEjLC9IS01OUFxfYWdoaXp8" }}
+
+For dungeons, drop {{< spell chelonian_gate >}}, {{< spell sonic_boom >}}, 
+{{< spell magic_hammer >}}, and {{< spell peculiar_light >}} to make room for:
 
 - {{< spell the_rams_voice >}} + {{< spell ultravibration >}} for mob packs
 - {{< spell hydro_pull >}} to gather enemies
 - {{< spell missile >}} for boss HP checks
+- {{< spell toad_oil >}} to reduce damage taken from mob packs
 
 Use {{< spell dragon_force >}} before pulling, {{< spell hydro_pull >}} to
 group enemies, then {{< spell ultravibration >}} to wipe the pack.
