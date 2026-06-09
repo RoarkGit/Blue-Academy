@@ -11,3 +11,23 @@
       allowfullscreen></iframe>
   </div>
 </div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": {{ printf "%s — Blue Academy" .Page.Title | jsonify }},
+  "description": {{ partial "page-description.html" .Page | jsonify }},
+  "thumbnailUrl": "https://i.ytimg.com/vi/{{ $id }}/maxresdefault.jpg",
+  "uploadDate": "{{ .Page.Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "contentUrl": "https://www.youtube.com/watch?v={{ $id }}",
+  "embedUrl": "https://www.youtube.com/embed/{{ $id }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blue Academy",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mage.blue/images/logo.png"
+    }
+  }
+}
+</script>
