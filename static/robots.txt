@@ -3,7 +3,6 @@ Allow: /
 Allow: /searchindex*.js
 Disallow: /search
 Disallow: /tags/
-Disallow: /index.xml
 Disallow: /*.js
 
 User-agent: GPTBot
