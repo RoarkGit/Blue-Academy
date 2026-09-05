@@ -277,11 +277,7 @@ snapshotted into the corner but Brute Justice will stay in the center.
 
 After Super Jump, Brute Justice will channel **Apocalyptic Ray**, which is a
 huge multi-hit frontal cone that applies a vuln stack with each hit. Just move
-behind Brute Justice to Alexander Prime's Final Sting threshold is 15%. Once he
-is at 15%, apply Off-guard Icon Off-guard, then use Moon Flute Icon Moon Flute,
-any Primal abilities you have, and finish with Whistle Icon Whistle and Final
-Sting Icon Final Sting. Most groups will be able to Final Sting before Inception
-2, and being able to do so makes the fight dramatically easier.be safe.
+behind Brute Justice to be safe.
 
 Brute Justice will repeat all of these mechanics one more time and then go into
 Intermission 1 if you haven't killed it yet.
