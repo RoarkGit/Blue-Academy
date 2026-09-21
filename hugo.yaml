@@ -49,13 +49,16 @@ module:
   mounts:
     - source: data
       target: data
-      excludeFiles: ["blue-mage-data/**"]
-    - source: data/blue-mage-data
+      excludeFiles: ["limited-job-data/**"]
+    - source: data/limited-job-data
+      target: data
+      includeFiles: ["*.yaml"]
+    - source: data/limited-job-data/spell
       target: data
       includeFiles: ["*.yaml"]
     - source: assets
       target: assets
-    - source: data/blue-mage-data/images
+    - source: data/limited-job-data/spell/images
       target: assets/images/tooltips
 
 menu:
