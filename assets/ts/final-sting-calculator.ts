@@ -30,6 +30,20 @@ function loadData(): FinalStingData {
 
 type Role = 'dps' | 'healer' | 'tank'
 
+const CUSTOM_BOSS = 'custom'
+
+function getCustomBoss(): Boss {
+  const hpEl = document.getElementById('custom-hp') as HTMLInputElement | null
+  const levelEl = document.getElementById(
+    'custom-level',
+  ) as HTMLSelectElement | null
+  return {
+    name: 'Custom',
+    hp: parseInt(hpEl?.value ?? '0') || 0,
+    level: parseInt(levelEl?.value ?? '0') || 0,
+  }
+}
+
 function getPlayerMultiplier(role: Role, multipliers: Multipliers): number {
   let m = 1.0
   const buffs: [string, keyof Multipliers][] = [
@@ -70,8 +84,22 @@ function calculate(
     'boss-select',
   ) as HTMLSelectElement | null
   if (!select) return
-  const boss = bosses[parseInt(select.value)]
-  if (!boss) return
+  const isCustom = select.value === CUSTOM_BOSS
+  const boss = isCustom ? getCustomBoss() : bosses[parseInt(select.value)]
+
+  const customEl = document.getElementById('custom-boss')
+  const hpInfoEl = document.getElementById('boss-hp-info')
+  if (customEl) customEl.hidden = !isCustom
+  if (hpInfoEl) hpInfoEl.hidden = isCustom
+
+  const resultEl = document.getElementById('result-total')
+  if (!boss || !(boss.hp > 0) || !baseStings[boss.level]) {
+    if (resultEl) {
+      resultEl.textContent = 'Enter boss HP'
+      resultEl.className = 'fsc-result-value'
+    }
+    return
+  }
 
   const getCount = (id: string) => {
     const el = document.getElementById(id) as HTMLInputElement | null
@@ -97,7 +125,6 @@ function calculate(
   const fmt = (n: number) => n.toFixed(2) + '%'
   const killed = (pct: number) => (pct >= 100 ? ' ✓ kills' : '')
 
-  const resultEl = document.getElementById('result-total')
   if (resultEl) {
     resultEl.textContent = fmt(displayPct) + killed(displayPct)
     resultEl.className =
@@ -131,6 +158,40 @@ ready(function () {
     opt.textContent = boss.name
     select.appendChild(opt)
   })
+  const customOpt = document.createElement('option')
+  customOpt.value = CUSTOM_BOSS
+  customOpt.textContent = 'Custom'
+  select.appendChild(customOpt)
+
+  const customLevel = document.getElementById(
+    'custom-level',
+  ) as HTMLSelectElement | null
+  for (const level of Object.keys(baseStings)) {
+    const opt = document.createElement('option')
+    opt.value = level
+    opt.textContent = level
+    customLevel?.appendChild(opt)
+  }
+
+  // Seed the custom inputs from the last selected boss so switching to
+  // Custom starts from a sensible value instead of an empty field.
+  const customHp = document.getElementById(
+    'custom-hp',
+  ) as HTMLInputElement | null
+  let lastBoss = bosses[0]
+  select.addEventListener('change', () => {
+    if (select.value !== CUSTOM_BOSS) {
+      lastBoss = bosses[parseInt(select.value)] ?? lastBoss
+      return
+    }
+    if (customHp && !customHp.value && lastBoss) {
+      customHp.value = String(lastBoss.hp)
+      if (customLevel) customLevel.value = String(lastBoss.level)
+    }
+  })
+  customHp?.addEventListener('input', () =>
+    calculate(bosses, multipliers, baseStings),
+  )
 
   for (const role of ['dps', 'healer', 'tank'] as const) {
     const whistle = document.getElementById(

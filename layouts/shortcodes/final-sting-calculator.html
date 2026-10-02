@@ -7,8 +7,14 @@
     <label for="boss-select">Boss</label>
     <select id="boss-select"></select>
   </div>
+  <div id="custom-boss" class="fsc-custom-boss" hidden>
+    <label for="custom-hp">HP</label>
+    <input type="number" id="custom-hp" min="1" step="1">
+    <label for="custom-level">Level</label>
+    <select id="custom-level"></select>
+  </div>
   <div class="fsc-boss-info">
-    <span>HP: <strong id="boss-hp"></strong></span>
+    <span id="boss-hp-info">HP: <strong id="boss-hp"></strong></span>
     <span>Base Sting: <strong id="boss-base-sting"></strong></span>
   </div>
   <p id="boss-note" class="fsc-note" hidden></p>
